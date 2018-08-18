@@ -1,0 +1,43 @@
+﻿@model VibExchange.Models.Order
+
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+<h4 style="width: 80%; margin-left: 5px; color: chocolate;">Fill Detail >></h4>
+
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary(true)
+
+    <div class=" form-horizontal" role="form" style="margin-left: 10px;">
+        <div class="form-group ">
+            @Html.LabelFor(model => model.EnquiryCategory, new { @class = "col-md-3 control-label" })
+            <div class="col-md-9">
+                @Html.DropDownList("CetegoryList", (IEnumerable<SelectListItem>)ViewBag.categoryList, "Please Select Category", new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.EnquiryCategory, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group ">
+                    @Html.LabelFor(model => model.EnquirySubject, new { @class = "col-md-3 control-label" })
+                    <div class="col-md-9">
+                        @Html.TextBoxFor(model => model.EnquirySubject, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.EnquirySubject, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+        <div class="form-group ">
+            @Html.LabelFor(model => model.EnquiryDetail, new { @class = "col-md-3 control-label" })
+            <div class="col-md-9">
+                @Html.TextAreaFor(model => model.EnquiryDetail, 5, 25, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.EnquiryDetail, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group ">
+            <div class="col-md-offset-3 col-md-9">
+                <button type="submit" id="btnSubmit" class="btn btn-default" onclick="location.href='@Url.Action("getEnquiry", "Oredr", new { id = "" })'">Submit Your Detail</button>
+            </div>
+        </div>
+    </div>
+    <h4></h4>
+}
+<script>function closeModal() {
+    $("#myModal").toggle();
+}</script>

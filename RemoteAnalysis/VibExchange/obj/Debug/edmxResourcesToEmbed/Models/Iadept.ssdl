@@ -1,0 +1,192 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl" Alias="Self" Namespace="Iadept_CloudModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008">
+  <EntityType Name="Emp_Detail">
+    <Key>
+      <PropertyRef Name="EmpID" />
+    </Key>
+    <Property Name="AutoId" Nullable="false" StoreGeneratedPattern="Identity" Type="int" />
+    <Property Name="EmpID" Nullable="false" MaxLength="50" Type="varchar" />
+    <Property Name="Emp_Name" Nullable="false" MaxLength="50" Type="varchar" />
+    <Property Name="eDesignation" Nullable="false" MaxLength="50" Type="varchar" />
+    <Property Name="eDepartment" Nullable="false" MaxLength="50" Type="varchar" />
+    <Property Name="EmailId" Nullable="false" MaxLength="50" Type="varchar" />
+    <Property Name="eLoginID" Nullable="false" MaxLength="50" Type="varchar" />
+    <Property Name="ePassword" Nullable="false" MaxLength="50" Type="varchar" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'Iadept_Cloud.dbo.PaymentDetail' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="PaymentDetail">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="UserName" />
+      <PropertyRef Name="ServiceId" />
+    </Key>
+    <Property Name="Id" Nullable="false" StoreGeneratedPattern="Identity" Type="int" />
+    <Property Name="UserName" Nullable="false" MaxLength="50" Type="varchar" />
+    <Property Name="ServiceId" Nullable="false" MaxLength="50" Type="varchar" />
+    <Property Name="Amount" Type="float" />
+    <Property Name="Status" MaxLength="20" Type="char" />
+    <Property Name="AccountDeptConfirm" MaxLength="50" Type="varchar" />
+    <Property Name="AdminRemark" MaxLength="200" Type="varchar" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'Iadept_Cloud.dbo.ProgressReport' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="ProgressReport">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="ServiceId" />
+      <PropertyRef Name="UserName" />
+      <PropertyRef Name="AssignEmpId" />
+    </Key>
+    <Property Name="Id" Nullable="false" StoreGeneratedPattern="Identity" Type="int" />
+    <Property Name="ServiceId" Nullable="false" MaxLength="50" Type="varchar" />
+    <Property Name="UserName" Nullable="false" MaxLength="50" Type="varchar" />
+    <Property Name="AssignEmpId" Nullable="false" MaxLength="50" Type="varchar" />
+    <Property Name="StartDate" Type="date" />
+    <Property Name="CurrentStatus" MaxLength="20" Type="char" />
+    <Property Name="Remark" MaxLength="200" Type="varchar" />
+    <Property Name="PaymentStatus" MaxLength="20" Type="char" />
+    <Property Name="ContactPerson" MaxLength="50" Type="varchar" />
+  </EntityType>
+  <EntityType Name="Services">
+    <Key>
+      <PropertyRef Name="ServiceId" />
+    </Key>
+    <Property Name="Id" Nullable="false" StoreGeneratedPattern="Identity" Type="int" />
+    <Property Name="ServiceId" Nullable="false" MaxLength="50" Type="varchar" />
+    <Property Name="ServiceName" MaxLength="50" Type="varchar" />
+    <Property Name="ServiceDepartment" MaxLength="50" Type="varchar" />
+    <Property Name="ServiceType" MaxLength="50" Type="varchar" />
+    <Property Name="ServiceCost" Type="float" />
+    <Property Name="ServiceDuration" MaxLength="50" Type="varchar" />
+    <Property Name="IsEnabled" MaxLength="50" Type="varchar" />
+  </EntityType>
+  <EntityType Name="UploadData">
+    <Key>
+      <PropertyRef Name="EmailID" />
+    </Key>
+    <Property Name="ID" Nullable="false" StoreGeneratedPattern="Identity" Type="int" />
+    <Property Name="EmailID" Nullable="false" MaxLength="50" Type="varchar" />
+    <Property Name="InstrumentUsed" Nullable="false" MaxLength="30" Type="varchar" />
+    <Property Name="MachineDescription" Nullable="false" MaxLength="200" Type="varchar" />
+    <Property Name="FileData" Nullable="false" Type="varbinary(max)" />
+    <Property Name="ReportFile" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="UserProfile">
+    <Key>
+      <PropertyRef Name="UserName" />
+    </Key>
+    <Property Name="AutoId" Nullable="false" StoreGeneratedPattern="Identity" Type="int" />
+    <Property Name="UserName" Nullable="false" MaxLength="50" Type="varchar" />
+    <Property Name="uPassword" Nullable="false" MaxLength="50" Type="varchar" />
+    <Property Name="uName" Nullable="false" MaxLength="50" Type="varchar" />
+    <Property Name="uCompanyName" Nullable="false" MaxLength="100" Type="varchar" />
+    <Property Name="uCompanyAddress" MaxLength="200" Type="varchar" />
+    <Property Name="uCity" MaxLength="50" Type="varchar" />
+    <Property Name="uState" MaxLength="50" Type="varchar" />
+    <Property Name="uCountry" MaxLength="50" Type="varchar" />
+    <Property Name="uFax_No" MaxLength="20" Type="varchar" />
+    <Property Name="uMobile_No" Nullable="false" MaxLength="20" Type="varchar" />
+    <Property Name="uCompany_Website" MaxLength="50" Type="varchar" />
+  </EntityType>
+  <Function Name="CheckUser" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="username" Type="varchar" Mode="In" />
+    <Parameter Name="userpass" Type="varchar" Mode="In" />
+    <Parameter Name="statuschk" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="spempdetail" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Emp_Name" Type="varchar" Mode="In" />
+    <Parameter Name="eDesignation" Type="varchar" Mode="In" />
+    <Parameter Name="eDepartment" Type="varchar" Mode="In" />
+    <Parameter Name="EmailId" Type="varchar" Mode="In" />
+    <Parameter Name="eLoginID" Type="varchar" Mode="In" />
+    <Parameter Name="ePassword" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="sppaymentdetail" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="userid" Type="varchar" Mode="In" />
+    <Parameter Name="serviceid" Type="varchar" Mode="In" />
+    <Parameter Name="amount" Type="float" Mode="In" />
+    <Parameter Name="status" Type="char" Mode="In" />
+    <Parameter Name="accountdeptconfirm" Type="varchar" Mode="In" />
+    <Parameter Name="adminremork" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="sppaymentServiceselect" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="serviceid" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="sppaymentUserselect" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="userid" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="spprogresServiceselect" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="serviceid" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="spprogressreport" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="serviceid" Type="varchar" Mode="In" />
+    <Parameter Name="userid" Type="varchar" Mode="In" />
+    <Parameter Name="assignempid" Type="varchar" Mode="In" />
+    <Parameter Name="currentstatus" Type="char" Mode="In" />
+    <Parameter Name="remark" Type="varchar" Mode="In" />
+    <Parameter Name="paymentstatus" Type="char" Mode="In" />
+    <Parameter Name="contactperson" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="spprogresUserselect" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="userid" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="spservices2" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="servicename" Type="varchar" Mode="In" />
+    <Parameter Name="servicedept" Type="varchar" Mode="In" />
+    <Parameter Name="servicetype" Type="varchar" Mode="In" />
+    <Parameter Name="servicecost" Type="float" Mode="In" />
+    <Parameter Name="serviceduration" Type="varchar" Mode="In" />
+    <Parameter Name="isenabled" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="spservicesselect" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="serviceid" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="spuserprofile" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="uEmailID" Type="varchar" Mode="In" />
+    <Parameter Name="uPassword" Type="varchar" Mode="In" />
+    <Parameter Name="uName" Type="varchar" Mode="In" />
+    <Parameter Name="uCompanyName" Type="varchar" Mode="In" />
+    <Parameter Name="uAddress" Type="varchar" Mode="In" />
+    <Parameter Name="uCountry" Type="varchar" Mode="In" />
+    <Parameter Name="uState" Type="varchar" Mode="In" />
+    <Parameter Name="uCity" Type="varchar" Mode="In" />
+    <Parameter Name="uFaxNo" Type="varchar" Mode="In" />
+    <Parameter Name="uContactNo" Type="varchar" Mode="In" />
+    <Parameter Name="uCompany_Website" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="spuserSelect" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="userID" Type="varchar" Mode="In" />
+    <Parameter Name="uPass" Type="varchar" Mode="In" />
+  </Function>
+  <EntityContainer Name="Iadept_CloudModelStoreContainer">
+    <EntitySet Name="Emp_Detail" EntityType="Self.Emp_Detail" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Services" EntityType="Self.Services" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UploadData" EntityType="Self.UploadData" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UserProfile" EntityType="Self.UserProfile" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PaymentDetail" EntityType="Self.PaymentDetail" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [PaymentDetail].[Id] AS [Id], 
+    [PaymentDetail].[UserName] AS [UserName], 
+    [PaymentDetail].[ServiceId] AS [ServiceId], 
+    [PaymentDetail].[Amount] AS [Amount], 
+    [PaymentDetail].[Status] AS [Status], 
+    [PaymentDetail].[AccountDeptConfirm] AS [AccountDeptConfirm], 
+    [PaymentDetail].[AdminRemark] AS [AdminRemark]
+    FROM [dbo].[PaymentDetail] AS [PaymentDetail]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="ProgressReport" EntityType="Self.ProgressReport" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [ProgressReport].[Id] AS [Id], 
+    [ProgressReport].[ServiceId] AS [ServiceId], 
+    [ProgressReport].[UserName] AS [UserName], 
+    [ProgressReport].[AssignEmpId] AS [AssignEmpId], 
+    [ProgressReport].[StartDate] AS [StartDate], 
+    [ProgressReport].[CurrentStatus] AS [CurrentStatus], 
+    [ProgressReport].[Remark] AS [Remark], 
+    [ProgressReport].[PaymentStatus] AS [PaymentStatus], 
+    [ProgressReport].[ContactPerson] AS [ContactPerson]
+    FROM [dbo].[ProgressReport] AS [ProgressReport]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>

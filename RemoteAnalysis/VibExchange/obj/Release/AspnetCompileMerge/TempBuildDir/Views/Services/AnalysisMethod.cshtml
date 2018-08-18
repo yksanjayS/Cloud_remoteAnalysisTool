@@ -1,0 +1,130 @@
+﻿@model VibExchange.Models.Services
+
+@{
+    ViewBag.Title = "AnalysisMethod";
+    Layout = "~/Views/Shared/_VibExchangeLayout.cshtml";
+}
+
+<script src="~/Scripts/jquery-1.8.3.min.js"></script>
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+<div class="container">
+    <div class="page-text">
+        <h4 style="color: #003366; font-family: Calibri; font-size: 20px">Vibration Analysis and Diagnostics</h4>
+        <div>
+            <p style="font-family: Vani" class="para">
+                <span>
+                    The rotating machines are very complex in nature so the problems are not unique and shall vary time to time. These machines are directly linked with plant production especially turbo-machinery.  The unexpected shutdown of these critical machines shall cause a huge losses to the industries as well as high maintenance cost.  The failure of the machines also creates an unsafe plant environment and to personnel.
+                </span>
+            </p>
+            <p style="text-align: justify;font-family: Vani;" class="para">
+
+                <span>
+                    The important technique to diagnose machinery problem is vibration analysis.
+                    To do machinery vibration diagnostics it requires a combination of good experience, training, knowledge on equipment design, applications and operation characteristics of machinery. The decision making at right time is a challenging and difficult task it always required in-house or external machinery diagnostic specialist’s expertise to avoid unplanned stoppage of machinery.
+                </span>
+            </p>
+            <p style="text-align: justify; font-family: Vani;" class="para">
+
+                <span>
+                    VibExchange offers offline and online vibration monitoring and consultancy services to the process industries.
+                    Our online remote system provide depth vibration analysis on your machinery using an advanced vibration analyzer software.
+                    There are three methods of vibration analysis shall be provided by us on the basis of customer prospect.
+                </span>
+                <br />
+            </p>
+        </div>
+    </div>
+    <div>
+        <h4>
+            <strong>
+                Three Methods of Vibration Analysis
+            </strong>
+        </h4>
+    </div>
+
+    <div style="margin-top: 15px" class="row-fluid">
+        <div class="col-md-4 imag">
+            <header class="Analysis">
+
+                <a>
+                    <h4 style="text-align: center;">Manually Analysis Method</h4>
+                    <img class="img-responsive AnalysisImage imag" src="~/Images/gear1.jpg" />
+                </a>
+                <p style="text-align: center; padding-top: 5px;">
+                    <a class="btn btn-Primary" href="@Url.Action("AnalysisMode", "UploadDownload", new { id = "Manually Analysis Method" })">Know more &raquo;</a>
+                    <a class="btn btn-Primary" href="@Url.Action("AnalysisMode", "UploadDownload")">Demo &raquo;</a>
+                </p>
+
+            </header>
+        </div>
+        <div class="col-md-4 imag">
+            <header class="Analysis">
+
+                <div>
+                    <a>
+                        <h4 style="text-align: center;">Remote Analysis Method</h4>
+                        <img class="img-responsive AnalysisImage" src="~/Images/images.png" />
+                    </a>
+                    <p style="text-align: center; padding-top: 5px;">
+                        @*<a class="btn btn-Primary" href="@Url.Action("AnalysisMode", "UploadDownload" , new { id="Remote Analysis Method"})" onclick ="alertMessage()">Know more &raquo;</a>
+                            <a class="btn btn-Primary" href="@Url.Action("AnalysisMode", "UploadDownload")" onclick ="alertMessage()">Demo &raquo;</a>*@
+                        <a class="btn btn-Primary" href="#" onclick="alertMessage()">Know more &raquo;</a>
+                        <a class="btn btn-Primary" href="#">Demo &raquo;</a>
+                    </p>
+                </div>
+            </header>
+
+        </div>
+        <div class="col-md-4 imag">
+            <header class="Analysis">
+                <div>
+                    <a>
+                        <h4 style="text-align: center;">Expert Analysis</h4>
+                        <img class="img-responsive AnalysisImage" src="~/Images/mcsa3.jpg" />
+                    </a>
+                    <p style="text-align: center; padding-top: 5px;">
+                        @*<a class="btn btn-Primary" href="@Url.Action("AnalysisMode", "UploadDownload" , new { id="Expert Analysis"})">Know more &raquo;</a>
+                            <a class="btn btn-Primary" href="@Url.Action("AnalysisMode", "UploadDownload")">Demo &raquo;</a>*@
+                        <a class="btn btn-Primary" href="#" onclick="alertMessage()">Know more &raquo;</a>
+                        <a class="btn btn-Primary" href="#">Demo &raquo;</a>
+                    </p>
+                </div>
+            </header>
+        </div>
+        <div>
+            @* <a href="@Url.Action("UploadFile", "UploadDownload", new { area = "Categories"}) id="btnUploadFile" title="Uplod File">
+                    <img src="~/Images/uploadfile.jpg" />
+                </a>*@
+            @*<button id="btnUploadFile" class="btn btn-default" onclick="location.href='@Url.Action("UploadFile", "UploadDownload", new { target = "_blank" })'">Upload Your File</button>*@
+        </div>
+
+        @section Scripts {
+            @Scripts.Render("~/bundles/jqueryval")
+        }
+    </div>
+</div>
+<script>
+    function OnDeleteClick(e) {
+        var employeeId = e.target.id;
+        var flag = confirm('Are you sure ? you want to delete this file ?');
+
+        if (flag) {
+            $.ajax({
+                url: '/Clients/Delete',
+                type: 'POST',
+                data: { id: employeeId },
+                dataType: 'ActionResult',
+                success: function (result) { alert(result); $("#" + employeeId).parent().parent().remove(); },
+                error: function () { alert('Error!'); }
+            });
+        }
+        return false;
+    }
+
+    function alertMessage()
+    {
+        alert("This fetaures is not workingright now.Coming soon...");
+    }
+
+</script>

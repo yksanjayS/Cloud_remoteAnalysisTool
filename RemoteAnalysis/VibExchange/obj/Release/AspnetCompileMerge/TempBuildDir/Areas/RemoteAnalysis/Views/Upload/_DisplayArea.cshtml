@@ -1,0 +1,55 @@
+﻿@model VibExchange.Areas.RemoteAnalysis.Models.AreaData
+
+@{
+    var status = TempData["NodeAvailability"];
+}
+
+@using (Html.BeginForm("UpdateArea", "Upload", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <legend class="navbar-left" style="color:lightcoral">Area Information</legend>
+
+    <div>
+        <div class="display-none">
+            @Html.HiddenFor(model => model.AreaID)
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.AreaName, new { @class = "control-label col-md-2 col-md-offset-1" })
+            <div class="col-md-8">
+                @Html.TextBoxFor(m => m.AreaName, new { @class = "form-control" })
+                @Html.ValidationMessageFor(m => m.AreaName, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.AreaDetail, htmlAttributes: new { @class = "control-label col-md-2 col-md-offset-1" })
+            <div class="col-md-8">
+                @Html.TextAreaFor(m => m.AreaDetail, 3, 10, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.AreaDetail, "", new { @class = "text-danger" })
+            </div>
+        </div>
+    </div>
+}
+<div class="form-group">
+    <div class="col-md-offset-4 col-md-8">
+        <button type="button" id="btnUpdateArea" class="btn btn-success">Save Detail</button>
+    </div>
+</div>
+
+<script>
+    $('#btnUpdateArea').click(function () {
+        $.ajax({
+            url: "@Url.Action("UpdateArea", "Upload", new { area = "RemoteAnalysis" })",
+            type: 'POST',
+            data: $('form').serialize(),
+            success: function (data) {
+                $('#graphDisplay').html('');
+                $('#graphDisplay').html(data);
+                alert("Area details update succesfully.");
+            }
+        });
+    });
+</script>
+

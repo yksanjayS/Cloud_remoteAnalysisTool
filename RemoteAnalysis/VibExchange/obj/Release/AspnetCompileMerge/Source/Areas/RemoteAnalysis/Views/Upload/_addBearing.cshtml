@@ -1,0 +1,192 @@
+﻿@model VibExchange.Areas.RemoteAnalysis.Models.BearingData
+
+<section class="col-md-offset-1">
+    @using (Html.BeginForm("AddFF", "Upload", null, FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+    {
+        @Html.AntiForgeryToken()
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="row-fluid" style="margin-left:5px;">
+            <div class="radio col-md-6">
+                <label class="radio-inline">
+                    @Html.RadioButton("bearing", "Physical", true, new { id = "IsPhysical" })
+                    Mannual Calculation
+                </label>
+            </div>
+            <div class="radio">
+                <label class="radio-inline">
+                    @Html.RadioButton("bearing", "Existing", new { id = "IsExisting" })
+                    Existing Bearing Data
+                </label>
+            </div>
+        </div>
+        <div class="row-fluid">
+            <div id="divPhysicalCal" style="margin-top:10px;padding-right:10px;padding-bottom:5px;">
+
+                <div class="form-group">
+                    @Html.LabelFor(m => m.InnerDia, new { @class = "col-md-5 control-label" })
+                    <div class="col-md-7">
+                        @Html.TextBoxFor(m => m.InnerDia, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(m => m.InnerDia, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(m => m.OuterDia, new { @class = "col-md-5 control-label" })
+                    <div class="col-md-7">
+                        @Html.TextBoxFor(m => m.OuterDia, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(m => m.OuterDia, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(m => m.ContactAngel, new { @class = "col-md-5 control-label" })
+                    <div class="col-md-7">
+                        @Html.TextBoxFor(m => m.ContactAngel, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(m => m.ContactAngel, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(m => m.RollingDia, new { @class = "col-md-5 control-label" })
+                    <div class="col-md-7">
+                        @Html.TextBoxFor(m => m.RollingDia, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(m => m.RollingDia, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(m => m.NoOfRollingElement, new { @class = "col-md-5 control-label" })
+                    <div class="col-md-7">
+                        @Html.TextBoxFor(m => m.NoOfRollingElement, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(m => m.NoOfRollingElement, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+                @*<div class="form-actions col-md-offset-4">
+                    <button type="button" id="btnPhysical" class="btn btn-info">Calculate Frequency</button>
+                </div>*@
+            </div>
+            <div id="divExistingBearing" style="margin-top:10px;padding-left:1px;padding-bottom:5px;display:none;">
+                <div class="form-group col-md-8" style="margin-left:1px;">
+                    @Html.DropDownListFor(model => model.BearingMake, new SelectList(ViewBag.lstBearingMake, "BearingMake", "BearingMake"), "Select Manufacture ", new { @class = "form-control ", @onchange = "FillBearingNumber()", @style = "margin-right:20px;" })
+                </div>
+                <div class="form-group col-md-8" style="margin-left:1px;">
+                    @Html.DropDownListFor(model => model.BearingNumber, Enumerable.Empty<SelectListItem>(), "Please select model", new { @class = "form-control " })
+                </div>
+            </div>
+        </div>
+        <hr />
+        @*<div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="submit" value="Save Detail" class="btn btn-default" />
+                </div>
+            </div>*@
+        <div class="form-group">
+            <input type="button" value="Save Detail" id="btnAddBFF" class="btn-sm btn-danger col-md-offset-3" />
+        </div>
+    }
+</section>
+<script>
+    //$("#divPhysicalCal").hide();
+    //$("#divExistingBearing").show();
+    $(function () {
+        $("input[name='bearing']").click(function () {
+            if ($("#IsPhysical").is(":checked")) {
+                $("#divPhysicalCal").show();
+                $("#divExistingBearing").hide();
+            }
+            if ($("#IsExisting").is(":checked")) {
+                $("#divPhysicalCal").hide();
+                $("#divExistingBearing").show();
+            }
+        });
+    });
+
+    function FillBearingNumber() {
+        var makeId = $('#BearingMake').val();
+        $.ajax({
+            url: "@Url.Action("getBearingNumber", "Upload", new { area = "RemoteAnalysis" })",
+            type: "GET",
+            dataType: "JSON",
+            data: { Make: makeId },
+            success: function (data) {
+                $("#BearingNumber").html(""); // clear before appending new list
+                var optionhtml1 = '<option value="' + 0 + '">' + "Please select model" + '</option>';
+                $("#BearingNumber").append(optionhtml1);
+                $.each(data, function (i, item) {
+                    var optionhtml = '<option value="' + item + '">' + item + '</option>';
+                    $("#BearingNumber").append(optionhtml);
+                });
+                $("#tblFrequency tbody tr").remove();
+            }
+        });
+    }
+
+    $('#btnPhysical').click(function () {
+        var InDia = $('#InnerDia').val();
+        var OutDia = $('#OuterDia').val();
+        var ConAngel = $('#ContactAngle').val();
+        var rDia = $('#RollingDia').val();
+        var rElement = $('#NoOfRollingElement').val();
+        var pointid = '@(Session["CurrentNodeID"])';
+        $.ajax({
+            url: "@Url.Action("getBearingDataPhysical", "Upload", new { area = "RemoteAnalysis" })",
+            type: "GET",
+            dataType: "JSON",
+            data: { PointID: pointid, InDia: InDia, OutDia: OutDia, ConAnagel: ConAngel, rDia: rDia, rElement: rElement },
+            success: function (frequency) {
+                if (frequency[8] == "Success") {
+                    $("#gridBearingFrequency tbody tr").remove();
+                    var newRow = "<tr><td><label>" + frequency[1] + "</label></td><td><label>" + frequency[2] + "</label></td><td><label>" + frequency[3] + "</label></td><td><label>" + frequency[4] + "</label></td><td><label>" + frequency[5] + "</label></td><td><label>" + frequency[6] + "</label></td><td><label>" + frequency[7] + "</label></td></tr>";
+                    $('#tblFrequency tbody:last').append(newRow);
+                }
+                else if (frequency[8] == "Failed") {
+                    alert("There is some error in add frequency. Please try again !")
+                }
+            }
+        });
+    });
+
+    $('#btnAddBFF').click(function () {
+        if ($("#IsPhysical").is(":checked")) {
+            var InDia = $('#InnerDia').val();
+            var OutDia = $('#OuterDia').val();
+            var ConAngel = $('#ContactAngle').val();
+            var rDia = $('#RollingDia').val();
+            var rElement = $('#NoOfRollingElement').val();
+            var pointid = '@(Session["CurrentNodeID"])';
+            $.ajax({
+                url: "@Url.Action("getBearingDataPhysical", "Upload", new { area = "RemoteAnalysis" })",
+                type: "GET",
+                dataType: "JSON",
+                data: { PointID: pointid, InDia: InDia, OutDia: OutDia, ConAnagel: ConAngel, rDia: rDia, rElement: rElement },
+                success: function (frequency) {
+                    if (frequency[8] == "Success") {
+                        $("#gridBearingFrequency tbody tr").remove();
+                        var newRow = "<tr><td><label>" + frequency[1] + "</label></td><td><label>" + frequency[2] + "</label></td><td><label>" + frequency[3] + "</label></td><td><label>" + frequency[4] + "</label></td><td><label>" + frequency[5] + "</label></td><td><label>" + frequency[6] + "</label></td><td><label>" + frequency[7] + "</label></td></tr>";
+                        $('#gridBearingFrequency tbody:last').append(newRow);
+                    }
+                    else if (frequency[8] == "Failed") {
+                        alert("There is some error in add frequency. Please try again !")
+                    }
+                }
+            });
+        }
+        else {
+            var makeId = $('#BearingMake').val();
+            var berNumber = $('#BearingNumber').val();
+            var pointid = '@(Session["CurrentNodeID"])';
+            $.ajax({
+                url: "@Url.Action("getBearingData", "Upload", new { area = "RemoteAnalysis" })",
+                type: "GET",
+                dataType: "JSON",
+                data: { Make: makeId, numberID: berNumber, PointID: pointid },
+                success: function (frequency) {
+                    if (frequency[8] == "Success") {
+                        $("#gridBearingFrequency tbody tr").remove();
+                        var newRow = "<tr><td><label>" + frequency[0] + "</label></td><td><label>" + frequency[1] + "</label></td><td><label>" + frequency[2] + "</label></td><td><label>" + frequency[3] + "</label></td><td><label>" + frequency[4] + "</label></td><td><label>" + frequency[5] + "</label></td><td><label>" + frequency[6] + "</label></td><td><label>" + frequency[7] + "</label></td></tr>";
+                        $('#gridBearingFrequency tbody:last').append(newRow);
+                    }
+                    else if (frequency[8] == "Failed") {
+                        alert("There is some error in add frequency. Please try again !")
+                    }
+                }
+            });
+        }
+    });
+</script>

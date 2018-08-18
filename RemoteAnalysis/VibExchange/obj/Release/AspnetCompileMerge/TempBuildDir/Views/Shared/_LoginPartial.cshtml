@@ -1,0 +1,82 @@
+﻿@if (Session["UserName"] != null)
+{
+    using (Html.BeginForm("LogOff", "Home",new { area = ""}, FormMethod.Post, new { id = "logoutForm", @class = "navbar-right" }))
+    {
+        @Html.AntiForgeryToken()
+        <div class="nav navbar-nav">
+            <div class="social-login pull-right" style="margin-left:20px;">
+                <a class="btn btn-primary btn-lg" href="https://www.facebook.com/VibrationAnalysisService/" >
+                    <i class="fa fa-facebook"></i>
+                </a>
+                <a class="btn btn-info btn-lg" href="https://www.linkedin.com/company/vibexchange" >
+                    <i class="fa fa-linkedin"></i>
+                </a>
+            </div>
+            <ul class="nav navbar-nav navbar-right" style="display:inline">
+                <!-- END TODO DROPDOWN -->
+                <!-- BEGIN USER LOGIN DROPDOWN -->
+                @*<li>
+                    <div style="margin-top:15px;">
+                        <i class="fa fa-phone" style="font-size: large; color: chartreuse"></i>
+                        <label style="color:white">: +91-9810010218</label>
+                       
+                    </div>
+                </li>*@
+                <li class="dropdown user" id="header-user">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        <img alt="" src="@Session["ImagePath"].ToString()" />
+                        <span class="chevron-circle-right username" style="font-family: Verdana; font-style: normal; font-weight: 400; color: chartreuse">
+                            Hi  @Session["FullName"]
+                        </span>
+                        <i class="fa fa-angle-down"></i>
+                    </a>
+                    <ul class="dropdown-menu">
+                        @if (Session["UserRole"].ToString() == "Consultant")
+                        {
+                            @*<li><a href="@Url.Action("AccountDetail", "Home", new { area = "", userName = Session["UserName"] })"><i class="fa fa-cog"></i>Account Detail</a></li>*@
+                        }
+                        <li><a href="@Url.Action("EditUserProfile", "Home", new { area = "", userName = Session["UserName"] })"><i class="fa fa-user"></i>My Profile</a></li>
+                        <li><a href="@Url.Action("ResetPassword", "Home", new { area = "", userName = Session["UserName"] })"><i class="fa fa-lock"></i>Change Password</a></li>
+                        <li><a href="javascript:document.getElementById('logoutForm').submit()"><i class="fa fa-power-off"></i>Sign out</a></li>
+                    </ul>
+                </li>
+                <!-- END USER LOGIN DROPDOWN -->
+            </ul>
+        </div>
+    }
+}
+else
+{
+ 
+    <div class="social-login pull-right" style="margin-left:20px;">
+        <a class="btn btn-primary btn-lg" href="https://www.facebook.com/VibrationAnalysisService/" target="_blank">
+            <i class="fa fa-facebook"></i>
+        </a>
+        <a class="btn btn-info btn-lg" href="https://www.linkedin.com/company/vibexchange" target="_blank">
+            <i class="fa fa-linkedin"></i>
+        </a>
+    </div>
+    <div class="nav navbar-nav navbar-right" style="display:inline">
+        <ul>
+            <li>
+                <a href="@Url.Action("Login", "Home")">
+
+                    <img src="~/Images/SignIn1.PNG" />
+                </a>
+            </li>
+
+        </ul>
+        @*<li><a style="color:greenyellow" href="@Url.Action("Login", "Home")" @(ViewContext.RouteData.Values["action"].ToString().Equals("Login") ? "class=nav_selected" : "") >Sign In
+            </a></li>*@
+        @* <li> <a href="@Url.Action("Login", "Home")" class="dropdown-toggle">
+              <img alt="" src="~/Images/Employee%20Log%20In%20Icon.jpg" />
+                <span class="chevron-circle-right">
+                </span>
+                <i class="fa fa-sign-in"></i>
+            </a></li>*@
+        @* <li><a style="color:greenyellow" href="@Url.Action("EmployeeLogin", "Employee")" @(ViewContext.RouteData.Values["action"].ToString().Equals("EmployeeLogin") ? "class=nav_selected" : "") >Expert Login
+            </a></li>*@
+    </div>
+}
+
+

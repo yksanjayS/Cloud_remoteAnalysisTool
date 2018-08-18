@@ -1,0 +1,278 @@
+﻿@model IEnumerable<VibExchange.Models.UploadFile>
+@using GridMvc.Html;
+@*<p>
+    @Html.ActionLink("Create New", "Create")
+</p>*@
+@*<script src="~/Scripts/jquery-1.8.2.min.js"></script>*@
+@*<script src="~/Script/jquery-1.8.2.js"></script>*@<script src="~/Scripts/bootstrap.min.js"></script>
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+<style>
+    .gridStyle {
+        text-align:left;
+        color:seagreen;
+    }
+</style>
+@Html.Grid(Model).Columns(columns =>
+{
+    columns.Add(c => c.MachineID,true).Titled("ID").Filterable(true);
+    columns.Add(c => c.TrainName).Titled("Machine Name").Filterable(true);
+    columns.Add(c => c.DEUnitType).Titled("Drive Unit").Filterable(true);
+    columns.Add(c => c.NDEUnit1).Titled("Driven Unit(First)").Filterable(true);
+    columns.Add(c => c.NDEUnit2).Titled("Driven Unit(Second)").Filterable(true);
+    columns.Add(c => c.NDEUnit3).Titled("Driven Unit(Third)").Filterable(true);
+    columns.Add(c => c.TotalPoint).Titled("Points Count").Filterable(true);   
+    columns.Add()
+    .Encoded(false)
+    .Sanitized(false)
+    .SetWidth(18)
+    .RenderValueAs(data => @Html.ActionLink("Delete", "Edit", "Clients", new { id = data.FileID }, new { target = "_blank" }));
+}).WithPaging(50).Sortable(true)
+
+
+
+@*<table>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Instrument)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AnalysisType)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MachineLabel)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MachineOrientaion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MountingType)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TransmissionType)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DEUnitType)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NDEUnitType)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.machine)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.coupling1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.coupling2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.coupling3)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.rpm)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.rpm1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.rpm2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.rpm3)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PointCount)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.filelabel)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fileName1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Uploaddate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FileType)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.sr)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.costperpoint)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.costpergraph)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.currentfile)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BearingType)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.chkId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.chkName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.chkStatus)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BearingMode)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.bearingDOIR)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.bearingDOOR)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.bearingCA)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.bearingDORE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.bearingNORE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.bearingManufacture)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.bearingModel)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Instrument)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AnalysisType)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MachineLabel)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MachineOrientaion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MountingType)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TransmissionType)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DEUnitType)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NDEUnitType)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.machine)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.coupling1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.coupling2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.coupling3)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.rpm)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.rpm1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.rpm2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.rpm3)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PointCount)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.filelabel)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.fileName1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Uploaddate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FileType)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.sr)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.costperpoint)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.costpergraph)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.currentfile)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BearingType)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.chkId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.chkName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.chkStatus)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BearingMode)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.bearingDOIR)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.bearingDOOR)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.bearingCA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.bearingDORE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.bearingNORE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.bearingManufacture)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.bearingModel)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+        </td>
+    </tr>
+}
+
+</table>*@
+

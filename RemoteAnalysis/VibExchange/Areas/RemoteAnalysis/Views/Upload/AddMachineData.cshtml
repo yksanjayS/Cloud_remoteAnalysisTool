@@ -1,0 +1,78 @@
+﻿@model VibExchange.Areas.RemoteAnalysis.Models.PlantData
+
+@{
+    ViewBag.Title = "AddMachineData";
+    Layout = "~/Views/Shared/_VibExchangeLayout.cshtml";
+}
+
+<h2>AddMachineData</h2>
+
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+      <div class="editor-label">
+            @Html.LabelFor(model => model.PlantName)
+        </div>
+      <div class="editor-field">
+            @Html.EditorFor(model => model.PlantName)
+            @Html.ValidationMessageFor(model => model.PlantName)
+        </div>
+    
+    
+    @*<fieldset>
+        <legend>PlantData</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.PlantID)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.PlantID)
+            @Html.ValidationMessageFor(model => model.PlantID)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.PlantName)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.PlantName)
+            @Html.ValidationMessageFor(model => model.PlantName)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.PlantDetail)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.PlantDetail)
+            @Html.ValidationMessageFor(model => model.PlantDetail)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.PlantCategory)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.PlantCategory)
+            @Html.ValidationMessageFor(model => model.PlantCategory)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.FileID)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.FileID)
+            @Html.ValidationMessageFor(model => model.FileID)
+        </div>
+
+        <p>
+            <input type="submit" value="Create" />
+        </p>
+    </fieldset>*@
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

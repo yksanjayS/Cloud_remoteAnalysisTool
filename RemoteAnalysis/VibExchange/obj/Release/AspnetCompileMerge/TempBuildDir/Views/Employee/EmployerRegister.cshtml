@@ -1,0 +1,242 @@
+﻿@model VibExchange.Models.RegisterModel
+
+@{
+    ViewBag.Title = "Employee Register";
+    Layout = "~/Views/Shared/_VibExchangeLayout.cshtml";
+}
+<style>
+    .radio {
+    }
+
+    .consImage {
+        width: 120px;
+        float: left;
+        /*-moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -ms-box-sizing: border-box;*/
+        box-sizing: border-box;
+    }
+
+    .doc_avatar {
+        border-radius: 3px;
+        width: 100%;
+    }
+</style>
+
+@using (Html.BeginForm("EmployerRegister", "Employee", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    <div class="container">
+        <div class="row" style="padding-left: 40px;">
+            <h4 style="color: chocolate"> Consultant Registration >> </h4>
+            <div class="form-group">
+                @Html.LabelFor(m => m.Name, new { @class = "col-md-2 control-label" })
+                <div class="col-md-10">
+                    @Html.TextBoxFor(m => m.Name, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(m => m.Name, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(m => m.UserName, new { @class = "col-md-2 control-label" })
+                <div class="col-md-10">
+                    @Html.TextBoxFor(m => m.UserName, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(m => m.UserName, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(m => m.Password, new { @class = "col-md-2 control-label" })
+                <div class="col-md-10">
+                    @Html.PasswordFor(m => m.Password, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(m => m.ConfirmPassword, new { @class = "col-md-2 control-label" })
+                <div class="col-md-10">
+                    @Html.PasswordFor(m => m.ConfirmPassword, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(m => m.ConfirmPassword, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(m => m.phoneno, new { @class = "col-md-2 control-label" })
+                <div class="col-md-10">
+                    @Html.TextBoxFor(m => m.phoneno, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(m => m.phoneno, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(m => m.Email, new { @class = "col-md-2 control-label" })
+                <div class="col-md-10">
+                    @Html.TextBoxFor(m => m.Email, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-6 control-label">
+                    @Html.CheckBoxFor(model => model.TermsAndConditions, new { @id = "chkcondition" })
+                    I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>
+                    <br />
+                    @Html.ValidationMessageFor(model => model.TermsAndConditions, "", new { @class = "text-danger" })
+                </div>
+
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-2" style="padding-left: 62px;">
+                <input type="submit" value="Register" class="btn btn-success" />
+            </div>
+        </div>
+        <div>
+            @Html.ActionLink("Back to Login", "Login", "Home")
+        </div>
+    </div>
+}
+
+
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
+
+<script>
+    $(document).ready(function () {
+        $('#grad').hide();
+        $('#pgrad').hide();
+        $('#certificate').hide();
+
+        $(function () {
+            $('#Graduation').change(function () {
+                var value = $(this).val();
+                var selectedText = $("#Graduation option:selected").text();
+                if (selectedText == "Other") {
+                    $('#grad').show();
+                }
+                else {
+                    $('#grad').hide();
+                }
+            });
+        });
+        $(function () {
+            $('#PostGraduation').change(function () {
+                var value = $(this).val();
+                var selectedText = $("#PostGraduation option:selected").text();
+                if (selectedText == "Other") {
+                    $('#pgrad').show();
+                }
+                else {
+                    $('#pgrad').hide();
+                }
+            });
+        });
+        $(function () {
+            $('#Certificate').change(function () {
+                var value = $(this).val();
+                var selectedText = $("#Certificate option:selected").text();
+                if (selectedText == "Other") {
+                    $('#certificate').show();
+                }
+                else {
+                    $('#certificate').hide();
+                }
+            });
+        });
+
+        $("#btnUploadEdit").click(function (e) {
+            e.preventDefault();
+            $("#jqGridMachine").trigger('reloadGrid');
+        });
+
+        $('.chkclass').click(function () {
+            var getchkid = $(this).attr('id');
+            var isChecked = $('#' + getchkid).is(':checked');
+
+            if ($('#' + getchkid).is(':checked') == true) {
+                $('#td' + $(this).val()).css("color", "white");
+                $('#td' + $(this).val()).css("background-color", "lightgray");
+            }
+            else {
+                $('#td' + $(this).val()).css("color", "black");
+                $('#td' + $(this).val()).css("background-color", "transparent");
+            }
+        });
+
+        $('#EmployeeSection').hide();
+        $('#ConsultantSection').hide();
+        $('#pAddress').hide();
+
+    });
+
+    ///////////////////////////Get item checked value for specialization/////////////////////////////////
+    function getValueUsingParentTag() {
+        var chkArray = [];
+
+        /* look for all checkboes that have a parent id called 'checkedid' attached to it and check if it was checked */
+        $("#checkedid input:checked").each(function () {
+            chkArray.push($(this).val());
+        });
+
+        /* we join the array separated by the comma */
+        var selected;
+        selected = chkArray.join(',') + ",";
+
+        /* check if there is selected checkboxes, by default the length is 1 as it contains one single comma */
+        if (selected.length > 1) {
+            $("#chkboxes").val(selected);
+            //alert("You have selected " + selected);
+        } else {
+            alert("Please at least one of the specialization");
+        }
+    }
+
+    $(function () {
+        $('#UserRole').change(function () {
+            var value = $(this).val();
+            var selectedText = $("#UserRole option:selected").text();
+
+            if (selectedText == "Select Your Role") {
+                $('#EmployeeSection').hide();
+                $('#ConsultantSection').hide();
+                $('#pAddress').hide();
+            }
+            else if (value == 'Employee') {
+                $('#EmployeeSection').show();
+                $('#ConsultantSection').hide();
+                $('#pAddress').hide();
+            }
+            else if (value == 'Consultant') {
+                $('#EmployeeSection').hide();
+                $('#ConsultantSection').show();
+                $('#pAddress').show();
+                $('#divCompany').hide();
+
+
+            }
+        });
+    });
+    $(function () {
+
+        $('input[name=companyif]').change(function () {
+            var value = $('input[name=companyif]:checked').val();
+            if (value == 'YES') {
+                $('#divCompany').show();
+            }
+            else { $('#divCompany').hide(); }
+        });
+        //var radiocheck;
+        //$('#YES').click(function () {
+        //    radiocheck = $('.radio:checked').val();
+        //});
+
+        ////var radiocheck = document.getElementById('compnyAvail').value;
+
+        //if (radiocheck == 'Yes') {
+        //    $('#divCompany').show();
+        //}
+        //else { $('#divCompany').hide(); }
+    });
+
+</script>

@@ -1,0 +1,213 @@
+﻿@model IEnumerable<VibExchange.Models.Enquiry>
+
+@{
+    ViewBag.Title = "Enquiry";
+    Layout = "~/Views/Shared/_VibExchangeLayout.cshtml";
+    var username = @Session["UserName"].ToString(); 
+}
+<script src="~/Scripts/jquery-1.8.3.min.js"></script>
+<script src="~/JQGridReq/jquery-1.9.0.min.js"></script>
+<link href="~/JQGridReq/jquery-ui-1.9.2.custom.css" rel="stylesheet" />
+<script src="~/JQGridReq/jquery.jqGrid.js"></script>
+<script src="~/JQGridReq/grid.locale-en.js"></script>
+<link href="~/JQGridReq/ui.jqgrid.css" rel="stylesheet" />
+<div class="container">
+    <h4 style="color:chocolate">All Enquiry...</h4>
+    <div class="form-group">
+        <table id="jqGridAllEnquiry"></table>
+        <div id="jQGridDemoPager">
+        </div>
+    </div>
+</div>
+<div id="myModal" class='modal fade in'>
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <button type="button" style="padding-right: 10px; padding-top: 10px; color: red;" class="close" data-dismiss="modal" aria-hidden="false" onclick="closeModal()">Close</button>
+            <div id="myModalContent">
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    var GetAllEnquiry = "@Url.Action("showEnquiry1", "Order")";    
+</script>
+<script type="text/javascript">
+
+    $(document).ready(function () {
+        BindAllEnquiry();
+    });
+
+    function BindAllEnquiry() {
+        //Bind jqgrid
+        jQuery("#jqGridAllEnquiry").jqGrid({
+            url: GetAllEnquiry,
+            datatype: "json",
+            colNames: ['Enquiry ID', 'User Name', 'Category', 'Subject','Enquiry Detail', 'Create Date', 'Buyer_Count', 'EnquiryStatus', 'Action'],
+            colModel: [
+                     { name: 'EnquiryID', index: 'EnquiryID', hidden: true },
+                     { name: 'UserName', index: 'UserName', hidden: true },
+                     { name: 'Enq_Category', index: 'Enq_Category', sortable: true },
+                     { name: 'Enq_Subject', index: 'Enq_Subject',hidden:true },
+                     { name: 'EnquiryDetail1', index: 'EnquiryDetail1' },
+                     { name: 'Enq_CreateDate', index: 'Enq_CreateDate', sortable: true },
+                     { name: 'Buyer_Count', index: 'Buyer_Count', sortable: true, hidden: true },
+                     { name: 'eStatus', index: 'eStatus', hidden: true },
+                     { name: 'Actions', index: 'Actions', sortable: false, title: false, formatter: ActionFormatter }
+            ],
+
+            pager: $('#jQGridDemoPager'),
+            //number of rows per page
+            rowNum: 50,
+            //initial sorting column
+            sortname: 'EnquiryID',
+            //initial sorting direction
+            sortorder: 'asc',
+            //we want to display total records count
+            viewrecords: true,
+            //grid width
+            autowidth: true,
+            //grid height
+            height: '100%',
+            pginput: true,
+            rownumbers: true,
+            gridview: true,
+            pgbuttons: true,
+            hoverrows: true,
+            viewrecords: true,
+            loadonce: true,
+            scroll: true,
+            emptyrecords: 'No records to display',
+            gridComplete: function () {
+                var $this = $(this), ids = $this.jqGrid('getDataIDs'), i, l = ids.length;
+                for (var j = 0; j < ids.length; j = j + 1) {
+                    $("#jqGridAllEnquiry").collapseSubGridRow(ids[j]);
+                }
+            },
+            loadComplete: function () {
+                //Below code is for keeping the rows in edit mode by default 
+                var $this = $(this), ids = $this.jqGrid('getDataIDs'), i, l = ids.length;
+                for (i = 0; i < l; i++) {
+                    $this.jqGrid('editRow', ids[i], false);
+                }
+            },
+        }).navGrid('#jQGridDemoPager',
+                { search: true, edit: false, add: false, del: false }
+              );
+    }
+
+    function ActionFormatter(cellvalue, options, rowObject) {
+        var primaryId = rowObject.EnquiryID;
+        if (primaryId == null || primaryId == undefined || primaryId == "")
+            primaryId = "0";
+        //alert(rowObject.eStatus);
+        if (rowObject.eStatus == 'YES') {
+            return "<a ID='btnBuy' href='javascript:BuyEnquiry(" + options.rowId + "," + primaryId + "," + options.gid + ")'style='color:blue; margin-left:5px;' title='Buy this Enquiry'><img src='@Url.Content("~/images/Buy.png")' alt='" + cellvalue + "'  /></a><span> | </span><a href='javascript:GetEnquiryDetail(" + options.rowId + "," + primaryId + "," + options.gid + ")' data-toggle='modal'  data-modal='myModal' title='information' onclick='GetEnquiryDetail(" + options.rowId + "," + primaryId + "," + options.gid + ")'><img src='@Url.Content("~/images/getDetail.png")' alt='" + cellvalue + "' /></a><span>";
+        }
+        else {
+            return "<a ID='btnBuy' href='javascript:BuyEnquiry(" + options.rowId + "," + primaryId + "," + options.gid + ")'style='color:blue; margin-left:5px;' title='Buy this Enquiry'><img src='@Url.Content("~/images/Buy.png")' alt='" + cellvalue + "'  /></a>";
+        }
+
+    }
+
+    function BuyEnquiry(rowId, primaryId, rowObject) {
+
+        var status = confirm("500 Points will be charged for this enquiry ! Prress OK for your confirmation !")
+        if (status) {
+            //e.preventDefault();
+            $.ajax({
+                url: "/Order/buyEnquiry",
+                type: "POST",
+                data: JSON.stringify({ 'Id': primaryId }),
+                dataType: "json",
+                traditional: true,
+                contentType: "application/json; charset=utf-8",
+                success: function (data) {
+
+                    // perform your save call here
+
+                    if (data.status == "Success") {
+                        alert("You have succesfully buy this enquiry. Now you can get information of this enquiry.");
+                        //$("#jqGridAllEnquiry").load();
+                        location.reload();
+                    }
+                    if (data.status == "Fail") {
+                        alert("You don't have enough balance in your account for this enquiry! Please recharge your account asap for getting more enquiries .");
+                    }
+                    if (data.status == "Database") {
+                        alert("Problem In Database. Please try again !");
+                    }
+                    if (data.status == "Client") {
+                        alert("Ooops ! Sorry ! You are not autherized to buy an enquiry !");
+                    }
+                },
+                error: function () {
+                    alert("An error has occured!!!");
+                }
+            });
+        }
+    }
+
+    function GetEnquiryDetail(rowId, primaryId, rowObject) {
+        $("#myModalContent").load("@Url.Action("showEnquiryDetail/", "Order",  new {EnquiryID = "_Id"})".replace("_Id", primaryId), function () {
+            $("#myModal").toggle();
+        });
+
+        //$.ajax({
+        //    url: '/uploaddownload/deletedrive',
+        //    type: 'post',
+        //    data: { id: primaryid },
+        //    datatype: 'actionresult',
+        //    success: function (result) {
+        //        alert(result);
+        //        //$("#" + table.id).jqgrid('delrowdata', (id != null && id != undefined && id != "") ? id : rowid);
+        //        $("#" + primaryid).parent().parent().remove();
+        //    },
+        //    error: function () { $("#" + primaryid).parent().parent().remove(); }
+        //});
+        //return false;
+    }
+
+    function DeleteDriven(rowId, primaryId, table) {
+        var Id = rowId.id;
+        var getData = $("#" + table.id).getRowData(Id);
+        if (confirm('Are you sure do you want to delete this record?')) {
+            $("#" + table.id).jqGrid('delRowData', (Id != null && Id != undefined && Id != "") ? Id : rowId);
+
+        }
+    }
+
+    function getEnquiryStatus(primaryId) {
+        var chksts = false;
+        $.ajax({
+            url: "/Order/getEnquiryStatus",
+            type: "POST",
+            data: JSON.stringify({ 'Id': primaryId }),
+            dataType: "json",
+            traditional: true,
+            contentType: "application/json; charset=utf-8",
+            success: function (data) {
+                if (data.sts == "True") {
+                    chksts = true;
+                }
+                if (data.sts == "False") {
+                }
+            },
+            error: function () {
+            }
+        });
+        return chksts;
+    }
+</script>
+<script type="text/javascript">
+    (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date(); a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-80727690-1', 'auto');
+    ga('send', 'pageview');
+
+</script>

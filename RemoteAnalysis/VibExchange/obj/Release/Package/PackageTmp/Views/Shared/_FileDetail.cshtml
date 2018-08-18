@@ -1,0 +1,64 @@
+﻿@model VibExchange.Models.UploadFile
+@{
+    ViewBag.Title = "Edit your file detail. ";
+}
+
+<script src="~/Scripts/jquery-1.8.2.min.js"></script>
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+
+<h4 style="color: chocolate">Your file detail.. </h4>
+
+<div class="row-fluid" style="padding-left: 40px">
+    <section id="uploadform">
+        @using (Html.BeginForm("Detail", "Clients", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Get, new { enctype = "multipart/form-data" }))
+        {
+            @Html.AntiForgeryToken()
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" }) 
+            <div class=" form-horizontal" role="form">
+                <div class="form-group ">
+                    @Html.LabelFor(model => model.fileName, new { @class = "col-md-2 control-label" })
+                    <div class="col-md-10">
+                        @Html.DisplayFor(model => model.fileName1, new { @class = "form-control" })
+                    </div>
+                </div>
+                <div class="form-group ">
+                    @Html.LabelFor(model => model.Instrument, new { @class = "col-md-2 control-label" })
+                    <div class="col-md-10">
+                        @Html.DisplayFor(model => model.Instrument, new { @class = "form-control" })
+                    </div>
+                </div>
+                <div class="form-group ">
+                    @Html.LabelFor(model => model.Uploaddate, new { @class = "col-md-2 control-label" })
+                    <div class="col-md-10">
+                        @Html.DisplayFor(model => model.Uploaddate, new { @class = "form-control" })
+                    </div>
+                </div>
+                 <div class="form-group ">
+                    @Html.LabelFor(model => model.AnalysisType, new { @class = "col-md-2 control-label" })
+                    <div class="col-md-10">
+                        @Html.DisplayFor(model => model.AnalysisType, new { @class = "form-control" })
+                    </div>
+                </div>
+                <div class="form-group ">
+                    @Html.LabelFor(model => model.Description, new { @class = "col-md-2 control-label" })
+                    <div class="col-md-10">
+                        @Html.DisplayFor(model => model.Description, new { @class = "form-control" })
+                    </div>
+                </div>
+
+                <div class="table table-responsive">
+                    @Html.Partial("_machineTable", Model.machine1)
+                </div>
+
+                <div class="form-group">
+                    <div class="col-md-offset-2 col-md-10">
+                        <button  class="btn btn-default" data-dismiss="modal" aria-hidden="false">OK</button>
+                        
+                    </div>
+                </div>
+            </div>
+        }
+    </section>
+
+</div>

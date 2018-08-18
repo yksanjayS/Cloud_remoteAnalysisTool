@@ -1,0 +1,62 @@
+﻿@model IEnumerable<VibExchange.Models.UploadFile>
+<style type="text/css">
+    .Table1 {
+        display: table;
+    }
+
+    .Title {
+        display: table-caption;
+        text-align: center;
+        font-weight: bold;
+        font-size: larger;
+    }
+
+    .Heading {
+        display: table-row;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    .Row {
+        display: table-row;
+    }
+
+    .Cell {
+        display: table-cell;
+        border: solid;
+        border-width: thin;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+</style>
+
+<div class="Table1">
+    <div class="Heading machinetr">
+        <div class="Cell">@Html.DisplayNameFor(model => model.machine)</div>
+        <div class="Cell">@Html.DisplayNameFor(model => model.rpm)  </div>
+        <div class="Cell">@Html.DisplayNameFor(model => model.coupling1) </div>
+        <div class="Cell">@Html.DisplayNameFor(model => model.rpm1)  </div>
+        <div class="Cell">@Html.DisplayNameFor(model => model.coupling2)  </div>
+        <div class="Cell">@Html.DisplayNameFor(model => model.rpm2)  </div>
+        <div class="Cell">@Html.DisplayNameFor(model => model.coupling3)  </div>
+        <div class="Cell">@Html.DisplayNameFor(model => model.rpm3) </div>
+        <div class="Cell">@Html.DisplayNameFor(model => model.PointCount) </div>
+    </div>
+
+    @foreach (var item in Model)
+    {
+        <div class="Row">
+            <div class="Cell">@Html.DisplayFor(modelItem => item.machine)</div>
+            <div class="Cell">@Html.DisplayFor(modelItem => item.rpm)  </div>
+            <div class="Cell">@Html.DisplayFor(modelItem => item.coupling1)  </div>
+            <div class="Cell">@Html.DisplayFor(modelItem => item.rpm1) </div>
+            <div class="Cell">@Html.DisplayFor(modelItem => item.coupling2) </div>
+            <div class="Cell">@Html.DisplayFor(modelItem => item.rpm2) </div>
+            <div class="Cell">@Html.DisplayFor(modelItem => item.coupling3) </div>
+            <div class="Cell">@Html.DisplayFor(modelItem => item.rpm3) </div>
+              <div class="Cell">@Html.DisplayFor(modelItem => item.PointCount) </div>
+        </div>
+    }
+
+
+</div>

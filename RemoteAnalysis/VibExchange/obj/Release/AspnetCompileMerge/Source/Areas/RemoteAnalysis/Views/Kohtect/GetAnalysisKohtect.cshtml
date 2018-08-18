@@ -1,0 +1,245 @@
+﻿@model IEnumerable<VibExchange.Areas.RemoteAnalysis.Models.FileDetail>
+
+
+@{
+    ViewBag.Title = "Remote Analysis";
+    Layout = "~/Views/Shared/_VibExchangeLayout.cshtml";
+}
+@section scripts{
+    @Styles.Render("~/Content/jsTree/themes/proton/style.min.css")
+    @*@Scripts.Render("~/Scripts/jsTree3/jstree.min.js")
+        @Scripts.Render("~/bundles/jqueryval")*@
+}
+
+<style>
+    /* Note: Try to remove the following lines to see the effect of CSS positioning */
+    .affix {
+        top: 0;
+        width: 100%;
+    }
+
+        .affix + .container-fluid {
+            padding-top: 70px;
+        }
+</style>
+
+<div class="nav navbar-inner">
+    <div class="row-fluid" id="divFeatures" style="border-bottom:solid 2px lightcoral">
+        <div class="col-md-2" id="divDisplay" style="margin-bottom: 3px; padding-left:10px;">
+            <h5 style="padding-top: 12px; padding-bottom: 3px; color: lightcoral;">Displays</h5>
+            <input type="button" value="Area" id="btnArea" class="btn-sm btn-info" />
+            @*<input type="button" value="Dual Graph" id="btnDualGraph" class="btn-warning" />*@
+            <input type="button" value="Trend" id="btnTrend" class="btn-sm btn-info" />
+        </div>
+        <div class="col-md-5" id="divMarkers" style="margin-bottom: 3px; border-right: solid 1px #4f9ae6; border-left: solid 1px #4f9ae6; padding-left: 10px;">
+            <h5 style="padding-top: 12px; padding-bottom: 3px; color: lightcoral;">Markers</h5>
+            <div class="col-md-4" style="padding-left:1px;">
+                @Html.DropDownList("Cursors", new List<SelectListItem>{
+                    new SelectListItem{ Text="Single", Value = "Single" },
+                     new SelectListItem{ Text="Cross Hair", Value = "CrossHair"},
+                      new SelectListItem{ Text="Harmonic", Value = "Harmonic" },
+                     new SelectListItem{ Text="Peak", Value = "Peak"}
+                 }, "Select Cursor", new { @class = "form-control" })
+            </div>
+            <div class="col-md-8" style="padding-left: 10px;">
+                <input type="button" value="Fault Frequency" id="btnFaultFrequency" class="btn-sm btn-info" />
+                <input type="button" value="RPM" id="btnRpm" class="btn-sm btn-info" />
+                <input type="button" value="Bearing Frequency" id="btnBearing" class="btn-sm btn-info" />
+            </div>
+        </div>
+        <div class="col-md-3" id="divConvertions" style="margin-bottom: 3px; border-right: solid 1px #4f9ae6; padding-left: 10px;">
+            <h5 style="padding-top: 12px; padding-bottom: 3px; color: lightcoral;">Unit & Parameter Conversions</h5>
+            <input type="button" value="Change 'X' unit" id="btnChangexUnit" class="btn-sm btn-info" data-toggle="modal" data-target="#myModal" />
+            <input type="button" value="Change 'Y' Unit" id="btnChangeyUnit" class="btn-sm btn-info" data-toggle="modal" data-target="#myModal" />
+            @*<input type="button" value="Change Parameter" id="btnChangeParameter" class=" btn-info" data-toggle="modal" data-target="#myModal" />*@
+        </div>
+        <div class="col-md-2" id="divColors" style="margin-bottom: 3px; padding-left: 10px;">
+            <h5 style="padding-top: 12px; padding-bottom: 3px; color: lightcoral;">Display Windows</h5>
+            @*<div style="padding-left:1px;">
+                @Html.DropDownList("Reports", new List<SelectListItem>{
+                    new SelectListItem{ Text="Overall With Alarm", Value = "Overall With Alarm" }
+                 }, "Select Report", new { @class = "form-control" })
+            </div>*@
+            <div><a href="@Url.Action("GenerateReport", "Upload", new { area = "RemoteAnalysis", ReportName = "Overall With Alarm" })">Get Aalrms Report</a></div>
+            @*<input type="checkbox" id="chkRoute" name="route" value="Route" class="checkbox checkbox-inline" checked> Route
+                <input type="checkbox" id="chkGraph" name="graph" value="Graph" class="checkbox checkbox-inline" checked>Graph & Data
+                <input type="checkbox" id="chkData" name="data" value="Data" class="checkbox checkbox-inline" checked> Data*@
+        </div>
+    </div>
+    <div class="container-fluid" style="overflow:auto;margin-top:20px;">
+        <div class="col-md-2" id="divRoute" style="padding-top: 5px; overflow: scroll; height:100vh">
+            <div style="margin-bottom:3px;">
+            </div>
+            <div id="planttree" style="height: 600px; width: 100%; padding-bottom: 3%; ">
+            </div>
+        </div>
+        <div class="col-md-10" id="divGraph" style="border-left: solid 1px #4f9ae6; height:100vh; padding-top:15px;">
+            <div id="detailDisplay" style="min-width:100%"> </div>
+            <div>
+                <div id="divReport">
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<div id='myModal' class="modal fade in">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" style="padding-right: 1%; padding-top: 1%; color: red;" class="close" data-dismiss="modal" onclick="closeModal()">Close</button>
+            </div>
+            <div id='myModalContent'></div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    $(function () {
+        $.ajaxSetup({ cache: false });
+        $("a[data-modal]").on("click", function (e) {
+            $('#myModalContent').load(this.href, function () {
+                $('#myModal').toggle();
+                //$('#myModal').modal({
+                //    /*backdrop: 'static',*/
+                //    keyboard: true
+                //}, 'show');
+            });
+            return false;
+        });
+    });
+
+    function closeModal() {
+        $('#myModal').toggle();
+    }
+</script>
+<script>
+    var selectednode = null;
+    var node = null;
+    $(document).ready(function () {
+        function addEventListener() {
+            $('#divFeatures').hide();
+            $("#planttree").on("select_node.jstree", function (event, node) {
+                selectednode = node.instance.get_selected();
+                if (selectednode.length === 1) {
+                    ShowPlant(selectednode);
+                } else if (selectednode.length > 1) {
+                    alert("You have not selected anything !");
+                }
+            });
+        }
+        $(function () {
+            $('#planttree').jstree({
+                core: {
+                    themes: {
+                        'name': 'proton',
+                        'responsive': true,
+                        'check_callback': true
+                    },
+                    data: {
+                        dataType: "json",
+                        url: "@Url.Action("CreateHierarchy", "Kohtect", new { area = "RemoteAnalysis" })"
+                    },
+                    rules: {
+                        metadata: "mdata",
+                        use_inline: true,
+                        clickable: ["all"],
+                        deletable: ["all"],
+                        renameable: ["all"],
+                        creatable: ["all"],
+                        draggable: ["all"],
+                        dragrules: ["child * child", "child inside root", "tree-drop inside root"],
+                        createat: ["top"],
+                        drag_button: "left",
+                        droppable: ["tree-drop"]
+                    }
+                },
+                plugins: ["themes", "json_data", "ui", "state"]
+            })
+            addEventListener();
+        });
+    });
+
+    $(function () {
+        $("tr.stripe:even").css("background-color", "#D0D0D0");
+        $("tr.stripe:odd").css("background-color", "#E5E5E5");
+    });
+    function closeModal() {
+        $('#myModal').toggle();
+    }
+    $('#planttree').on('ready.jstree', function () {
+        $("#planttree").jstree("open_all");
+        $("#planttree").jstree("select_node", "ul > li:first");
+        var Selectednode1 = $("#planttree").jstree("get_selected");
+        addEventListener();
+    });
+
+    //////////////////////// Function for show detail of selected Node////////////////////////
+
+    function ShowPlant(nodeid) {
+        $.ajax({
+            url: "@Url.Action("RouteDetail", "Upload", new { area = "RemoteAnalysis" })",
+            type: 'POST',
+            data: { 'param': String(nodeid) },
+            success: function (data) {
+                if ('@ViewBag.NodeType != "Graph"') {
+                    $('#divFeatures').hide();
+                }
+                $('#detailDisplay').html('');
+                $('#detailDisplay').html(data);
+            }
+        });
+    }
+    function UpdatePoint(nodeid) {
+        $.ajax({
+            url: "@Url.Action("UpdatePoint", "Upload", new { area = "RemoteAnalysis" })",
+            type: 'POST',
+            data: { 'nodeid': String(nodeid) },
+            success: function (data) {
+                $('#detailDisplay').html('');
+                $('#detailDisplay').html(data);
+            }
+        });
+    }
+    ///////////////////////////////////////---------Dispaly window section-------/////////////////////////////////
+    $(function () {
+        $("#chkRoute").click(function () {
+            if ($(this).is(":checked")) {
+                $("#divRoute").show();
+            } else {
+                $("#divRoute").hide();
+                $('#jqChart').resizable();
+            }
+        });
+        $("#chkGraph").click(function () {
+            if ($(this).is(":checked")) {
+                $("#divGraph").show();
+
+            } else {
+                $("#divGraph").hide();
+                $('#jqChart').resizable();
+            }
+        });
+        //$("#chkData").click(function () {
+        //    if ($(this).is(":checked")) {
+        //        $("#divData").show();
+        //    } else {
+        //        $("#divData").hide();
+        //        $('#jqChart').resizable();
+        //    }
+        //});
+    });
+
+    /////////////////////////////////////-----------Reporting Section---------////////////////////////////////////////////
+    $('#Reports').change(function () {
+        var reportName = this.value;
+        $.ajax({
+            url: "@Url.Action("GenerateReport", "Upload", new { area = "RemoteAnalysis"})",
+            type: 'POST',
+            data: { ReportName: reportName },
+            success: function (data) {
+                $('#detailDisplay').html('');
+                $('#detailDisplay').html(data);
+            }
+        });
+    });
+</script>

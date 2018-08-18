@@ -1,0 +1,145 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Iadept_CloudModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Emp_Detail">
+    <Key>
+      <PropertyRef Name="EmpID" />
+    </Key>
+    <Property Name="AutoId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EmpID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="IsEnabled" Type="bit" />
+    <Property Name="Emp_Name" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="DisplayName" Type="varchar" MaxLength="50" />
+    <Property Name="LoginID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Password" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="UserRole" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Designation" Type="varchar" MaxLength="50" />
+    <Property Name="Department" Type="varchar" MaxLength="50" />
+    <Property Name="PhoneNo" Type="varchar" MaxLength="50" />
+    <Property Name="EmailId" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Image" Type="varchar(max)" />
+    <Property Name="Specialization" Type="varchar" MaxLength="200" />
+    <Property Name="Experience" Type="varchar" MaxLength="20" />
+    <Property Name="EAddress" Type="varchar" MaxLength="200" />
+    <Property Name="ECountry" Type="varchar" MaxLength="50" />
+    <Property Name="EState" Type="varchar" MaxLength="50" />
+    <Property Name="ECity" Type="varchar" MaxLength="50" />
+    <Property Name="Academic" Type="varchar" MaxLength="50" />
+    <Property Name="Graduation" Type="varchar" MaxLength="50" />
+    <Property Name="Postgraduation" Type="varchar" MaxLength="50" />
+    <Property Name="Certification" Type="varchar" MaxLength="50" />
+    <Property Name="CompName" Type="varchar" MaxLength="50" />
+    <Property Name="CAddress" Type="varchar" MaxLength="200" />
+    <Property Name="CCountry" Type="varchar" MaxLength="50" />
+    <Property Name="CState" Type="varchar" MaxLength="50" />
+    <Property Name="CCity" Type="varchar" MaxLength="50" />
+    <Property Name="OfficeContactNo" Type="varchar" MaxLength="50" />
+    <Property Name="CompWebsite" Type="varchar" MaxLength="50" />
+    <Property Name="CreationDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="UserDetail">
+    <Key>
+      <PropertyRef Name="UserName" />
+    </Key>
+    <Property Name="AutoId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="uPassword" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="uName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Email_ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Address" Type="varchar" MaxLength="200" />
+    <Property Name="City" Type="varchar" MaxLength="200" />
+    <Property Name="State" Type="varchar" MaxLength="200" />
+    <Property Name="Country" Type="varchar" MaxLength="200" />
+    <Property Name="ImagePath" Type="varchar(max)" />
+    <Property Name="uCompanyName" Type="varchar" MaxLength="100" />
+    <Property Name="uCompanyAddress" Type="varchar" MaxLength="200" />
+    <Property Name="uCity" Type="varchar" MaxLength="50" />
+    <Property Name="uState" Type="varchar" MaxLength="50" />
+    <Property Name="uCountry" Type="varchar" MaxLength="50" />
+    <Property Name="officePhone" Type="varchar" MaxLength="20" />
+    <Property Name="uMobile_No" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="uCompany_Website" Type="varchar" MaxLength="50" />
+    <Property Name="UserRole" Type="varchar" MaxLength="10" />
+    <Property Name="CreationDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="UserProfile">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="UserId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserName" Type="nvarchar" MaxLength="56" Nullable="false" />
+  </EntityType>
+  <EntityType Name="webpages_Membership">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="UserId" Type="int" Nullable="false" />
+    <Property Name="CreateDate" Type="datetime" />
+    <Property Name="ConfirmationToken" Type="nvarchar" MaxLength="128" />
+    <Property Name="IsConfirmed" Type="bit" />
+    <Property Name="LastPasswordFailureDate" Type="datetime" />
+    <Property Name="PasswordFailuresSinceLastSuccess" Type="int" Nullable="false" />
+    <Property Name="Password" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="PasswordChangedDate" Type="datetime" />
+    <Property Name="PasswordSalt" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="PasswordVerificationToken" Type="nvarchar" MaxLength="128" />
+    <Property Name="PasswordVerificationTokenExpirationDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="webpages_OAuthMembership">
+    <Key>
+      <PropertyRef Name="Provider" />
+      <PropertyRef Name="ProviderUserId" />
+    </Key>
+    <Property Name="Provider" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="ProviderUserId" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="UserId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="webpages_Roles">
+    <Key>
+      <PropertyRef Name="RoleId" />
+    </Key>
+    <Property Name="RoleId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="RoleName" Type="nvarchar" MaxLength="256" Nullable="false" />
+  </EntityType>
+  <EntityType Name="webpages_UsersInRoles">
+    <Key>
+      <PropertyRef Name="UserId" />
+      <PropertyRef Name="RoleId" />
+    </Key>
+    <Property Name="UserId" Type="int" Nullable="false" />
+    <Property Name="RoleId" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="fk_RoleId">
+    <End Role="webpages_Roles" Type="Self.webpages_Roles" Multiplicity="1" />
+    <End Role="webpages_UsersInRoles" Type="Self.webpages_UsersInRoles" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="webpages_Roles">
+        <PropertyRef Name="RoleId" />
+      </Principal>
+      <Dependent Role="webpages_UsersInRoles">
+        <PropertyRef Name="RoleId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="spAddUser" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="UserName" Type="varchar" Mode="In" />
+    <Parameter Name="Password" Type="varchar" Mode="In" />
+    <Parameter Name="Name" Type="varchar" Mode="In" />
+    <Parameter Name="EmailID" Type="varchar" Mode="In" />
+    <Parameter Name="CompanyName" Type="varchar" Mode="In" />
+    <Parameter Name="ContactNo" Type="varchar" Mode="In" />
+    <Parameter Name="UserRole" Type="varchar" Mode="In" />
+  </Function>
+  <EntityContainer Name="Iadept_CloudModelStoreContainer">
+    <EntitySet Name="Emp_Detail" EntityType="Self.Emp_Detail" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UserDetail" EntityType="Self.UserDetail" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UserProfile" EntityType="Self.UserProfile" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="webpages_Membership" EntityType="Self.webpages_Membership" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="webpages_OAuthMembership" EntityType="Self.webpages_OAuthMembership" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="webpages_Roles" EntityType="Self.webpages_Roles" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="webpages_UsersInRoles" EntityType="Self.webpages_UsersInRoles" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="fk_RoleId" Association="Self.fk_RoleId">
+      <End Role="webpages_Roles" EntitySet="webpages_Roles" />
+      <End Role="webpages_UsersInRoles" EntitySet="webpages_UsersInRoles" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

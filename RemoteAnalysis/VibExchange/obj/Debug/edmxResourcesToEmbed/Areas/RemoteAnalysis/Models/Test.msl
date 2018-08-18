@@ -1,0 +1,269 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Iadept_CloudModelStoreContainer" CdmEntityContainer="Iadept_CloudEntities">
+    <EntitySetMapping Name="Emp_Detail">
+      <EntityTypeMapping TypeName="Iadept_CloudModel.Emp_Detail">
+        <MappingFragment StoreEntitySet="Emp_Detail">
+          <ScalarProperty Name="AutoId" ColumnName="AutoId" />
+          <ScalarProperty Name="EmpID" ColumnName="EmpID" />
+          <ScalarProperty Name="IsEnabled" ColumnName="IsEnabled" />
+          <ScalarProperty Name="Emp_Name" ColumnName="Emp_Name" />
+          <ScalarProperty Name="DisplayName" ColumnName="DisplayName" />
+          <ScalarProperty Name="LoginID" ColumnName="LoginID" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="UserRole" ColumnName="UserRole" />
+          <ScalarProperty Name="Designation" ColumnName="Designation" />
+          <ScalarProperty Name="Department" ColumnName="Department" />
+          <ScalarProperty Name="PhoneNo" ColumnName="PhoneNo" />
+          <ScalarProperty Name="EmailId" ColumnName="EmailId" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="Specialization" ColumnName="Specialization" />
+          <ScalarProperty Name="Experience" ColumnName="Experience" />
+          <ScalarProperty Name="EAddress" ColumnName="EAddress" />
+          <ScalarProperty Name="ECountry" ColumnName="ECountry" />
+          <ScalarProperty Name="EState" ColumnName="EState" />
+          <ScalarProperty Name="ECity" ColumnName="ECity" />
+          <ScalarProperty Name="Academic" ColumnName="Academic" />
+          <ScalarProperty Name="Graduation" ColumnName="Graduation" />
+          <ScalarProperty Name="Postgraduation" ColumnName="Postgraduation" />
+          <ScalarProperty Name="Certification" ColumnName="Certification" />
+          <ScalarProperty Name="CompName" ColumnName="CompName" />
+          <ScalarProperty Name="CAddress" ColumnName="CAddress" />
+          <ScalarProperty Name="CCountry" ColumnName="CCountry" />
+          <ScalarProperty Name="CState" ColumnName="CState" />
+          <ScalarProperty Name="CCity" ColumnName="CCity" />
+          <ScalarProperty Name="OfficeContactNo" ColumnName="OfficeContactNo" />
+          <ScalarProperty Name="CompWebsite" ColumnName="CompWebsite" />
+          <ScalarProperty Name="CreationDate" ColumnName="CreationDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblAlarms">
+      <EntityTypeMapping TypeName="Iadept_CloudModel.tblAlarm">
+        <MappingFragment StoreEntitySet="tblAlarm">
+          <ScalarProperty Name="AlarmID" ColumnName="AlarmID" />
+          <ScalarProperty Name="AlarmName" ColumnName="AlarmName" />
+          <ScalarProperty Name="AlarmType" ColumnName="AlarmType" />
+          <ScalarProperty Name="HighValue" ColumnName="HighValue" />
+          <ScalarProperty Name="LowValue" ColumnName="LowValue" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblAreas">
+      <EntityTypeMapping TypeName="Iadept_CloudModel.tblArea">
+        <MappingFragment StoreEntitySet="tblArea">
+          <ScalarProperty Name="AreaID" ColumnName="AreaID" />
+          <ScalarProperty Name="AreaName" ColumnName="AreaName" />
+          <ScalarProperty Name="AreaDetail" ColumnName="AreaDetail" />
+          <ScalarProperty Name="FileID" ColumnName="FileID" />
+          <ScalarProperty Name="ParentID" ColumnName="ParentID" />
+          <ScalarProperty Name="ParentType" ColumnName="ParentType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblBearings">
+      <EntityTypeMapping TypeName="Iadept_CloudModel.tblBearing">
+        <MappingFragment StoreEntitySet="tblBearing">
+          <ScalarProperty Name="BearingID" ColumnName="BearingID" />
+          <ScalarProperty Name="BearingMake" ColumnName="BearingMake" />
+          <ScalarProperty Name="BearingModel" ColumnName="BearingModel" />
+          <ScalarProperty Name="InnerDia" ColumnName="InnerDia" />
+          <ScalarProperty Name="OuterDia" ColumnName="OuterDia" />
+          <ScalarProperty Name="ContactAngel" ColumnName="ContactAngel" />
+          <ScalarProperty Name="RollingDia" ColumnName="RollingDia" />
+          <ScalarProperty Name="NoOfRollingElement" ColumnName="NoOfRollingElement" />
+          <ScalarProperty Name="Balls" ColumnName="Balls" />
+          <ScalarProperty Name="FTF" ColumnName="FTF" />
+          <ScalarProperty Name="BSF" ColumnName="BSF" />
+          <ScalarProperty Name="BPFO" ColumnName="BPFO" />
+          <ScalarProperty Name="BPFI" ColumnName="BPFI" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblFaultFrequencies">
+      <EntityTypeMapping TypeName="Iadept_CloudModel.tblFaultFrequency">
+        <MappingFragment StoreEntitySet="tblFaultFrequency">
+          <ScalarProperty Name="FrequencyID" ColumnName="FrequencyID" />
+          <ScalarProperty Name="FrequencyName" ColumnName="FrequencyName" />
+          <ScalarProperty Name="FrequencyValue" ColumnName="FrequencyValue" />
+          <ScalarProperty Name="PointID" ColumnName="PointID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblInstruments">
+      <EntityTypeMapping TypeName="Iadept_CloudModel.tblInstrument">
+        <MappingFragment StoreEntitySet="tblInstrument">
+          <ScalarProperty Name="InstrumentID" ColumnName="InstrumentID" />
+          <ScalarProperty Name="InstrumentName" ColumnName="InstrumentName" />
+          <ScalarProperty Name="ManufacturerName" ColumnName="ManufacturerName" />
+          <ScalarProperty Name="FileID" ColumnName="FileID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblMachines">
+      <EntityTypeMapping TypeName="Iadept_CloudModel.tblMachine">
+        <MappingFragment StoreEntitySet="tblMachine">
+          <ScalarProperty Name="MachineID" ColumnName="MachineID" />
+          <ScalarProperty Name="MachineName" ColumnName="MachineName" />
+          <ScalarProperty Name="MachineDetail" ColumnName="MachineDetail" />
+          <ScalarProperty Name="MachineClass" ColumnName="MachineClass" />
+          <ScalarProperty Name="RPMDriven" ColumnName="RPMDriven" />
+          <ScalarProperty Name="PulseRevolution" ColumnName="PulseRevolution" />
+          <ScalarProperty Name="FileID" ColumnName="FileID" />
+          <ScalarProperty Name="ParentID" ColumnName="ParentID" />
+          <ScalarProperty Name="ParentType" ColumnName="ParentType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblPlants">
+      <EntityTypeMapping TypeName="Iadept_CloudModel.tblPlant">
+        <MappingFragment StoreEntitySet="tblPlant">
+          <ScalarProperty Name="PlantID" ColumnName="PlantID" />
+          <ScalarProperty Name="PlantName" ColumnName="PlantName" />
+          <ScalarProperty Name="Category" ColumnName="Category" />
+          <ScalarProperty Name="PlantDetail" ColumnName="PlantDetail" />
+          <ScalarProperty Name="FileID" ColumnName="FileID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblPoints">
+      <EntityTypeMapping TypeName="Iadept_CloudModel.tblPoint">
+        <MappingFragment StoreEntitySet="tblPoint">
+          <ScalarProperty Name="PointID" ColumnName="PointID" />
+          <ScalarProperty Name="PointName" ColumnName="PointName" />
+          <ScalarProperty Name="PointDetail" ColumnName="PointDetail" />
+          <ScalarProperty Name="PointBearingID" ColumnName="PointBearingID" />
+          <ScalarProperty Name="FileID" ColumnName="FileID" />
+          <ScalarProperty Name="ParentID" ColumnName="ParentID" />
+          <ScalarProperty Name="ParentType" ColumnName="ParentType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblTrains">
+      <EntityTypeMapping TypeName="Iadept_CloudModel.tblTrain">
+        <MappingFragment StoreEntitySet="tblTrain">
+          <ScalarProperty Name="TrainID" ColumnName="TrainID" />
+          <ScalarProperty Name="TrainName" ColumnName="TrainName" />
+          <ScalarProperty Name="TrainDetail" ColumnName="TrainDetail" />
+          <ScalarProperty Name="NoOfMachine" ColumnName="NoOfMachine" />
+          <ScalarProperty Name="FileID" ColumnName="FileID" />
+          <ScalarProperty Name="ParentID" ColumnName="ParentID" />
+          <ScalarProperty Name="ParentType" ColumnName="ParentType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblUnits">
+      <EntityTypeMapping TypeName="Iadept_CloudModel.tblUnit">
+        <MappingFragment StoreEntitySet="tblUnit">
+          <ScalarProperty Name="UnitID" ColumnName="UnitID" />
+          <ScalarProperty Name="SensorType" ColumnName="SensorType" />
+          <ScalarProperty Name="Unit" ColumnName="Unit" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblUserMasters">
+      <EntityTypeMapping TypeName="Iadept_CloudModel.tblUserMaster">
+        <MappingFragment StoreEntitySet="tblUserMaster">
+          <ScalarProperty Name="FileID" ColumnName="FileID" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="InstrumentID" ColumnName="InstrumentID" />
+          <ScalarProperty Name="AnalysisID" ColumnName="AnalysisID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserDetails">
+      <EntityTypeMapping TypeName="Iadept_CloudModel.UserDetail">
+        <MappingFragment StoreEntitySet="UserDetail">
+          <ScalarProperty Name="AutoId" ColumnName="AutoId" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="uPassword" ColumnName="uPassword" />
+          <ScalarProperty Name="uName" ColumnName="uName" />
+          <ScalarProperty Name="Email_ID" ColumnName="Email_ID" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="Country" ColumnName="Country" />
+          <ScalarProperty Name="ImagePath" ColumnName="ImagePath" />
+          <ScalarProperty Name="uCompanyName" ColumnName="uCompanyName" />
+          <ScalarProperty Name="uCompanyAddress" ColumnName="uCompanyAddress" />
+          <ScalarProperty Name="uCity" ColumnName="uCity" />
+          <ScalarProperty Name="uState" ColumnName="uState" />
+          <ScalarProperty Name="uCountry" ColumnName="uCountry" />
+          <ScalarProperty Name="officePhone" ColumnName="officePhone" />
+          <ScalarProperty Name="uMobile_No" ColumnName="uMobile_No" />
+          <ScalarProperty Name="uCompany_Website" ColumnName="uCompany_Website" />
+          <ScalarProperty Name="UserRole" ColumnName="UserRole" />
+          <ScalarProperty Name="CreationDate" ColumnName="CreationDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserProfiles">
+      <EntityTypeMapping TypeName="Iadept_CloudModel.UserProfile">
+        <MappingFragment StoreEntitySet="UserProfile">
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="webpages_Membership">
+      <EntityTypeMapping TypeName="Iadept_CloudModel.webpages_Membership">
+        <MappingFragment StoreEntitySet="webpages_Membership">
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="ConfirmationToken" ColumnName="ConfirmationToken" />
+          <ScalarProperty Name="IsConfirmed" ColumnName="IsConfirmed" />
+          <ScalarProperty Name="LastPasswordFailureDate" ColumnName="LastPasswordFailureDate" />
+          <ScalarProperty Name="PasswordFailuresSinceLastSuccess" ColumnName="PasswordFailuresSinceLastSuccess" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="PasswordChangedDate" ColumnName="PasswordChangedDate" />
+          <ScalarProperty Name="PasswordSalt" ColumnName="PasswordSalt" />
+          <ScalarProperty Name="PasswordVerificationToken" ColumnName="PasswordVerificationToken" />
+          <ScalarProperty Name="PasswordVerificationTokenExpirationDate" ColumnName="PasswordVerificationTokenExpirationDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="webpages_OAuthMembership">
+      <EntityTypeMapping TypeName="Iadept_CloudModel.webpages_OAuthMembership">
+        <MappingFragment StoreEntitySet="webpages_OAuthMembership">
+          <ScalarProperty Name="Provider" ColumnName="Provider" />
+          <ScalarProperty Name="ProviderUserId" ColumnName="ProviderUserId" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="webpages_Roles">
+      <EntityTypeMapping TypeName="Iadept_CloudModel.webpages_Roles">
+        <MappingFragment StoreEntitySet="webpages_Roles">
+          <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+          <ScalarProperty Name="RoleName" ColumnName="RoleName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="webpages_UsersInRoles">
+      <EntityTypeMapping TypeName="Iadept_CloudModel.webpages_UsersInRoles">
+        <MappingFragment StoreEntitySet="webpages_UsersInRoles">
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblFileDatas">
+      <EntityTypeMapping TypeName="Iadept_CloudModel.tblFileData">
+        <MappingFragment StoreEntitySet="tblFileData">
+          <ScalarProperty Name="FileID" ColumnName="FileID" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="FileName" ColumnName="FileName" />
+          <ScalarProperty Name="FileType" ColumnName="FileType" />
+          <ScalarProperty Name="FileFormate" ColumnName="FileFormate" />
+          <ScalarProperty Name="InstrumentUsed" ColumnName="InstrumentUsed" />
+          <ScalarProperty Name="NoOfMachines" ColumnName="NoOfMachines" />
+          <ScalarProperty Name="NoOfPoints" ColumnName="NoOfPoints" />
+          <ScalarProperty Name="AnalysisMethod" ColumnName="AnalysisMethod" />
+          <ScalarProperty Name="ImagePath" ColumnName="ImagePath" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="DateOfUpload" ColumnName="DateOfUpload" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,104 @@
+﻿@model VibExchange.Models.UploadFile
+
+@{
+    ViewBag.Title = "Edit your file detail. ";
+}
+<script src="~/Scripts/jquery-1.8.2.min.js"></script>
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+
+<div class="row" style="padding-left: 40px">
+    <section id="uploadform">
+        @using (Html.BeginForm("Edit", "Clients", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { enctype = "multipart/form-data" }))
+        {
+            @Html.AntiForgeryToken()
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" }) 
+            <div class=" form-horizontal" role="form">
+                <div class="form-group ">
+                    @Html.LabelFor(model => model.currentfile, new { @class = "col-md-2 control-label" })
+                    <div class="col-md-10">
+                        @Html.TextBoxFor(model => model.currentfile, new { @class = "form-control", @readonly="readonly" })
+                        @Html.ValidationMessageFor(model => model.currentfile, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+                <div class="form-group ">
+                    @Html.LabelFor(model => model.Changefile, new { @class = "col-md-2 control-label" })
+                    <div class="col-md-6">
+                        <input type="file" name="FiletoChange" id="fileToChange" class="form-control" />
+                        <span class="field-validation-error" id="ErrorText" style="color: red"></span>
+                        <p style="padding-top:5px;color:blue;">      Select if you want to change your file !</p>
+                    </div>
+                </div>
+                 <div id="filetype" class="form-group ">
+                    @Html.LabelFor(model => model.FileType, new { @class = "col-md-2 control-label" })
+                    <div class="col-md-10">
+                        @Html.RadioButtonFor(model => model.FileType, "Data", new { @class = "radio radio-inline", id = "data" ,@checked=ViewBag.FileType})
+                        @Html.Label("DataFile", "Data File")
+                    </div>
+                    <div class="col-md-10">
+                        @Html.RadioButtonFor(model => model.FileType, "Image", new { @class = "radio radio-inline", id = "image"})
+                        @Html.Label("GraphImage", "Graph Image")
+                        @Html.ValidationMessageFor(model => model.Description, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+                <div class="form-group ">
+                    @Html.LabelFor(model => model.Instrument, new { @class = "col-md-2 control-label" })
+                    <div class="col-md-10">
+                        @Html.DropDownList("Instrument", new List<SelectListItem>{
+                    new SelectListItem{ Text="IMPAQ-ELITE", Value = "IMPAQ-ELITE" },
+                     new SelectListItem{ Text="DI-460", Value = "DI-460"},
+                      new SelectListItem{ Text="ENPAC", Value = "NPAQ" },
+                       new SelectListItem{ Text="IMXA-460", Value = "Imax-460" },
+                          new SelectListItem{ Text="VIBXPERT", Value = "VIBXPERT" },
+                     new SelectListItem{ Text="CSI-2130", Value = "CSI-2130"},
+                      new SelectListItem{ Text="CSI-2140", Value = "CSI-2140" },
+                         new SelectListItem{ Text="C911", Value = "C911" },
+                     new SelectListItem{ Text="FIELDPAQ", Value = "FIELDPAQ"},
+                      new SelectListItem{ Text="VB8", Value = "VB8" },
+                         new SelectListItem{ Text="ADASH-4400", Value = "ADASH-4400" },
+                     new SelectListItem{ Text="COCO-80", Value = "COCO-80"}
+                 }, "Select Instrument", new { @class = "form-control" })
+                        @Html.ValidationMessageFor(m => m.Instrument, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+                <div class="form-group ">
+                    @Html.LabelFor(model => model.AnalysisType, new { @class = "col-md-2 control-label" })
+                    <div class="col-md-10">
+                        @Html.DropDownList("AnalysisType", new List<SelectListItem>{  
+                       new SelectListItem{ Text="Indicative Analysis", Value = "Indicative Analysis" },  
+                       new SelectListItem{ Text="VibAnalyst Analysis", Value = "VibAnalyst Analysis"},   
+                       new SelectListItem{ Text="Expert Analysis", Value = "Expert Analysis" }
+                 }, "Select Analysis Type", new { @class = "form-control" })
+                        @Html.ValidationMessageFor(m => m.AnalysisType, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+                 <div class="form-group ">
+                    @Html.LabelFor(model => model.TotalPoint, new { @class = "col-md-2 control-label" })
+                    <div class="col-md-10">
+                        @Html.TextBoxFor(model => model.TotalPoint, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.TotalPoint, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+                <div class="form-group ">
+                    @Html.LabelFor(model => model.Description, new { @class = "col-md-2 control-label" })
+                    <div class="col-md-10">
+                        @Html.TextAreaFor(model => model.Description, 5, 25, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.Description, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-md-offset-2 col-md-10">
+                        <button id="btnUploadEdit" class="btn btn-default" onclick="location.href='@Url.Action("Edit", "Clients", new { target = "_blank" })'">Save Changes</button>
+
+                    </div>
+                </div>
+            </div>
+        }
+    </section>
+</div>
+
+
+
+
+

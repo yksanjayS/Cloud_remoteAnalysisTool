@@ -1,0 +1,217 @@
+﻿@model VibExchange.Models.RegisterModel
+
+@{
+    ViewBag.Title = "All Consultant List";
+    Layout = "~/Views/Shared/_VibExchangeLayout.cshtml";
+}
+@{
+    var username = Session["UserName"];
+}
+<script src="~/Scripts/jquery-1.8.3.min.js"></script>
+<style>
+    .searchbox {
+        padding-top: 20px;
+        background-color:cadetblue;
+    }
+
+    .consDeatil {
+        margin-left: 0px;
+        /*margin-right:10px;*/
+        background-color: #fff;
+        border: 1px solid;
+        border-radius: 7px 7px 7px 7px;
+        text-align: left;
+        box-shadow: -3px 5px 10px #ccc,inset -3px 5px 10px #0094ff;
+        box-sizing: border-box;
+    }
+
+    .conDetailCSS {
+        display: compact;
+        width: 100%;
+        height: auto;
+        font-size: 14px;
+        text-align: center;
+    }
+
+    div.vertical-line {
+        background-color: transparent;
+        height: 100%;
+        float: left;
+        border: 2px ridge silver;
+        border-radius: 2px;
+    }
+</style>
+<div class="container" style="background-color:cadetblue;">
+    @using (Html.BeginForm("EmployerRegister", "Employee", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+    {
+        @Html.ValidationSummary(true)
+        <div id="searchboxsection" class="row-fluid searchbox img-rounded">
+            <div class="col-md-3"></div>
+            <div class="col-md-6">
+                <input id="search" type="text" placeholder="Search Your Need Here..">
+                <input id="submit" type="submit" value="Search">
+            </div>
+            <div class="col-md-3">
+                <div style="vertical-align: text-bottom;">
+                    <input type="button" id="btnContactDetail" value="Send Your Enquiry >>" class="btn btn-default" data-toggle="modal" data-modal="myModal" onclick="checkUser();" />
+                </div>
+            </div>
+        </div>
+
+        <div style="padding-top: 5px; min-height: 100%; background-color: cadetblue;" class="col-md-3 img img-thumbnail">
+            <div class="title"><label style="color: lightskyblue;margin-bottom:10px;text-decoration:underline;">Filter Your Search</label></div>
+            <label style="color: lightskyblue;text-decoration:underline;">Location</label>
+            <ul style="font-family: Verdana, Georgia, Serif; font-size: 12px; color: white;">
+                <li>
+                    <input type="checkbox" id="chk1" value="Delhi" />
+                    @Html.Label("Delhi")
+                </li>
+                <li>
+                    <input type="checkbox" id="chk2" value="Agra" />
+                    @Html.Label("Agra")
+                </li>
+                <li>
+                    <input type="checkbox" id="chk3" value="Mumbai" />
+                    @Html.Label("Mumbai")
+                </li>
+                <li>
+                    <input type="checkbox" id="chk4" value="Kolkata" />
+                    @Html.Label("Kolkata")
+                </li>
+                <li>
+                    <input type="checkbox" id="chk5" value="Pune" />
+                    @Html.Label("Pune")
+                </li>
+                <li>
+                    <input type="checkbox" id="chk6" value="Noida" />
+                    @Html.Label("Noida")
+                </li>
+                <li>
+                    <input type="checkbox" id="chk7" value="Kanpur" />
+                    @Html.Label("Kanpur")
+                </li>
+                <li>
+                    <input type="checkbox" id="chk8" value="Lucknow" />
+                    @Html.Label("Lucknow")
+                </li>
+            </ul>
+            <label style="color: lightskyblue;text-decoration:underline;">Specialization</label>
+            <ul style="font-family: Verdana, Georgia, Serif; font-size: 12px; color: white;">
+                <li>
+                    <input type="checkbox" id="chkVib" value="Vibration" />
+                    @Html.Label("Vibration")
+                </li>
+                <li>
+                    <input type="checkbox" id="chkBal" value="Balancing" />
+                    @Html.Label("Balancing")
+                </li>
+                <li>
+                    <input type="checkbox" id="chkLeak" value="Laser Alignment" />
+                    @Html.Label("Laser Alignment")
+                </li>
+                <li>
+                    <input type="checkbox" id="chkThermal" value="Thermal Imaging" />
+                    @Html.Label("Thermal Imaging")
+                </li>
+            </ul>
+            <label style="color: lightskyblue;text-decoration:underline;">Certification</label>
+            <ul style="font-family: Arial, Georgia, Serif; font-size: 12px; color: white;">
+                <li>
+                    <input type="checkbox" id="CAT1" value="CAT-Level-1" />
+                    @Html.Label("CAT-Level-1")
+                </li>
+                <li>
+                    <input type="checkbox" id="CAT2" value="CAT-Level-2" />
+                    @Html.Label("CAT-Level-2")
+                </li>
+                <li>
+                    <input type="checkbox" id="CAT3" value="CAT-Level-3" />
+                    @Html.Label("CAT-Level-3")
+                </li>
+                <li>
+                    <input type="checkbox" id="CAT4" value="CAT-Level-4" />
+                    @Html.Label("CAT-Level-4")
+                </li>
+
+                <li>
+                    <input type="checkbox" id="ASNT1" value="ASNT-Level-1" />
+                    @Html.Label("ASNT-Level-1")
+                </li>
+                <li>
+                    <input type="checkbox" id="ASNT2" value="ASNT-Level-2" />
+                    @Html.Label("ASNT-Level-2")
+                </li>
+                <li>
+                    <input type="checkbox" id="ASNT3" value="ASNT-Level-3" />
+                    @Html.Label("ASNT-Level-3")
+                </li>
+                <li>
+                    <input type="checkbox" id="ASNT4" value="ASNT-Level-4" />
+                    @Html.Label("ASNT-Level-4")
+                </li>
+
+                <li>
+                    <input type="checkbox" id="BiNDT1" value="BiNDT-Level-1" />
+                    @Html.Label("BiNDT-Level-1")
+                </li>
+                <li>
+                    <input type="checkbox" id="BiNDT2" value="BiNDT-Level-2" />
+                    @Html.Label("BiNDT-Level-2")
+                </li>
+                <li>
+                    <input type="checkbox" id="BiNDT3" value="BiNDT-Level-3" />
+                    @Html.Label("BiNDT-Level-3")
+                </li>
+                <li>
+                    <input type="checkbox" id="BiNDT4" value="BiNDT-Level-4" />
+                    @Html.Label("BiNDT-Level-4")
+                </li>
+            </ul>
+        </div>
+
+        <div class="col-md-9" style="height: 100%; padding-left: 2px; padding-right: 2px;margin-bottom:10px;">
+            @Html.Partial("_consultantDetail", Model.AllConsultant)
+        </div>
+    }
+</div>
+<div id='myModal' class="modal fade in">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                Put Your Enquiry here ...
+                <button type="button" style="padding-right: 10px; padding-top: 10px; color: red;" class="close" data-dismiss="modal" onclick="closeModal()">Close</button>
+            </div>
+            <div id='myModalContent'></div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    function checkUser() {
+        var userName = '@username';
+        if (userName == "") {
+            var flag = confirm('Please login or register before send your enquiry !');
+            if (flag) {
+                var url = '@Url.Action("Login", "Home")';
+                window.location.href = url;
+            }
+        }
+        else {
+            $('#myModalContent').load("@Url.Action("getEnquiry/", "Order")", function () {
+                $('#myModal').toggle();
+            });
+        }
+    }
+</script>
+<script>
+    (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date(); a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-81671504-1', 'auto');
+    ga('send', 'pageview');
+
+</script>

@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="IIS Web Application Name" description="" value="remoteanalysis" tags="IisApp">
+    <parameterEntry kind="ProviderPath" scope="IisApp" match="^C:\\Users\\vimal\\Desktop\\New\ folder\ \(4\)\\RemoteAnalysis\\VibExchange\\obj\\Release\\Package\\PackageTmp$" />
+    <parameterEntry kind="ProviderPath" scope="setAcl" match="^C:\\Users\\vimal\\Desktop\\New\ folder\ \(4\)\\RemoteAnalysis\\VibExchange\\obj\\Release\\Package\\PackageTmp$" />
+  </parameter>
+  <parameter name="ConnectionString-Web.config Connection String" description="" value="Data Source=tcp:databasesrv.database.windows.net,1433;Initial Catalog=iadeptdb;User ID=iadeptadmin;Password=Iadept321?" tags="">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\vimal\\Desktop\\New\ folder\ \(4\)\\RemoteAnalysis\\VibExchange\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='ConnectionString']/@connectionString" />
+  </parameter>
+</parameters>

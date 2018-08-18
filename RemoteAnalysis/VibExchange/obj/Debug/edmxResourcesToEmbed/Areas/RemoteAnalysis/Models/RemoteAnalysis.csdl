@@ -1,0 +1,443 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Iadept_CloudModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="tblAlarm">
+    <Key>
+      <PropertyRef Name="AlarmID" />
+    </Key>
+    <Property Name="AlarmID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AlarmName" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="AlarmType" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="HighValue" Type="Double" Nullable="false" />
+    <Property Name="LowValue" Type="Double" Nullable="false" />
+    <NavigationProperty Name="tblMeasurementSetup_Benstone" Relationship="Self.FK_Measurement_AlarmID" FromRole="tblAlarm" ToRole="tblMeasurementSetup_Benstone" />
+  </EntityType>
+  <EntityType Name="tblArea">
+    <Key>
+      <PropertyRef Name="AreaID" />
+    </Key>
+    <Property Name="AreaID" Type="Int32" Nullable="false" />
+    <Property Name="AreaName" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="AreaDetail" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="FileID" Type="Int32" Nullable="false" />
+    <Property Name="ParentID" Type="Int32" Nullable="false" />
+    <Property Name="NodeType" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblBearing">
+    <Key>
+      <PropertyRef Name="BearingID" />
+    </Key>
+    <Property Name="BearingID" Type="Int32" Nullable="false" />
+    <Property Name="BearingMake" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="BearingModel" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="InnerDia" Type="Double" Nullable="false" />
+    <Property Name="OuterDia" Type="Double" Nullable="false" />
+    <Property Name="ContactAngel" Type="Double" Nullable="false" />
+    <Property Name="RollingDia" Type="Double" Nullable="false" />
+    <Property Name="NoOfRollingElement" Type="Int32" Nullable="false" />
+    <Property Name="Balls" Type="Double" Nullable="false" />
+    <Property Name="FTF" Type="Double" Nullable="false" />
+    <Property Name="BSF" Type="Double" Nullable="false" />
+    <Property Name="BPFO" Type="Double" Nullable="false" />
+    <Property Name="BPFI" Type="Double" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblFaultFrequency">
+    <Key>
+      <PropertyRef Name="FrequencyID" />
+    </Key>
+    <Property Name="FrequencyID" Type="Int32" Nullable="false" />
+    <Property Name="FrequencyName" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="FrequencyValue" Type="Double" Nullable="false" />
+    <Property Name="PointID" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblFileData">
+    <Key>
+      <PropertyRef Name="FileID" />
+    </Key>
+    <Property Name="FileID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="FileName" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="FileType" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="FileFormate" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="InstrumentUsed" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="NoOfMachines" Type="Int32" />
+    <Property Name="NoOfPoints" Type="Int32" />
+    <Property Name="AnalysisMethod" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="FilePath" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="DateOfUpload" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="tblInstrument">
+    <Key>
+      <PropertyRef Name="InstrumentID" />
+    </Key>
+    <Property Name="InstrumentID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="InstrumentName" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ManufacturerName" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="tblJob">
+    <Key>
+      <PropertyRef Name="JobID" />
+    </Key>
+    <Property Name="JobID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="JobTitle" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="JobCategory" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ExperienceRequired" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblMachine">
+    <Key>
+      <PropertyRef Name="MachineID" />
+    </Key>
+    <Property Name="MachineID" Type="Int32" Nullable="false" />
+    <Property Name="MachineName" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="MachineDetail" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="MachineClass" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="RPMDriven" Type="Double" Nullable="false" />
+    <Property Name="PulseRevolution" Type="Double" Nullable="false" />
+    <Property Name="FileID" Type="Int32" Nullable="false" />
+    <Property Name="ParentID" Type="Int32" Nullable="false" />
+    <Property Name="NodeType" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblMeasure_Benstone">
+    <Key>
+      <PropertyRef Name="MeasureID" />
+    </Key>
+    <Property Name="MeasureID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FileID" Type="Int32" Nullable="false" />
+    <Property Name="OverAcc" Type="Boolean" Nullable="false" />
+    <Property Name="OverVel" Type="Boolean" Nullable="false" />
+    <Property Name="OverDisp" Type="Boolean" Nullable="false" />
+    <Property Name="OverBear" Type="Boolean" Nullable="false" />
+    <Property Name="TimeWaveForm" Type="Boolean" Nullable="false" />
+    <Property Name="PowerSpectrum" Type="Boolean" Nullable="false" />
+    <Property Name="DemodulateSpectrum" Type="Boolean" Nullable="false" />
+    <Property Name="Temprature" Type="Boolean" Nullable="false" />
+    <Property Name="ProcessParameter" Type="Boolean" Nullable="false" />
+    <Property Name="CrestFacture" Type="Boolean" Nullable="false" />
+    <Property Name="OrderTrace" Type="Boolean" Nullable="false" />
+    <Property Name="Cepstrum" Type="Boolean" Nullable="false" />
+    <Property Name="CalcMeasure" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="tblMeasurementSetup_Benstone" Relationship="Self.FK_Setup_MeasureID" FromRole="tblMeasure_Benstone" ToRole="tblMeasurementSetup_Benstone" />
+  </EntityType>
+  <EntityType Name="tblMeasurementSetup_Benstone">
+    <Key>
+      <PropertyRef Name="SetupID" />
+    </Key>
+    <Property Name="SetupID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FileID" Type="Int32" Nullable="false" />
+    <Property Name="MeasureID" Type="Int32" Nullable="false" />
+    <Property Name="AlarmID" Type="Int32" />
+    <Property Name="acc_filter" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="vel_filter" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="displ_filter" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="crest_factor_filter" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="bearing_acc_hp_filter" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="overall_bearing_filter" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ordertrace_average_times" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ordertrace_resolution" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ordertrace_order" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ordertrace_trigger_slope" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="time_band" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="time_resoltion" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="time_overlap" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="SensorDir" Type="Int32" />
+    <Property Name="SensorID" Type="Int32" />
+    <Property Name="TemperatureID" Type="Int32" />
+    <Property Name="power_multiple" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="power_band" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="power_resolution" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="power_band1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="power_resolution1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="power2_band" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="power2_resolution" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="power2_band1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="power2_resolution1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="power3_band" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="power3_resolution" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="power3_band1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="power3_resolution1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="power_window" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="power_average_times" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="power_overlap" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="power_zoom" Type="Int32" />
+    <Property Name="power_zoom_startfeq" Type="Double" />
+    <Property Name="cepstrum_band" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="cepstrum_resolution" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="cepstrum_window" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="cepstrum_average_times" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="cepstrum_overlap" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="cepstrum_zoom" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="cepstrum_zoom_startfeq" Type="Double" />
+    <Property Name="demodulate_band" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="demodulate_resolution" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="demodulate_window" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="demodulate_average_times" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="demodulate_filter" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Date" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="tblAlarm" Relationship="Self.FK_Measurement_AlarmID" FromRole="tblMeasurementSetup_Benstone" ToRole="tblAlarm" />
+    <NavigationProperty Name="tblMeasure_Benstone" Relationship="Self.FK_Setup_MeasureID" FromRole="tblMeasurementSetup_Benstone" ToRole="tblMeasure_Benstone" />
+  </EntityType>
+  <EntityType Name="tblMeasurementSetup_Kohtect">
+    <Key>
+      <PropertyRef Name="SetupID" />
+    </Key>
+    <Property Name="SetupID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FileID" Type="Int32" Nullable="false" />
+    <Property Name="AlarmID" Type="Int32" />
+    <Property Name="Channel1" Type="Int32" />
+    <Property Name="SelectRadio1" Type="Int32" />
+    <Property Name="EVFrequency" Type="Int32" />
+    <Property Name="Channel2" Type="Int32" />
+    <Property Name="SelectRadio2" Type="Int32" />
+    <Property Name="SpectrumLineNo" Type="Int32" />
+    <Property Name="WindowType" Type="Int32" />
+    <Property Name="Fmin" Type="Int32" />
+    <Property Name="Fmax" Type="Int32" />
+    <Property Name="TriggerMode" Type="Int32" />
+    <Property Name="AvgMode" Type="Int32" />
+    <Property Name="N" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Comment" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="tblPlant">
+    <Key>
+      <PropertyRef Name="PlantID" />
+    </Key>
+    <Property Name="PlantID" Type="Int32" Nullable="false" />
+    <Property Name="PlantName" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Category" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="PlantDetail" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="FileID" Type="Int32" Nullable="false" />
+    <Property Name="NodeType" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="tblPoint">
+    <Key>
+      <PropertyRef Name="PointID" />
+    </Key>
+    <Property Name="PointID" Type="Int32" Nullable="false" />
+    <Property Name="PointName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="PointDetail" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="PointBearingID" Type="Int32" />
+    <Property Name="FileID" Type="Int32" Nullable="false" />
+    <Property Name="ParentID" Type="Int32" Nullable="false" />
+    <Property Name="NodeType" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblPointData_Kohtect">
+    <Key>
+      <PropertyRef Name="DataID" />
+    </Key>
+    <Property Name="DataID" Type="Int32" Nullable="false" />
+    <Property Name="PointID" Type="Int32" Nullable="false" />
+    <Property Name="SetupID" Type="Int32" Nullable="false" />
+    <Property Name="MeasureTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="FileID" Type="Int32" Nullable="false" />
+    <Property Name="OverallValue" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="OverallUnit" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Chnl1Time_X" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Chnl1Time_Y" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Chnl2Time_X" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Chnl2Time_Y" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Chnl1FFT_X" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Chnl1FFT_Y" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Chnl2FFT_X" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Chnl2FFT_Y" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="InsertDate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="tblSensor">
+    <Key>
+      <PropertyRef Name="SensorID" />
+    </Key>
+    <Property Name="SensorID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SensorName" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="SensorType" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Sensitivity_Ch1" Type="Int32" />
+    <Property Name="Sensitivity_Ch2" Type="Int32" />
+    <Property Name="Sensitivity_Ch3" Type="Int32" />
+    <Property Name="Sensitivity_Ch4" Type="Int32" />
+    <Property Name="SensorUnit" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="SensorDirection" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="SensorICP" Type="Boolean" Nullable="false" />
+    <Property Name="SensorOffset" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="InputRange" Type="Int32" />
+  </EntityType>
+  <EntityType Name="tblTrain">
+    <Key>
+      <PropertyRef Name="TrainID" />
+    </Key>
+    <Property Name="TrainID" Type="Int32" Nullable="false" />
+    <Property Name="TrainName" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="TrainDetail" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="NoOfMachine" Type="Int32" />
+    <Property Name="FileID" Type="Int32" Nullable="false" />
+    <Property Name="ParentID" Type="Int32" />
+    <Property Name="NodeType" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblUnit">
+    <Key>
+      <PropertyRef Name="UnitID" />
+    </Key>
+    <Property Name="UnitID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SensorType" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Unit" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblUserMaster">
+    <Key>
+      <PropertyRef Name="FileID" />
+      <PropertyRef Name="UserID" />
+      <PropertyRef Name="InstrumentID" />
+      <PropertyRef Name="AnalysisID" />
+    </Key>
+    <Property Name="FileID" Type="Int32" Nullable="false" />
+    <Property Name="UserID" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="InstrumentID" Type="Int32" Nullable="false" />
+    <Property Name="AnalysisID" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_Measurement_AlarmID">
+    <End Role="tblAlarm" Type="Self.tblAlarm" Multiplicity="0..1" />
+    <End Role="tblMeasurementSetup_Benstone" Type="Self.tblMeasurementSetup_Benstone" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblAlarm">
+        <PropertyRef Name="AlarmID" />
+      </Principal>
+      <Dependent Role="tblMeasurementSetup_Benstone">
+        <PropertyRef Name="AlarmID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Setup_MeasureID">
+    <End Role="tblMeasure_Benstone" Type="Self.tblMeasure_Benstone" Multiplicity="1" />
+    <End Role="tblMeasurementSetup_Benstone" Type="Self.tblMeasurementSetup_Benstone" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblMeasure_Benstone">
+        <PropertyRef Name="MeasureID" />
+      </Principal>
+      <Dependent Role="tblMeasurementSetup_Benstone">
+        <PropertyRef Name="MeasureID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="Iadept_CloudEntities1" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="tblAlarms" EntityType="Self.tblAlarm" />
+    <EntitySet Name="tblAreas" EntityType="Self.tblArea" />
+    <EntitySet Name="tblBearings" EntityType="Self.tblBearing" />
+    <EntitySet Name="tblFaultFrequencies" EntityType="Self.tblFaultFrequency" />
+    <EntitySet Name="tblFileDatas" EntityType="Self.tblFileData" />
+    <EntitySet Name="tblInstruments" EntityType="Self.tblInstrument" />
+    <EntitySet Name="tblJobs" EntityType="Self.tblJob" />
+    <EntitySet Name="tblMachines" EntityType="Self.tblMachine" />
+    <EntitySet Name="tblMeasure_Benstone" EntityType="Self.tblMeasure_Benstone" />
+    <EntitySet Name="tblMeasurementSetup_Benstone" EntityType="Self.tblMeasurementSetup_Benstone" />
+    <EntitySet Name="tblMeasurementSetup_Kohtect" EntityType="Self.tblMeasurementSetup_Kohtect" />
+    <EntitySet Name="tblPlants" EntityType="Self.tblPlant" />
+    <EntitySet Name="tblPoints" EntityType="Self.tblPoint" />
+    <EntitySet Name="tblPointData_Kohtect" EntityType="Self.tblPointData_Kohtect" />
+    <EntitySet Name="tblSensors" EntityType="Self.tblSensor" />
+    <EntitySet Name="tblTrains" EntityType="Self.tblTrain" />
+    <EntitySet Name="tblUnits" EntityType="Self.tblUnit" />
+    <EntitySet Name="tblUserMasters" EntityType="Self.tblUserMaster" />
+    <AssociationSet Name="FK_Measurement_AlarmID" Association="Self.FK_Measurement_AlarmID">
+      <End Role="tblAlarm" EntitySet="tblAlarms" />
+      <End Role="tblMeasurementSetup_Benstone" EntitySet="tblMeasurementSetup_Benstone" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Setup_MeasureID" Association="Self.FK_Setup_MeasureID">
+      <End Role="tblMeasure_Benstone" EntitySet="tblMeasure_Benstone" />
+      <End Role="tblMeasurementSetup_Benstone" EntitySet="tblMeasurementSetup_Benstone" />
+    </AssociationSet>
+    <FunctionImport Name="AddArea">
+      <Parameter Name="FileID" Mode="In" Type="Int32" />
+      <Parameter Name="AreaName" Mode="In" Type="String" />
+      <Parameter Name="AreaDeatil" Mode="In" Type="String" />
+      <Parameter Name="ParentID" Mode="In" Type="Int32" />
+      <Parameter Name="ParentType" Mode="In" Type="String" />
+      <Parameter Name="AreaID" Mode="InOut" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="AddMachine">
+      <Parameter Name="FileID" Mode="In" Type="Int32" />
+      <Parameter Name="MachineName" Mode="In" Type="String" />
+      <Parameter Name="MachineDeatil" Mode="In" Type="String" />
+      <Parameter Name="MachineClass" Mode="In" Type="String" />
+      <Parameter Name="RPMDriven" Mode="In" Type="Int32" />
+      <Parameter Name="PulseRevolution" Mode="In" Type="Int32" />
+      <Parameter Name="ParentID" Mode="In" Type="Int32" />
+      <Parameter Name="ParentType" Mode="In" Type="String" />
+      <Parameter Name="MachineID" Mode="InOut" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="AddPlant">
+      <Parameter Name="FileID" Mode="In" Type="Int32" />
+      <Parameter Name="PlantName" Mode="In" Type="String" />
+      <Parameter Name="Category" Mode="In" Type="String" />
+      <Parameter Name="PlantDetail" Mode="In" Type="String" />
+      <Parameter Name="PlantID" Mode="InOut" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="AddPoint">
+      <Parameter Name="FileID" Mode="In" Type="Int32" />
+      <Parameter Name="PointName" Mode="In" Type="String" />
+      <Parameter Name="PointDeatil" Mode="In" Type="String" />
+      <Parameter Name="BearingID" Mode="In" Type="Int32" />
+      <Parameter Name="ParentID" Mode="In" Type="Int32" />
+      <Parameter Name="ParentType" Mode="In" Type="String" />
+      <Parameter Name="PointID" Mode="InOut" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="addRecordedDataForKohtect">
+      <Parameter Name="Fileid" Mode="In" Type="Int32" />
+      <Parameter Name="Userid" Mode="In" Type="String" />
+      <Parameter Name="Alarmid" Mode="In" Type="Int32" />
+      <Parameter Name="Chnl1" Mode="In" Type="Int32" />
+      <Parameter Name="Radio1" Mode="In" Type="Int32" />
+      <Parameter Name="Chnl2" Mode="In" Type="Int32" />
+      <Parameter Name="Radio2" Mode="In" Type="Int32" />
+      <Parameter Name="EVfreq" Mode="In" Type="Int32" />
+      <Parameter Name="SLine" Mode="In" Type="Int32" />
+      <Parameter Name="WType" Mode="In" Type="Int32" />
+      <Parameter Name="Fmin" Mode="In" Type="Int32" />
+      <Parameter Name="Fmax" Mode="In" Type="Int32" />
+      <Parameter Name="TMode" Mode="In" Type="Int32" />
+      <Parameter Name="AMode" Mode="In" Type="Int32" />
+      <Parameter Name="N" Mode="In" Type="Int32" />
+      <Parameter Name="Comment" Mode="In" Type="String" />
+      <Parameter Name="PointID" Mode="In" Type="Int32" />
+      <Parameter Name="MTime" Mode="In" Type="DateTime" />
+      <Parameter Name="OverallValue" Mode="In" Type="Double" />
+      <Parameter Name="OvUnit" Mode="In" Type="String" />
+      <Parameter Name="Chnl1FFTX" Mode="In" Type="String" />
+      <Parameter Name="Chnl1FFTY" Mode="In" Type="String" />
+      <Parameter Name="Chnl2FFTX" Mode="In" Type="String" />
+      <Parameter Name="Chnl2FFTY" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="AddTrain">
+      <Parameter Name="FileID" Mode="In" Type="Int32" />
+      <Parameter Name="TrainName" Mode="In" Type="String" />
+      <Parameter Name="TrainDeatil" Mode="In" Type="String" />
+      <Parameter Name="NoofMachine" Mode="In" Type="Int32" />
+      <Parameter Name="ParentID" Mode="In" Type="Int32" />
+      <Parameter Name="ParentType" Mode="In" Type="String" />
+      <Parameter Name="TrainID" Mode="InOut" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="addUploadDataRAM">
+      <Parameter Name="UserID" Mode="In" Type="String" />
+      <Parameter Name="FileName" Mode="In" Type="String" />
+      <Parameter Name="FileType" Mode="In" Type="String" />
+      <Parameter Name="FileFormate" Mode="In" Type="String" />
+      <Parameter Name="InstrumentUsed" Mode="In" Type="String" />
+      <Parameter Name="NoOfMachines" Mode="In" Type="Int32" />
+      <Parameter Name="NoOfPoints" Mode="In" Type="Int32" />
+      <Parameter Name="AnalysisMethod" Mode="In" Type="String" />
+      <Parameter Name="ImagePath" Mode="In" Type="String" />
+      <Parameter Name="Description" Mode="In" Type="String" />
+      <Parameter Name="id" Mode="InOut" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="GetFilePathbyFileID">
+      <Parameter Name="FileID" Mode="In" Type="Int32" />
+      <Parameter Name="UserID" Mode="In" Type="String" />
+      <Parameter Name="FilePath" Mode="InOut" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="GetHierarchyData" ReturnType="Collection(Iadept_CloudModel.GetHierarchyData_Result)">
+      <Parameter Name="FileID" Mode="In" Type="Int32" />
+    </FunctionImport>
+  </EntityContainer>
+  <ComplexType Name="GetHierarchyData_Result">
+    <Property Type="Int32" Name="NodeID" Nullable="false" />
+    <Property Type="String" Name="NodeText" Nullable="false" MaxLength="200" />
+    <Property Type="Int32" Name="ParentID" Nullable="true" />
+    <Property Type="String" Name="NodeType" Nullable="true" MaxLength="50" />
+  </ComplexType>
+</Schema>

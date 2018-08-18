@@ -1,0 +1,65 @@
+﻿@model VibExchange.Models.Enquiry
+
+<h4 style="width: 80%; margin-left: 5px; color: chocolate;">Enquiry Detail >></h4>
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" }) 
+            <div class=" form-horizontal" role="form" style="margin-left: 10px;">
+                <div class="form-group ">
+                    @Html.LabelFor(model => model.UserName, new { @class = "col-md-3 control-label" })
+                    <div class="col-md-9">
+                        @Html.TextBoxFor(model => model.UserName, new { @class = "form-control", @readonly = true })
+                        @Html.ValidationMessageFor(model => model.UserName, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+                <div class="form-group ">
+                    @Html.LabelFor(model => model.company, new { @class = "col-md-3 control-label" })
+                    <div class="col-md-9">
+                        @Html.TextBoxFor(model => model.company, new { @class = "form-control", @readonly = true })
+                        @Html.ValidationMessageFor(model => model.company, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+                <div class="form-group ">
+                    @Html.LabelFor(model => model.phone, new { @class = "col-md-3 control-label" })
+                    <div class="col-md-9">
+                        @Html.TextBoxFor(model => model.phone, new { @class = "form-control", @readonly = true })
+                        @Html.ValidationMessageFor(model => model.phone, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+                <div class="form-group ">
+                    @Html.LabelFor(model => model.emailid, new { @class = "col-md-3 control-label" })
+                    <div class="col-md-9">
+                        @Html.TextBoxFor(model => model.emailid, new { @class = "form-control", @readonly = true })
+                        @Html.ValidationMessageFor(model => model.emailid, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+                <div class="form-group ">
+                    @Html.LabelFor(model => model.Enq_Category, new { @class = "col-md-3 control-label" })
+                    <div class="col-md-9">
+                        @Html.TextBoxFor(model => model.Enq_Category, new { @class = "form-control", @readonly = true })
+                        @Html.ValidationMessageFor(model => model.Enq_Category, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+                <div class="form-group ">
+                    @Html.LabelFor(model => model.Enq_Subject, new { @class = "col-md-3 control-label" })
+                    <div class="col-md-9">
+                        @Html.TextBoxFor(model => model.Enq_Subject, new { @class = "form-control", @readonly = true })
+                        @Html.ValidationMessageFor(model => model.Enq_Subject, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+                <div class="form-group ">
+                    @Html.LabelFor(model => model.EnquiryDetail1, new { @class = "col-md-3 control-label" })
+                    <div class="col-md-9">
+                        @Html.TextAreaFor(model => model.EnquiryDetail1, 5, 25, new { @class = "form-control", @readonly = true })
+                        @Html.ValidationMessageFor(model => model.EnquiryDetail1, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+        }
+<h4></h4>
+<script>
+    function closeModal() {
+        $('#myModal').toggle();
+    }
+</script>

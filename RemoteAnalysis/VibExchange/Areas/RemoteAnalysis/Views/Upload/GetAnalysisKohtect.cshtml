@@ -1,0 +1,122 @@
+﻿@model IEnumerable<VibExchange.Areas.RemoteAnalysis.Models.FileDetail>
+
+@{
+    ViewBag.Title = "GetAnalysisKohtect";
+    Layout = "~/Views/Shared/_VibExchangeLayout.cshtml";
+}
+@section scripts{
+    <link href="~/Content/jsTree/themes/proton/style.min.css" rel="stylesheet" />
+    <script src="~/Scripts/jsTree3/jstree.min.js"></script>
+    @*@Styles.Render("~/Content/jsTree/themes/proton/style.min.css")
+    @Scripts.Render("~/Scripts/jsTree3/jstree.min.js")*@
+        @Scripts.Render("~/bundles/jqueryval")
+}
+<legend id="lblDisplay" class="row-fluid" style="width:100%;margin-top:2%;"> Your File data display here...</legend>
+<div class="row">
+    <div class="row-fluid" style="margin-left:2%">
+        <input type="button" value="Trend" id="btnTrend" class="btn btn-success"/>
+        <input type="button" value="Area" id="btnArea" class="btn btn-success" />
+        <input type="button" value="Dual Graph" id="btnDualGraph" class="btn btn-success" />
+      
+        <div class="col-md-10">
+            @Html.DropDownList("Cursors", new List<SelectListItem>{
+                    new SelectListItem{ Text="Single", Value = "Single" },
+                     new SelectListItem{ Text="Cross Hair", Value = "Cross Hair"},
+                      new SelectListItem{ Text="Reference", Value = "Reference" },
+                     new SelectListItem{ Text="Peak", Value = "Peak"}
+                 }, "Select Cursor", new { @class = "form-control" })
+        </div>
+    </div>
+    <legend></legend>
+    <div class="row">
+        <div class="col-md-3">
+            <div id="planttree">
+
+            </div>
+        </div>
+
+        <div class="col-md-6" style="border-left:solid 1px #4f9ae6;">
+            <div id="detailDisplay" class="row">
+            </div>
+        </div>
+        <div class="col-md-3">
+
+        </div>
+    </div>
+</div>
+<div id='myModal' class="modal fade in">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="col-md-6" id="title"></h4>
+                <button type="button" style="padding-right: 10px; padding-top: 10px; color: red;" class="close" data-dismiss="modal" onclick="closeModal()">Close</button>
+            </div>
+            <div id='myModalContent'></div>
+        </div>
+    </div>
+</div>
+
+<script>
+    var selectednode = null;
+    $(document).ready(function () {
+        function addEventListener() {
+            $("#planttree").on("select_node.jstree", function (event, node) {
+                selectednode = node.instance.get_selected();
+                if (selectednode.length === 1) {
+                    ShowPlant(selectednode);
+                } else if (selectednode.length > 1) {
+                    alert("You have not selected anything !");
+                }
+            });
+        }
+        $(function () {
+            $('#planttree').jstree({
+                core: {
+                    themes: {
+                        'name': 'proton',
+                        'responsive': true,
+                        'check_callback': true
+                    },
+                    data: {
+                        dataType: "json",
+                        url: "/Upload/CreateHierarchy",
+                        async: true
+                    }
+                },
+                plugins: ["themes", "json_data", "ui", "state"]
+            });
+            addEventListener();
+        });
+    });
+
+    $(function () {
+        $.ajaxSetup({ cache: false });
+        $("a[data-modal]").on("click", function (e) {
+            $('#myModalContent').load(this.href, function () {
+                $('#myModal').toggle();
+                $('#myModal').modal({
+                    /*backdrop: 'static',*/
+                    keyboard: true
+                }, 'show');
+            });
+            return true;
+        });
+    });
+
+    function closeModal() {
+        $('#myModal').toggle();
+    }
+    //////////////////////// Function for show detail of selected Node////////////////////////
+
+    function ShowPlant(nodeid) {
+        $.ajax({
+            url: '/Plant/PlantDetail',
+            type: 'POST',
+            data: { 'nodeid': nodeid },
+            success: function (data) {
+                $('#detailDisplay').html('');
+                $('#detailDisplay').html(data);
+            }
+        });
+    }
+</script>

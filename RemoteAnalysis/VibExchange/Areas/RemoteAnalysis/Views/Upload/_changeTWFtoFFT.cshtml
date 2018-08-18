@@ -1,0 +1,36 @@
+﻿@model VibExchange.Areas.RemoteAnalysis.Models.ConversionFWTtoFFT
+<style>
+    .modelmargin {
+        margin-bottom: 20%;
+    }
+</style>
+@using (Html.BeginForm("TWFTFFT", "Upload", null, FormMethod.Post, new { @class = "Form-horizantol", role = "form" }))
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true, "", new { @class="text-danger"});
+    <section class="col-md-offset-1">
+        <div class="form-group">
+            @Html.Label("TWF Type", new  {@class="col-md-3 control-lable" })
+            <div class="col-md-7">
+                @Html.HiddenFor(m=>m.convId)
+                @Html.TextBoxFor(m => m.tWFFormat, new { @class="form-control modelMargin"})
+                @Html.ValidationMessageFor(model => model.tWFFormat, "", new { @class = "text-danger" })
+            </div>
+        </div>
+           
+        <div class="from-group">
+            @Html.Label("FFT Type", new  {@class="col-md-3 control-lable" })
+            <div class="col-md-7">
+                @Html.TextBoxFor(m => m.fFTType, new {@class="form-Control modelMargin" })
+                @Html.ValidationMessageFor(model => model.fFTType, "", new { @class="text-danger"})
+            </div>
+        </div>
+        
+    </section>
+    
+    <div class="form-group">
+        <input type="button"  value="Convert TWF TO FFT" id="btnTWFtoFFT"/>
+    </div>
+    
+    
+}

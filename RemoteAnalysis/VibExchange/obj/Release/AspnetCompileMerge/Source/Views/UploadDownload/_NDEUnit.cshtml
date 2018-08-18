@@ -1,0 +1,437 @@
+﻿@model VibExchange.Models.UploadFile
+
+<script src="~/JQGridReq/jquery-1.9.0.min.js"></script>
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+<h4 style="color: chocolate; margin-left: 10px;">Your machine detail.. </h4>
+<div class="row-fluid" style="padding-left: 20px">
+    <section id="DriveUnit">
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" }) 
+            <div class=" form-horizontal" role="form">
+                @* <div class="form-group ">
+                    @Html.LabelFor(model => model.DrivenUnitID, new { @class = "col-md-3 control-label" })
+                    <div class="col-md-9">
+                        @Html.TextBoxFor(model => model.DrivenUnitID, new { @class = "form-control"  })
+                        @Html.ValidationMessageFor(model => model.DrivenUnitID, "", new { @class = "text-danger" })
+                    </div>
+                </div>*@
+                <div class="form-group ">
+                    @Html.LabelFor(model => model.NDEUnit1, new { @class = "col-md-3 control-label" })
+                    <div class="col-md-9">
+                        @Html.DropDownList("NDEUnit", (IEnumerable<SelectListItem>)ViewBag.NDEUnitList, "Please Select", new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.NDEUnit1, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+                <div class="form-group ">
+                    @Html.LabelFor(model => model.NDEType, new { @class = "col-md-3 control-label" })
+                    <div class="col-md-9">
+                        @Html.DropDownList("NDEType", (IEnumerable<SelectListItem>)ViewBag.NDETypeList, "Please Select", new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.NDEType, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+                <div class="form-group ">
+                    @Html.LabelFor(model => model.TransmissionType, new { @class = "col-md-3 control-label" })
+                    <div class="col-md-9">
+                        @Html.DropDownList("TransmissionType", (IEnumerable<SelectListItem>)ViewBag.TransmissionList, "Please Select", new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.TransmissionType, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+                <div class="form-group ">
+                    @Html.LabelFor(model => model.BearingLubrication, new { @class = "col-md-3 control-label" })
+                    <div class="col-md-9">
+                        @Html.DropDownList("BerLubrication", (IEnumerable<SelectListItem>)ViewBag.LubType, "Please Select", new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.BearingLubrication, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+                <div id="divBearingCommon">
+                    <div class="form-group ">
+                        @Html.LabelFor(model => model.bearingMake, new { @class = "col-md-3 control-label" })
+                        <div class="col-md-9">
+                            @Html.TextBoxFor(model => model.bearingMake, new { @class = "form-control", id = "BerMake" })
+                            @Html.ValidationMessageFor(model => model.bearingMake, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="form-group ">
+                        @Html.LabelFor(model => model.bearingNoDE, new { @class = "col-md-3 control-label" })
+                        <div class="col-md-9">
+                            @Html.TextBoxFor(model => model.bearingNoDE, new { @class = "form-control", id = "BerDE" })
+                            @Html.ValidationMessageFor(model => model.bearingNoDE, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="form-group ">
+                        @Html.LabelFor(model => model.bearingNoNDE, new { @class = "col-md-3 control-label" })
+                        <div class="col-md-9">
+                            @Html.TextBoxFor(model => model.bearingNoNDE, new { @class = "form-control", id = "BerNDE" })
+                            @Html.ValidationMessageFor(model => model.bearingNoNDE,"", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+
+                <div id="divBearingTwoStage">
+                    <div class="form-group ">
+                        @Html.LabelFor(model => model.bearingMake, new { @class = "col-md-3 control-label" })
+                        <div class="col-md-9">
+                            @Html.TextBoxFor(model => model.bearingMake, new { @class = "form-control", id = "BerMake" })
+                            @Html.ValidationMessageFor(model => model.bearingMake,"", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group ">
+                        @Html.LabelFor(model => model.bearingDEIn, new { @class = "col-md-3 control-label" })
+                        <div class="col-md-9">
+                            @Html.TextBoxFor(model => model.bearingDEIn, new { @class = "form-control", id = "BerDE" })
+                            @Html.ValidationMessageFor(model => model.bearingDEIn, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group ">
+                        @Html.LabelFor(model => model.bearingNDEIn, new { @class = "col-md-3 control-label" })
+                        <div class="col-md-9">
+                            @Html.TextBoxFor(model => model.bearingNDEIn, new { @class = "form-control", id = "BerNDE" })
+                            @Html.ValidationMessageFor(model => model.bearingNDEIn, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group ">
+                        @Html.LabelFor(model => model.bearingDEOut, new { @class = "col-md-3 control-label" })
+                        <div class="col-md-9">
+                            @Html.TextBoxFor(model => model.bearingDEOut, new { @class = "form-control", id = "BerDE" })
+                            @Html.ValidationMessageFor(model => model.bearingDEOut, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group ">
+                        @Html.LabelFor(model => model.bearingNDEOut, new { @class = "col-md-3 control-label" })
+                        <div class="col-md-9">
+                            @Html.TextBoxFor(model => model.bearingNDEOut, new { @class = "form-control", id = "BerNDE" })
+                            @Html.ValidationMessageFor(model => model.bearingNDEOut, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                </div>
+
+                <div id="divBearingThreeStage">
+                    <div class="form-group ">
+                        @Html.LabelFor(model => model.bearingMake, new { @class = "col-md-3 control-label" })
+                        <div class="col-md-9">
+                            @Html.TextBoxFor(model => model.bearingMake, new { @class = "form-control" })
+                            @Html.ValidationMessageFor(model => model.bearingMake, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="form-group ">
+                        @Html.LabelFor(model => model.bearingDEIn, new { @class = "col-md-3 control-label" })
+                        <div class="col-md-9">
+                            @Html.TextBoxFor(model => model.bearingDEIn, new { @class = "form-control" })
+                            @Html.ValidationMessageFor(model => model.bearingDEIn, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group ">
+                        @Html.LabelFor(model => model.bearingNDEIn, new { @class = "col-md-3 control-label" })
+                        <div class="col-md-9">
+                            @Html.TextBoxFor(model => model.bearingNDEIn, new { @class = "form-control" })
+                            @Html.ValidationMessageFor(model => model.bearingNDEIn, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group ">
+                        @Html.LabelFor(model => model.bearingDEIdler, new { @class = "col-md-3 control-label" })
+                        <div class="col-md-9">
+                            @Html.TextBoxFor(model => model.bearingDEIdler, new { @class = "form-control" })
+                            @Html.ValidationMessageFor(model => model.bearingDEIdler, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group ">
+                        @Html.LabelFor(model => model.bearingNDEIdler, new { @class = "col-md-3 control-label" })
+                        <div class="col-md-9">
+                            @Html.TextBoxFor(model => model.bearingNDEIdler, new { @class = "form-control" })
+                            @Html.ValidationMessageFor(model => model.bearingNDEIdler, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group ">
+                        @Html.LabelFor(model => model.bearingDEOut, new { @class = "col-md-3 control-label" })
+                        <div class="col-md-9">
+                            @Html.TextBoxFor(model => model.bearingDEOut, new { @class = "form-control", id = "BerDE" })
+                            @Html.ValidationMessageFor(model => model.bearingDEOut, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group ">
+                        @Html.LabelFor(model => model.bearingNDEOut, new { @class = "col-md-3 control-label" })
+                        <div class="col-md-9">
+                            @Html.TextBoxFor(model => model.bearingNDEOut, new { @class = "form-control", id = "BerNDE" })
+                            @Html.ValidationMessageFor(model => model.bearingNDEOut, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+                <div id="divRpmIn" class="form-group ">
+                    @Html.LabelFor(model => model.InputRPM, new { @class = "col-md-3 control-label" })
+                    <div class="col-md-9">
+                        @Html.TextBoxFor(model => model.InputRPM, new { @class = "form-control", id = "BerNDE" })
+                        @Html.ValidationMessageFor(model => model.InputRPM, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+                <div id="divRpmOut" class="form-group ">
+                    @Html.LabelFor(model => model.OutputRPM, new { @class = "col-md-3 control-label" })
+                    <div class="col-md-9">
+                        @Html.TextBoxFor(model => model.OutputRPM, new { @class = "form-control", id = "BerNDE" })
+                        @Html.ValidationMessageFor(model => model.OutputRPM, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+                <div id="divGearRatio" class="form-group ">
+                    @Html.LabelFor(model => model.GearRatio, new { @class = "col-md-3 control-label" })
+                    <div class="col-md-9">
+                        @Html.TextBoxFor(model => model.GearRatio, new { @class = "form-control", id = "BerNDE" })
+                        @Html.ValidationMessageFor(model => model.GearRatio, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+                <div id="divTeethInput" class="form-group ">
+                    @Html.LabelFor(model => model.TeethCountInput, new { @class = "col-md-3 control-label" })
+                    <div class="col-md-9">
+                        @Html.TextBoxFor(model => model.TeethCountInput, new { @class = "form-control", id = "BerNDE" })
+                        @Html.ValidationMessageFor(model => model.TeethCountInput, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+                <div id="divTeethOutput" class="form-group ">
+                    @Html.LabelFor(model => model.TeethCountOutput, new { @class = "col-md-3 control-label" })
+                    <div class="col-md-9">
+                        @Html.TextBoxFor(model => model.TeethCountOutput, new { @class = "form-control", id = "BerNDE" })
+                        @Html.ValidationMessageFor(model => model.TeethCountOutput, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+                <div id="divTeethIdler" class="form-group ">
+                    @Html.LabelFor(model => model.TeethCountIdle, new { @class = "col-md-3 control-label" })
+                    <div class="col-md-9">
+                        @Html.TextBoxFor(model => model.TeethCountIdle, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.TeethCountIdle, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div id="divRPM" class="form-group ">
+                    @Html.LabelFor(model => model.NDERPM, new { @class = "col-md-3 control-label" })
+                    <div class="col-md-9">
+                        @Html.TextBoxFor(model => model.NDERPM, new { @class = "form-control", id = "NDEURPM", placeholder = "Fill rpm" })
+                        @Html.ValidationMessageFor(model => model.NDERPM, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+                <div id="divBladesorFins" class="form-group ">
+                    @Html.LabelFor(model => model.BladesorFins, new { @class = "col-md-3 control-label" })
+                    <div class="col-md-9">
+                        @Html.TextBoxFor(model => model.BladesorFins, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.BladesorFins, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div id="divBeltType" class="form-group ">
+                    @Html.LabelFor(model => model.BeltType, new { @class = "col-md-3 control-label" })
+                    <div class="col-md-9">
+                        @Html.DropDownList("BeltType", (IEnumerable<SelectListItem>)ViewBag.BeltTypeList, "Please Select", new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.BeltType, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div id="divBeltCount" class="form-group ">
+                    @Html.LabelFor(model => model.BeltCount, new { @class = "col-md-3 control-label" })
+                    <div class="col-md-9">
+                        @Html.TextBoxFor(model => model.BeltCount, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.BeltCount, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div id="divBeltLength" class="form-group ">
+                    @Html.LabelFor(model => model.BeltLength, new { @class = "col-md-3 control-label" })
+                    <div class="col-md-9">
+                        @Html.TextBoxFor(model => model.BeltLength, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.BeltLength, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div id="divPitchDia" class="form-group ">
+                    @Html.LabelFor(model => model.PitchDia, new { @class = "col-md-3 control-label" })
+                    <div class="col-md-9">
+                        @Html.TextBoxFor(model => model.PitchDia, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.PitchDia, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div id="divBeltTeethCount" class="form-group ">
+                    @Html.LabelFor(model => model.TeethCount, new { @class = "col-md-3 control-label" })
+                    <div class="col-md-9">
+                        @Html.TextBoxFor(model => model.TeethCount, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.TeethCount, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group ">
+                    @Html.LabelFor(model => model.Point_Count_NDE, new { @class = "col-md-3 control-label" })
+                    <div class="col-md-9">
+                        @Html.TextBoxFor(model => model.Point_Count_NDE, new { @class = "form-control", placeholder = "Data Collected Points" })
+                        @Html.ValidationMessageFor(model => model.Point_Count_NDE, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+
+                <div class="form-group">
+                    <div class="col-md-offset-2 col-md-10">
+                        @Html.HiddenFor(model=>model.DrivenUnitID)
+                        @*<input type="submit" id="btnUploadEdit" value="Save Detail" class="btn btn-default" FormMethod="post" onclick="location.href=@Url.Action("AddNDEUnit", "UploadDownload", new { target = "_blank" ,id = Model.MachineID })" />*@
+                        <button id="btnAddDrivenUnit" class="btn btn-default" FormMethod="post" onclick="location.href='@Url.Action("AddNDEUnit", "UploadDownload",new { id = TempData["MachineID"].ToString() })'">Save Detail</button>
+
+                    </div>
+                </div>
+            </div>
+        }
+    </section>
+</div>
+
+<script>
+    $(document).ready(function () {
+
+        $("#btnUploadEdit").click(function (e) {
+            e.preventDefault();
+            $("#jqGridMachine").trigger('reloadGrid');
+        });
+
+        $('#divBeltTeethCount').hide();
+        $('#divPitchDia').hide();
+        $('#divBeltLength').hide();
+        $('#divBeltCount').hide();
+        $('#divBeltType').hide();
+        $('#divRPM').hide();
+        $('#divTeethIdler').hide();
+        $('#divTeethOutput').hide();
+        $('#divTeethInput').hide();
+        $('#divGearRatio').hide();
+        $('#divRpmOut').hide();
+        $('#divRpmIn').hide();
+        $('#divBladesorFins').hide();
+        $('#divBearingCommon').hide();
+        $('#divBearingTwoStage').hide();
+        $('#divBearingThreeStage').hide();
+    });
+    $(function () {
+        $('#NDEUnit').change(function () {
+            var value = $(this).val();
+            var selectedText = $("#NDEUnit option:selected").text();
+
+            if (selectedText == "Please Select") {
+                $('#divBeltTeethCount').hide();
+                $('#divPitchDia').hide();
+                $('#divBeltLength').hide();
+                $('#divBeltCount').hide();
+                $('#divBeltType').hide();
+                $('#divRPM').hide();
+                $('#divTeethIdler').hide();
+                $('#divTeethOutput').hide();
+                $('#divTeethInput').hide();
+                $('#divGearRatio').hide();
+                $('#divRpmOut').hide();
+                $('#divRpmIn').hide();
+                $('#divBladesorFins').hide();
+                $('#divBearingCommon').hide();
+                $('#divBearingTwoStage').hide();
+                $('#divBearingThreeStage').hide();
+            }
+            else if (value == 'Gear Box Two Stage' || value == 'Gear Box Three Stage') {
+                $('#divTeethOutput').show();
+                $('#divTeethInput').show();
+                $('#divGearRatio').show();
+                $('#divRpmOut').show();
+                $('#divRpmIn').show();
+                $('#divRPM').hide();
+                $('#divBladesorFins').hide();
+                $('#divBearingCommon').hide();
+                $('#divBearingTwoStage').hide();
+                $('#divBearingThreeStage').hide();
+                if (value == 'Gear Box Two Stage') {
+                    $('#divTeethIdler').hide();
+                    $('#divBearingCommon').hide();
+                    $('#divBearingTwoStage').show();
+                    $('#divBearingThreeStage').hide();
+                }
+                else {
+                    $('#divTeethIdler').show();
+                    $('#divBearingCommon').hide();
+                    $('#divBearingTwoStage').hide();
+                    $('#divBearingThreeStage').show();
+                }
+            }
+            else if (value == 'Fan' || value == 'Pump') {
+                $('#divRPM').show();
+                $('#divBladesorFins').show();
+                $('#divTeethIdler').hide();
+                $('#divTeethOutput').hide();
+                $('#divTeethInput').hide();
+                $('#divGearRatio').hide();
+                $('#divRpmOut').hide();
+                $('#divRpmIn').hide();
+                $('#divBearingCommon').show();
+                $('#divBearingTwoStage').hide();
+                $('#divBearingThreeStage').hide();
+            }
+            else if (value == 'Crusher' || value == 'Compressor') {
+                $('#divRPM').show();
+                $('#divTeethIdler').hide();
+                $('#divTeethOutput').hide();
+                $('#divTeethInput').hide();
+                $('#divGearRatio').hide();
+                $('#divRpmOut').hide();
+                $('#divRpmIn').hide();
+                $('#divBladesorFins').hide();
+                $('#divBearingCommon').show();
+                $('#divBearingTwoStage').hide();
+                $('#divBearingThreeStage').hide();
+
+            }
+        });
+    });
+
+    $(function () {
+        $('#TransmissionType').change(function () {
+            var value = $(this).val();
+            var selectedText = $("#TransmissionType option:selected").text();
+
+            if (selectedText == "Please Select") {
+                $('#divBeltType').hide();
+            }
+            else if (value == 'Direct Mountained' || value == 'Coupled') {
+                $('#divBeltType').hide();
+            }
+            else if (value == 'Belt Driven') {
+                $('#divBeltType').show();
+            }
+        });
+    });
+
+    $(function () {
+        $('#BeltType').change(function () {
+            var value = $(this).val();
+            var selectedText = $("#BeltType option:selected").text();
+            if (selectedText == "Please Select") {
+                $('#divBeltTeethCount').hide();
+                $('#divPitchDia').hide();
+                $('#divBeltLength').hide();
+                $('#divBeltCount').hide();
+            }
+            else if (selectedText == "V Belt") {
+                $('#divPitchDia').show();
+                $('#divBeltLength').show();
+                $('#divBeltCount').show();
+                $('#divBeltTeethCount').hide();
+            }
+            else if (selectedText == "Timing Belt") {
+                $('#divBeltTeethCount').show();
+                $('#divPitchDia').hide();
+                $('#divBeltLength').hide();
+                $('#divBeltCount').hide();
+            }
+        });
+    });
+</script>
+
+

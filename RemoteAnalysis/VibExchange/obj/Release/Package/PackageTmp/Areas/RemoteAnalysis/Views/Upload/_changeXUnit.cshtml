@@ -1,0 +1,100 @@
+﻿@model VibExchange.Areas.RemoteAnalysis.Models.Unit
+
+@using (Html.BeginForm("AddPlant", "Plant", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <div class="row">
+        <div class="form-group">
+            <input id="PlantID" type="hidden" value="@Model.UnitID" />
+        </div>
+       
+        <section class="col-md-offset-1">
+            <div class="form-group">
+
+                @Html.RequiredLabelFor(model => model.UnitType, htmlAttributes: new { @class = "col-md-3 control-lable" })
+                <div class="col-md-7">
+                    @Html.DropDownList("UnitType", new List<SelectListItem>{
+                    new SelectListItem{ Text="Acceleration", Value = "Acceleration" },
+                     new SelectListItem{ Text="Velocity", Value = "Velocity" },
+                      new SelectListItem{ Text="Displacement", Value = "Displacement" },
+                 }, "Select parameter", new { @class = "form-control" })
+
+                    @Html.ValidationMessageFor(model => model.UnitType, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.RequiredLabelFor(model => model.UnitName, htmlAttributes: new { @class = "control-label col-md-3 align-right" })
+                <div class="col-md-7">
+                    @Html.DropDownListFor(m => m.UnitName,
+       new SelectList(Enumerable.Empty<SelectListItem>(), "UnitID", "Unit"),
+              "Select Unit",
+              new { @class = "form-control" })
+                    
+                    @Html.ValidationMessageFor(m => m.UnitName, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </section>
+        <div class="form-group">
+            @*<button id="btnShowGraph" class="btn-sm btn-info col-md-offset-3" onclick="ShowGraphx()"  >Show Graph </button>*@
+        </div>
+      
+    </div>
+}
+
+
+<script>
+    $("#UnitType").change(function () {
+
+        var type = this.value;     
+        getUnitList(type);
+    });
+
+    function getUnitList(type) {
+        alert(type);
+
+        var uid = $('#UnitType').val()
+        alert(uid);
+
+        $.ajax
+        ({
+            url: "@Url.Action("GetUnitByType", "Upload", new { area = "RemoteAnalysis" })",
+            type: 'POST',
+            data: JSON.stringify({ unitType: type }),
+            dataType: "JSON",
+            contentType: 'application/json',
+
+            success: function (data) {
+               
+
+                $("#UnitName").html(""); // clear before appending new list
+                var optionhtml1 = '<option value="' + 0 + '">' + "Please select model" + '</option>';
+                $("#BearingNumber").append(optionhtml1);
+                $.each(data, function (i, item) {
+                    var optionhtml = '<option value="' + item.unitType + '">' + item.UnitName + '</option>';
+                    $("#UnitName").append(optionhtml);
+                });
+
+            },
+            error: function () {
+                alert("Ooops! Something went wrong..")
+            },
+        });
+
+
+    }
+    $('#btnShowGraph').click(function () {
+        $.ajax({
+            url: "@Url.Action("getUnitDetail", "Upload", new { area = "RemoteAnalysis" })",
+            type: 'POST',
+        data: $('form').serialize(),
+        success: function (data) {
+            $('#graphDisplay').html('');
+            $('#graphDisplay').html(data);
+            //alert("Point details update succesfully.");
+        }
+    });
+    });
+</script>

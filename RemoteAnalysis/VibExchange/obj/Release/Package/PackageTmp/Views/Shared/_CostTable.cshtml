@@ -1,0 +1,56 @@
+﻿@model IEnumerable<VibExchange.Models.UploadFile>
+
+<style type="text/css">
+    .Table1 {
+        display: table;
+    }
+
+    .Title {
+        color: #4800ff;
+        font-family: Calibri;
+        font-size: 18px;
+        padding-bottom: 10px;
+    }
+
+    .Heading {
+        display: table-row;
+        font-weight: bold;
+        border-top: solid;
+    }
+
+    .Row {
+        display: table-row;
+    }
+
+    .Cell {
+        display: table-cell;
+        border-bottom: solid;
+        border-left: solid;
+        border-right: solid;
+        border-width: thin;
+        padding-left: 5px;
+        padding-right: 5px;
+        text-align: center;
+    }
+</style>
+<div class="col-md-7" style="margin-bottom:10px;">
+    <div class="table">
+
+        <div class="Heading machinetr">
+            <div class="Cell">Analysis Mode</div>
+            <div class="Cell">Cost(Per Point)</div>
+            <div class="Cell">Cost(Per Image/Graph)</div>
+            <div class="Cell">Analysis Time</div>
+        </div>
+
+        @foreach (var item in Model)
+        {
+            <div class="Row">
+                <div class="Cell">@Html.DisplayFor(modelItem => item.sr)</div>
+                <div class="Cell">@Html.DisplayFor(modelItem => item.costperpoint) $  </div>
+                <div class="Cell">@Html.DisplayFor(modelItem => item.costpergraph) $ </div>
+                <div class="Cell">@Html.DisplayFor(modelItem => item.AnalysisTime) </div>
+            </div>
+        }
+    </div>
+</div>

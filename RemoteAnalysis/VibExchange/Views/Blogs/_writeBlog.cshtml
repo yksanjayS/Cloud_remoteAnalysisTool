@@ -1,0 +1,130 @@
+﻿@model VibExchange.Models.Blogs
+
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+
+    @using (Html.BeginForm("addBlogs", "Blogs", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { enctype = "multipart/form-data" }))
+    {
+        @Html.AntiForgeryToken()
+        @Html.ValidationSummary(true)
+        <div class=" row-fluid" role="form" style="margin-left: 10px;">
+            <div class="form-group ">
+                @Html.LabelFor(model => model.blogTitle, new { @class = "control-label" })
+                <div>
+                    @Html.TextBoxFor(model => model.blogTitle, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.blogTitle, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="form-group ">
+                @Html.LabelFor(model => model.blogText, new { @class = "control-label" })
+                <div>
+                    @Html.TextAreaFor(model => model.blogText,5,30, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.blogText, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="form-group ">
+                @Html.LabelFor(model => model.blogImage, new { @class = "control-label" })
+                <div>
+                    <input type="file" dir="ltr" draggable="true" name="blogImage" id="fileToUpload" class="form-control" multiple="multiple" />
+                    <span class="field-validation-error" id="ErrorText" style="color: red"></span>
+                </div>
+            </div>
+            <div class="form-group ">
+                <div class="col-md-offset-3 col-md-9">
+                    <button type="submit" id="btnSubmit" class="btn btn-default" onclick="location.href='@Url.Action("addBlogs", "Blogs", new { id = "" })'">Submit Your Blog</button>
+                </div>
+            </div>
+        </div>
+        <h4></h4>
+    }
+
+<script>
+    function closeModal() {
+        $("#myModal").toggle();
+    }
+</script>
+<script type="text/javascript">
+    $(function () {
+        $("#ImageChange").change(function () {
+
+            if (window.FormData !== undefined) {
+
+                var fileUpload = $("#BlogImage").get(0);
+                var files = fileUpload.files;
+
+                // Create FormData object
+                var fileData = new FormData();
+
+                // Looping over all files and add it to FormData object
+                for (var i = 0; i < files.length; i++) {
+                    fileData.append(files[i].name, files[i]);
+                }
+
+                // Adding one more key to FormData object
+                //fileData.append('username', ‘Manas’);
+
+                //$.ajax({
+                //    url: '/Home/ChangeProfileImage',
+                //    type: "POST",
+                //    contentType: false, // Not to set any content header
+                //    processData: false, // Not to process data
+                //    data: fileData,
+                //    success: function (result) {
+                //        if (result.status == "Success") {
+                //            $('#imgUser').removeAttr('src');
+                //            $('#imgUser').attr('src', result.path);
+                //        }
+                //        if (result.status == "Failed") {
+                //            alert(result.Message);
+                //        }
+                //    },
+                //    error: function (err) {
+                //        alert(err.statusText);
+                //    }
+                //});
+            } else {
+                alert("FormData is not supported.");
+            }
+        });
+    });
+</script>
+<script>
+    $("#btnSubmit").on("click", function () {
+        if ($('#fileToUpload').val() == "") {
+            $("#ErrorText").html("Please upload file");
+            return false;
+        }
+        else {
+            return checkfile();
+        }
+    });
+
+    function checkfile() {
+        var file = getNameFromPath($("#fileToUpload").val());
+        if (file != null) {
+            var extension = file.substr((file.lastIndexOf('.') + 1));
+            // alert(extension);
+            flag = true;
+        }
+        if (flag == false) {
+            $("#ErrorText").text("Please check you file extension and Try again !");
+            return false;
+        }
+        else {
+            var size = GetFileSize('fileToUpload');
+            if (size > 1) {
+                $("#ErrorText").text("You can upload file up to 1 MB");
+                return false;
+            }
+            else {
+                $("#ErrorText").text("");
+            }
+        }
+    }
+    $(function () {
+        $("#fileToUpload").change(function () {
+            checkfile();
+        });
+    });
+</script>
+

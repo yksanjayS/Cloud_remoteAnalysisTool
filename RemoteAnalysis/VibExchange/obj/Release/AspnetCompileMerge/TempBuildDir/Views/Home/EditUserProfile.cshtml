@@ -1,0 +1,445 @@
+﻿@model VibExchange.Models.EditUserProfile
+
+@{
+    ViewBag.Title = "Update Profile";
+    Layout = "~/Views/Shared/_VibExchangeLayout.cshtml";
+}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+<style>
+    .consImage {
+        width: auto;
+        float: left;
+        box-sizing: border-box;
+    }
+
+    .doc_avatar {
+        max-width: 120px;
+        max-height: inherit;
+        border-radius: 3px;
+        width: 100%;
+        background-color: lightgray;
+    }
+</style>
+<div class="container">
+    <h4 style="color: chocolate">Change your detail. </h4>
+    @using (Html.BeginForm("EditUserProfile", "Home", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { enctype = "multipart/form-data", @class = "form-horizontal", role = "form" }))
+    {
+        @Html.AntiForgeryToken()
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="row-fluid">
+            <div class="col-md-8">
+                <div class="row-fluid">
+                    <a href="#" id="personal" onclick="showPersonal()">Personal Detail</a>
+                    <h4></h4>
+                    <div id="Personal" class="row-fluid">
+                        <div class="form-group ">
+                            @Html.LabelFor(model => model.fullName, new { @class = "col-md-2 control-label" })
+                            <div class="col-md-10">
+                                @Html.TextBoxFor(model => model.fullName, new { @class = "form-control" })
+                                @Html.ValidationMessageFor(model => model.fullName, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                        <div class="form-group ">
+                            @Html.LabelFor(model => model.UserName, new { @class = "col-md-2 control-label" })
+                            <div class="col-md-10">
+                                @Html.TextBoxFor(model => model.UserName, new { @class = "form-control", @readonly = "readonly" })
+                                @Html.ValidationMessageFor(model => model.UserName, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Phone, new { @class = "col-md-2 control-label" })
+                            <div class="col-md-10">
+                                @Html.TextBoxFor(model => model.Phone, new { @class = "form-control", onkeypress = "return isNumberKey(event)" })
+                                @Html.ValidationMessageFor(model => model.Phone, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Email, new { @class = "col-md-2 control-label" })
+                            <div class="col-md-10">
+                                @Html.TextBoxFor(model => model.Email, new { @class = "form-control", @readonly = "readonly" })
+                                @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            @Html.LabelFor(m => m.Address, new { @class = "col-md-2 control-label" })
+                            <div class="col-md-10">
+                                @Html.TextBoxFor(m => m.Address, new { @class = "form-control" })
+                                @Html.ValidationMessageFor(m => m.Address, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            @Html.LabelFor(m => m.City, new { @class = "col-md-2 control-label" })
+                            <div class="col-md-10">
+                                @Html.TextBoxFor(m => m.City, new { @class = "form-control" })
+                                @Html.ValidationMessageFor(m => m.City, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            @Html.LabelFor(m => m.State, new { @class = "col-md-2 control-label" })
+                            <div class="col-md-10">
+                                @Html.TextBoxFor(m => m.State, new { @class = "form-control" })
+                                @Html.ValidationMessageFor(m => m.State, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            @Html.LabelFor(m => m.Country, new { @class = "col-md-2 control-label" })
+                            <div class="col-md-10">
+                                @Html.TextBoxFor(m => m.Country, new { @class = "form-control" })
+                                @Html.ValidationMessageFor(m => m.Country, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                        <h4></h4>
+                    </div>
+                </div>
+
+                @if (Session["UserRole"].ToString() == "Consultant")
+                {
+                    <div class="row-fluid">
+                        <a href="#" id="qualification" onclick="showQualification()">Qualification Detail</a>
+                        <h4></h4>
+                        <div id="Qualification" class="row-fluid">
+                            <div class="form-group">
+                                @Html.LabelFor(m => m.graduation, new { @class = "col-md-2 control-label" })
+                                <div class="col-md-10">
+                                    @Html.DropDownList("Graduation", (IEnumerable<SelectListItem>)ViewBag.gradList, "Please Select", new { @class = "form-control" })
+                                    @Html.ValidationMessageFor(model => model.graduation, "", new { @class = "text-danger" })
+                                </div>
+                                <div id="grad" class="col-md-10">
+                                    @Html.TextBoxFor(m => m.graduation, new { @class = "form-control", @placeholder = "Please enter.." })
+                                    @Html.ValidationMessageFor(model => model.graduation, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                @Html.LabelFor(m => m.postgraduation, new { @class = "col-md-2 control-label" })
+                                <div class="col-md-10">
+                                    @Html.DropDownList("PostGraduation", (IEnumerable<SelectListItem>)ViewBag.postgradList, "Please Select", new { @class = "form-control" })
+                                    @Html.ValidationMessageFor(model => model.postgraduation, "", new { @class = "text-danger" })
+                                </div>
+                                <div id="pgrad" class="col-md-10">
+                                    @Html.TextBoxFor(m => m.postgraduation, new { @class = "form-control", @placeholder = "Please enter.." })
+                                    @Html.ValidationMessageFor(model => model.postgraduation, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                @Html.LabelFor(m => m.certification, new { @class = "col-md-2 control-label" })
+                                <div class="col-md-10">
+                                    @Html.DropDownList("Certification", (IEnumerable<SelectListItem>)ViewBag.certList, "Please Select", new { @class = "form-control" })
+                                    @Html.ValidationMessageFor(model => model.certification, "", new { @class = "text-danger" })
+                                </div>
+                                <div id="certificate" class="col-md-10">
+                                    @Html.TextBoxFor(m => m.certification, new { @class = "form-control", @placeholder = "Please enter.." })
+                                    @Html.ValidationMessageFor(model => model.certification, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                            <h4></h4>
+                        </div>
+                    </div>
+                }
+
+                <div class="row-fluid">
+                    <a href="#" id="professional" onclick="showProfessional()">Professional Detail</a>
+                    <h4></h4>
+                    <div id="Professional" class="row-fluid">
+
+                        @if (Session["UserRole"].ToString() == "Consultant")
+                        {
+                            <div class="form-group">
+                                @Html.LabelFor(m => m.Experience, new { @class = "col-md-2 control-label" })
+                                <div class="col-md-10">
+                                    @Html.DropDownList("Experience", (IEnumerable<SelectListItem>)ViewBag.expList, "Please Select", new { @class = "form-control" })
+                                    @Html.ValidationMessageFor(model => model.Experience, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                @Html.LabelFor(m => m.specialization, new { @class = "col-md-2 control-label" })
+                                <div class="col-md-10">
+                                    <div id="divStudentlist" class="table machineTable">
+                                        @foreach (var specs in ViewBag.SpecList)
+                                        {
+                                            string val = specs.Value;
+                                            var checkBoxId = "chk" + specs.Value;
+                                            var tdId = "td" + specs.Value;
+                                            <table>
+                                                <tr id="checkedid">
+                                                    <td>
+                                                        @if (Model.specialization.Contains(val))
+                                                        {
+                                                            <input type="checkbox" id="@checkBoxId" class="chkclass" checked="checked" value="@specs.Value" name="allchecked" />
+                                                        }
+                                                        else
+                                                        { <input type="checkbox" id="@checkBoxId" class="chkclass" value="@specs.Value" name="allchecked" /> }
+                                                    </td>
+                                                    <td id="@tdId">
+                                                        @specs.Text
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        }
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                        @if (Session["UserRole"].ToString() == "Employee")
+                        {
+                            <div class="form-group">
+                                @Html.LabelFor(m => m.Designation, new { @class = "col-md-2 control-label" })
+                                <div class="col-md-10">
+                                    @Html.TextBoxFor(m => m.Designation, new { @class = "form-control" })
+                                    @Html.ValidationMessageFor(m => m.Designation, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                @Html.LabelFor(m => m.Department, new { @class = "col-md-2 control-label" })
+                                <div class="col-md-10">
+                                    @Html.DropDownList("Department", (IEnumerable<SelectListItem>)ViewBag.departmentList, "Please Select", new { @class = "form-control" })
+                                    @Html.ValidationMessageFor(model => model.Department, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                        }
+                        @if (Session["UserRole"].ToString() != "Employee")
+                        {
+                            <div id="divCompany">
+                                <div class="form-group">
+                                    @Html.LabelFor(m => m.companyName, new { @class = "col-md-2 control-label" })
+                                    <div class="col-md-10">
+                                        @Html.TextBoxFor(m => m.companyName, new { @class = "form-control" })
+                                        @Html.ValidationMessageFor(m => m.companyName, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    @Html.LabelFor(m => m.compAddress, new { @class = "col-md-2 control-label" })
+                                    <div class="col-md-10">
+                                        @Html.TextBoxFor(m => m.compAddress, new { @class = "form-control" })
+                                        @Html.ValidationMessageFor(m => m.compAddress, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    @Html.LabelFor(m => m.cmpCity, new { @class = "col-md-2 control-label" })
+                                    <div class="col-md-10">
+                                        @Html.TextBoxFor(m => m.cmpCity, new { @class = "form-control" })
+                                        @Html.ValidationMessageFor(m => m.cmpCity, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    @Html.LabelFor(m => m.cmpState, new { @class = "col-md-2 control-label" })
+                                    <div class="col-md-10">
+                                        @Html.TextBoxFor(m => m.cmpState, new { @class = "form-control" })
+                                        @Html.ValidationMessageFor(m => m.cmpState, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    @Html.LabelFor(m => m.cmpCountry, new { @class = "col-md-2 control-label" })
+                                    <div class="col-md-10">
+                                        @Html.TextBoxFor(m => m.cmpCountry, new { @class = "form-control" })
+                                        @Html.ValidationMessageFor(m => m.cmpCountry, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    @Html.LabelFor(m => m.OfficeNo, new { @class = "col-md-2 control-label" })
+                                    <div class="col-md-10">
+                                        @Html.TextBoxFor(m => m.OfficeNo, new { @class = "form-control" })
+                                        @Html.ValidationMessageFor(m => m.OfficeNo, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    @Html.LabelFor(m => m.cmpWebsite, new { @class = "col-md-2 control-label" })
+                                    <div class="col-md-10">
+                                        @Html.TextBoxFor(m => m.cmpWebsite, new { @class = "form-control" })
+                                        @Html.ValidationMessageFor(m => m.cmpWebsite, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="row-fluid">
+                    <div class="consImage col-md-6">
+                        <div id="divImage" class="table-bordered">
+                            <img src="@Model.imageSrc" id="imgUser" class="doc_avatar" />
+                        </div>
+                        <div style="padding-top: 10px; text-align: center;line-height: 1.429;">
+                            <input style="display: none" type="file" id="ImageChange" />
+                            <input type="button" id="btnUpload" onclick='$("#ImageChange").click()' value="Upload Photo" class="btn btn-sm btn-default"  />
+                            <span id="spnName"></span>
+                            @*Html.ActionLink("Change Image", "EmployerRegister", "Employee", new { area = "", userName = Session["UserName"].ToString() }, htmlAttributes: new { @class = "btn btn-primary", title = "Home", id = Session["UserName"].ToString() })*@
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        @if (Session["UserRole"].ToString() == "Employee")
+                        {
+                            if (Session["Department"].ToString() == "Admin")
+                            {
+                                <div class="form-group">
+                                    @Html.ActionLink("Add Employee", "EmployerRegister", "Employee", new { area = "", userName = Session["UserName"].ToString() }, htmlAttributes: new { @class = "btn btn-primary", title = "Home", id = Session["UserName"].ToString() })
+                                </div>
+                            }
+                        }
+                        <div class="form-group">
+                            @Html.ActionLink("Change Password", "ResetPassword", "Home", new { area = "", userName = Session["UserName"].ToString() }, htmlAttributes: new { @class = "btn btn-primary", title = "Home", id = Session["UserName"].ToString() })
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row-fluid">
+            <div class="form-group">
+                <div class="col-md-offset-4 col-md-10">
+                    <input type="submit" value="Save Changes" class="btn btn-default" />
+                </div>
+            </div>
+        </div>
+    }
+</div>
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
+<script type="text/javascript">
+    $(function () {
+        $("#ImageChange").change(function () {
+
+            if (window.FormData !== undefined) {
+
+                var fileUpload = $("#ImageChange").get(0);
+                var files = fileUpload.files;
+
+                // Create FormData object
+                var fileData = new FormData();
+
+                // Looping over all files and add it to FormData object
+                for (var i = 0; i < files.length; i++) {
+                    fileData.append(files[i].name, files[i]);
+                }
+
+                // Adding one more key to FormData object
+                //fileData.append('username', ‘Manas’);
+
+                $.ajax({
+                    url: '/Home/ChangeProfileImage',
+                    type: "POST",
+                    contentType: false, // Not to set any content header
+                    processData: false, // Not to process data
+                    data: fileData,
+                    success: function (result) {
+                        if (result.status == "Success") {
+                            $('#imgUser').removeAttr('src');
+                            $('#imgUser').attr('src', result.path);
+                        }
+                        if (result.status == "Failed") {
+                            alert(result.Message);
+                        }
+                    },
+                    error: function (err) {
+                        alert(err.statusText);
+                    }
+                });
+            } else {
+                alert("FormData is not supported.");
+            }
+        });
+    });
+
+
+</script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('#Personal').show();
+        $('#Qualification').hide();
+        $('#Professional').hide();
+        $('#Account').hide();
+
+        $('#grad').hide();
+        $('#pgrad').hide();
+        $('#certificate').hide();
+
+    });
+
+    function showPersonal() {
+        if ($("#Personal").is(":visible")) { $('#Personal').hide(); }
+        else { $('#Personal').show(); }
+    }
+
+    function showQualification() {
+        if ($("#Qualification").is(":visible")) { $('#Qualification').hide(); }
+        else { $('#Qualification').show(); }
+    }
+
+    function showProfessional() {
+        if ($("#Professional").is(":visible")) { $('#Professional').hide(); }
+        else { $('#Professional').show(); }
+    }
+
+    function showAccount() {
+        if ($("#Account").is(":visible")) { $('#Account').hide(); }
+        else { $('#Account').show(); }
+    }
+
+    $(function () {
+        $('#Graduation').change(function () {
+            var value = $(this).val();
+            var selectedText = $("#Graduation option:selected").text();
+            if (selectedText == "Other") {
+                $('#grad').show();
+            }
+            else {
+                $('#grad').hide();
+            }
+        });
+    });
+    $(function () {
+        $('#PostGraduation').change(function () {
+            var value = $(this).val();
+            var selectedText = $("#PostGraduation option:selected").text();
+            if (selectedText == "Other") {
+                $('#pgrad').show();
+            }
+            else {
+                $('#pgrad').hide();
+            }
+        });
+    });
+    $(function () {
+        $('#Certificate').change(function () {
+            var value = $(this).val();
+            var selectedText = $("#Certificate option:selected").text(); PostGraduation
+            if (selectedText == "Other") {
+                $('#certificate').show();
+            }
+            else {
+                $('#certificate').hide();
+            }
+        });
+    });
+
+    function isNumberKey(evt) {
+        var charCode = (evt.which) ? evt.which : event.keyCode;
+        if (charCode != 46 && charCode > 31 && (charCode < 48 || charCode > 57))
+            return false;
+
+        return true;
+    }
+
+    function getValueUsingParentTag() {
+        var chkArray = [];
+
+        /* look for all checkboes that have a parent id called 'checkedid' attached to it and check if it was checked */
+        $("#checkedid input:checked").each(function () {
+            chkArray.push($(this).val());
+        });
+
+        /* we join the array separated by the comma */
+        var selected;
+        selected = chkArray.join(',') + ",";
+
+        /* check if there is selected checkboxes, by default the length is 1 as it contains one single comma */
+        if (selected.length > 1) {
+            $("#chkboxes").val(selected);
+            //alert("You have selected " + selected);
+        } else {
+            alert("Please at least one of the specialization");
+        }
+    }
+</script>
+

@@ -1,0 +1,104 @@
+﻿@model IEnumerable<VibExchange.Models.ClientsRecord>
+
+@{
+    ViewBag.Title = "All User Data";
+    Layout = "~/Views/Shared/_VibExchangeLayout.cshtml";
+}
+<script src="~/JQGridReq/jquery-1.9.0.min.js"></script>
+<link href="~/JQGridReq/jquery-ui-1.9.2.custom.css" rel="stylesheet" />
+<script src="~/JQGridReq/jquery.jqGrid.js"></script>
+<script src="~/JQGridReq/grid.locale-en.js"></script>
+<link href="~/JQGridReq/ui.jqgrid.css" rel="stylesheet" />
+<div class="container row-fluid">
+    <h4>All Users Data >></h4>
+    <div class="jumbotron">
+        <table id="jqGridUserData"></table>
+        <div id="jQGridDemoPager">
+        </div>
+    </div>
+</div>
+<script>
+    var GetAllUserList = "@Url.Action("getUserData", "Clients")";
+</script>
+
+<script type="text/javascript">
+
+    $(document).ready(function () {
+        BindUserData();
+    });
+
+    function BindUserData() {
+        jQuery("#jqGridUserData").jqGrid({
+            url: GetAllUserList,
+            datatype: "json",
+            colNames: ['Create Date', "UserName", 'Name', 'Phone', 'EmailID', "User Role", "Action"],
+            colModel: [
+                   { name: 'CreatedDate', index: 'CreatedDate', sortable: true, formatter: "date", formatoptions: { srcformat: "ISO8601Long", newformat: "d/m/Y " } },
+                     { name: 'UserName', index: 'UserName', stype: 'text', hidden: true },
+                     { name: 'Name', index: 'Name', stype: 'text', sortable: true },
+                     //{ name: 'Company', index: 'Company' },
+                     { name: 'Phone', index: 'Phone' },
+                     { name: 'EmailID', index: 'EmailID' ,sortable:false},
+                     { name: 'UserRole', index: 'UserRole', sortable: true ,Filetr:true},
+                    { name: 'ShowDetail', index: 'ShowDetail', sortable: false, title: false, formatter: ShowDetail }
+            ],
+            pager: $('#jQGridDemoPager'),
+            //number of rows per page
+            rowNum: 50,
+            //initial sorting column
+            sortname: 'EnquiryID',
+            //initial sorting direction
+            sortorder: 'asc',
+            //we want to display total records count
+            viewrecords: true,
+            //grid width
+            autowidth: true,
+            //grid height
+            height: '100%',
+            pginput: true,
+            rownumbers: true,
+            gridview: true,
+            pgbuttons: true,
+            hoverrows: true,    
+            viewrecords: true,
+            loadonce: true,
+            scroll: true,
+            //height: 250,
+            autowidth: true,
+            autoheight: true,
+            emptyrecords: 'No records to display',
+            gridComplete: function () {
+                var $this = $(this), ids = $this.jqGrid('getDataIDs'), i, l = ids.length;
+                for (var j = 0; j < ids.length; j = j + 1) {
+                    $("#jqGridUserData").collapseSubGridRow(ids[j]);
+                }
+            },
+            loadComplete: function () {
+                //Below code is for keeping the rows in edit mode by default 
+                var $this = $(this), ids = $this.jqGrid('getDataIDs'), i, l = ids.length;
+                for (i = 0; i < l; i++) {
+                    $this.jqGrid('editRow', ids[i], false);
+                }
+            },
+        }).navGrid('#jQGridDemoPager',
+                { search: true, edit: false, add: false, del: false }
+              );
+    }
+
+    function ShowDetail(cellvalue, options, rowObject) {
+        var primaryId = rowObject.UserName;
+        if (primaryId == null || primaryId == undefined || primaryId == "")
+            primaryId = "0";
+
+        return "<a href='javascript:ShowUser(" + options.rowId + "," + rowObject.UserName + "," + options.gid + ")'style='color:blue; margin-left:5px;' title='Show Detail'>Detail</a>";
+      
+    }
+
+    function ShowUser(rowId, UserName, rowObject) {
+       
+        $('#myModalContent').load("@Url.Action("ShowUserDetail/", "Clients", new { UserName = "_Id" })".replace("_Id", UserName), function () {
+
+            $('#myModal').toggle();
+        });
+    } 
+</script>

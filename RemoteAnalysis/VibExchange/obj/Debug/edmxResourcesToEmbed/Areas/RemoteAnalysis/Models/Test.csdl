@@ -1,0 +1,494 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Iadept_CloudModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Emp_Detail">
+    <Key>
+      <PropertyRef Name="EmpID" />
+    </Key>
+    <Property Name="AutoId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="EmpID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="IsEnabled" Type="Boolean" />
+    <Property Name="Emp_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="DisplayName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="LoginID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="UserRole" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Designation" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Department" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PhoneNo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="EmailId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Image" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Specialization" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="Experience" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="EAddress" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="ECountry" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="EState" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ECity" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Academic" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Graduation" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Postgraduation" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Certification" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CompName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CAddress" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="CCountry" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CState" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CCity" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="OfficeContactNo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CompWebsite" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CreationDate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="tblAlarm">
+    <Key>
+      <PropertyRef Name="AlarmID" />
+    </Key>
+    <Property Name="AlarmID" Type="Int32" Nullable="false" />
+    <Property Name="AlarmName" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="AlarmType" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="HighValue" Type="Double" Nullable="false" />
+    <Property Name="LowValue" Type="Double" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblArea">
+    <Key>
+      <PropertyRef Name="AreaID" />
+    </Key>
+    <Property Name="AreaID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AreaName" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="AreaDetail" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="FileID" Type="Int32" Nullable="false" />
+    <Property Name="ParentID" Type="Int32" Nullable="false" />
+    <Property Name="ParentType" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="tblFileData" Relationship="Iadept_CloudModel.FK_Area_Fileid" FromRole="tblArea" ToRole="tblFileData" />
+    <NavigationProperty Name="tblPlant" Relationship="Iadept_CloudModel.FK_Area_Parentid" FromRole="tblArea" ToRole="tblPlant" />
+  </EntityType>
+  <EntityType Name="tblBearing">
+    <Key>
+      <PropertyRef Name="BearingID" />
+    </Key>
+    <Property Name="BearingID" Type="Int32" Nullable="false" />
+    <Property Name="BearingMake" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="BearingModel" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="InnerDia" Type="Double" Nullable="false" />
+    <Property Name="OuterDia" Type="Double" Nullable="false" />
+    <Property Name="ContactAngel" Type="Double" Nullable="false" />
+    <Property Name="RollingDia" Type="Double" Nullable="false" />
+    <Property Name="NoOfRollingElement" Type="Int32" Nullable="false" />
+    <Property Name="Balls" Type="Double" Nullable="false" />
+    <Property Name="FTF" Type="Double" Nullable="false" />
+    <Property Name="BSF" Type="Double" Nullable="false" />
+    <Property Name="BPFO" Type="Double" Nullable="false" />
+    <Property Name="BPFI" Type="Double" Nullable="false" />
+    <NavigationProperty Name="tblPoints" Relationship="Iadept_CloudModel.FK_tblPoint_tblBearing" FromRole="tblBearing" ToRole="tblPoint" />
+  </EntityType>
+  <EntityType Name="tblFaultFrequency">
+    <Key>
+      <PropertyRef Name="FrequencyID" />
+    </Key>
+    <Property Name="FrequencyID" Type="Int32" Nullable="false" />
+    <Property Name="FrequencyName" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="FrequencyValue" Type="Double" Nullable="false" />
+    <Property Name="PointID" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblInstrument">
+    <Key>
+      <PropertyRef Name="InstrumentID" />
+    </Key>
+    <Property Name="InstrumentID" Type="Int32" Nullable="false" />
+    <Property Name="InstrumentName" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ManufacturerName" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="FileID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="tblUserMasters" Relationship="Iadept_CloudModel.FK_Instrumentid" FromRole="tblInstrument" ToRole="tblUserMaster" />
+  </EntityType>
+  <EntityType Name="tblMachine">
+    <Key>
+      <PropertyRef Name="MachineID" />
+    </Key>
+    <Property Name="MachineID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MachineName" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="MachineDetail" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="MachineClass" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="RPMDriven" Type="Double" Nullable="false" />
+    <Property Name="PulseRevolution" Type="Double" Nullable="false" />
+    <Property Name="FileID" Type="Int32" Nullable="false" />
+    <Property Name="ParentID" Type="Int32" Nullable="false" />
+    <Property Name="ParentType" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="tblFileData" Relationship="Iadept_CloudModel.FK_Machine_Fileid" FromRole="tblMachine" ToRole="tblFileData" />
+    <NavigationProperty Name="tblPoints" Relationship="Iadept_CloudModel.FK_Point_Machineid" FromRole="tblMachine" ToRole="tblPoint" />
+    <NavigationProperty Name="tblTrain" Relationship="Iadept_CloudModel.FK_tblMachine_tblTrain" FromRole="tblMachine" ToRole="tblTrain" />
+  </EntityType>
+  <EntityType Name="tblPlant">
+    <Key>
+      <PropertyRef Name="PlantID" />
+    </Key>
+    <Property Name="PlantID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PlantName" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Category" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="PlantDetail" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="FileID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="tblAreas" Relationship="Iadept_CloudModel.FK_Area_Parentid" FromRole="tblPlant" ToRole="tblArea" />
+  </EntityType>
+  <EntityType Name="tblPoint">
+    <Key>
+      <PropertyRef Name="PointID" />
+    </Key>
+    <Property Name="PointID" Type="Int32" Nullable="false" />
+    <Property Name="PointName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="PointDetail" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="PointBearingID" Type="Int32" Nullable="false" />
+    <Property Name="FileID" Type="Int32" Nullable="false" />
+    <Property Name="ParentID" Type="Int32" Nullable="false" />
+    <Property Name="ParentType" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="tblBearing" Relationship="Iadept_CloudModel.FK_tblPoint_tblBearing" FromRole="tblPoint" ToRole="tblBearing" />
+    <NavigationProperty Name="tblFileData" Relationship="Iadept_CloudModel.FK_Point_Fileid" FromRole="tblPoint" ToRole="tblFileData" />
+    <NavigationProperty Name="tblMachine" Relationship="Iadept_CloudModel.FK_Point_Machineid" FromRole="tblPoint" ToRole="tblMachine" />
+  </EntityType>
+  <EntityType Name="tblTrain">
+    <Key>
+      <PropertyRef Name="TrainID" />
+    </Key>
+    <Property Name="TrainID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TrainName" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="TrainDetail" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="NoOfMachine" Type="Int32" Nullable="false" />
+    <Property Name="FileID" Type="Int32" Nullable="false" />
+    <Property Name="ParentID" Type="Int32" Nullable="false" />
+    <Property Name="ParentType" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="tblMachines" Relationship="Iadept_CloudModel.FK_tblMachine_tblTrain" FromRole="tblTrain" ToRole="tblMachine" />
+  </EntityType>
+  <EntityType Name="tblUnit">
+    <Key>
+      <PropertyRef Name="UnitID" />
+    </Key>
+    <Property Name="UnitID" Type="Int32" Nullable="false" />
+    <Property Name="SensorType" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Unit" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblUserMaster">
+    <Key>
+      <PropertyRef Name="FileID" />
+    </Key>
+    <Property Name="FileID" Type="Int32" Nullable="false" />
+    <Property Name="UserID" Type="Int32" Nullable="false" />
+    <Property Name="InstrumentID" Type="String" Nullable="false" />
+    <Property Name="AnalysisID" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="tblFileData" Relationship="Iadept_CloudModel.FK_Fileid" FromRole="tblUserMaster" ToRole="tblFileData" />
+    <NavigationProperty Name="tblInstrument" Relationship="Iadept_CloudModel.FK_Instrumentid" FromRole="tblUserMaster" ToRole="tblInstrument" />
+    <NavigationProperty Name="UserDetail" Relationship="Iadept_CloudModel.FK_Userid" FromRole="tblUserMaster" ToRole="UserDetail" />
+  </EntityType>
+  <EntityType Name="UserDetail">
+    <Key>
+      <PropertyRef Name="UserName" />
+    </Key>
+    <Property Name="AutoId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="uPassword" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="uName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Email_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Address" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="City" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="State" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="Country" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="ImagePath" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="uCompanyName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="uCompanyAddress" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="uCity" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="uState" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="uCountry" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="officePhone" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="uMobile_No" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="uCompany_Website" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="UserRole" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="CreationDate" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="tblUserMasters" Relationship="Iadept_CloudModel.FK_Userid" FromRole="UserDetail" ToRole="tblUserMaster" />
+  </EntityType>
+  <EntityType Name="UserProfile">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="UserId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserName" Type="String" MaxLength="56" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityType Name="webpages_Membership">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="UserId" Type="Int32" Nullable="false" />
+    <Property Name="CreateDate" Type="DateTime" Precision="3" />
+    <Property Name="ConfirmationToken" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="IsConfirmed" Type="Boolean" />
+    <Property Name="LastPasswordFailureDate" Type="DateTime" Precision="3" />
+    <Property Name="PasswordFailuresSinceLastSuccess" Type="Int32" Nullable="false" />
+    <Property Name="Password" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="PasswordChangedDate" Type="DateTime" Precision="3" />
+    <Property Name="PasswordSalt" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="PasswordVerificationToken" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="PasswordVerificationTokenExpirationDate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="webpages_OAuthMembership">
+    <Key>
+      <PropertyRef Name="Provider" />
+      <PropertyRef Name="ProviderUserId" />
+    </Key>
+    <Property Name="Provider" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ProviderUserId" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="UserId" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="webpages_Roles">
+    <Key>
+      <PropertyRef Name="RoleId" />
+    </Key>
+    <Property Name="RoleId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RoleName" Type="String" MaxLength="256" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="webpages_UsersInRoles" Relationship="Self.fk_RoleId" FromRole="webpages_Roles" ToRole="webpages_UsersInRoles" />
+  </EntityType>
+  <EntityType Name="webpages_UsersInRoles">
+    <Key>
+      <PropertyRef Name="UserId" />
+      <PropertyRef Name="RoleId" />
+    </Key>
+    <Property Name="UserId" Type="Int32" Nullable="false" />
+    <Property Name="RoleId" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="webpages_Roles" Relationship="Self.fk_RoleId" FromRole="webpages_UsersInRoles" ToRole="webpages_Roles" />
+  </EntityType>
+  <EntityType Name="tblFileData">
+    <Key>
+      <PropertyRef Name="FileID" />
+      <PropertyRef Name="UserID" />
+      <PropertyRef Name="FileName" />
+      <PropertyRef Name="FileType" />
+      <PropertyRef Name="FileFormate" />
+      <PropertyRef Name="InstrumentUsed" />
+      <PropertyRef Name="AnalysisMethod" />
+      <PropertyRef Name="DateOfUpload" />
+    </Key>
+    <Property Name="FileID" Type="Int32" Nullable="false" />
+    <Property Name="UserID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="FileName" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="FileType" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="FileFormate" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="InstrumentUsed" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="NoOfMachines" Type="Int32" />
+    <Property Name="NoOfPoints" Type="Int32" />
+    <Property Name="AnalysisMethod" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ImagePath" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="DateOfUpload" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="tblUserMasters" Relationship="Iadept_CloudModel.FK_Fileid" FromRole="tblFileData" ToRole="tblUserMaster" />
+    <NavigationProperty Name="tblFileData1" Relationship="Iadept_CloudModel.FK_tblFileData_tblFileData" FromRole="tblFileData" ToRole="tblFileData1" />
+    <NavigationProperty Name="tblFileData2" Relationship="Iadept_CloudModel.FK_tblFileData_tblFileData" FromRole="tblFileData1" ToRole="tblFileData" />
+    <NavigationProperty Name="tblAreas" Relationship="Iadept_CloudModel.FK_Area_Fileid" FromRole="tblFileData" ToRole="tblArea" />
+    <NavigationProperty Name="tblMachines" Relationship="Iadept_CloudModel.FK_Machine_Fileid" FromRole="tblFileData" ToRole="tblMachine" />
+    <NavigationProperty Name="tblPoints" Relationship="Iadept_CloudModel.FK_Point_Fileid" FromRole="tblFileData" ToRole="tblPoint" />
+  </EntityType>
+  <Association Name="fk_RoleId">
+    <End Role="webpages_Roles" Type="Self.webpages_Roles" Multiplicity="1" />
+    <End Role="webpages_UsersInRoles" Type="Self.webpages_UsersInRoles" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="webpages_Roles">
+        <PropertyRef Name="RoleId" />
+      </Principal>
+      <Dependent Role="webpages_UsersInRoles">
+        <PropertyRef Name="RoleId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="Iadept_CloudEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Emp_Detail" EntityType="Self.Emp_Detail" />
+    <EntitySet Name="tblAlarms" EntityType="Self.tblAlarm" />
+    <EntitySet Name="tblAreas" EntityType="Self.tblArea" />
+    <EntitySet Name="tblBearings" EntityType="Self.tblBearing" />
+    <EntitySet Name="tblFaultFrequencies" EntityType="Self.tblFaultFrequency" />
+    <EntitySet Name="tblInstruments" EntityType="Self.tblInstrument" />
+    <EntitySet Name="tblMachines" EntityType="Self.tblMachine" />
+    <EntitySet Name="tblPlants" EntityType="Self.tblPlant" />
+    <EntitySet Name="tblPoints" EntityType="Self.tblPoint" />
+    <EntitySet Name="tblTrains" EntityType="Self.tblTrain" />
+    <EntitySet Name="tblUnits" EntityType="Self.tblUnit" />
+    <EntitySet Name="tblUserMasters" EntityType="Self.tblUserMaster" />
+    <EntitySet Name="UserDetails" EntityType="Self.UserDetail" />
+    <EntitySet Name="UserProfiles" EntityType="Self.UserProfile" />
+    <EntitySet Name="webpages_Membership" EntityType="Self.webpages_Membership" />
+    <EntitySet Name="webpages_OAuthMembership" EntityType="Self.webpages_OAuthMembership" />
+    <EntitySet Name="webpages_Roles" EntityType="Self.webpages_Roles" />
+    <EntitySet Name="webpages_UsersInRoles" EntityType="Self.webpages_UsersInRoles" />
+    <EntitySet Name="tblFileDatas" EntityType="Self.tblFileData" />
+    <AssociationSet Name="fk_RoleId" Association="Self.fk_RoleId">
+      <End Role="webpages_Roles" EntitySet="webpages_Roles" />
+      <End Role="webpages_UsersInRoles" EntitySet="webpages_UsersInRoles" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Fileid" Association="Iadept_CloudModel.FK_Fileid">
+      <End Role="tblFileData" EntitySet="tblFileDatas" />
+      <End Role="tblUserMaster" EntitySet="tblUserMasters" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblFileData_tblFileData" Association="Iadept_CloudModel.FK_tblFileData_tblFileData">
+      <End Role="tblFileData" EntitySet="tblFileDatas" />
+      <End Role="tblFileData1" EntitySet="tblFileDatas" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Instrumentid" Association="Iadept_CloudModel.FK_Instrumentid">
+      <End Role="tblInstrument" EntitySet="tblInstruments" />
+      <End Role="tblUserMaster" EntitySet="tblUserMasters" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Userid" Association="Iadept_CloudModel.FK_Userid">
+      <End Role="UserDetail" EntitySet="UserDetails" />
+      <End Role="tblUserMaster" EntitySet="tblUserMasters" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Area_Fileid" Association="Iadept_CloudModel.FK_Area_Fileid">
+      <End Role="tblFileData" EntitySet="tblFileDatas" />
+      <End Role="tblArea" EntitySet="tblAreas" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Area_Parentid" Association="Iadept_CloudModel.FK_Area_Parentid">
+      <End Role="tblPlant" EntitySet="tblPlants" />
+      <End Role="tblArea" EntitySet="tblAreas" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblPoint_tblBearing" Association="Iadept_CloudModel.FK_tblPoint_tblBearing">
+      <End Role="tblBearing" EntitySet="tblBearings" />
+      <End Role="tblPoint" EntitySet="tblPoints" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Machine_Fileid" Association="Iadept_CloudModel.FK_Machine_Fileid">
+      <End Role="tblFileData" EntitySet="tblFileDatas" />
+      <End Role="tblMachine" EntitySet="tblMachines" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Point_Fileid" Association="Iadept_CloudModel.FK_Point_Fileid">
+      <End Role="tblFileData" EntitySet="tblFileDatas" />
+      <End Role="tblPoint" EntitySet="tblPoints" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Point_Machineid" Association="Iadept_CloudModel.FK_Point_Machineid">
+      <End Role="tblMachine" EntitySet="tblMachines" />
+      <End Role="tblPoint" EntitySet="tblPoints" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblMachine_tblTrain" Association="Iadept_CloudModel.FK_tblMachine_tblTrain">
+      <End Role="tblTrain" EntitySet="tblTrains" />
+      <End Role="tblMachine" EntitySet="tblMachines" />
+    </AssociationSet>
+  </EntityContainer>
+  <Association Name="FK_Fileid">
+    <End Type="Iadept_CloudModel.tblFileData" Role="tblFileData" Multiplicity="1" />
+    <End Type="Iadept_CloudModel.tblUserMaster" Role="tblUserMaster" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblFileData">
+        <PropertyRef Name="FileID" />
+      </Principal>
+      <Dependent Role="tblUserMaster">
+        <PropertyRef Name="FileID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblFileData_tblFileData">
+    <End Type="Iadept_CloudModel.tblFileData" Role="tblFileData" Multiplicity="1" />
+    <End Type="Iadept_CloudModel.tblFileData" Role="tblFileData1" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="tblFileData">
+        <PropertyRef Name="FileID" />
+      </Principal>
+      <Dependent Role="tblFileData1">
+        <PropertyRef Name="FileID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Instrumentid">
+    <End Type="Iadept_CloudModel.tblInstrument" Role="tblInstrument" Multiplicity="1" />
+    <End Type="Iadept_CloudModel.tblUserMaster" Role="tblUserMaster" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblInstrument">
+        <PropertyRef Name="InstrumentID" />
+      </Principal>
+      <Dependent Role="tblUserMaster">
+        <PropertyRef Name="InstrumentID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Userid">
+    <End Type="Iadept_CloudModel.UserDetail" Role="UserDetail" Multiplicity="1" />
+    <End Type="Iadept_CloudModel.tblUserMaster" Role="tblUserMaster" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UserDetail">
+        <PropertyRef Name="UserName" />
+      </Principal>
+      <Dependent Role="tblUserMaster">
+        <PropertyRef Name="UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Area_Fileid">
+    <End Type="Iadept_CloudModel.tblFileData" Role="tblFileData" Multiplicity="1" />
+    <End Type="Iadept_CloudModel.tblArea" Role="tblArea" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblFileData">
+        <PropertyRef Name="FileID" />
+      </Principal>
+      <Dependent Role="tblArea">
+        <PropertyRef Name="FileID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Area_Parentid">
+    <End Type="Iadept_CloudModel.tblPlant" Role="tblPlant" Multiplicity="1" />
+    <End Type="Iadept_CloudModel.tblArea" Role="tblArea" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblPlant">
+        <PropertyRef Name="PlantID" />
+      </Principal>
+      <Dependent Role="tblArea">
+        <PropertyRef Name="ParentID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblPoint_tblBearing">
+    <End Type="Iadept_CloudModel.tblBearing" Role="tblBearing" Multiplicity="1" />
+    <End Type="Iadept_CloudModel.tblPoint" Role="tblPoint" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblBearing">
+        <PropertyRef Name="BearingID" />
+      </Principal>
+      <Dependent Role="tblPoint">
+        <PropertyRef Name="PointBearingID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Machine_Fileid">
+    <End Type="Iadept_CloudModel.tblFileData" Role="tblFileData" Multiplicity="1" />
+    <End Type="Iadept_CloudModel.tblMachine" Role="tblMachine" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblFileData">
+        <PropertyRef Name="FileID" />
+      </Principal>
+      <Dependent Role="tblMachine">
+        <PropertyRef Name="FileID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Point_Fileid">
+    <End Type="Iadept_CloudModel.tblFileData" Role="tblFileData" Multiplicity="1" />
+    <End Type="Iadept_CloudModel.tblPoint" Role="tblPoint" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblFileData">
+        <PropertyRef Name="FileID" />
+      </Principal>
+      <Dependent Role="tblPoint">
+        <PropertyRef Name="FileID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Point_Machineid">
+    <End Type="Iadept_CloudModel.tblMachine" Role="tblMachine" Multiplicity="1" />
+    <End Type="Iadept_CloudModel.tblPoint" Role="tblPoint" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblMachine">
+        <PropertyRef Name="MachineID" />
+      </Principal>
+      <Dependent Role="tblPoint">
+        <PropertyRef Name="ParentID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblMachine_tblTrain">
+    <End Type="Iadept_CloudModel.tblTrain" Role="tblTrain" Multiplicity="1" />
+    <End Type="Iadept_CloudModel.tblMachine" Role="tblMachine" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblTrain">
+        <PropertyRef Name="TrainID" />
+      </Principal>
+      <Dependent Role="tblMachine">
+        <PropertyRef Name="ParentID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

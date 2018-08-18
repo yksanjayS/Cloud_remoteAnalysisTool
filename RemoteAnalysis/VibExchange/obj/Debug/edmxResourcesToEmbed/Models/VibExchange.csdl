@@ -1,0 +1,211 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Iadept_CloudModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Emp_Detail">
+    <Key>
+      <PropertyRef Name="EmpID" />
+    </Key>
+    <Property Name="AutoId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="EmpID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Emp_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="eDesignation" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="eDepartment" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="EmailId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="eLoginID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ePassword" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Service">
+    <Key>
+      <PropertyRef Name="ServiceId" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ServiceId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ServiceName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ServiceDepartment" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ServiceType" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ServiceCost" Type="Double" />
+    <Property Name="ServiceDuration" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="IsEnabled" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="UploadData">
+    <Key>
+      <PropertyRef Name="EmailID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="EmailID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="InstrumentUsed" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="MachineDescription" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="FileData" Type="Binary" MaxLength="Max" FixedLength="false" Nullable="false" />
+    <Property Name="ReportFile" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="UserProfile">
+    <Key>
+      <PropertyRef Name="UserName" />
+    </Key>
+    <Property Name="AutoId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="uPassword" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="uName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="uCompanyName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="uCompanyAddress" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="uCity" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="uState" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="uCountry" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="uFax_No" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="uMobile_No" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="uCompany_Website" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="PaymentDetail">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="UserName" />
+      <PropertyRef Name="ServiceId" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ServiceId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Amount" Type="Double" />
+    <Property Name="Status" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
+    <Property Name="AccountDeptConfirm" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="AdminRemark" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="ProgressReport">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="ServiceId" />
+      <PropertyRef Name="UserName" />
+      <PropertyRef Name="AssignEmpId" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ServiceId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="UserName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="AssignEmpId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="StartDate" Type="DateTime" Precision="0" />
+    <Property Name="CurrentStatus" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
+    <Property Name="Remark" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="PaymentStatus" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
+    <Property Name="ContactPerson" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityContainer Name="Iadept_CloudEntities1" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Emp_Detail" EntityType="Self.Emp_Detail" />
+    <EntitySet Name="Services" EntityType="Self.Service" />
+    <EntitySet Name="UploadDatas" EntityType="Self.UploadData" />
+    <EntitySet Name="UserProfiles" EntityType="Self.UserProfile" />
+    <EntitySet Name="PaymentDetails" EntityType="Self.PaymentDetail" />
+    <EntitySet Name="ProgressReports" EntityType="Self.ProgressReport" />
+    <FunctionImport Name="spempdetail">
+      <Parameter Name="Emp_Name" Mode="In" Type="String" />
+      <Parameter Name="eDesignation" Mode="In" Type="String" />
+      <Parameter Name="eDepartment" Mode="In" Type="String" />
+      <Parameter Name="EmailId" Mode="In" Type="String" />
+      <Parameter Name="eLoginID" Mode="In" Type="String" />
+      <Parameter Name="ePassword" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sppaymentdetail">
+      <Parameter Name="userid" Mode="In" Type="String" />
+      <Parameter Name="serviceid" Mode="In" Type="String" />
+      <Parameter Name="amount" Mode="In" Type="Double" />
+      <Parameter Name="status" Mode="In" Type="String" />
+      <Parameter Name="accountdeptconfirm" Mode="In" Type="String" />
+      <Parameter Name="adminremork" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sppaymentServiceselect" ReturnType="Collection(Iadept_CloudModel.sppaymentServiceselect_Result)">
+      <Parameter Name="serviceid" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sppaymentUserselect" ReturnType="Collection(Iadept_CloudModel.sppaymentUserselect_Result)">
+      <Parameter Name="userid" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spprogresServiceselect" ReturnType="Collection(Iadept_CloudModel.spprogresServiceselect_Result)">
+      <Parameter Name="serviceid" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spprogressreport">
+      <Parameter Name="serviceid" Mode="In" Type="String" />
+      <Parameter Name="userid" Mode="In" Type="String" />
+      <Parameter Name="assignempid" Mode="In" Type="String" />
+      <Parameter Name="currentstatus" Mode="In" Type="String" />
+      <Parameter Name="remark" Mode="In" Type="String" />
+      <Parameter Name="paymentstatus" Mode="In" Type="String" />
+      <Parameter Name="contactperson" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spprogresUserselect" ReturnType="Collection(Iadept_CloudModel.spprogresUserselect_Result)">
+      <Parameter Name="userid" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spservices2">
+      <Parameter Name="servicename" Mode="In" Type="String" />
+      <Parameter Name="servicedept" Mode="In" Type="String" />
+      <Parameter Name="servicetype" Mode="In" Type="String" />
+      <Parameter Name="servicecost" Mode="In" Type="Double" />
+      <Parameter Name="serviceduration" Mode="In" Type="String" />
+      <Parameter Name="isenabled" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spservicesselect" ReturnType="Collection(Iadept_CloudModel.spservicesselect_Result)">
+      <Parameter Name="serviceid" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spuserprofile">
+      <Parameter Name="uEmailID" Mode="In" Type="String" />
+      <Parameter Name="uPassword" Mode="In" Type="String" />
+      <Parameter Name="uName" Mode="In" Type="String" />
+      <Parameter Name="uCompanyName" Mode="In" Type="String" />
+      <Parameter Name="uAddress" Mode="In" Type="String" />
+      <Parameter Name="uCountry" Mode="In" Type="String" />
+      <Parameter Name="uState" Mode="In" Type="String" />
+      <Parameter Name="uCity" Mode="In" Type="String" />
+      <Parameter Name="uFaxNo" Mode="In" Type="String" />
+      <Parameter Name="uContactNo" Mode="In" Type="String" />
+      <Parameter Name="uCompany_Website" Mode="In" Type="String" />
+    </FunctionImport>
+  </EntityContainer>
+  <ComplexType Name="sppaymentServiceselect_Result">
+    <Property Type="Int32" Name="Id" Nullable="false" />
+    <Property Type="String" Name="ServiceId" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="UserName" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="AssignEmpId" Nullable="false" MaxLength="50" />
+    <Property Type="DateTime" Name="StartDate" Nullable="true" />
+    <Property Type="String" Name="CurrentStatus" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="Remark" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="PaymentStatus" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="ContactPerson" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="sppaymentUserselect_Result">
+    <Property Type="Int32" Name="Id" Nullable="false" />
+    <Property Type="String" Name="ServiceId" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="UserName" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="AssignEmpId" Nullable="false" MaxLength="50" />
+    <Property Type="DateTime" Name="StartDate" Nullable="true" />
+    <Property Type="String" Name="CurrentStatus" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="Remark" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="PaymentStatus" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="ContactPerson" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="spprogresServiceselect_Result">
+    <Property Type="Int32" Name="Id" Nullable="false" />
+    <Property Type="String" Name="ServiceId" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="UserName" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="AssignEmpId" Nullable="false" MaxLength="50" />
+    <Property Type="DateTime" Name="StartDate" Nullable="true" />
+    <Property Type="String" Name="CurrentStatus" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="Remark" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="PaymentStatus" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="ContactPerson" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="spprogresUserselect_Result">
+    <Property Type="Int32" Name="Id" Nullable="false" />
+    <Property Type="String" Name="ServiceId" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="UserName" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="AssignEmpId" Nullable="false" MaxLength="50" />
+    <Property Type="DateTime" Name="StartDate" Nullable="true" />
+    <Property Type="String" Name="CurrentStatus" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="Remark" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="PaymentStatus" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="ContactPerson" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="spservicesselect_Result">
+    <Property Type="Int32" Name="Id" Nullable="false" />
+    <Property Type="String" Name="ServiceId" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="ServiceName" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="ServiceDepartment" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="ServiceType" Nullable="true" MaxLength="50" />
+    <Property Type="Double" Name="ServiceCost" Nullable="true" />
+    <Property Type="String" Name="ServiceDuration" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="IsEnabled" Nullable="true" MaxLength="50" />
+  </ComplexType>
+</Schema>

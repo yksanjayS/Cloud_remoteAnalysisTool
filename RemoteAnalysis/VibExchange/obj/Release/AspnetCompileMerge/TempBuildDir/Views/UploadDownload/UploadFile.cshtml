@@ -1,0 +1,260 @@
+﻿@model VibExchange.Models.UploadFile
+@{
+    ViewBag.Title = "File Upload";
+    Layout = "~/Views/Shared/_VibExchangeLayout.cshtml";
+
+}
+@if (@ViewBag.Message != null)
+{
+    <div>
+        <button type="button">@ViewBag.Message</button>
+    </div>
+}
+    @*@if (TempData["Error"] != null)
+        {
+            <p>@TempData["Error"]</p>
+        }*@
+
+    <script src="~/Scripts/jquery-1.8.3.min.js"></script>
+    <script src="~/JQGridReq/jquery-1.9.0.min.js"></script>
+    <link href="~/JQGridReq/jquery-ui-1.9.2.custom.css" rel="stylesheet" />
+    <script src="~/JQGridReq/jquery.jqGrid.js"></script>
+    <script src="~/JQGridReq/grid.locale-en.js"></script>
+    <link href="~/JQGridReq/ui.jqgrid.css" rel="stylesheet" />
+
+    <style>
+        .text {
+            text-align: left;
+            font-weight: bold;
+            font-size: smaller;
+        }
+    </style>
+
+    <h4>Please enter your detail. </h4>
+
+    <div class="container row-fluid">
+
+        @using (Html.BeginForm("UploadFile", "UploadDownload",  FormMethod.Post, new { ReturnUrl = this.Request.RawUrl }))
+        {
+            @Html.AntiForgeryToken()
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+            <div class=" form-horizontal" role="form">
+                <div id="filetype" class="form-group ">
+                    @Html.LabelFor(model => model.FileType, new { @class = "col-md-2 control-label" })
+                    <div class="col-md-10">
+                        @Html.RadioButtonFor(model => model.FileType, "Data", new { @class = "radio radio-inline", id = "data", })
+                        @Html.Label("DataFile", "Data File")
+                        @Html.RadioButtonFor(model => model.FileType, "Image", new { @class = "radio radio-inline", id = "image" })
+                        @Html.Label("GraphImage", "Graph Image")
+                        @Html.ValidationMessageFor(model => model.Description, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+                <div class="form-group ">
+                    @Html.LabelFor(model => model.fileName, new { @class = "col-md-2 control-label" })
+                    <div class="col-md-10">
+                        <input type="file" dir="rtl" draggable="true" name="UploadedFile" id="fileToUpload" class="form-control" multiple="single" />
+                        <span class="field-validation-error" id="ErrorText" style="color: red"></span>
+                    </div>
+                </div>
+
+                <div class="form-group ">
+                    @Html.LabelFor(model => model.Instrument, new { @class = "col-md-2 control-label" })
+                    <div class="col-md-10">
+                        @Html.DropDownList("Instrument", new List<SelectListItem>{
+                    new SelectListItem{ Text="IMPAQ-ELITE", Value = "IMPAQ-ELITE" },
+                     new SelectListItem{ Text="DI-460", Value = "DI-460"},
+                      new SelectListItem{ Text="ENPAC", Value = "NPAQ" },
+                       new SelectListItem{ Text="IMXA-460", Value = "Imax-460" },
+                          new SelectListItem{ Text="VIBXPERT", Value = "VIBXPERT" },
+                     new SelectListItem{ Text="CSI-2130", Value = "CSI-2130"},
+                      new SelectListItem{ Text="CSI-2140", Value = "CSI-2140" },
+                         new SelectListItem{ Text="C911", Value = "C911" },
+                     new SelectListItem{ Text="FIELDPAQ", Value = "FIELDPAQ"},
+                      new SelectListItem{ Text="VB8", Value = "VB8" },
+                         new SelectListItem{ Text="ADASH-4400", Value = "ADASH-4400" },
+                     new SelectListItem{ Text="COCO-80", Value = "COCO-80"}
+                 }, "Select Instrument", new { @class = "form-control" })
+                        @Html.ValidationMessageFor(m => m.Instrument, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group ">
+                    @Html.LabelFor(model => model.AnalysisType, new { @class = "col-md-2 control-label" })
+                    <div class="col-md-10">
+                        @Html.DropDownList("AnalysisType", new List<SelectListItem>{  new SelectListItem{ Text="Indicative Analysis", Value = "Indicative" },  new SelectListItem{ Text="VibAnalyst Analysis", Value = "VibAnalyst"}
+                 }, "Select Analysis Type", new { @class = "form-control" })
+                        @Html.ValidationMessageFor(m => m.AnalysisType, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+
+                <div class="form-group ">
+                    @Html.LabelFor(model => model.Description, new { @class = "col-md-2 control-label" })
+                    <div class="col-md-10">
+                        @Html.TextAreaFor(model => model.Description, 5, 25, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.Description, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+
+                <div class="form-group">
+                    @*
+                        <div class="col-md-2">
+                            @Html.ActionLink("Back to Services", "ServiceDetail", "Services")
+                        </div>*@
+                    <div style="padding-top: 20px; padding-left: 10px; max-width: 1100px;">
+                        @*<input type="submit" id="btnSubmit" value="Submit your file" class=" btn btn-default" onclick="javascript: return Postsubmit()" />*@
+                        <button type="submit" id="btnSubmit" class="btn btn-default" onclick="location.href='@Url.Action("UploadFile", "UploadDownload", new { id = ViewBag.AnalysisMethod })'">Submit your file</button>
+
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+    <div id='myModal' class='modal fade in'>
+        <div id="mdialog" class="modal-dialog">
+            <div class="modal-content">
+                <button type="button" style="padding-right: 10px; padding-top: 10px; color: red;" class="close" data-dismiss="modal" aria-hidden="false" onclick="closeModal()">Close</button>
+                <div id='myModalContent'></div>
+            </div>
+        </div>
+    </div>
+    <div id='myModalDriven' class='modal fade in'>
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <button type="button" style="padding-right: 10px; padding-top: 10px; color: red;" class="close" data-dismiss="modal" aria-hidden="false" onclick="closeModal()">Close</button>
+                <div id='myModalContentDriven'></div>
+            </div>
+        </div>
+    </div>
+    <div id="divForm">
+    </div>
+
+    @section Scripts {
+        @Scripts.Render("~/bundles/jqueryval")
+    }
+
+
+    <script type="text/javascript">
+        $(function () {
+            $.ajaxSetup({ cache: false });
+            $("a[data-modal]").on("click", function (e) {
+                $('#myModalContent').load(this.href, function () {
+                    //$('#myModal').toggle();
+                    $('#myModal').toggle({
+                        backdrop: 'static',
+                        keyboard: true
+                    }, 'show');
+                });
+                return false;
+            });
+        });
+
+        function closeModal() {
+            $('#myModal').toggle();
+        }
+
+    </script>
+
+    <script type="text/jscript">
+        var radiocheck;
+        $('.radio').click(function () {
+            radiocheck = $('.radio:checked').val();
+        });
+
+        //get file size
+        function GetFileSize(fileid) {
+            try {
+                var fileSize = 0;
+                //for IE
+                fileSize = $("#" + fileid)[0].files[0].size //size in kb
+                fileSize = fileSize / 1048576; //size in mb
+                return fileSize;
+            }
+            catch (e) {
+                alert("Error is :" + e);
+            }
+        }
+        function deleteRow(row) {
+            var rowCount = $('#tblMachineDetail tr').length;
+            if (rowCount > 2) {
+                var i = row.parentNode.parentNode.rowIndex;
+                document.getElementById('tblMachineDetail').deleteRow(i);
+            }
+            else {
+                alert("You can delete.Atleast one machine should be available.")
+            }
+        }
+
+
+        function ShowDeatil(row) {
+            var rowIndex = row.parentNode.rowIndex;
+            if (rowIndex == 1) {
+            }
+            else if (rowIndex == 2) { }
+            else { }
+        }
+
+        $("#btnaddRow").click(function () {
+            var rowCount = $("table tr").length;
+            var firstRow = $("table tr:Last").clone();
+            firstRow.children("td input").each(function () {
+                this.id = this.id.replace("_0", "_" + rowCount);
+            });
+            var newid = this.id + rowCount;
+            $("table").append(firstRow);
+            alert(newid);
+        });
+
+        //get file path from client system
+        function getNameFromPath(strFilepath) {
+            var objRE = new RegExp(/([^\/\\]+)$/);
+            var strName = objRE.exec(strFilepath);
+            if (strName == null) {
+                return null;
+            }
+            else {
+                return strName[0];
+            }
+        }
+
+        $("#btnSubmit").on("click", function () {
+            if ($('#fileToUpload').val() == "") {
+                $("#ErrorText").html("Please upload file");
+
+                return false;
+            }
+            else {
+                return checkfile();
+            }
+        });
+
+        function checkfile() {
+            var file = getNameFromPath($("#fileToUpload").val());
+            if (file != null) {
+                var extension = file.substr((file.lastIndexOf('.') + 1));
+                // alert(extension);
+                flag = true;
+            }
+            if (flag == false) {
+                $("#ErrorText").text("Please check you file extension and Try again !");
+                return false;
+            }
+            else {
+                var size = GetFileSize('fileToUpload');
+                if (size > 150) {
+                    $("#ErrorText").text("You can upload file up to 150 MB");
+                    return false;
+                }
+                else {
+                    return true;
+                }
+            }
+        }
+        $(function () {
+            $("#fileToUpload").change(function () {
+                checkfile();
+            });
+        });
+    </script>

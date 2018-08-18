@@ -1,0 +1,66 @@
+﻿@model VibExchange.Areas.RemoteAnalysis.Models.Unit
+
+@using (Html.BeginForm("AddPlant", "Plant", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <div class="row">
+        <div class="form-group">
+            <input id="PlantID" type="hidden" value="@Model.UnitID" />
+        </div>
+        <div class="form-group">
+            @Html.RequiredLabelFor(model => model.UnitType, htmlAttributes: new { @class = "control-label col-md-3" })
+            <div class="col-md-9">
+                @Html.DropDownList("UnitType", new List<SelectListItem>{
+                    new SelectListItem{ Text="Acceleration", Value = "Acceleration" },
+                     new SelectListItem{ Text="Velocity", Value = "Velocity" },
+                      new SelectListItem{ Text="Displacement", Value = "Displacement" },
+                 }, "Select parameter", new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.UnitType, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+
+        <div class="form-group">
+            @Html.RequiredLabelFor(model => model.UnitName, htmlAttributes: new { @class = "control-label col-md-3" })
+            <div class="col-md-9">
+                @Html.DropDownListFor(m => m.UnitName,
+       new SelectList(Enumerable.Empty<SelectListItem>(), "UnitID", "Unit"),
+              "Select Unit",
+              new { @class = "form-control" })
+                @Html.ValidationMessageFor(m => m.UnitName, "", new { @class = "text-danger" })
+            </div>
+        </div>
+    </div>
+}
+
+
+<script>
+    $("#UnitType").change(function () {
+        var type = this.value;
+        alert(type);
+        getUnitList(type);
+    });
+    function getUnitList(type) {
+       
+        $.ajax
+        ({
+            url: "@Url.Action("GetUnitByType", "Upload", new { area = "RemoteAnalysis" })",
+            type: 'POST',
+            datatype: 'application/json',
+            contentType: 'application/json',
+            data: JSON.stringify({unitType: type}),
+            success: function (result) {
+                $("#UnitName").html("");
+                $.each($.parseJSON(result), function (i, city) {
+                    $("#UnitName").append
+                    ($('<option></option>').val(city.UnitName).text(city.UnitName))
+                })
+            },
+            error: function () {
+                alert("Ooops! Something went wrong..")
+            },
+        });
+    }
+</script>

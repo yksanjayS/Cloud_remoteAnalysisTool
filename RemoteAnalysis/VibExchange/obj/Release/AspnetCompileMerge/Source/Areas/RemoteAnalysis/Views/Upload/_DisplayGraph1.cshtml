@@ -1,0 +1,26 @@
+﻿@model com.iAM.chart2dnet.ChartView
+@using com.iAM.chart2dnet
+@{
+    ViewBag.Title = "_DisplayGraph1";
+    Layout = "~/Views/Shared/_VibExchangeLayout.cshtml";
+}
+
+<h2>_DisplayGraph1</h2>
+
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+   <div id="qchart">
+       
+   </div>
+}
+
+
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
+<script>
+    @*$("#qchart").append(@Model.Draw(@Model.)*@
+</script>

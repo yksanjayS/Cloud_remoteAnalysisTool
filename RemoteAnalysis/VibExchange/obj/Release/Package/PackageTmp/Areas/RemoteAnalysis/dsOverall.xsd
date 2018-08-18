@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsOverall" targetNamespace="http://tempuri.org/dsOverall.xsd" xmlns:mstns="http://tempuri.org/dsOverall.xsd" xmlns="http://tempuri.org/dsOverall.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsOverall" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dsOverall" msprop:Generator_UserDSName="dsOverall">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="tblOverallAlarm" msprop:Generator_TableClassName="tblOverallAlarmDataTable" msprop:Generator_TableVarName="tabletblOverallAlarm" msprop:Generator_TablePropName="tblOverallAlarm" msprop:Generator_RowDeletingName="tblOverallAlarmRowDeleting" msprop:Generator_RowChangingName="tblOverallAlarmRowChanging" msprop:Generator_RowEvHandlerName="tblOverallAlarmRowChangeEventHandler" msprop:Generator_RowDeletedName="tblOverallAlarmRowDeleted" msprop:Generator_UserTableName="tblOverallAlarm" msprop:Generator_RowChangedName="tblOverallAlarmRowChanged" msprop:Generator_RowEvArgName="tblOverallAlarmRowChangeEvent" msprop:Generator_RowClassName="tblOverallAlarmRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="FileiID" msprop:Generator_ColumnVarNameInTable="columnFileiID" msprop:Generator_ColumnPropNameInRow="FileiID" msprop:Generator_ColumnPropNameInTable="FileiIDColumn" msprop:Generator_UserColumnName="FileiID" type="xs:string" minOccurs="0" />
+              <xs:element name="PointID" msprop:Generator_ColumnVarNameInTable="columnPointID" msprop:Generator_ColumnPropNameInRow="PointID" msprop:Generator_ColumnPropNameInTable="PointIDColumn" msprop:Generator_UserColumnName="PointID" type="xs:string" minOccurs="0" />
+              <xs:element name="PlantName" msprop:Generator_ColumnVarNameInTable="columnPlantName" msprop:Generator_ColumnPropNameInRow="PlantName" msprop:Generator_ColumnPropNameInTable="PlantNameColumn" msprop:Generator_UserColumnName="PlantName" type="xs:string" minOccurs="0" />
+              <xs:element name="AreaName" msprop:Generator_ColumnVarNameInTable="columnAreaName" msprop:Generator_ColumnPropNameInRow="AreaName" msprop:Generator_ColumnPropNameInTable="AreaNameColumn" msprop:Generator_UserColumnName="AreaName" type="xs:string" minOccurs="0" />
+              <xs:element name="TrainName" msprop:Generator_ColumnVarNameInTable="columnTrainName" msprop:Generator_ColumnPropNameInRow="TrainName" msprop:Generator_ColumnPropNameInTable="TrainNameColumn" msprop:Generator_UserColumnName="TrainName" type="xs:string" minOccurs="0" />
+              <xs:element name="MachineName" msprop:Generator_ColumnVarNameInTable="columnMachineName" msprop:Generator_ColumnPropNameInRow="MachineName" msprop:Generator_ColumnPropNameInTable="MachineNameColumn" msprop:Generator_UserColumnName="MachineName" type="xs:string" minOccurs="0" />
+              <xs:element name="PointName" msprop:Generator_ColumnVarNameInTable="columnPointName" msprop:Generator_ColumnPropNameInRow="PointName" msprop:Generator_ColumnPropNameInTable="PointNameColumn" msprop:Generator_UserColumnName="PointName" type="xs:string" minOccurs="0" />
+              <xs:element name="AlarmName" msprop:Generator_ColumnVarNameInTable="columnAlarmName" msprop:Generator_ColumnPropNameInRow="AlarmName" msprop:Generator_ColumnPropNameInTable="AlarmNameColumn" msprop:Generator_UserColumnName="AlarmName" type="xs:string" minOccurs="0" />
+              <xs:element name="MeasurementDate" msprop:Generator_ColumnVarNameInTable="columnMeasurementDate" msprop:Generator_ColumnPropNameInRow="MeasurementDate" msprop:Generator_ColumnPropNameInTable="MeasurementDateColumn" msprop:Generator_UserColumnName="MeasurementDate" type="xs:string" minOccurs="0" />
+              <xs:element name="OverallChnlA" msprop:Generator_ColumnVarNameInTable="columnOverallChnlA" msprop:Generator_ColumnPropNameInRow="OverallChnlA" msprop:Generator_ColumnPropNameInTable="OverallChnlAColumn" msprop:Generator_UserColumnName="OverallChnlA" type="xs:string" minOccurs="0" />
+              <xs:element name="UnitChnlA" msprop:Generator_ColumnVarNameInTable="columnUnitChnlA" msprop:Generator_ColumnPropNameInRow="UnitChnlA" msprop:Generator_ColumnPropNameInTable="UnitChnlAColumn" msprop:Generator_UserColumnName="UnitChnlA" type="xs:string" minOccurs="0" />
+              <xs:element name="OverallChnlB" msprop:Generator_ColumnVarNameInTable="columnOverallChnlB" msprop:Generator_ColumnPropNameInRow="OverallChnlB" msprop:Generator_ColumnPropNameInTable="OverallChnlBColumn" msprop:Generator_UserColumnName="OverallChnlB" type="xs:string" minOccurs="0" />
+              <xs:element name="UnitChnlB" msprop:Generator_ColumnVarNameInTable="columnUnitChnlB" msprop:Generator_ColumnPropNameInRow="UnitChnlB" msprop:Generator_ColumnPropNameInTable="UnitChnlBColumn" msprop:Generator_UserColumnName="UnitChnlB" type="xs:string" minOccurs="0" />
+              <xs:element name="LowValue" msprop:Generator_ColumnVarNameInTable="columnLowValue" msprop:Generator_ColumnPropNameInRow="LowValue" msprop:Generator_ColumnPropNameInTable="LowValueColumn" msprop:Generator_UserColumnName="LowValue" type="xs:string" minOccurs="0" />
+              <xs:element name="HighValue" msprop:Generator_ColumnVarNameInTable="columnHighValue" msprop:Generator_ColumnPropNameInRow="HighValue" msprop:Generator_ColumnPropNameInTable="HighValueColumn" msprop:Generator_UserColumnName="HighValue" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

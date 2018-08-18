@@ -1,0 +1,147 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Iadept_CloudModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Emp_Detail">
+    <Key>
+      <PropertyRef Name="EmpID" />
+    </Key>
+    <Property Name="AutoId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="EmpID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="IsEnabled" Type="Boolean" />
+    <Property Name="Emp_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="DisplayName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="LoginID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="UserRole" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Designation" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Department" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PhoneNo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="EmailId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Image" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Specialization" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="Experience" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="EAddress" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="ECountry" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="EState" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ECity" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Academic" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Graduation" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Postgraduation" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Certification" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CompName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CAddress" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="CCountry" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CState" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CCity" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="OfficeContactNo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CompWebsite" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CreationDate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="UserDetail">
+    <Key>
+      <PropertyRef Name="UserName" />
+    </Key>
+    <Property Name="AutoId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="uPassword" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="uName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Email_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Address" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="City" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="State" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="Country" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="ImagePath" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="uCompanyName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="uCompanyAddress" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="uCity" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="uState" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="uCountry" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="officePhone" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="uMobile_No" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="uCompany_Website" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="UserRole" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="CreationDate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="UserProfile">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="UserId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserName" Type="String" MaxLength="56" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityType Name="webpages_Membership">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="UserId" Type="Int32" Nullable="false" />
+    <Property Name="CreateDate" Type="DateTime" Precision="3" />
+    <Property Name="ConfirmationToken" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="IsConfirmed" Type="Boolean" />
+    <Property Name="LastPasswordFailureDate" Type="DateTime" Precision="3" />
+    <Property Name="PasswordFailuresSinceLastSuccess" Type="Int32" Nullable="false" />
+    <Property Name="Password" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="PasswordChangedDate" Type="DateTime" Precision="3" />
+    <Property Name="PasswordSalt" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="PasswordVerificationToken" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="PasswordVerificationTokenExpirationDate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="webpages_OAuthMembership">
+    <Key>
+      <PropertyRef Name="Provider" />
+      <PropertyRef Name="ProviderUserId" />
+    </Key>
+    <Property Name="Provider" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ProviderUserId" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="UserId" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="webpages_Roles">
+    <Key>
+      <PropertyRef Name="RoleId" />
+    </Key>
+    <Property Name="RoleId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RoleName" Type="String" MaxLength="256" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="webpages_UsersInRoles" Relationship="Self.fk_RoleId" FromRole="webpages_Roles" ToRole="webpages_UsersInRoles" />
+  </EntityType>
+  <EntityType Name="webpages_UsersInRoles">
+    <Key>
+      <PropertyRef Name="UserId" />
+      <PropertyRef Name="RoleId" />
+    </Key>
+    <Property Name="UserId" Type="Int32" Nullable="false" />
+    <Property Name="RoleId" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="webpages_Roles" Relationship="Self.fk_RoleId" FromRole="webpages_UsersInRoles" ToRole="webpages_Roles" />
+  </EntityType>
+  <Association Name="fk_RoleId">
+    <End Role="webpages_Roles" Type="Self.webpages_Roles" Multiplicity="1" />
+    <End Role="webpages_UsersInRoles" Type="Self.webpages_UsersInRoles" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="webpages_Roles">
+        <PropertyRef Name="RoleId" />
+      </Principal>
+      <Dependent Role="webpages_UsersInRoles">
+        <PropertyRef Name="RoleId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="Iadept_CloudEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Emp_Detail" EntityType="Self.Emp_Detail" />
+    <EntitySet Name="UserDetails" EntityType="Self.UserDetail" />
+    <EntitySet Name="UserProfiles" EntityType="Self.UserProfile" />
+    <EntitySet Name="webpages_Membership" EntityType="Self.webpages_Membership" />
+    <EntitySet Name="webpages_OAuthMembership" EntityType="Self.webpages_OAuthMembership" />
+    <EntitySet Name="webpages_Roles" EntityType="Self.webpages_Roles" />
+    <EntitySet Name="webpages_UsersInRoles" EntityType="Self.webpages_UsersInRoles" />
+    <AssociationSet Name="fk_RoleId" Association="Self.fk_RoleId">
+      <End Role="webpages_Roles" EntitySet="webpages_Roles" />
+      <End Role="webpages_UsersInRoles" EntitySet="webpages_UsersInRoles" />
+    </AssociationSet>
+    <FunctionImport Name="spAddUser">
+      <Parameter Name="UserName" Mode="In" Type="String" />
+      <Parameter Name="Password" Mode="In" Type="String" />
+      <Parameter Name="Name" Mode="In" Type="String" />
+      <Parameter Name="EmailID" Mode="In" Type="String" />
+      <Parameter Name="CompanyName" Mode="In" Type="String" />
+      <Parameter Name="ContactNo" Mode="In" Type="String" />
+      <Parameter Name="UserRole" Mode="In" Type="String" />
+    </FunctionImport>
+  </EntityContainer>
+</Schema>

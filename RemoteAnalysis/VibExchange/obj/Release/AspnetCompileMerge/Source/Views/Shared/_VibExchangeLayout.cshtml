@@ -1,0 +1,157 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content=" VibExchange is one of the global vibration consultants and technicians services Provider of Online. We arrange your top online vibration consultant’s and best supports. ">
+    <meta name="keywords" content=" vibration analysis services, machine vibration analysis, vibration measurements, measuring vibration, vibration analysis, vibration measurement ">
+    <meta name="robots" content="noodp, noydir" />
+    <meta name="distribution" content="Global" />
+    <meta name="robots" content="index, follow" />
+    <meta name="classification" content="Product Worldwide Services”    />
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/modernizr")
+    @RenderSection("scripts", required: false)
+    <!-- STYLESHEETS -->
+    <!--[if lt IE 9]><script src="js/flot/excanvas.min.js"></script><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script><![endif]-->
+    <link rel="stylesheet" type="text/css" href="~/css/themes/default.css" id="skin-switcher">
+
+
+    <link href="~/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <!-- ANIMATE -->
+    <link rel="stylesheet" type="text/css" href="~/css/animatecss/animate.min.css" />
+    <!-- FONTS -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700' rel='stylesheet' type='text/css'>
+</head> 
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top" style="line-height:1;">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("VibExchange", "Home", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav" id="nav">
+                    <li>
+                        <a href="@Url.Action("Home", "Home",new { area = "" }, null)" style="margin-top:5px;">
+                            Home
+                        </a>
+                    </li>
+                    <li>
+                        <a href="@Url.Action("GetPreviosData", "Upload", new { area = "RemoteAnalysis" }, null)" style="margin-top:5px;">
+                            Remote Analysis
+                        </a>
+                    </li>
+                    <li>
+                        <a href="@Url.Action("ServiceDetail", "Services", new { area = "" }, null)" @(ViewContext.RouteData.Values["action"].ToString().Equals("ServiceDetail") ? "class=nav_selected" : "") style="margin-top:5px;">
+                            Services
+                        </a>
+                    </li>
+                    <li>
+                        <a href="@Url.Action("GetConsultant", "Employee", new { area = "" }, null)" @(ViewContext.RouteData.Values["action"].ToString().Equals("GetConsultant") ? "class=nav_selected" : "") style="margin-top:5px;">
+                            Find Experts
+                        </a>
+                    </li>
+                    @if (Session["UserName"] != null)
+                    {
+                        if (Convert.ToString(Session["UserRole"]) == "Client")
+                        {
+                            <li>
+                                <a href="@Url.Action("ClientList", "Clients", new { area = "" }, null)" @(ViewContext.RouteData.Values["action"].ToString().Equals("ClientList") ? "class=nav_selected" : "") style="margin-top:5px;">
+                                    Your Files
+                                </a>
+                            </li>
+                            <li>
+                                <a href="@Url.Action("showEnquiry", "Order", new { area = "" }, null)" @(ViewContext.RouteData.Values["action"].ToString().Equals("ClientList") ? "class=nav_selected" : "") style="margin-top:5px;">
+                                    Enquiry
+                                </a>
+                            </li>
+                        }
+
+                        if (Convert.ToString(Session["UserRole"]) == "Employee")
+                        {
+                            <li>
+                                <a href="@Url.Action("ClientList", "Clients", new { area = "" }, null)" @(ViewContext.RouteData.Values["action"].ToString().Equals("ClientList") ? "class=nav_selected" : "") style="margin-top:5px;">
+                                    Your Files
+                                </a>
+                            </li>
+                            <li>
+                                <a href="@Url.Action("showEnquiry", "Order", new { area = "" },null)" @(ViewContext.RouteData.Values["action"].ToString().Equals("ClientList") ? "class=nav_selected" : "") style="margin-top:5px;">
+                                    Enquiry
+                                </a>
+                            </li>
+                            <li>
+                                <a href="@Url.Action("AllUserList", "Clients", new { area = "" },null)" @(ViewContext.RouteData.Values["action"].ToString().Equals("ClientList") ? "class=nav_selected" : "") style="margin-top:5px;">
+                                    Users Data
+                                </a>
+                            </li>
+                        }
+
+                        if (Convert.ToString(Session["UserRole"]) == "Consultant")
+                        {
+                            <li>
+                                <a href="@Url.Action("ClientList", "Clients", new { area = "" },null)" @(ViewContext.RouteData.Values["action"].ToString().Equals("ClientList") ? "class=nav_selected" : "") style="margin-top:5px;">
+                                    Your Files
+                                </a>
+                            </li>
+                            <li>
+                                <a href="@Url.Action("showEnquiry", "Order", new { area = "" },null)" @(ViewContext.RouteData.Values["action"].ToString().Equals("ClientList") ? "class=nav_selected" : "") style="margin-top:5px;">
+                                    Enquiry
+                                </a>
+                            </li>
+                        }
+                    }
+                    @*<li>
+                            <a href="@Url.Action("ShowBlogs", "Blogs")" @(ViewContext.RouteData.Values["action"].ToString().Equals("Contacts") ? "class=nav_selected" : "") style="margin-top:5px;">
+                                Blogs
+                            </a>
+                        </li>*@
+                    <li>
+                        <a href="@Url.Action("GetJobs", "Contact", new { area = "" },null)" @(ViewContext.RouteData.Values["action"].ToString().Equals("Contacts") ? "class=nav_selected" : "") style="margin-top:5px;">
+                            Career
+                        </a>
+                    </li>
+                    <li>
+                        <a href="@Url.Action("Contacts", "Contact", new { area = "" },null)" @(ViewContext.RouteData.Values["action"].ToString().Equals("Contacts") ? "class=nav_selected" : "") style="margin-top:5px;">
+                            Contact Us
+                        </a>
+                    </li>
+                    @*<li>
+                            <div class="float-right" style="margin-top:5px;padding-left:20px;">
+                                <i class="fa fa-phone" style="font-size: large; color: chartreuse"></i>
+                                <label style="color:white">:+919810010218</label>
+
+                            </div>
+                        </li>*@
+                </ul>
+                @Html.Partial("_LoginPartial")
+            </div>
+        </div>
+    </div>
+    <div class="body-content" style="padding-bottom:2.5%">
+        @RenderBody()
+    </div>
+    <div class=" navbar navbar-fixed-bottom">
+        <footer>
+            <div class="center">
+                <p style="text-align:center;color:lightgreen;">&copy; <a style="color:gray;" href="http://www.vibration-service.com" title="VibExchange" target="_blank">@DateTime.Now.Year - VibExchange.</a> All Right Reserved.</p>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
+<script>
+
+    $(document).ready(function () {
+        $('ul.nav.navbar-nav').find('a[href="' + location.pathname + '"]')
+            .closest('li').addClass('active');
+    });
+</script>

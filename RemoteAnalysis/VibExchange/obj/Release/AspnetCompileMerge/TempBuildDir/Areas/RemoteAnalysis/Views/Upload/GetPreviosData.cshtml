@@ -1,0 +1,115 @@
+﻿@model IEnumerable<VibExchange.Areas.RemoteAnalysis.Models.FileDetail>
+
+@{
+    ViewBag.Title = "Previouse Data List";
+    Layout = "~/Views/Shared/_VibExchangeLayout.cshtml";
+}
+
+<style>
+    .head {
+        color: cyan;
+        background-color: chocolate;
+    }
+</style>
+@*<script src="~/Scripts/jquery-1.8.3.min.js"></script>*@
+<script src="~/JQGridReq/jquery-1.9.0.min.js"></script>
+<link href="~/JQGridReq/jquery-ui-1.9.2.custom.css" rel="stylesheet" />
+<script src="~/JQGridReq/jquery.jqGrid.js"></script>
+<script src="~/JQGridReq/grid.locale-en.js"></script>
+<link href="~/JQGridReq/ui.jqgrid.css" rel="stylesheet" />
+
+<div class="container">
+
+    <div class="row">
+        <h4 class="col-md-10" style="color:chocolate;">Uploaded Data Detail..</h4>
+        @Html.ActionLink("Upload New Data", "DataUpload", "Upload", new { area = "RemoteAnalysis" }, new { @class = "btn btn-sm btn-info", @style = "margin-top:25px;margin-left:5%;" })
+    </div>
+    <div class="form-group">
+        <table id="grdUploadedData"></table>
+        <div id="jQGridPager">
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+
+    $(document).ready(function () {
+        BindAllEnquiry();
+    });
+    var GetAllEnquiry = "@Url.Action("GetFileData", "Upload", new { area = "RemoteAnalysis"})";
+    function BindAllEnquiry() {
+        //Bind jqgrid
+        jQuery("#grdUploadedData").jqGrid({
+            url: GetAllEnquiry,
+            datatype: "json",
+            colNames: ['File ID', 'User Name', 'Upload Date', 'Category', 'File Name', 'Instrument Used', 'Action'],
+            colModel: [
+                     { name: 'FileID', index: 0, hidden: true },
+                     { name: 'UserID', index: 1, hidden: true },
+                     { name: 'UploadDate', index: 2, sortable: true },
+                     { name: 'FileType', index: 3, sortable: true },
+                     { name: 'FileName', index: 4 },
+                     { name: 'InstrumentUsed', index: 5, sortable: true },
+                      { name: 'Actions', index: 'Actions', sortable: false, title: false, formatter: ActionFormatter }
+            ],
+
+            pager: $('#jQGridPager'),
+            //number of rows per page
+            rowNum: 50,
+            //initial sorting column
+            sortname: 'UploadDate',
+            //initial sorting direction
+            sortorder: 'desc',
+            //we want to display total records count
+            viewrecords: true,
+            //grid width
+            autowidth: true,
+            //grid height
+            height: '100%',
+            pginput: true,
+            rownumbers: true,
+            gridview: true,
+            pgbuttons: true,
+            hoverrows: true,
+            viewrecords: true,
+            loadonce: true,
+            scroll: true,
+            emptyrecords: 'There is no records to displays',
+            gridComplete: function () {
+                var $this = $(this), ids = $this.jqGrid('getDataIDs'), i, l = ids.length;
+                for (var j = 0; j < ids.length; j = j + 1) {
+                    $("#grdUploadedData").collapseSubGridRow(ids[j]);
+                }
+            },
+            loadComplete: function () {
+                //Below code is for keeping the rows in edit mode by default
+                var $this = $(this), ids = $this.jqGrid('getDataIDs'), i, l = ids.length;
+                for (i = 0; i < l; i++) {
+                    $this.jqGrid('editRow', ids[i], false);
+                }
+            },
+        }).navGrid('#jQGridPager',
+                { search: false, edit: false, add: false, del: false }
+              );
+    }
+
+    function ActionFormatter(cellvalue, options, rowObject) {
+        var primaryId = rowObject.FileID;
+        if (primaryId == null || primaryId == undefined || primaryId == "")
+            primaryId = "0";
+
+        var x = '@Html.ActionLink("Analyse", "ReAnalysisKohtect", "Kohtect", new { FileID = "Id" }, new { @style = "color:Blue;font-weight:bold;margin-left:5px;" })'.replace("Id", primaryId) + '  | ' + '@Html.ActionLink("Download", "DownloadRoute", "Upload", new { FileID = "Id" }, new { @style = "color:Blue;font-weight:bold;margin-left:5px;" })'.replace("Id", primaryId);
+        return x;
+    }
+
+    (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date(); a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-80727690-1', 'auto');
+    ga('send', 'pageview');
+</script>
+

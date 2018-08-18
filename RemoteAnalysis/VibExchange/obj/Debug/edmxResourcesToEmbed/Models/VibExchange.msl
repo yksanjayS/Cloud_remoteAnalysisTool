@@ -1,0 +1,170 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Iadept_CloudModelStoreContainer" CdmEntityContainer="Iadept_CloudEntities1">
+    <EntitySetMapping Name="Emp_Detail">
+      <EntityTypeMapping TypeName="Iadept_CloudModel.Emp_Detail">
+        <MappingFragment StoreEntitySet="Emp_Detail">
+          <ScalarProperty Name="AutoId" ColumnName="AutoId" />
+          <ScalarProperty Name="EmpID" ColumnName="EmpID" />
+          <ScalarProperty Name="Emp_Name" ColumnName="Emp_Name" />
+          <ScalarProperty Name="eDesignation" ColumnName="eDesignation" />
+          <ScalarProperty Name="eDepartment" ColumnName="eDepartment" />
+          <ScalarProperty Name="EmailId" ColumnName="EmailId" />
+          <ScalarProperty Name="eLoginID" ColumnName="eLoginID" />
+          <ScalarProperty Name="ePassword" ColumnName="ePassword" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Services">
+      <EntityTypeMapping TypeName="Iadept_CloudModel.Service">
+        <MappingFragment StoreEntitySet="Services">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ServiceId" ColumnName="ServiceId" />
+          <ScalarProperty Name="ServiceName" ColumnName="ServiceName" />
+          <ScalarProperty Name="ServiceDepartment" ColumnName="ServiceDepartment" />
+          <ScalarProperty Name="ServiceType" ColumnName="ServiceType" />
+          <ScalarProperty Name="ServiceCost" ColumnName="ServiceCost" />
+          <ScalarProperty Name="ServiceDuration" ColumnName="ServiceDuration" />
+          <ScalarProperty Name="IsEnabled" ColumnName="IsEnabled" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UploadDatas">
+      <EntityTypeMapping TypeName="Iadept_CloudModel.UploadData">
+        <MappingFragment StoreEntitySet="UploadData">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="EmailID" ColumnName="EmailID" />
+          <ScalarProperty Name="InstrumentUsed" ColumnName="InstrumentUsed" />
+          <ScalarProperty Name="MachineDescription" ColumnName="MachineDescription" />
+          <ScalarProperty Name="FileData" ColumnName="FileData" />
+          <ScalarProperty Name="ReportFile" ColumnName="ReportFile" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserProfiles">
+      <EntityTypeMapping TypeName="Iadept_CloudModel.UserProfile">
+        <MappingFragment StoreEntitySet="UserProfile">
+          <ScalarProperty Name="AutoId" ColumnName="AutoId" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="uPassword" ColumnName="uPassword" />
+          <ScalarProperty Name="uName" ColumnName="uName" />
+          <ScalarProperty Name="uCompanyName" ColumnName="uCompanyName" />
+          <ScalarProperty Name="uCompanyAddress" ColumnName="uCompanyAddress" />
+          <ScalarProperty Name="uCity" ColumnName="uCity" />
+          <ScalarProperty Name="uState" ColumnName="uState" />
+          <ScalarProperty Name="uCountry" ColumnName="uCountry" />
+          <ScalarProperty Name="uFax_No" ColumnName="uFax_No" />
+          <ScalarProperty Name="uMobile_No" ColumnName="uMobile_No" />
+          <ScalarProperty Name="uCompany_Website" ColumnName="uCompany_Website" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PaymentDetails">
+      <EntityTypeMapping TypeName="Iadept_CloudModel.PaymentDetail">
+        <MappingFragment StoreEntitySet="PaymentDetail">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="ServiceId" ColumnName="ServiceId" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="AccountDeptConfirm" ColumnName="AccountDeptConfirm" />
+          <ScalarProperty Name="AdminRemark" ColumnName="AdminRemark" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProgressReports">
+      <EntityTypeMapping TypeName="Iadept_CloudModel.ProgressReport">
+        <MappingFragment StoreEntitySet="ProgressReport">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ServiceId" ColumnName="ServiceId" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="AssignEmpId" ColumnName="AssignEmpId" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="CurrentStatus" ColumnName="CurrentStatus" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="PaymentStatus" ColumnName="PaymentStatus" />
+          <ScalarProperty Name="ContactPerson" ColumnName="ContactPerson" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="spempdetail" FunctionName="Iadept_CloudModel.Store.spempdetail" />
+    <FunctionImportMapping FunctionImportName="sppaymentdetail" FunctionName="Iadept_CloudModel.Store.sppaymentdetail" />
+    <FunctionImportMapping FunctionImportName="sppaymentServiceselect" FunctionName="Iadept_CloudModel.Store.sppaymentServiceselect">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Iadept_CloudModel.sppaymentServiceselect_Result">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ServiceId" ColumnName="ServiceId" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="AssignEmpId" ColumnName="AssignEmpId" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="CurrentStatus" ColumnName="CurrentStatus" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="PaymentStatus" ColumnName="PaymentStatus" />
+          <ScalarProperty Name="ContactPerson" ColumnName="ContactPerson" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sppaymentUserselect" FunctionName="Iadept_CloudModel.Store.sppaymentUserselect">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Iadept_CloudModel.sppaymentUserselect_Result">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ServiceId" ColumnName="ServiceId" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="AssignEmpId" ColumnName="AssignEmpId" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="CurrentStatus" ColumnName="CurrentStatus" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="PaymentStatus" ColumnName="PaymentStatus" />
+          <ScalarProperty Name="ContactPerson" ColumnName="ContactPerson" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spprogresServiceselect" FunctionName="Iadept_CloudModel.Store.spprogresServiceselect">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Iadept_CloudModel.spprogresServiceselect_Result">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ServiceId" ColumnName="ServiceId" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="AssignEmpId" ColumnName="AssignEmpId" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="CurrentStatus" ColumnName="CurrentStatus" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="PaymentStatus" ColumnName="PaymentStatus" />
+          <ScalarProperty Name="ContactPerson" ColumnName="ContactPerson" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spprogressreport" FunctionName="Iadept_CloudModel.Store.spprogressreport" />
+    <FunctionImportMapping FunctionImportName="spprogresUserselect" FunctionName="Iadept_CloudModel.Store.spprogresUserselect">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Iadept_CloudModel.spprogresUserselect_Result">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ServiceId" ColumnName="ServiceId" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="AssignEmpId" ColumnName="AssignEmpId" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="CurrentStatus" ColumnName="CurrentStatus" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="PaymentStatus" ColumnName="PaymentStatus" />
+          <ScalarProperty Name="ContactPerson" ColumnName="ContactPerson" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spservices2" FunctionName="Iadept_CloudModel.Store.spservices2" />
+    <FunctionImportMapping FunctionImportName="spservicesselect" FunctionName="Iadept_CloudModel.Store.spservicesselect">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Iadept_CloudModel.spservicesselect_Result">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ServiceId" ColumnName="ServiceId" />
+          <ScalarProperty Name="ServiceName" ColumnName="ServiceName" />
+          <ScalarProperty Name="ServiceDepartment" ColumnName="ServiceDepartment" />
+          <ScalarProperty Name="ServiceType" ColumnName="ServiceType" />
+          <ScalarProperty Name="ServiceCost" ColumnName="ServiceCost" />
+          <ScalarProperty Name="ServiceDuration" ColumnName="ServiceDuration" />
+          <ScalarProperty Name="IsEnabled" ColumnName="IsEnabled" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spuserprofile" FunctionName="Iadept_CloudModel.Store.spuserprofile" />
+  </EntityContainerMapping>
+</Mapping>

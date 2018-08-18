@@ -1,0 +1,315 @@
+﻿@model VibExchange.Models.UploadFile
+
+@{
+    ViewBag.Title = "File Detail";
+    Layout = "~/Views/Shared/_VibExchangeLayout.cshtml";
+}
+
+<script src="~/Scripts/jquery-1.8.3.min.js"></script>
+<script src="~/JQGridReq/jquery-1.9.0.min.js"></script>
+<link href="~/JQGridReq/jquery-ui-1.9.2.custom.css" rel="stylesheet" />
+<script src="~/JQGridReq/jquery.jqGrid.js"></script>
+<script src="~/JQGridReq/grid.locale-en.js"></script>
+<link href="~/JQGridReq/ui.jqgrid.css" rel="stylesheet" />
+<div class="container">
+    <h4>Your File Detail</h4>
+
+    <div class="row" style="padding-left: 20px">
+        @using (Html.BeginForm("MachineDetail", "UploadDownload", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { enctype = "multipart/form-data" }))
+    {
+            <div class=" form-horizontal" role="form">
+                <div class="form-group ">
+                    @*  @Html.LabelFor(model => model.FileID, new { @class = "col-md-2 control-label" })*@
+                    <div id="fileid" class="col-md-10">
+                        @Html.HiddenFor(model => model.FileID, new { @class = "form-control", @readonly = "true" })
+                    </div>
+                </div>
+                <div class="form-group ">
+                    @Html.LabelFor(model => model.fileName, new { @class = "col-md-2 control-label" })
+                    <div class="col-md-10">
+                        @Html.TextBoxFor(model => model.fileName1, new { @class = "form-control", @readonly = "true" })
+                    </div>
+                </div>
+
+                <div class="form-group ">
+                    @Html.LabelFor(model => model.Instrument, new { @class = "col-md-2 control-label" })
+                    <div class="col-md-10">
+                        @Html.TextBoxFor(model => model.Instrument, new { @class = "form-control", @readonly = "true" })
+                    </div>
+                </div>
+                <div class="form-group ">
+                    @Html.LabelFor(model => model.AnalysisType, new { @class = "col-md-2 control-label" })
+                    <div class="col-md-10">
+                        @Html.TextBoxFor(model => model.AnalysisType, new { @class = "form-control", @readonly = "true" })
+                    </div>
+                </div>
+                <div class="form-group ">
+                    @Html.LabelFor(model => model.Description, new { @class = "col-md-2 control-label" })
+                    <div class="col-md-10">
+                        @Html.TextAreaFor(model => model.Description, new { @class = "form-control", @readonly = "true" })
+                    </div>
+                </div>
+                <div class="form-group">
+                    <table id="jqGridMachine"></table>
+                    <div id="jQGridDemoPager">
+                    </div>
+                </div>
+                <div class="form-group">
+                    @Html.ActionLink("Back to Clients", "ClientList", "Clients")
+                </div>
+            </div>
+    }
+    </div>
+</div>
+<div id='myModal' class='modal fade in'>
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <button type="button" style="padding-right: 10px; padding-top: 10px; color: red;" class="close" data-dismiss="modal" aria-hidden="false" onclick="closeModal()">Close</button>
+            <div id='myModalContent'>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    $(function () {
+        $.ajaxSetup({ cache: false });
+        $("a[data-modal]").on("click", function (e) {
+            $('#myModalContent').load(this.href, function () {
+                $('#myModal').toggle({
+                    backdrop: 'static',
+                    keyboard: true
+                }, 'show');
+            });
+            return false;
+        });
+    });
+
+    function closeModal() {
+        $('#myModal').toggle();
+    }
+</script>
+
+@*<div class="form-group">
+    <table id="jqGridMachine"></table>
+
+    <div id="jQGridDemoPager">
+    </div>
+</div>*@
+<script>
+
+    var GetDriveUnit = "@Url.Action("GetMachineData1", "UploadDownload")";
+    var GetDrivenUnit = "@Url.Action("getDrivenUnit", "UploadDownload")";
+</script>
+
+<script type="text/javascript">
+
+    $(document).ready(function () {
+        BindDriveUnit();
+        $("#btnaddDrive1").click(function (e) {
+            e.preventDefault();
+        });
+    });
+
+    function BindDriveUnit() {
+        //Bind jqgrid
+        var fileid = '@ViewBag.fileID';
+        jQuery("#jqGridMachine").jqGrid({
+            url: GetDriveUnit,
+            datatype: "json",
+            postData: { 'fileID': fileid },
+            colNames: ['ID', 'Machine Name', 'Drive Unit', 'Point Count', 'Action'],
+            colModel: [
+                     { name: 'MachineID', index: 'MachineID', stype: 'text', hidden: true },
+                     { name: 'TrainName', index: 'TrainName', stype: 'text', sortable: true },
+                     { name: 'DEUnitType', index: 'DEUnitType' },
+                     { name: 'TotalPoint', index: 'TotalPoint' },
+                     { name: 'Actions', index: 'Actions', sortable: false, title: false, formatter: ActionFormatter }
+            ],
+            pginput: false,
+            rownumbers: false,
+            gridview: true,
+            pgbuttons: true,
+            hoverrows: false,
+            viewrecords: false,
+            loadonce: true,
+            scroll: true,
+            //height: 250,
+            autowidth: true,
+            autoheight: true,
+            emptyrecords: 'No records to display',
+
+
+            gridComplete: function () {
+                var $this = $(this), ids = $this.jqGrid('getDataIDs'), i, l = ids.length;
+                for (var j = 0; j < ids.length; j = j + 1) {
+                    $("#jqGridMachine").collapseSubGridRow(ids[j]);
+                }
+            },
+            loadComplete: function () {
+                //Below code is for keeping the rows in edit mode by default 
+                var $this = $(this), ids = $this.jqGrid('getDataIDs'), i, l = ids.length;
+                for (i = 0; i < l; i++) {
+                    $this.jqGrid('editRow', ids[i], false);
+                }
+
+            },
+            subGrid: true,
+            subGridOptions: {
+                plusicon: "ui-icon-plus",
+                minusicon: "ui-icon-minus",
+                openicon: "ui-icon-carat-1-sw",
+                expandOnLoad: true,
+                selectOnExpand: false,
+                reloadOnExpand: true
+            },
+            subGridRowExpanded: function (subgrid_id, row_id) {
+                var rowData = $(this).getRowData(row_id);
+                var selectedReport = rowData.MachineID;
+                var subgrid_table_id;
+                subgrid_table_id = subgrid_id + "_t";
+                var pagerId = "jqGridPager_" + subgrid_id;
+                jQuery("#" + subgrid_id).html("<table id='" + subgrid_table_id + "' class='scroll'></table><div id='" + pagerId + "'></div>");
+                jQuery("#" + subgrid_table_id).jqGrid({
+                    url: GetDrivenUnit,
+                    datatype: "json",
+                    postData: {
+                        'id': selectedReport,
+                    },
+                    colNames: ['ID', 'Driven Unit', 'Point Count', 'Action'],
+                    colModel: [
+                          { name: 'MachineID', index: 'MachineID', stype: 'text', hidden: true },
+                        { name: 'NDEUnit1', index: 'NDEUnit1', title: false },
+                        { name: 'Point_Count_NDE', index: 'Point_Count_NDE', title: false },
+                       { name: 'Action', index: 'Action', sortable: false, title: false, formatter: ActionDrivenFormatter }
+                    ],
+                    pginput: false,
+                    rownumbers: false,
+                    gridview: true,
+                    pgbuttons: false,
+                    hoverrows: false,
+                    viewrecords: false,
+                    loadonce: true,
+                    autowidth: true,
+                    width: '100%',
+                    height: '100%',
+                    emptyrecords: 'No records to display',
+                    pager: jQuery("#" + pagerId),
+                    loadComplete: function () {
+                        //Below code is for keeping the rows in edit mode by default 
+                        var $this = $(this), ids = $this.jqGrid('getDataIDs'), i, l = ids.length;
+                        for (i = 0; i < l; i++) {
+                            $this.jqGrid('editRow', ids[i], false);
+                        }
+                    }
+                }).navGrid("#" + pagerId, { edit: false, add: false, del: false, search: false, refresh: false })
+                    .navButtonAdd("#" + pagerId, {
+                        caption: "",
+                        title: false,
+                        buttonicon: "",
+                       @* onClickButton: function (options) {
+                            $('#myModalContent').load("@Url.Action("AddNDEUnit/", "UploadDownload")" + rowData['MachineID'], function () {
+                                $('#myModal').toggle();
+                                //$('#myModal').dialog('option', 'title', 'Web Link');
+                            });
+                        },*@
+                        position: "last"
+                    });
+            }
+        });
+    }
+
+    function ActionFormatter(cellvalue, options, rowObject) {
+        var primaryId = rowObject.MachineID;
+        if (primaryId == null || primaryId == undefined || primaryId == "")
+            primaryId = "0";
+        return "<a href='javascript:ShowDrive(" + options.rowId + "," + primaryId + "," + options.gid + ")'style='color:blue; margin-left:5px;' title='Machine Detail'>Show Detail</a>";
+    }
+
+    function ShowDrive(rowId, primaryId, table) {
+        $("#myModalContent").load("@Url.Action("ShowDriveUnit/", "Clients", new { MachineID = "_Id" })".replace("_Id", primaryId), function () {
+            $("#myModal").toggle();
+        });
+    }
+    function ActionDrivenFormatter(cellvalue, options, rowObject) {
+        var primaryId = rowObject.MachineID;
+        if (primaryId == null || primaryId == undefined || primaryId == "")
+            primaryId = "0";
+        return "<a href='javascript:ShowDriven(" + options.rowId + "," + primaryId + "," + options.gid + ")'style='color:blue; margin-left:5px;' title='Show Detail'>Show Detail</a>";
+    }
+
+    function ShowDriven(rowId, primaryId, table) {
+        $("#myModalContent").load("@Url.Action("ShowDrivenUnit/", "Clients", new { MachineID = "_Id" })".replace("_Id", primaryId), function () {
+            $("#myModal").toggle();
+        });
+    }
+
+    //$(document).ready(function () {
+    //    $('#jqGridMachine').jqGrid({
+    //        //url from wich data should be requested
+    //        url: '/UploadDownload/GetMachineData1',
+    //        //type of data
+    //        datatype: 'json',
+    //        //url access method type
+    //        mtype: 'GET',
+    //        //columns names
+    //        colNames: ['ID', 'Machine Name', 'Drive Unit', 'Point Count'],
+    //        //columns model
+    //        colModel: [
+    //                 { name: 'MachineID', index: 'MachineID', width: 50, stype: 'text', hidden: false },
+    //                 { name: 'TrainName', index: 'TrainName', width: 300, stype: 'text', sortable: true, editable: true },
+    //                 { name: 'DEUnitType', index: 'DEUnitType', width: 300, editable: true },
+    //                 { name: 'TotalPoint', index: 'TotalPoint', width: 100, editable: true }
+
+    //        ],
+    //        //pager for grid
+    //        pager: $('#jQGridDemoPager'),
+    //        //number of rows per page
+    //        rowNum: 10,
+    //        //initial sorting column
+    //        sortname: 'ID',
+    //        //initial sorting direction
+    //        sortorder: 'asc',
+    //        //we want to display total records count
+    //        viewrecords: true,
+    //        //grid width
+    //        width: 'auto',
+    //        //grid height
+    //        height: 'auto',
+    //        //enable subgrid
+    //        subGrid: true,
+    //        //subrid model
+    //        subGridModel: [{
+    //            //subgrid columns names
+    //            name: ['Driven Unit', 'Point Count'],
+    //            //subgrid columns widths
+    //            width: [500, 300],
+    //            //subrig columns aligns
+    //            align: ['left', 'left']
+    //        }],
+    //        //url from which subgrid data should be requested
+    //        subGridUrl: '/UploadDownload/getDrivenUnit'
+    //    });
+    //    jQuery("#jqGridMachine").jqGrid('navGrid', '#jQGridDemoPager', {
+    //        edit: true,
+    //        add: true,
+    //        del: true,
+    //        search: true,
+    //        refresh: true,
+    //        searchtext: "Search",
+    //        addtext: "Add",
+    //        edittext: "Edit",
+    //        deltext: "Delete",
+    //        refreshtext: "Refresh"
+    //    }
+    //  );
+    //});
+
+    //$("#jqGridMachine").jqGrid('setGridWidth', $(window).width(), true);
+</script>
+
+
+
+
+
+

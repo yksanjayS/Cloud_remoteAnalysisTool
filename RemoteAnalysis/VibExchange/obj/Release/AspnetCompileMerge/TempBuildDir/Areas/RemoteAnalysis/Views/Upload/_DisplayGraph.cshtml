@@ -1,0 +1,353 @@
+﻿@model IEnumerable<VibExchange.Areas.RemoteAnalysis.Models.ChartData>
+@{
+    var chartTitle = ViewBag.Title;
+    //var Nodeid = ViewBag.NodeID;
+    var xunit = VibExchange.Areas.RemoteAnalysis.Models.ChartData.xAxisUnit;
+    var yunit = VibExchange.Areas.RemoteAnalysis.Models.ChartData.yAxisUnit;
+
+}
+<script src="~/JQGridReq/jquery.jqGrid.js"></script>
+<script src="~/JQGridReq/grid.locale-en.js"></script>
+<link href="~/JQGridReq/ui.jqgrid.css" rel="stylesheet" />
+<script src="~/Scripts/highcharts.js"></script>
+<script src="~/Scripts/series-label.js"></script>
+<script src="~/Scripts/exporting.js"></script>
+<div style="max-height:80vh;border-left:solid 1px grey">
+    <div id="graphSelect" class="col-md-offset-4">
+        <label class="checkbox-inline"><input type="checkbox" value="chnlA" checked="checked">Channel A</label>
+        <label class="checkbox-inline"><input type="checkbox" value="chnlB">Channel B</label>
+        <label class="checkbox-inline"><input type="checkbox" value="chnlAll">All Channel</label>
+    </div>
+    <div id="container" style="padding-top:20px;padding-bottom:30px;" class="col-md-11">
+    </div>
+</div>
+
+
+<script lang="javascript" type="text/javascript">
+    var ddlValue = "";
+    var area = false;
+    var chkCursor = "";
+    var xAxisData = new Array();
+    var yAxisdata = new Array();
+    var bearingData = new Array();
+    var faultFrequencyData = new Array();
+    var xVal, yVal;
+    var cursorValue = "";
+    var newindex = "";
+    $('#divFeatures').toggle();
+    $.getJSON('/Upload/GetChartData', { FileID: '@ViewBag.NodeID' }, function (jsonData) {
+        xAxisData = jsonData[0];
+        yAxisdata = jsonData[1];
+        var chart = Highcharts.chart('container', {
+            chart: {
+                type: "spline",
+                borderWidth: 1,
+                borderRadius: 7,
+                color: 'red',
+                zoomType: 'x',
+                events: {
+                    click: function (e) {
+                        var chart = this;
+                        var pos = this.pointer.normalize(e);
+                        point = this.pointer.findNearestKDPoint(this.series, false, pos);
+                        drawCursor(chart, e, point);
+                    }
+                }
+            },
+            xAxis: {
+                categories: xAxisData,
+                allowDecimals: false,
+                labels: {
+                    enabled: true
+                }
+            },
+            yAxis: {
+                labels: {
+                    format: '{value} @ViewBag.yUnit'
+                },
+                title: {
+                    text: '@ViewBag.amplitudeUnit'
+                },
+                alternateGridColor: '#F0F8FF'
+
+            },
+            //plotOptions: {
+            //    series: {
+            //        pointStart: 0
+            //    }
+            //},
+            credits: {
+                enabled: false
+            },
+            title: {
+                text: '@chartTitle'
+            },
+
+            tooltip: {
+                positioner: function () {
+                    return { x: this.chart.chartWidth - this.label.width, y: 35 };
+                },
+                shadow: false,
+                borderWidth: 1,
+                backgroundColor: 'lightgreen',
+                style: {
+                    fontSize: '12px'
+                }
+            },
+            series: [{
+                name: '@ViewBag.xUnit' + '( Overall : ' + '@ViewBag.Overall' + ' ' + '@ViewBag.yUnit' + ')',
+                data: yAxisdata,
+                color: 'lightcoral'
+            }]
+
+        }, function (chart) {
+            $("#Cursors").change(function () {
+                var ddlValue = this.value;
+                //alert(ddlValue);
+                var selectedText = this.options[this.selectedIndex].text;
+                if (ddlValue != "") {
+                    if (ddlValue == "Single") {
+                        removePlotLinesByID(chart, chkCursor);
+                        chart.xAxis[0].update({
+                            crosshair: false
+                        })
+                        chart.yAxis[0].update({
+                            crosshair: false
+                        })
+                    }
+                    if (ddlValue == "CrossHair") {
+                        //chart.xAxis[0].removePlotLine('plot-line-1');
+                        removePlotLinesByID(chart, chkCursor);
+                        chart.xAxis[0].update({
+                            crosshair: true
+                        })
+                        chart.yAxis[0].update({
+                            crosshair: true
+                        })
+                    }
+                    if (ddlValue == "Harmonic") {
+                        //chart.xAxis[0].removePlotLine('plot-line-1');
+                        removePlotLinesByID(chart, chkCursor);
+                        chart.xAxis[0].update({
+                            crosshair: false
+                        })
+                        chart.yAxis[0].update({
+                            crosshair: false
+                        })
+                    }
+                    if (ddlValue == "Peak") {
+                        removePlotLinesByID(chart, chkCursor);
+                        chart.xAxis[0].update({
+                            crosshair: false
+                        })
+                        chart.yAxis[0].update({
+                            crosshair: false
+                        })
+                    }
+                }
+                else {
+                    removePlotLinesByID(chart, chkCursor);
+                }
+            });
+
+            $("#btnArea").click(function () {
+                if (!area) {
+                    chart.series[0].update({
+                        type: 'areaspline',
+                        //color:'red'
+                    });
+                    area = true;
+                    $("#btnArea").attr('value', 'Remove Area');
+                }
+                else {
+                    chart.series[0].update({
+                        type: 'spline'
+                    });
+                    area = false;
+                    $("#btnArea").attr('value', 'Fill Area');
+                }
+            });
+            $("#btnBearing").click(function () {
+                bearingData = jsonData[3];
+                drawBearingFrequncy(chart, bearingData)
+            });
+            $("#btnFaultFrequency").click(function () {
+                faultFrequencyData = jsonData[2];
+                drawFaultFrequncy(chart, faultFrequencyData)
+            });
+        });
+    });
+    function drawCursor(chart, e, point) {
+        ddlValue = $("#Cursors").val();
+        if (ddlValue == "Single") {
+            //////////////////////////////Changes for cursor value
+
+            xVal = Highcharts.numberFormat(point.x, 2);
+            yVal = Highcharts.numberFormat(point.y, 2);
+            ////////////////////////////////////////////////////
+            x = e.chartX,
+            y = e.chartY;
+            //chart.xAxis[0].removePlotLine('Single1');
+            removePlotLinesByID(chart, chkCursor);
+            chart.xAxis[0].addPlotLine({
+                value: xVal,
+                color: 'green',
+                width: 1,
+                zIndex: 1,
+                label: {
+                    text: xAxisData[xVal - 1 + 1] + "/" + yVal
+                },
+                id: 'Single1'
+            });
+            chkCursor = "Single";
+        }
+        else if (ddlValue == "Harmonic") {
+            removePlotLinesByID(chart, chkCursor);
+            xVal = Highcharts.numberFormat(point.x, 2);
+            yVal = Highcharts.numberFormat(point.y, 2);
+            for (i = 1; i < 21; i++) {
+                chart.xAxis[0].addPlotLine({
+                    value: xVal * i,
+                    color: '#' + (Math.random() * 0xEEEEEE << 0).toString(16),
+                    width: 2,
+                    // added label to id so the id is unique:
+                    id: 'harmonic' + i,
+                    zIndex: 9999,
+                    // added plotLine event click - same as before.
+                    events: {
+                        click: function (e) {
+                            this.axis.removePlotLine();
+                        }
+                    },
+                    label: {
+                        text: xAxisData[xVal * i] + "/" + yAxisdata[xVal * i]
+                        //text: xVal * i + "/" + Highcharts.numberFormat(point.y*i, 2)
+                    }
+                });
+            }
+            chkCursor = "Harmonic";
+        }
+        else if (ddlValue == "Peak") {
+            removePlotLinesByID(chart, chkCursor);
+            xVal = Highcharts.numberFormat(point.x, 2);
+            yVal = Highcharts.numberFormat(point.y, 2);
+            var PeakValue = Math.max.apply(Math, yAxisdata);
+            //alert(PeakValue);
+            var PeakValueIndex = yAxisdata.indexOf(PeakValue);
+            // alert(PeakValueIndex);
+            chart.xAxis[0].addPlotLine({
+                value: PeakValueIndex,
+                color: 'red',
+                width: 1,
+                zIndex: 1,
+                label: {
+                    text: xAxisData[PeakValueIndex] + "/" + PeakValue
+                },
+                id: 'Peak'
+            });
+            chkCursor = "Peak";
+        }
+        else {
+            return false;
+        }
+    }
+    function removePlotLinesByID(chart, chkCursor) {
+        switch (chkCursor) {
+            case 'Single':
+                chart.xAxis[0].removePlotLine('Single1');
+                break;
+            case 'Harmonic':
+                for (i = 1; i < 21; i++) {
+                    chart.xAxis[0].removePlotLine('harmonic' + i);
+                }
+                break;
+            case 'Peak':
+                chart.xAxis[0].removePlotLine('Peak');
+                break;
+            case 'Bearing':
+                for (i = 0; i < 5; i++) {
+                    chart.xAxis[0].removePlotLine('bearing' + i);
+                }
+                break;
+            case 'FaultFrequency':
+                for (i = 0; i < 10; i++) {
+                    chart.xAxis[0].removePlotLine('FF' + i);
+                }
+                break;
+            default:
+                //alert('Nobody Wins!');
+        }
+
+    }
+    function chartRedraw(chart) {
+        chart.xAxis[0].update({
+            categories: xAxisData
+        });
+        chart.series[0].update({
+            data: yAxisdata
+        });
+    }
+
+    //////////////////////////// Bearing Cursors
+    function drawBearingFrequncy(chart, bearingData) {
+        if (chkCursor != "") {
+            removePlotLinesByID(chart, chkCursor);
+        }
+        for (var j = 0; j < bearingData.length; j++) {
+            chart.xAxis[0].addPlotLine({
+                value: bearingData[j],
+                color: '#' + (Math.random() * 0xEEEEEE << 0).toString(16),
+                width: 1,
+                id: 'bearing' + j,
+                zIndex: 9999,
+                label: {
+                    text: xAxisData[bearingData[j]] + "/" + yAxisdata[bearingData[j]]
+                }
+            });
+        }
+       
+        $('select option:contains("Select Cursor")').prop('selected', true);
+        chkCursor = "Bearing";
+    }
+
+    //////////////////////////// fault frequency Cursors
+    function drawFaultFrequncy(chart, faltFrequencyData) {
+        if (chkCursor != "") {
+            removePlotLinesByID(chart, chkCursor);
+        }
+        for (i = 0; i < faltFrequencyData.length; i++) {
+            chart.xAxis[0].addPlotLine({
+                value: faultFrequencyData[i],
+                color: '#' + (Math.random() * 0xEEEEEE << 0).toString(16),
+                width: 1,
+                id: 'FF' + i,
+                zIndex: 9999,
+                label: {
+                    text: xAxisData[faultFrequencyData[i]] + "/" + yAxisdata[faultFrequencyData[i]]
+                }
+            });
+        }
+        $('select option:contains("Select Cursor")').prop('selected', true);
+        chkCursor = "FaultFrequency";
+    }
+
+    $(function () {
+        $("input[name='bearing']").click(function () {
+            if ($("#IsPhysical").is(":checked")) {
+                $("#divPhysicalCal").show();
+                $("#divExistingBearing").hide();
+            }
+            if ($("#IsExisting").is(":checked")) {
+                $("#divPhysicalCal").hide();
+                $("#divExistingBearing").show();
+            }
+        });
+    });
+
+
+
+
+
+
+
+</script>

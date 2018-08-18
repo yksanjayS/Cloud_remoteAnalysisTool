@@ -1,0 +1,42 @@
+﻿@model VibExchange.Models.RegisterModel
+
+<script src="~/Scripts/jquery-1.8.2.min.js"></script>
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+<h4 style="width:80%;margin-left:5px;color:chocolate;">Contact Detail</h4>
+<div class="row">
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" }) 
+            <div class=" form-horizontal" role="form">
+                <div class="form-group ">
+                    @Html.LabelFor(model => model.Address, new { @class = "col-md-3 control-label"  })
+                    <div class="col-md-9">
+                        @Html.TextBoxFor(model => model.Address, new { @class = "form-control", id = "TrainID" ,@readonly=true})
+                    </div>
+                </div>
+                <div class="form-group ">
+                    @Html.LabelFor(model => model.phoneno, new { @class = "col-md-3 control-label" })
+                    <div class="col-md-9">
+                        @Html.TextBoxFor(model => model.phoneno, new { @class = "form-control", id = "TrainID",@readonly=true })
+                    </div>
+                </div>
+                  <div class="form-group ">
+                    @Html.LabelFor(model => model.OfficeNo, new { @class = "col-md-3 control-label" })
+                    <div class="col-md-9">
+                        @Html.TextBoxFor(model => model.OfficeNo, new { @class = "form-control", id = "TrainID",@readonly=true })
+                    </div>
+                </div>
+                <div class="form-group ">
+                    @Html.LabelFor(model => model.Email, new { @class = "col-md-3 control-label" })
+                    <div class="col-md-9">
+                       @Html.TextBoxFor(model => model.Email, new { @class = "form-control", id = "TrainID",@readonly=true })
+                    </div>
+                </div>
+            </div>
+    }
+</div>
+<script>function closeModal() {
+    $("#myModal").toggle();
+}</script>

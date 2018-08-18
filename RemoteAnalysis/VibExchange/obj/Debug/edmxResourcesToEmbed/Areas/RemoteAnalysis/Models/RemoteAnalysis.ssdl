@@ -1,0 +1,442 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Iadept_CloudModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="tblAlarm">
+    <Key>
+      <PropertyRef Name="AlarmID" />
+    </Key>
+    <Property Name="AlarmID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AlarmName" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="AlarmType" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="HighValue" Type="float" Nullable="false" />
+    <Property Name="LowValue" Type="float" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblArea">
+    <Key>
+      <PropertyRef Name="AreaID" />
+    </Key>
+    <Property Name="AreaID" Type="int" Nullable="false" />
+    <Property Name="AreaName" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="AreaDetail" Type="varchar(max)" />
+    <Property Name="FileID" Type="int" Nullable="false" />
+    <Property Name="ParentID" Type="int" Nullable="false" />
+    <Property Name="NodeType" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblBearing">
+    <Key>
+      <PropertyRef Name="BearingID" />
+    </Key>
+    <Property Name="BearingID" Type="int" Nullable="false" />
+    <Property Name="BearingMake" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="BearingModel" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="InnerDia" Type="float" Nullable="false" />
+    <Property Name="OuterDia" Type="float" Nullable="false" />
+    <Property Name="ContactAngel" Type="float" Nullable="false" />
+    <Property Name="RollingDia" Type="float" Nullable="false" />
+    <Property Name="NoOfRollingElement" Type="int" Nullable="false" />
+    <Property Name="Balls" Type="float" Nullable="false" />
+    <Property Name="FTF" Type="float" Nullable="false" />
+    <Property Name="BSF" Type="float" Nullable="false" />
+    <Property Name="BPFO" Type="float" Nullable="false" />
+    <Property Name="BPFI" Type="float" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblFaultFrequency">
+    <Key>
+      <PropertyRef Name="FrequencyID" />
+    </Key>
+    <Property Name="FrequencyID" Type="int" Nullable="false" />
+    <Property Name="FrequencyName" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="FrequencyValue" Type="float" Nullable="false" />
+    <Property Name="PointID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblFileData">
+    <Key>
+      <PropertyRef Name="FileID" />
+    </Key>
+    <Property Name="FileID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="FileName" Type="varchar(max)" Nullable="false" />
+    <Property Name="FileType" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="FileFormate" Type="varchar" MaxLength="50" />
+    <Property Name="InstrumentUsed" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="NoOfMachines" Type="int" />
+    <Property Name="NoOfPoints" Type="int" />
+    <Property Name="AnalysisMethod" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="FilePath" Type="varchar(max)" />
+    <Property Name="Description" Type="varchar(max)" />
+    <Property Name="DateOfUpload" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblInstrument">
+    <Key>
+      <PropertyRef Name="InstrumentID" />
+    </Key>
+    <Property Name="InstrumentID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="InstrumentName" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="ManufacturerName" Type="varchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="tblJobs">
+    <Key>
+      <PropertyRef Name="JobID" />
+    </Key>
+    <Property Name="JobID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="JobTitle" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="JobCategory" Type="varchar(max)" Nullable="false" />
+    <Property Name="Description" Type="varchar(max)" Nullable="false" />
+    <Property Name="ExperienceRequired" Type="varchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblMachine">
+    <Key>
+      <PropertyRef Name="MachineID" />
+    </Key>
+    <Property Name="MachineID" Type="int" Nullable="false" />
+    <Property Name="MachineName" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="MachineDetail" Type="varchar(max)" />
+    <Property Name="MachineClass" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="RPMDriven" Type="float" Nullable="false" />
+    <Property Name="PulseRevolution" Type="float" Nullable="false" />
+    <Property Name="FileID" Type="int" Nullable="false" />
+    <Property Name="ParentID" Type="int" Nullable="false" />
+    <Property Name="NodeType" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblMeasure_Benstone">
+    <Key>
+      <PropertyRef Name="MeasureID" />
+    </Key>
+    <Property Name="MeasureID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FileID" Type="int" Nullable="false" />
+    <Property Name="OverAcc" Type="bit" Nullable="false" />
+    <Property Name="OverVel" Type="bit" Nullable="false" />
+    <Property Name="OverDisp" Type="bit" Nullable="false" />
+    <Property Name="OverBear" Type="bit" Nullable="false" />
+    <Property Name="TimeWaveForm" Type="bit" Nullable="false" />
+    <Property Name="PowerSpectrum" Type="bit" Nullable="false" />
+    <Property Name="DemodulateSpectrum" Type="bit" Nullable="false" />
+    <Property Name="Temprature" Type="bit" Nullable="false" />
+    <Property Name="ProcessParameter" Type="bit" Nullable="false" />
+    <Property Name="CrestFacture" Type="bit" Nullable="false" />
+    <Property Name="OrderTrace" Type="bit" Nullable="false" />
+    <Property Name="Cepstrum" Type="bit" Nullable="false" />
+    <Property Name="CalcMeasure" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblMeasurementSetup_Benstone">
+    <Key>
+      <PropertyRef Name="SetupID" />
+    </Key>
+    <Property Name="SetupID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FileID" Type="int" Nullable="false" />
+    <Property Name="MeasureID" Type="int" Nullable="false" />
+    <Property Name="AlarmID" Type="int" />
+    <Property Name="acc_filter" Type="varchar" MaxLength="50" />
+    <Property Name="vel_filter" Type="varchar" MaxLength="50" />
+    <Property Name="displ_filter" Type="varchar" MaxLength="50" />
+    <Property Name="crest_factor_filter" Type="varchar" MaxLength="50" />
+    <Property Name="bearing_acc_hp_filter" Type="varchar" MaxLength="50" />
+    <Property Name="overall_bearing_filter" Type="varchar" MaxLength="50" />
+    <Property Name="ordertrace_average_times" Type="varchar" MaxLength="50" />
+    <Property Name="ordertrace_resolution" Type="varchar" MaxLength="50" />
+    <Property Name="ordertrace_order" Type="varchar" MaxLength="50" />
+    <Property Name="ordertrace_trigger_slope" Type="varchar" MaxLength="50" />
+    <Property Name="time_band" Type="varchar" MaxLength="50" />
+    <Property Name="time_resoltion" Type="varchar" MaxLength="50" />
+    <Property Name="time_overlap" Type="varchar" MaxLength="50" />
+    <Property Name="SensorDir" Type="int" />
+    <Property Name="SensorID" Type="int" />
+    <Property Name="TemperatureID" Type="int" />
+    <Property Name="power_multiple" Type="varchar" MaxLength="50" />
+    <Property Name="power_band" Type="varchar" MaxLength="50" />
+    <Property Name="power_resolution" Type="varchar" MaxLength="50" />
+    <Property Name="power_band1" Type="varchar" MaxLength="50" />
+    <Property Name="power_resolution1" Type="varchar" MaxLength="50" />
+    <Property Name="power2_band" Type="varchar" MaxLength="50" />
+    <Property Name="power2_resolution" Type="varchar" MaxLength="50" />
+    <Property Name="power2_band1" Type="varchar" MaxLength="50" />
+    <Property Name="power2_resolution1" Type="varchar" MaxLength="50" />
+    <Property Name="power3_band" Type="varchar" MaxLength="50" />
+    <Property Name="power3_resolution" Type="varchar" MaxLength="50" />
+    <Property Name="power3_band1" Type="varchar" MaxLength="50" />
+    <Property Name="power3_resolution1" Type="varchar" MaxLength="50" />
+    <Property Name="power_window" Type="varchar" MaxLength="50" />
+    <Property Name="power_average_times" Type="varchar" MaxLength="50" />
+    <Property Name="power_overlap" Type="varchar" MaxLength="50" />
+    <Property Name="power_zoom" Type="int" />
+    <Property Name="power_zoom_startfeq" Type="float" />
+    <Property Name="cepstrum_band" Type="varchar" MaxLength="50" />
+    <Property Name="cepstrum_resolution" Type="varchar" MaxLength="50" />
+    <Property Name="cepstrum_window" Type="varchar" MaxLength="50" />
+    <Property Name="cepstrum_average_times" Type="varchar" MaxLength="50" />
+    <Property Name="cepstrum_overlap" Type="varchar" MaxLength="50" />
+    <Property Name="cepstrum_zoom" Type="varchar" MaxLength="50" />
+    <Property Name="cepstrum_zoom_startfeq" Type="float" />
+    <Property Name="demodulate_band" Type="varchar" MaxLength="50" />
+    <Property Name="demodulate_resolution" Type="varchar" MaxLength="50" />
+    <Property Name="demodulate_window" Type="varchar" MaxLength="50" />
+    <Property Name="demodulate_average_times" Type="varchar" MaxLength="50" />
+    <Property Name="demodulate_filter" Type="varchar" MaxLength="50" />
+    <Property Name="Date" Type="datetime" />
+  </EntityType>
+  <EntityType Name="tblMeasurementSetup_Kohtect">
+    <Key>
+      <PropertyRef Name="SetupID" />
+    </Key>
+    <Property Name="SetupID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FileID" Type="int" Nullable="false" />
+    <Property Name="AlarmID" Type="int" />
+    <Property Name="Channel1" Type="int" />
+    <Property Name="SelectRadio1" Type="int" />
+    <Property Name="EVFrequency" Type="int" />
+    <Property Name="Channel2" Type="int" />
+    <Property Name="SelectRadio2" Type="int" />
+    <Property Name="SpectrumLineNo" Type="int" />
+    <Property Name="WindowType" Type="int" />
+    <Property Name="Fmin" Type="int" />
+    <Property Name="Fmax" Type="int" />
+    <Property Name="TriggerMode" Type="int" />
+    <Property Name="AvgMode" Type="int" />
+    <Property Name="N" Type="varchar" MaxLength="50" />
+    <Property Name="Comment" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="tblPlant">
+    <Key>
+      <PropertyRef Name="PlantID" />
+    </Key>
+    <Property Name="PlantID" Type="int" Nullable="false" />
+    <Property Name="PlantName" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="Category" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="PlantDetail" Type="varchar(max)" />
+    <Property Name="FileID" Type="int" Nullable="false" />
+    <Property Name="NodeType" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="tblPoint">
+    <Key>
+      <PropertyRef Name="PointID" />
+    </Key>
+    <Property Name="PointID" Type="int" Nullable="false" />
+    <Property Name="PointName" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="PointDetail" Type="varchar(max)" />
+    <Property Name="PointBearingID" Type="int" />
+    <Property Name="FileID" Type="int" Nullable="false" />
+    <Property Name="ParentID" Type="int" Nullable="false" />
+    <Property Name="NodeType" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblPointData_Kohtect">
+    <Key>
+      <PropertyRef Name="DataID" />
+    </Key>
+    <Property Name="DataID" Type="int" Nullable="false" />
+    <Property Name="PointID" Type="int" Nullable="false" />
+    <Property Name="SetupID" Type="int" Nullable="false" />
+    <Property Name="MeasureTime" Type="datetime" Nullable="false" />
+    <Property Name="FileID" Type="int" Nullable="false" />
+    <Property Name="OverallValue" Type="varchar" MaxLength="50" />
+    <Property Name="OverallUnit" Type="varchar" MaxLength="20" />
+    <Property Name="Chnl1Time_X" Type="varchar(max)" />
+    <Property Name="Chnl1Time_Y" Type="varchar(max)" />
+    <Property Name="Chnl2Time_X" Type="varchar(max)" />
+    <Property Name="Chnl2Time_Y" Type="varchar(max)" />
+    <Property Name="Chnl1FFT_X" Type="varchar(max)" />
+    <Property Name="Chnl1FFT_Y" Type="varchar(max)" />
+    <Property Name="Chnl2FFT_X" Type="varchar(max)" />
+    <Property Name="Chnl2FFT_Y" Type="varchar(max)" />
+    <Property Name="InsertDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="tblSensor">
+    <Key>
+      <PropertyRef Name="SensorID" />
+    </Key>
+    <Property Name="SensorID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SensorName" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="SensorType" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Sensitivity_Ch1" Type="int" />
+    <Property Name="Sensitivity_Ch2" Type="int" />
+    <Property Name="Sensitivity_Ch3" Type="int" />
+    <Property Name="Sensitivity_Ch4" Type="int" />
+    <Property Name="SensorUnit" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="SensorDirection" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="SensorICP" Type="bit" Nullable="false" />
+    <Property Name="SensorOffset" Type="varchar" MaxLength="50" />
+    <Property Name="InputRange" Type="int" />
+  </EntityType>
+  <EntityType Name="tblTrain">
+    <Key>
+      <PropertyRef Name="TrainID" />
+    </Key>
+    <Property Name="TrainID" Type="int" Nullable="false" />
+    <Property Name="TrainName" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="TrainDetail" Type="varchar(max)" />
+    <Property Name="NoOfMachine" Type="int" />
+    <Property Name="FileID" Type="int" Nullable="false" />
+    <Property Name="ParentID" Type="int" />
+    <Property Name="NodeType" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblUnit">
+    <Key>
+      <PropertyRef Name="UnitID" />
+    </Key>
+    <Property Name="UnitID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SensorType" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Unit" Type="varchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'Iadept_Cloud.dbo.tblUserMaster' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="tblUserMaster">
+    <Key>
+      <PropertyRef Name="FileID" />
+      <PropertyRef Name="UserID" />
+      <PropertyRef Name="InstrumentID" />
+      <PropertyRef Name="AnalysisID" />
+    </Key>
+    <Property Name="FileID" Type="int" Nullable="false" />
+    <Property Name="UserID" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="InstrumentID" Type="int" Nullable="false" />
+    <Property Name="AnalysisID" Type="varchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_Measurement_AlarmID">
+    <End Role="tblAlarm" Type="Self.tblAlarm" Multiplicity="0..1" />
+    <End Role="tblMeasurementSetup_Benstone" Type="Self.tblMeasurementSetup_Benstone" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblAlarm">
+        <PropertyRef Name="AlarmID" />
+      </Principal>
+      <Dependent Role="tblMeasurementSetup_Benstone">
+        <PropertyRef Name="AlarmID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Setup_MeasureID">
+    <End Role="tblMeasure_Benstone" Type="Self.tblMeasure_Benstone" Multiplicity="1" />
+    <End Role="tblMeasurementSetup_Benstone" Type="Self.tblMeasurementSetup_Benstone" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblMeasure_Benstone">
+        <PropertyRef Name="MeasureID" />
+      </Principal>
+      <Dependent Role="tblMeasurementSetup_Benstone">
+        <PropertyRef Name="MeasureID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="AddArea" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="FileID" Type="int" Mode="In" />
+    <Parameter Name="AreaName" Type="varchar" Mode="In" />
+    <Parameter Name="AreaDeatil" Type="varchar(max)" Mode="In" />
+    <Parameter Name="ParentID" Type="int" Mode="In" />
+    <Parameter Name="ParentType" Type="varchar" Mode="In" />
+    <Parameter Name="AreaID" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="AddMachine" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="FileID" Type="int" Mode="In" />
+    <Parameter Name="MachineName" Type="varchar" Mode="In" />
+    <Parameter Name="MachineDeatil" Type="varchar(max)" Mode="In" />
+    <Parameter Name="MachineClass" Type="varchar" Mode="In" />
+    <Parameter Name="RPMDriven" Type="int" Mode="In" />
+    <Parameter Name="PulseRevolution" Type="int" Mode="In" />
+    <Parameter Name="ParentID" Type="int" Mode="In" />
+    <Parameter Name="ParentType" Type="varchar" Mode="In" />
+    <Parameter Name="MachineID" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="AddPlant" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="FileID" Type="int" Mode="In" />
+    <Parameter Name="PlantName" Type="varchar" Mode="In" />
+    <Parameter Name="Category" Type="varchar" Mode="In" />
+    <Parameter Name="PlantDetail" Type="varchar(max)" Mode="In" />
+    <Parameter Name="PlantID" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="AddPoint" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="FileID" Type="int" Mode="In" />
+    <Parameter Name="PointName" Type="varchar" Mode="In" />
+    <Parameter Name="PointDeatil" Type="varchar(max)" Mode="In" />
+    <Parameter Name="BearingID" Type="int" Mode="In" />
+    <Parameter Name="ParentID" Type="int" Mode="In" />
+    <Parameter Name="ParentType" Type="varchar" Mode="In" />
+    <Parameter Name="PointID" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="addRecordedDataForKohtect" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Fileid" Type="int" Mode="In" />
+    <Parameter Name="Userid" Type="varchar" Mode="In" />
+    <Parameter Name="Alarmid" Type="int" Mode="In" />
+    <Parameter Name="Chnl1" Type="int" Mode="In" />
+    <Parameter Name="Radio1" Type="int" Mode="In" />
+    <Parameter Name="Chnl2" Type="int" Mode="In" />
+    <Parameter Name="Radio2" Type="int" Mode="In" />
+    <Parameter Name="EVfreq" Type="int" Mode="In" />
+    <Parameter Name="SLine" Type="int" Mode="In" />
+    <Parameter Name="WType" Type="int" Mode="In" />
+    <Parameter Name="Fmin" Type="int" Mode="In" />
+    <Parameter Name="Fmax" Type="int" Mode="In" />
+    <Parameter Name="TMode" Type="int" Mode="In" />
+    <Parameter Name="AMode" Type="int" Mode="In" />
+    <Parameter Name="N" Type="int" Mode="In" />
+    <Parameter Name="Comment" Type="varchar(max)" Mode="In" />
+    <Parameter Name="PointID" Type="int" Mode="In" />
+    <Parameter Name="MTime" Type="datetime" Mode="In" />
+    <Parameter Name="OverallValue" Type="float" Mode="In" />
+    <Parameter Name="OvUnit" Type="varchar" Mode="In" />
+    <Parameter Name="Chnl1FFTX" Type="varchar(max)" Mode="In" />
+    <Parameter Name="Chnl1FFTY" Type="varchar(max)" Mode="In" />
+    <Parameter Name="Chnl2FFTX" Type="varchar(max)" Mode="In" />
+    <Parameter Name="Chnl2FFTY" Type="varchar(max)" Mode="In" />
+  </Function>
+  <Function Name="AddTrain" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="FileID" Type="int" Mode="In" />
+    <Parameter Name="TrainName" Type="varchar" Mode="In" />
+    <Parameter Name="TrainDeatil" Type="varchar(max)" Mode="In" />
+    <Parameter Name="NoofMachine" Type="int" Mode="In" />
+    <Parameter Name="ParentID" Type="int" Mode="In" />
+    <Parameter Name="ParentType" Type="varchar" Mode="In" />
+    <Parameter Name="TrainID" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="addUploadDataRAM" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="UserID" Type="varchar" Mode="In" />
+    <Parameter Name="FileName" Type="varchar(max)" Mode="In" />
+    <Parameter Name="FileType" Type="varchar" Mode="In" />
+    <Parameter Name="FileFormate" Type="varchar" Mode="In" />
+    <Parameter Name="InstrumentUsed" Type="varchar" Mode="In" />
+    <Parameter Name="NoOfMachines" Type="int" Mode="In" />
+    <Parameter Name="NoOfPoints" Type="int" Mode="In" />
+    <Parameter Name="AnalysisMethod" Type="varchar" Mode="In" />
+    <Parameter Name="ImagePath" Type="varchar(max)" Mode="In" />
+    <Parameter Name="Description" Type="varchar(max)" Mode="In" />
+    <Parameter Name="id" Type="int" Mode="InOut" />
+  </Function>
+  <Function Name="GetFilePathbyFileID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="FileID" Type="int" Mode="In" />
+    <Parameter Name="UserID" Type="varchar" Mode="In" />
+    <Parameter Name="FilePath" Type="varchar(max)" Mode="InOut" />
+  </Function>
+  <Function Name="GetHierarchyData" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="FileID" Type="int" Mode="In" />
+  </Function>
+  <EntityContainer Name="Iadept_CloudModelStoreContainer">
+    <EntitySet Name="tblAlarm" EntityType="Self.tblAlarm" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblArea" EntityType="Self.tblArea" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblBearing" EntityType="Self.tblBearing" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblFaultFrequency" EntityType="Self.tblFaultFrequency" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblFileData" EntityType="Self.tblFileData" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblInstrument" EntityType="Self.tblInstrument" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblJobs" EntityType="Self.tblJobs" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblMachine" EntityType="Self.tblMachine" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblMeasure_Benstone" EntityType="Self.tblMeasure_Benstone" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblMeasurementSetup_Benstone" EntityType="Self.tblMeasurementSetup_Benstone" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblMeasurementSetup_Kohtect" EntityType="Self.tblMeasurementSetup_Kohtect" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblPlant" EntityType="Self.tblPlant" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblPoint" EntityType="Self.tblPoint" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblPointData_Kohtect" EntityType="Self.tblPointData_Kohtect" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblSensor" EntityType="Self.tblSensor" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblTrain" EntityType="Self.tblTrain" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblUnit" EntityType="Self.tblUnit" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblUserMaster" EntityType="Self.tblUserMaster" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [tblUserMaster].[FileID] AS [FileID], 
+    [tblUserMaster].[UserID] AS [UserID], 
+    [tblUserMaster].[InstrumentID] AS [InstrumentID], 
+    [tblUserMaster].[AnalysisID] AS [AnalysisID]
+    FROM [dbo].[tblUserMaster] AS [tblUserMaster]</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="FK_Measurement_AlarmID" Association="Self.FK_Measurement_AlarmID">
+      <End Role="tblAlarm" EntitySet="tblAlarm" />
+      <End Role="tblMeasurementSetup_Benstone" EntitySet="tblMeasurementSetup_Benstone" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Setup_MeasureID" Association="Self.FK_Setup_MeasureID">
+      <End Role="tblMeasure_Benstone" EntitySet="tblMeasure_Benstone" />
+      <End Role="tblMeasurementSetup_Benstone" EntitySet="tblMeasurementSetup_Benstone" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

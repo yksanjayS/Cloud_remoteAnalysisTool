@@ -1,0 +1,69 @@
+﻿@model VibExchange.Models.Contact
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+
+<style>
+    .enquirybox {
+        max-width: 80%;
+        font-family: Verdana;
+    }
+</style>
+@using (Html.BeginForm("getExpertQuery", "Order", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { role = "form" }))
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <div class="row-fluid col-md-offset-1">
+        <div class="form-group" style="margin-top:10px;">
+            <div>
+                @Html.LabelFor(model => model.Name, new { @class = "enquirybox" })
+            </div>
+            <div>
+                @Html.TextBoxFor(model => model.Name, new { @class = "form-control enquirybox" })
+                @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            <div>
+                @Html.LabelFor(model => model.Email, new { @class = "control-label" })
+            </div>
+            <div>
+                @Html.TextBoxFor(model => model.Email, new { @class = "form-control enquirybox" })
+                @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            <div>
+                @Html.LabelFor(model => model.Phone, new { @class = "enquirybox" })
+            </div>
+            <div>
+                @Html.TextBoxFor(model => model.Phone, new { @class = "form-control enquirybox" })
+                @Html.ValidationMessageFor(model => model.Phone, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            <div>
+                @Html.LabelFor(model => model.Subject)
+            </div>
+            <div>
+                @Html.TextBoxFor(model => model.Subject, new { @class = "form-control enquirybox" })
+                @Html.ValidationMessageFor(model => model.Subject, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            <div>
+                @Html.LabelFor(model => model.Message)
+            </div>
+            <div>
+                @Html.TextAreaFor(model => model.Message, new { @class = "form-control enquirybox" })
+                @Html.ValidationMessageFor(model => model.Message, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            <div>
+                <button id="btnAddEnquiry" class="btn btn-default" onclick="location.href='@Url.Action("getExpertQuery", "Order")'">Send Query</button>
+
+            </div>
+        </div>
+    </div>
+}

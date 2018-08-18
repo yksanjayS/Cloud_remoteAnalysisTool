@@ -1,0 +1,136 @@
+﻿@model VibExchange.Models.AnalysisMethod
+
+@{
+    ViewBag.Title = "Gears Vibration Analysis Services";
+    Layout = "~/Views/Shared/_VibExchangeLayout.cshtml";
+}
+<style>
+    #coverpage {
+        background: url("../Images/Gear11.jpg") no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+</style>
+<div id="coverpage" class="row-fluid" style="height:inherit;width:inherit;">
+    <div>
+        <div class=" col-md-3 col-md-offset-4" style="padding-top:20%;">
+            <h2 style="color:floralwhite;text-align:center;background-color:darkcyan">Gears Vibration Analysis</h2>
+        </div>
+
+       
+    </div>
+</div>
+
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary(true)
+    <div class="container">
+        <div class="page-text">
+            <div class="row">
+                <p>
+                    Gears are critical element in a variety of industrial applications such as machine tool and gearboxes.The main parts of the gearbox are the gears, shafts, bearings, housing,
+                    and the outside of the gearbox clutches and couplings. The gears are machine elements that transmit motion by means of successively engaging teeth.
+                    The transformation of speed is without slip and loss of synchronization. Thus, the relationship between the angular velocities of the driving gear to the driven gear,
+                    or the velocity ratio, of a pair of mating teeth results from the number of teeth of the driving and driven gear. <br />
+                </p>
+                <div class="col-md-7">
+                    <p>
+                        <span style=" font-size:16px; color:#49b1d1;">
+                            Common Gear Faults are
+                        </span>
+                    </p>
+                    <p>
+                        <span>
+                            <img style="padding-right: 10px;" src="~/Images/steps.png" />
+                            Tooth Meshing Faults
+                        </span>
+                    </p>
+                    <p>
+                        <span>
+                            <img style="padding-right: 10px;" src="~/Images/steps.png" />
+                            Misalignment
+                        </span>
+                    </p>
+                    <p>
+                        <span>
+                            <img style="padding-right: 10px;" src="~/Images/steps.png" />
+                            Cracked or Broken Tooth of either Gear
+                        </span>
+                    </p>
+                    <p>
+                        <span>
+                            <img style="padding-right: 10px;" src="~/Images/steps.png" />
+                            Eccentricity and Backlash
+                        </span>
+                    </p>
+                </div>
+
+                <div class="col-md-offset-1 col-md-4">
+
+                    <img src="~/Images/gears.jpg" class="img-thumbnail" />
+                </div>
+            </div>
+
+            <hr />
+            <div class="row">
+                <div class="col-md-8">
+                    <p>
+                        <span style=" font-size:16px; color:#49b1d1;text-decoration:underline">
+                            Cost for Analysis
+                        </span>
+
+                    </p>
+                    @Html.Partial("_CostTable", Model.CostList)
+                    <div class="col-md-offset-4">
+                        @*<a style="margin-left:20px;margin-bottom:20px;color:blue;" id="btnUploadManual" class="btn btn-default" href="@Url.Action("UploadFile", "UploadDownload", new { flag=ViewBag.AnalysisMethod})" onclick="OnDeleteClick(this);"> Upload Your Data &raquo;</a>*@
+
+                        @*<div class=" services img-thumbnail" style="background-color: #ff6600; margin-left: 10px; margin-bottom: 10px;">
+                                <a href="@Url.Action("GetSampleReport", "UploadDownload", new { area = "", id = "Indicative Analysis"})" style="color:white" title="Indicative Analysis" target="blank">SampleReport For Indicative Analysis</a>
+                            </div>
+                            <div class=" services img-thumbnail" style="background-color: #ff6600; margin-left: 10px; margin-bottom: 10px;">
+                                <a href="@Url.Action("GetSampleReport", "UploadDownload", new { area = "", id = "VibAnalyst Analysis" })" style="color:white" title="VibAnalyst Analysis" target="blank">SampleReport For VibAnalyst Analysis</a>
+                            </div>
+                            <div class=" services img-thumbnail" style="background-color: #ff6600; margin-left: 10px; margin-bottom: 10px;">
+                                <a href="@Url.Action("Login", "Home", new { area = "", id = "VibAnalyst Analysis" })" style="color:white" title="Register Here">Not Register Yet Please Register !</a>
+                            </div>*@
+                    </div>
+                </div>
+                <div class="col-md-offset-0 col-md-4">
+                    @*<img src="~/Images/pump.png" class="img-responsive" />*@
+                    <img src="~/Images/gearsfft.PNG" class="img-thumbnail"/>
+                </div>
+                <br />
+            </div>
+            <div class="row">
+
+                <div class=" col-md-3 services img-thumbnail" style="background-color: #ff6600; margin-left: 10px; margin-bottom: 10px;">
+                    <a href="@Url.Action("GetSampleReport", "UploadDownload", new { area = "", id = "Indicative Analysis"})" style="color:white" title="Indicative Analysis" target="blank">SampleReport For Indicative Analysis</a>
+                </div>
+                <div class=" col-md-3 services img-thumbnail" style="background-color: #ff6600; margin-left: 10px; margin-bottom: 10px;">
+                    <a href="@Url.Action("GetSampleReport", "UploadDownload", new { area = "", id = "VibAnalyst Analysis" })" style="color:white" title="VibAnalyst Analysis" target="blank">SampleReport For VibAnalyst Analysis</a>
+                </div>
+                <div class=" col-md-3 services img-thumbnail" style="background-color: #ff6600; margin-left: 10px; margin-bottom: 10px;">
+                    <a href="@Url.Action("Login", "Home", new { area = "", id = "VibAnalyst Analysis" })" style="color:white" title="Register Here">Not Register Yet! Please Register </a>
+                </div>
+
+
+            </div>
+
+
+
+            <div class="row-fluid">
+                <a style="margin-left:20px;margin-bottom:20px;color:blue;" id="btnUploadManual" class="btn btn-default" href="@Url.Action("UploadFile", "UploadDownload", new { flag=ViewBag.AnalysisMethod})" onclick="OnDeleteClick(this);"> Upload Your Data &raquo;</a>
+
+            </div>
+        </div>
+    </div>
+}
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
+
+
+

@@ -1,0 +1,25 @@
+﻿@model IEnumerable<VibExchange.Models.ClientsRecord>
+@using GridMvc.Html;
+@{
+    ViewBag.Title = "allFilesDetail";
+    Layout = "~/Views/Shared/_VibExchangeLayout.cshtml";
+}
+
+<h2>allFilesDetail</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+
+@Html.Grid(Model).Columns(columns=>
+{
+  columns.Add(c => c.Serial).Titled("File ID").Filterable(true);
+                        columns.Add(c => c.Company).Titled("Comapny Name").Filterable(true);
+                        columns.Add()
+                        .Encoded(false)
+                        .Sanitized(false)
+                        .SetWidth(30)
+                        .RenderValueAs(o => Html.ActionLink("Edit", "Edit", new { id = o.Serial }));
+                        
+                    }).WithPaging(10).Sortable(true)
+

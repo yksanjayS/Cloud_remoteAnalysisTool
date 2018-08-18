@@ -1,0 +1,85 @@
+﻿@model VibExchange.Models.Order
+
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+
+<style>
+    .enquirybox {
+         font-family: Verdana;
+    }
+</style>
+
+    @using (Html.BeginForm("getEnquiry", "Order", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { role = "form" }))
+    {
+        @Html.AntiForgeryToken()
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+       <div class="row-fluid col-md-offset-1" >
+           <div class="form-group" style="margin-top:10px;">
+               <div>
+                   @Html.LabelFor(model => model.fullName, new { @class = "enquirybox" })
+               </div>
+               <div>
+                   @Html.TextBoxFor(model => model.fullName, new { @class = "form-control enquirybox" })
+                   @Html.ValidationMessageFor(model => model.fullName, "", new { @class = "text-danger" })
+               </div>
+           </div>
+            <div class="form-group">
+                <div>
+                    @Html.LabelFor(model => model.emailID, new { @class = "control-label" })
+                </div>
+                <div>
+                    @Html.TextBoxFor(model => model.emailID, new { @class = "form-control enquirybox" })
+                    @Html.ValidationMessageFor(model => model.emailID, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="form-group">
+                <div>
+                    @Html.LabelFor(model => model.password, new { @class = "enquirybox" })
+                </div>
+                <div>
+                    @Html.PasswordFor(model => model.password, new { @class = "form-control enquirybox" })
+                    @Html.ValidationMessageFor(model => model.password, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="form-group">
+                <div>
+                    @Html.LabelFor(model => model.phone)
+                </div>
+                <div>
+                    @Html.TextBoxFor(model => model.phone, new { @class = "form-control enquirybox" })
+                    @Html.ValidationMessageFor(model => model.phone, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="form-group">
+                <div>
+                    @Html.LabelFor(model => model.EnquiryCategory)
+                </div>
+                <div>
+                    @Html.DropDownList("CategoryList", (IEnumerable<SelectListItem>)ViewBag.categoryList, "Please Select", new { @class = "form-control enquirybox" })
+                    @Html.ValidationMessageFor(model => model.EnquiryCategory, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="form-group">
+                <div>
+                    @Html.LabelFor(model => model.EnquiryDetail)
+                </div>
+                <div>
+                    @Html.TextAreaFor(model => model.EnquiryDetail, new { @class = "form-control enquirybox" })
+                    @Html.ValidationMessageFor(model => model.EnquiryDetail, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="form-group">
+                @*<div>
+                    @Html.CheckBoxFor(model => model.TermsAndConditions, new { @id = "chkcondition" })
+                    I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>
+                    <br />
+                    @Html.ValidationMessageFor(model => model.TermsAndConditions, "", new { @class = "text-danger" })
+                </div>*@
+                <div>
+                    <button id="btnAddEnquiry" type="submit" class="btn btn-default" onclick="location.href='@Url.Action("getEnquiry", "Order",new { pageID = "Home" },null)'">Send Enquiry</button>
+                    @*<button type="submit" class="col-md-offset-5 btn btn-success" onclick="location.href='@Url.Action("getEnquiry", "Order", new { @route = "Home" })'>Submit</button>*@
+                </div>
+            </div>
+       </div>
+    }
+

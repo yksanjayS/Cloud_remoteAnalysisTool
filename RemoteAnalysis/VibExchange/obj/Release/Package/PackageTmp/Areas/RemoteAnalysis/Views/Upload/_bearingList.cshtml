@@ -1,0 +1,41 @@
+﻿@model IEnumerable<VibExchange.Areas.RemoteAnalysis.Models.BearingData>
+
+@{var grid = new WebGrid(source: Model, ajaxUpdateContainerId: "bearingGrid", canPage: true, rowsPerPage: 10);
+grid.Pager(WebGridPagerModes.All);
+}
+<div class="row-fluid">
+    <div class="row-fluid">
+        <button type="button" id="btnAddBearingFrequency" class="btn btn-sm btn-info" data-toggle="modal" data-target="#myModal" style="vertical-align: text-bottom; padding-bottom:5px;">
+            Add Bearing Frequency
+        </button>
+        @*<a href="@Url.Action("AddBearingFrequency", "Upload", new { area = "RemoteAnalysis"})" data-toggle="modal" data-target="#myModal" title="Add Bearing Frequency" class="btn btn-sm btn-info" style="vertical-align: text-bottom; padding-bottom:5px;">
+            Add Bearing Frequency
+        </a>*@
+    </div>
+    <div id="gridBearingFrequency" class="row-fluid" style="font-family: Calibri;">
+        @grid.GetHtml(tableStyle: "table table-bordered",
+                      headerStyle: "webgrid-header",
+                      footerStyle: "webgrid-footer",
+                      alternatingRowStyle: "webgrid-alternating-row",
+                      selectedRowStyle: "webgrid-selected-row",
+                      rowStyle: "webgrid-row-style",
+                columns: grid.Columns(
+                                           grid.Column("BearingID", format: (item) => item.GetSelectLink(item.BearingID.ToString())),
+                                           grid.Column(columnName: "BearingMake", header: "Make"),
+                                                    grid.Column(columnName: "BearingNumber", header: "Number"),
+                                                              grid.Column(columnName: "Balls", header: "Balls"),
+                                                                      grid.Column(columnName: "FTF", header: "FTF"),
+                                                                                 grid.Column(columnName: "BSF", header: "BSF"),
+                                                                      grid.Column(columnName: "BPFO", header: "BPFO"),
+                                                                                         grid.Column(columnName: "BPFI", header: "BPFI"),
+                grid.Column("Action",
+                    style: "col1",
+                    format: @<text><div>
+                            @Html.ActionLink("Delete", "DeleteBearingData", "Upload", new { area = "RemoteAnalysis", id = item.BearingID })
+                        </div>
+                    </text>)))
+    </div>
+
+</div>
+
+

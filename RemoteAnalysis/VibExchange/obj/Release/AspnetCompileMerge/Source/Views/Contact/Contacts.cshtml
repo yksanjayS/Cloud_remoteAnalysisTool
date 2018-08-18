@@ -1,0 +1,93 @@
+﻿@model VibExchange.Models.Contact
+
+@{
+    ViewBag.Title = "Contacts";
+    Layout = "~/Views/Shared/_VibExchangeLayout.cshtml";
+}
+
+<div class="nav navbar">
+    <div class="jumbotron center">
+        <img src="~/Images/contact-us-banner.jpg" class="img-responsive" style="width: 100%;" />
+    </div>
+</div>
+<div class="container">
+    <h4 style="color: chocolate">Contact >> Please enter your detail... </h4>
+    <div class="col-md-8">
+        <section id="contactform">
+            @using (Html.BeginForm("Contacts", "Contact", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+            {
+                @Html.AntiForgeryToken()
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                <div class="form-group">
+                    @Html.LabelFor(m => m.Name, new { @class = "col-md-2 control-label" })
+                    <div class="col-md-10">
+                        @Html.TextBoxFor(m => m.Name, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(m => m.Name, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(m => m.Email, new { @class = "col-md-2 control-label" })
+                    <div class="col-md-10">
+                        @Html.TextBoxFor(m => m.Email, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(m => m.Phone, new { @class = "col-md-2 control-label" })
+                    <div class="col-md-10">
+                        @Html.TextBoxFor(m => m.Phone, new { @class = "form-control", onkeypress = "return isNumberKey(event)" })
+                        @Html.ValidationMessageFor(m => m.Phone, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(m => m.Subject, new { @class = "col-md-2 control-label" })
+                    <div class="col-md-10">
+                        @Html.TextBoxFor(m => m.Subject, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(m => m.Subject, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(m => m.Message, new { @class = "col-md-2 control-label" })
+                    <div class="col-md-10">
+                        @Html.TextAreaFor(m => m.Message, 5, 25, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(m => m.Message, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-offset-2 col-md-10">
+                        <input type="submit" value="Submit Detail" class="btn btn-default" />
+                    </div>
+                </div>
+            }
+        </section>
+    </div>
+    <div class="col-md-4">
+        <section id="socialcontactform">
+            <address>
+                <strong>Contact Person: </strong>       
+                Mr. Brijesh Kumar
+                <br />
+                <strong>Phone: </strong>
+                +(91)-9810010218 , +(91)-11-45613132
+            </address>
+            <address>
+                <strong>Support:</strong>   <a href="mailto:support@vibration-service.com">support@vibration-service.com</a><br />
+                <strong>Marketing:</strong> <a href="mailto:info@vibration-service.com">info@vibration-service.com</a>
+            </address>
+        </section>
+    </div>
+</div>
+<script type="text/javascript">
+    function isNumberKey(evt) {
+        var charCode = (evt.which) ? evt.which : event.keyCode;
+        if (charCode != 46 && charCode > 31
+          && (charCode < 48 || charCode > 57))
+            return false;
+
+        return true;
+    }
+</script>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

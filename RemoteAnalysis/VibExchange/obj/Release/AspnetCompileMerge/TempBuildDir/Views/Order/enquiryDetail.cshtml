@@ -1,0 +1,61 @@
+﻿@model VibExchange.Models.Enquiry
+
+@{
+    ViewBag.Title = "Enquiry Detail";
+    Layout = "~/Views/Shared/_VibExchangeLayout.cshtml";
+}
+
+<h4>Enquiry Detail</h4>
+
+<fieldset>
+    <legend>Enquiry</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.UserName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.UserName)
+    </div>
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.company)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.company)
+    </div>
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.phone)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.phone)
+    </div>
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.emailid)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.emailid)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Enq_Category)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Enq_Category)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Enq_Subject)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Enq_Subject)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Enq_CreateDate)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Enq_CreateDate)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Back to Enquiry List", "Index")
+</p>

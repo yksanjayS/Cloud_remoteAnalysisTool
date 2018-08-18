@@ -1,0 +1,85 @@
+﻿@model VibExchange.Areas.RemoteAnalysis.Models.PlantData
+@{
+    var status = TempData["NodeAvailability"];
+}
+@using (Html.BeginForm("UpdatePlant", "Upload", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+    <legend class="navbar-left" style="color:lightcoral">Plant Information</legend>
+    <div class="row">
+        <div class="col-md-8">
+            <div class="display-none">
+                @Html.HiddenFor(model => model.PlantID)
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(m => m.PlantName, new { @class = "col-md-2 col-md-offset-1 control-label" })
+                <div class="col-md-8">
+                    @Html.TextBoxFor(m => m.PlantName, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(m => m.PlantName, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(model => model.PlantCategory, htmlAttributes: new { @class = "control-label col-md-2 col-md-offset-1" })
+                <div class="col-md-8">
+                    @Html.DropDownList("PlantCategory", new List<SelectListItem>{
+                  new SelectListItem{ Text="Agriculture", Value = "Agriculture" },
+                   new SelectListItem{ Text="Automotive", Value = "Automotive" },
+                     new SelectListItem{ Text="Construction & Developement", Value = "Construction & Developement" },
+                      new SelectListItem{ Text="Defence", Value = "Defence" },
+                       new SelectListItem{ Text="Electronics & Electrical", Value = "Electronics & Electrical" },
+                        new SelectListItem{ Text="FMCG", Value = "FMCG" },
+                         new SelectListItem{ Text="Information Technology", Value = "Information Technology" },
+                          new SelectListItem{ Text="Power", Value = "Power" },
+                           new SelectListItem{ Text="Research & Developement", Value = "Research & Developement" }
+                 }, "Select Plant Category", new { @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.PlantCategory, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(model => model.PlantDetail, htmlAttributes: new { @class = "control-label col-md-2 col-md-offset-1" })
+                <div class="col-md-8">
+                    @Html.TextAreaFor(m => m.PlantDetail, 3, 10, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.PlantDetail, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-offset-3 col-md-8">
+                    <button type="button" id="btnUpdatePlant" class="btn btn-success">Save Detail</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            @Html.ActionLink("Show All Routes", "GetPreviosData", "Upload", new { area = "RemoteAnalysis" }, new { @class = "btn btn-sm btn-info" })
+            @*<button type="button" id="btnDownloadRoute" class="btn btn-sm btn-info">
+                    Download Route Data
+                </button>*@
+        </div>
+    </div>
+}
+<script>
+    $('#btnUpdatePlant').click(function () {
+        $.ajax({
+            url: "@Url.Action("UpdatePlant", "Upload", new { area = "RemoteAnalysis" })",
+            type: 'POST',
+            data: $('form').serialize(),
+            success: function (data) {
+                $('#graphDisplay').html('');
+                $('#graphDisplay').html(data);
+                alert("Plant detail update succesfully.");
+                $("#jstree").jstree("refresh");
+            }
+        });
+    });
+    @*$("#btnUpdatePlant").click(function () {
+        $.ajax({
+            url: "@Url.Action("UpdatePlant", "Upload", new { area = "RemoteAnalysis" })",
+            type: "get",
+            data: $("form").serialize(), //if you need to post Model data, use this
+            success: function (result) {
+                $("#detailDisplay").html(result);
+            }
+        });
+    });*@
+
+</script>

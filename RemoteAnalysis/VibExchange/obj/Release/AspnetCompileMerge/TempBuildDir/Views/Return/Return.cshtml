@@ -1,0 +1,12 @@
+﻿@{
+    ViewBag.Title = "Return";
+}
+
+<h2>PayUMoney Response</h2>
+
+<h1> ViewData["Message"]</h1>
+<script type="text/javascript">
+    $.getJSON('/Clients/SomeAction', function (json) {
+        alert(json.Message);
+    });
+</script>

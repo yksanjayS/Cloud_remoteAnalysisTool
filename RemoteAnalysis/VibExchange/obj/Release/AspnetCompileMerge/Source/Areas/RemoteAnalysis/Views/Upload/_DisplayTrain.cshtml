@@ -1,0 +1,71 @@
+﻿@model VibExchange.Areas.RemoteAnalysis.Models.TrainData
+
+@{
+    var status = TempData["NodeAvailability"];
+}
+
+@using (Html.BeginForm("UpdateTrain", "Upload", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+{    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <legend class="navbar-left" style="color:lightcoral">Train Information</legend>
+
+    <div>
+        <div class="display-none">
+            @Html.HiddenFor(model => model.TrainID)
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.TrainName, new { @class = "col-md-2 col-md-offset-1 control-label" })
+            <div class="col-md-8">
+                @Html.TextBoxFor(m => m.TrainName, new { @class = "form-control" })
+                @Html.ValidationMessageFor(m => m.TrainName, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.NoOfMachine, htmlAttributes: new { @class = "col-md-2 col-md-offset-1 control-label" })
+            <div class="col-md-8">
+                @Html.DropDownList("NoOfMachine", new List<SelectListItem>{
+               new SelectListItem{ Text="1", Value = "1" },
+                     new SelectListItem{ Text="2", Value = "2" },
+                      new SelectListItem{ Text="3", Value = "3" },
+                       new SelectListItem{ Text="4", Value = "4" },
+                        new SelectListItem{ Text="5", Value = "5" },
+                         new SelectListItem{ Text="6", Value = "6" },
+                          new SelectListItem{ Text="7", Value = "7" },
+                           new SelectListItem{ Text="8", Value = "8" },
+                         new SelectListItem{ Text="9", Value = "9" },
+                          new SelectListItem{ Text="10", Value = "10" },
+                           new SelectListItem{ Text="10+", Value = "10+" }
+
+                 }, "Select No of Machine", new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.NoOfMachine, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.TrainDetail, htmlAttributes: new { @class = "col-md-2 col-md-offset-1 control-label" })
+            <div class="col-md-8">
+                @Html.TextAreaFor(m => m.TrainDetail, 3, 10, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.TrainDetail, "", new { @class = "text-danger" })
+            </div>
+        </div>
+    </div>
+}
+<div class="form-group">
+    <div class="col-md-offset-4 col-md-8">
+        <button type="button" id="btnUpdateTrain" class="btn btn-success">Save Detail</button>
+    </div>
+</div>
+<script>
+    $('#btnUpdateTrain').click(function () {
+        $.ajax({
+            url: "@Url.Action("UpdateTrain", "Upload", new { area = "RemoteAnalysis" })",
+            type: 'POST',
+            data: $('form').serialize(),
+            success: function (data) {
+                $('#graphDisplay').html('');
+                $('#graphDisplay').html(data);
+                alert("Train details update succesfully.");
+            }
+        });
+    });
+</script>

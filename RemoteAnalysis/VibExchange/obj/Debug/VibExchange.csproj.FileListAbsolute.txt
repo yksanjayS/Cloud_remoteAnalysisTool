@@ -1,0 +1,1927 @@
+C:\Users\rohit_000\Desktop\Code BackUp\VibExchange\VibExchange\bin\VibExchange.dll.config
+C:\Users\rohit_000\Desktop\Code BackUp\VibExchange\VibExchange\bin\VibExchange.dll
+C:\Users\rohit_000\Desktop\Code BackUp\VibExchange\VibExchange\bin\VibExchange.pdb
+C:\Users\rohit_000\Desktop\Code BackUp\VibExchange\VibExchange\bin\Antlr3.Runtime.dll
+C:\Users\rohit_000\Desktop\Code BackUp\VibExchange\VibExchange\bin\DotNetOpenAuth.AspNet.dll
+C:\Users\rohit_000\Desktop\Code BackUp\VibExchange\VibExchange\bin\DotNetOpenAuth.Core.dll
+C:\Users\rohit_000\Desktop\Code BackUp\VibExchange\VibExchange\bin\DotNetOpenAuth.OAuth.Consumer.dll
+C:\Users\rohit_000\Desktop\Code BackUp\VibExchange\VibExchange\bin\DotNetOpenAuth.OAuth.dll
+C:\Users\rohit_000\Desktop\Code BackUp\VibExchange\VibExchange\bin\DotNetOpenAuth.OpenId.dll
+C:\Users\rohit_000\Desktop\Code BackUp\VibExchange\VibExchange\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
+C:\Users\rohit_000\Desktop\Code BackUp\VibExchange\VibExchange\bin\EntityFramework.dll
+C:\Users\rohit_000\Desktop\Code BackUp\VibExchange\VibExchange\bin\EntityFramework.SqlServer.dll
+C:\Users\rohit_000\Desktop\Code BackUp\VibExchange\VibExchange\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\rohit_000\Desktop\Code BackUp\VibExchange\VibExchange\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+C:\Users\rohit_000\Desktop\Code BackUp\VibExchange\VibExchange\bin\Microsoft.Web.WebPages.OAuth.dll
+C:\Users\rohit_000\Desktop\Code BackUp\VibExchange\VibExchange\bin\Newtonsoft.Json.dll
+C:\Users\rohit_000\Desktop\Code BackUp\VibExchange\VibExchange\bin\System.Net.Http.dll
+C:\Users\rohit_000\Desktop\Code BackUp\VibExchange\VibExchange\bin\System.Net.Http.Formatting.dll
+C:\Users\rohit_000\Desktop\Code BackUp\VibExchange\VibExchange\bin\System.Net.Http.WebRequest.dll
+C:\Users\rohit_000\Desktop\Code BackUp\VibExchange\VibExchange\bin\System.Web.Helpers.dll
+C:\Users\rohit_000\Desktop\Code BackUp\VibExchange\VibExchange\bin\System.Web.Http.dll
+C:\Users\rohit_000\Desktop\Code BackUp\VibExchange\VibExchange\bin\System.Web.Http.WebHost.dll
+C:\Users\rohit_000\Desktop\Code BackUp\VibExchange\VibExchange\bin\System.Web.Mvc.dll
+C:\Users\rohit_000\Desktop\Code BackUp\VibExchange\VibExchange\bin\System.Web.Optimization.dll
+C:\Users\rohit_000\Desktop\Code BackUp\VibExchange\VibExchange\bin\System.Web.Providers.dll
+C:\Users\rohit_000\Desktop\Code BackUp\VibExchange\VibExchange\bin\System.Web.Razor.dll
+C:\Users\rohit_000\Desktop\Code BackUp\VibExchange\VibExchange\bin\System.Web.WebPages.Deployment.dll
+C:\Users\rohit_000\Desktop\Code BackUp\VibExchange\VibExchange\bin\System.Web.WebPages.dll
+C:\Users\rohit_000\Desktop\Code BackUp\VibExchange\VibExchange\bin\System.Web.WebPages.Razor.dll
+C:\Users\rohit_000\Desktop\Code BackUp\VibExchange\VibExchange\bin\WebGrease.dll
+C:\Users\rohit_000\Desktop\Code BackUp\VibExchange\VibExchange\bin\WebMatrix.Data.dll
+C:\Users\rohit_000\Desktop\Code BackUp\VibExchange\VibExchange\bin\WebMatrix.WebData.dll
+C:\Users\rohit_000\Desktop\Code BackUp\VibExchange\VibExchange\bin\Antlr3.Runtime.pdb
+C:\Users\rohit_000\Desktop\Code BackUp\VibExchange\VibExchange\bin\DotNetOpenAuth.AspNet.xml
+C:\Users\rohit_000\Desktop\Code BackUp\VibExchange\VibExchange\bin\DotNetOpenAuth.Core.xml
+C:\Users\rohit_000\Desktop\Code BackUp\VibExchange\VibExchange\bin\DotNetOpenAuth.OAuth.xml
+C:\Users\rohit_000\Desktop\Code BackUp\VibExchange\VibExchange\bin\DotNetOpenAuth.OAuth.Consumer.xml
+C:\Users\rohit_000\Desktop\Code BackUp\VibExchange\VibExchange\bin\DotNetOpenAuth.OpenId.xml
+C:\Users\rohit_000\Desktop\Code BackUp\VibExchange\VibExchange\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+C:\Users\rohit_000\Desktop\Code BackUp\VibExchange\VibExchange\bin\EntityFramework.xml
+C:\Users\rohit_000\Desktop\Code BackUp\VibExchange\VibExchange\bin\EntityFramework.SqlServer.xml
+C:\Users\rohit_000\Desktop\Code BackUp\VibExchange\VibExchange\bin\Microsoft.Web.WebPages.OAuth.xml
+C:\Users\rohit_000\Desktop\Code BackUp\VibExchange\VibExchange\bin\Newtonsoft.Json.xml
+C:\Users\rohit_000\Desktop\Code BackUp\VibExchange\VibExchange\bin\System.Web.Optimization.xml
+C:\Users\rohit_000\Desktop\Code BackUp\VibExchange\VibExchange\bin\System.Web.Providers.xml
+C:\Users\rohit_000\Desktop\Code BackUp\VibExchange\VibExchange\bin\System.Net.Http.Formatting.xml
+C:\Users\rohit_000\Desktop\Code BackUp\VibExchange\VibExchange\bin\System.Web.Helpers.xml
+C:\Users\rohit_000\Desktop\Code BackUp\VibExchange\VibExchange\bin\System.Web.Http.xml
+C:\Users\rohit_000\Desktop\Code BackUp\VibExchange\VibExchange\bin\System.Web.Http.WebHost.xml
+C:\Users\rohit_000\Desktop\Code BackUp\VibExchange\VibExchange\bin\System.Web.Mvc.xml
+C:\Users\rohit_000\Desktop\Code BackUp\VibExchange\VibExchange\bin\System.Web.Razor.xml
+C:\Users\rohit_000\Desktop\Code BackUp\VibExchange\VibExchange\bin\System.Web.WebPages.xml
+C:\Users\rohit_000\Desktop\Code BackUp\VibExchange\VibExchange\bin\System.Web.WebPages.Deployment.xml
+C:\Users\rohit_000\Desktop\Code BackUp\VibExchange\VibExchange\bin\System.Web.WebPages.Razor.xml
+C:\Users\rohit_000\Desktop\Code BackUp\VibExchange\VibExchange\bin\WebMatrix.Data.xml
+C:\Users\rohit_000\Desktop\Code BackUp\VibExchange\VibExchange\bin\WebMatrix.WebData.xml
+C:\Users\rohit_000\Desktop\Code BackUp\VibExchange\VibExchange\obj\Debug\VibExchange.csprojResolveAssemblyReference.cache
+C:\Users\rohit_000\Desktop\Code BackUp\VibExchange\VibExchange\obj\Debug\VibExchange.dll
+C:\Users\rohit_000\Desktop\Code BackUp\VibExchange\VibExchange\obj\Debug\VibExchange.pdb
+C:\Users\rohit_000\Desktop\Code BackUp\VibExchange_3Dec\VibExchange\VibExchange\bin\VibExchange.dll.config
+C:\Users\rohit_000\Desktop\Code BackUp\VibExchange_3Dec\VibExchange\VibExchange\bin\VibExchange.dll
+C:\Users\rohit_000\Desktop\Code BackUp\VibExchange_3Dec\VibExchange\VibExchange\bin\VibExchange.pdb
+C:\Users\rohit_000\Desktop\Code BackUp\VibExchange_3Dec\VibExchange\VibExchange\bin\Antlr3.Runtime.dll
+C:\Users\rohit_000\Desktop\Code BackUp\VibExchange_3Dec\VibExchange\VibExchange\bin\DotNetOpenAuth.AspNet.dll
+C:\Users\rohit_000\Desktop\Code BackUp\VibExchange_3Dec\VibExchange\VibExchange\bin\DotNetOpenAuth.Core.dll
+C:\Users\rohit_000\Desktop\Code BackUp\VibExchange_3Dec\VibExchange\VibExchange\bin\DotNetOpenAuth.OAuth.Consumer.dll
+C:\Users\rohit_000\Desktop\Code BackUp\VibExchange_3Dec\VibExchange\VibExchange\bin\DotNetOpenAuth.OAuth.dll
+C:\Users\rohit_000\Desktop\Code BackUp\VibExchange_3Dec\VibExchange\VibExchange\bin\DotNetOpenAuth.OpenId.dll
+C:\Users\rohit_000\Desktop\Code BackUp\VibExchange_3Dec\VibExchange\VibExchange\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
+C:\Users\rohit_000\Desktop\Code BackUp\VibExchange_3Dec\VibExchange\VibExchange\bin\EntityFramework.dll
+C:\Users\rohit_000\Desktop\Code BackUp\VibExchange_3Dec\VibExchange\VibExchange\bin\EntityFramework.SqlServer.dll
+C:\Users\rohit_000\Desktop\Code BackUp\VibExchange_3Dec\VibExchange\VibExchange\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\rohit_000\Desktop\Code BackUp\VibExchange_3Dec\VibExchange\VibExchange\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+C:\Users\rohit_000\Desktop\Code BackUp\VibExchange_3Dec\VibExchange\VibExchange\bin\Microsoft.Web.WebPages.OAuth.dll
+C:\Users\rohit_000\Desktop\Code BackUp\VibExchange_3Dec\VibExchange\VibExchange\bin\Newtonsoft.Json.dll
+C:\Users\rohit_000\Desktop\Code BackUp\VibExchange_3Dec\VibExchange\VibExchange\bin\System.Net.Http.dll
+C:\Users\rohit_000\Desktop\Code BackUp\VibExchange_3Dec\VibExchange\VibExchange\bin\System.Net.Http.Formatting.dll
+C:\Users\rohit_000\Desktop\Code BackUp\VibExchange_3Dec\VibExchange\VibExchange\bin\System.Net.Http.WebRequest.dll
+C:\Users\rohit_000\Desktop\Code BackUp\VibExchange_3Dec\VibExchange\VibExchange\bin\System.Web.Helpers.dll
+C:\Users\rohit_000\Desktop\Code BackUp\VibExchange_3Dec\VibExchange\VibExchange\bin\System.Web.Http.dll
+C:\Users\rohit_000\Desktop\Code BackUp\VibExchange_3Dec\VibExchange\VibExchange\bin\System.Web.Http.WebHost.dll
+C:\Users\rohit_000\Desktop\Code BackUp\VibExchange_3Dec\VibExchange\VibExchange\bin\System.Web.Mvc.dll
+C:\Users\rohit_000\Desktop\Code BackUp\VibExchange_3Dec\VibExchange\VibExchange\bin\System.Web.Optimization.dll
+C:\Users\rohit_000\Desktop\Code BackUp\VibExchange_3Dec\VibExchange\VibExchange\bin\System.Web.Providers.dll
+C:\Users\rohit_000\Desktop\Code BackUp\VibExchange_3Dec\VibExchange\VibExchange\bin\System.Web.Razor.dll
+C:\Users\rohit_000\Desktop\Code BackUp\VibExchange_3Dec\VibExchange\VibExchange\bin\System.Web.WebPages.Deployment.dll
+C:\Users\rohit_000\Desktop\Code BackUp\VibExchange_3Dec\VibExchange\VibExchange\bin\System.Web.WebPages.dll
+C:\Users\rohit_000\Desktop\Code BackUp\VibExchange_3Dec\VibExchange\VibExchange\bin\System.Web.WebPages.Razor.dll
+C:\Users\rohit_000\Desktop\Code BackUp\VibExchange_3Dec\VibExchange\VibExchange\bin\WebGrease.dll
+C:\Users\rohit_000\Desktop\Code BackUp\VibExchange_3Dec\VibExchange\VibExchange\bin\WebMatrix.Data.dll
+C:\Users\rohit_000\Desktop\Code BackUp\VibExchange_3Dec\VibExchange\VibExchange\bin\WebMatrix.WebData.dll
+C:\Users\rohit_000\Desktop\Code BackUp\VibExchange_3Dec\VibExchange\VibExchange\bin\Antlr3.Runtime.pdb
+C:\Users\rohit_000\Desktop\Code BackUp\VibExchange_3Dec\VibExchange\VibExchange\bin\DotNetOpenAuth.AspNet.xml
+C:\Users\rohit_000\Desktop\Code BackUp\VibExchange_3Dec\VibExchange\VibExchange\bin\DotNetOpenAuth.Core.xml
+C:\Users\rohit_000\Desktop\Code BackUp\VibExchange_3Dec\VibExchange\VibExchange\bin\DotNetOpenAuth.OAuth.xml
+C:\Users\rohit_000\Desktop\Code BackUp\VibExchange_3Dec\VibExchange\VibExchange\bin\DotNetOpenAuth.OAuth.Consumer.xml
+C:\Users\rohit_000\Desktop\Code BackUp\VibExchange_3Dec\VibExchange\VibExchange\bin\DotNetOpenAuth.OpenId.xml
+C:\Users\rohit_000\Desktop\Code BackUp\VibExchange_3Dec\VibExchange\VibExchange\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+C:\Users\rohit_000\Desktop\Code BackUp\VibExchange_3Dec\VibExchange\VibExchange\bin\EntityFramework.xml
+C:\Users\rohit_000\Desktop\Code BackUp\VibExchange_3Dec\VibExchange\VibExchange\bin\EntityFramework.SqlServer.xml
+C:\Users\rohit_000\Desktop\Code BackUp\VibExchange_3Dec\VibExchange\VibExchange\bin\Microsoft.Web.WebPages.OAuth.xml
+C:\Users\rohit_000\Desktop\Code BackUp\VibExchange_3Dec\VibExchange\VibExchange\bin\Newtonsoft.Json.xml
+C:\Users\rohit_000\Desktop\Code BackUp\VibExchange_3Dec\VibExchange\VibExchange\bin\System.Web.Optimization.xml
+C:\Users\rohit_000\Desktop\Code BackUp\VibExchange_3Dec\VibExchange\VibExchange\bin\System.Web.Providers.xml
+C:\Users\rohit_000\Desktop\Code BackUp\VibExchange_3Dec\VibExchange\VibExchange\bin\System.Net.Http.Formatting.xml
+C:\Users\rohit_000\Desktop\Code BackUp\VibExchange_3Dec\VibExchange\VibExchange\bin\System.Web.Helpers.xml
+C:\Users\rohit_000\Desktop\Code BackUp\VibExchange_3Dec\VibExchange\VibExchange\bin\System.Web.Http.xml
+C:\Users\rohit_000\Desktop\Code BackUp\VibExchange_3Dec\VibExchange\VibExchange\bin\System.Web.Http.WebHost.xml
+C:\Users\rohit_000\Desktop\Code BackUp\VibExchange_3Dec\VibExchange\VibExchange\bin\System.Web.Mvc.xml
+C:\Users\rohit_000\Desktop\Code BackUp\VibExchange_3Dec\VibExchange\VibExchange\bin\System.Web.Razor.xml
+C:\Users\rohit_000\Desktop\Code BackUp\VibExchange_3Dec\VibExchange\VibExchange\bin\System.Web.WebPages.xml
+C:\Users\rohit_000\Desktop\Code BackUp\VibExchange_3Dec\VibExchange\VibExchange\bin\System.Web.WebPages.Deployment.xml
+C:\Users\rohit_000\Desktop\Code BackUp\VibExchange_3Dec\VibExchange\VibExchange\bin\System.Web.WebPages.Razor.xml
+C:\Users\rohit_000\Desktop\Code BackUp\VibExchange_3Dec\VibExchange\VibExchange\bin\WebMatrix.Data.xml
+C:\Users\rohit_000\Desktop\Code BackUp\VibExchange_3Dec\VibExchange\VibExchange\bin\WebMatrix.WebData.xml
+C:\Users\rohit_000\Desktop\Code BackUp\VibExchange_3Dec\VibExchange\VibExchange\obj\Debug\VibExchange.csprojResolveAssemblyReference.cache
+C:\Users\rohit_000\Desktop\Code BackUp\VibExchange_3Dec\VibExchange\VibExchange\obj\Debug\VibExchange.dll
+C:\Users\rohit_000\Desktop\Code BackUp\VibExchange_3Dec\VibExchange\VibExchange\obj\Debug\VibExchange.pdb
+C:\Users\rohit_000\Desktop\Code BackUp\15 Dec 2015\VibExchange\VibExchange\bin\VibExchange.dll
+C:\Users\rohit_000\Desktop\Code BackUp\15 Dec 2015\VibExchange\VibExchange\bin\VibExchange.pdb
+C:\Users\rohit_000\Desktop\Code BackUp\15 Dec 2015\VibExchange\VibExchange\bin\Antlr3.Runtime.dll
+C:\Users\rohit_000\Desktop\Code BackUp\15 Dec 2015\VibExchange\VibExchange\bin\DotNetOpenAuth.AspNet.dll
+C:\Users\rohit_000\Desktop\Code BackUp\15 Dec 2015\VibExchange\VibExchange\bin\DotNetOpenAuth.Core.dll
+C:\Users\rohit_000\Desktop\Code BackUp\15 Dec 2015\VibExchange\VibExchange\bin\DotNetOpenAuth.OAuth.Consumer.dll
+C:\Users\rohit_000\Desktop\Code BackUp\15 Dec 2015\VibExchange\VibExchange\bin\DotNetOpenAuth.OAuth.dll
+C:\Users\rohit_000\Desktop\Code BackUp\15 Dec 2015\VibExchange\VibExchange\bin\DotNetOpenAuth.OpenId.dll
+C:\Users\rohit_000\Desktop\Code BackUp\15 Dec 2015\VibExchange\VibExchange\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
+C:\Users\rohit_000\Desktop\Code BackUp\15 Dec 2015\VibExchange\VibExchange\bin\EntityFramework.dll
+C:\Users\rohit_000\Desktop\Code BackUp\15 Dec 2015\VibExchange\VibExchange\bin\EntityFramework.SqlServer.dll
+C:\Users\rohit_000\Desktop\Code BackUp\15 Dec 2015\VibExchange\VibExchange\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\rohit_000\Desktop\Code BackUp\15 Dec 2015\VibExchange\VibExchange\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+C:\Users\rohit_000\Desktop\Code BackUp\15 Dec 2015\VibExchange\VibExchange\bin\Microsoft.Web.WebPages.OAuth.dll
+C:\Users\rohit_000\Desktop\Code BackUp\15 Dec 2015\VibExchange\VibExchange\bin\Newtonsoft.Json.dll
+C:\Users\rohit_000\Desktop\Code BackUp\15 Dec 2015\VibExchange\VibExchange\bin\System.Net.Http.dll
+C:\Users\rohit_000\Desktop\Code BackUp\15 Dec 2015\VibExchange\VibExchange\bin\System.Net.Http.Formatting.dll
+C:\Users\rohit_000\Desktop\Code BackUp\15 Dec 2015\VibExchange\VibExchange\bin\System.Net.Http.WebRequest.dll
+C:\Users\rohit_000\Desktop\Code BackUp\15 Dec 2015\VibExchange\VibExchange\bin\System.Web.Helpers.dll
+C:\Users\rohit_000\Desktop\Code BackUp\15 Dec 2015\VibExchange\VibExchange\bin\System.Web.Http.dll
+C:\Users\rohit_000\Desktop\Code BackUp\15 Dec 2015\VibExchange\VibExchange\bin\System.Web.Http.WebHost.dll
+C:\Users\rohit_000\Desktop\Code BackUp\15 Dec 2015\VibExchange\VibExchange\bin\System.Web.Mvc.dll
+C:\Users\rohit_000\Desktop\Code BackUp\15 Dec 2015\VibExchange\VibExchange\bin\System.Web.Optimization.dll
+C:\Users\rohit_000\Desktop\Code BackUp\15 Dec 2015\VibExchange\VibExchange\bin\System.Web.Providers.dll
+C:\Users\rohit_000\Desktop\Code BackUp\15 Dec 2015\VibExchange\VibExchange\bin\System.Web.Razor.dll
+C:\Users\rohit_000\Desktop\Code BackUp\15 Dec 2015\VibExchange\VibExchange\bin\System.Web.WebPages.Deployment.dll
+C:\Users\rohit_000\Desktop\Code BackUp\15 Dec 2015\VibExchange\VibExchange\bin\System.Web.WebPages.dll
+C:\Users\rohit_000\Desktop\Code BackUp\15 Dec 2015\VibExchange\VibExchange\bin\System.Web.WebPages.Razor.dll
+C:\Users\rohit_000\Desktop\Code BackUp\15 Dec 2015\VibExchange\VibExchange\bin\WebGrease.dll
+C:\Users\rohit_000\Desktop\Code BackUp\15 Dec 2015\VibExchange\VibExchange\bin\WebMatrix.Data.dll
+C:\Users\rohit_000\Desktop\Code BackUp\15 Dec 2015\VibExchange\VibExchange\bin\WebMatrix.WebData.dll
+C:\Users\rohit_000\Desktop\Code BackUp\15 Dec 2015\VibExchange\VibExchange\bin\Antlr3.Runtime.pdb
+C:\Users\rohit_000\Desktop\Code BackUp\15 Dec 2015\VibExchange\VibExchange\bin\DotNetOpenAuth.AspNet.xml
+C:\Users\rohit_000\Desktop\Code BackUp\15 Dec 2015\VibExchange\VibExchange\bin\DotNetOpenAuth.Core.xml
+C:\Users\rohit_000\Desktop\Code BackUp\15 Dec 2015\VibExchange\VibExchange\bin\DotNetOpenAuth.OAuth.xml
+C:\Users\rohit_000\Desktop\Code BackUp\15 Dec 2015\VibExchange\VibExchange\bin\DotNetOpenAuth.OAuth.Consumer.xml
+C:\Users\rohit_000\Desktop\Code BackUp\15 Dec 2015\VibExchange\VibExchange\bin\DotNetOpenAuth.OpenId.xml
+C:\Users\rohit_000\Desktop\Code BackUp\15 Dec 2015\VibExchange\VibExchange\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+C:\Users\rohit_000\Desktop\Code BackUp\15 Dec 2015\VibExchange\VibExchange\bin\EntityFramework.xml
+C:\Users\rohit_000\Desktop\Code BackUp\15 Dec 2015\VibExchange\VibExchange\bin\EntityFramework.SqlServer.xml
+C:\Users\rohit_000\Desktop\Code BackUp\15 Dec 2015\VibExchange\VibExchange\bin\Microsoft.Web.WebPages.OAuth.xml
+C:\Users\rohit_000\Desktop\Code BackUp\15 Dec 2015\VibExchange\VibExchange\bin\Newtonsoft.Json.xml
+C:\Users\rohit_000\Desktop\Code BackUp\15 Dec 2015\VibExchange\VibExchange\bin\System.Web.Optimization.xml
+C:\Users\rohit_000\Desktop\Code BackUp\15 Dec 2015\VibExchange\VibExchange\bin\System.Web.Providers.xml
+C:\Users\rohit_000\Desktop\Code BackUp\15 Dec 2015\VibExchange\VibExchange\bin\System.Net.Http.Formatting.xml
+C:\Users\rohit_000\Desktop\Code BackUp\15 Dec 2015\VibExchange\VibExchange\bin\System.Web.Helpers.xml
+C:\Users\rohit_000\Desktop\Code BackUp\15 Dec 2015\VibExchange\VibExchange\bin\System.Web.Http.xml
+C:\Users\rohit_000\Desktop\Code BackUp\15 Dec 2015\VibExchange\VibExchange\bin\System.Web.Http.WebHost.xml
+C:\Users\rohit_000\Desktop\Code BackUp\15 Dec 2015\VibExchange\VibExchange\bin\System.Web.Mvc.xml
+C:\Users\rohit_000\Desktop\Code BackUp\15 Dec 2015\VibExchange\VibExchange\bin\System.Web.Razor.xml
+C:\Users\rohit_000\Desktop\Code BackUp\15 Dec 2015\VibExchange\VibExchange\bin\System.Web.WebPages.xml
+C:\Users\rohit_000\Desktop\Code BackUp\15 Dec 2015\VibExchange\VibExchange\bin\System.Web.WebPages.Deployment.xml
+C:\Users\rohit_000\Desktop\Code BackUp\15 Dec 2015\VibExchange\VibExchange\bin\System.Web.WebPages.Razor.xml
+C:\Users\rohit_000\Desktop\Code BackUp\15 Dec 2015\VibExchange\VibExchange\bin\WebMatrix.Data.xml
+C:\Users\rohit_000\Desktop\Code BackUp\15 Dec 2015\VibExchange\VibExchange\bin\WebMatrix.WebData.xml
+C:\Users\rohit_000\Desktop\Code BackUp\15 Dec 2015\VibExchange\VibExchange\obj\Debug\VibExchange.csprojResolveAssemblyReference.cache
+C:\Users\rohit_000\Desktop\Code BackUp\15 Dec 2015\VibExchange\VibExchange\obj\Debug\VibExchange.dll
+C:\Users\rohit_000\Desktop\Code BackUp\15 Dec 2015\VibExchange\VibExchange\obj\Debug\VibExchange.pdb
+C:\Users\rohit_000\Desktop\Code BackUp\17 Dec\VibExchange\VibExchange\bin\VibExchange.dll
+C:\Users\rohit_000\Desktop\Code BackUp\17 Dec\VibExchange\VibExchange\bin\VibExchange.pdb
+C:\Users\rohit_000\Desktop\Code BackUp\17 Dec\VibExchange\VibExchange\bin\Antlr3.Runtime.dll
+C:\Users\rohit_000\Desktop\Code BackUp\17 Dec\VibExchange\VibExchange\bin\DotNetOpenAuth.AspNet.dll
+C:\Users\rohit_000\Desktop\Code BackUp\17 Dec\VibExchange\VibExchange\bin\DotNetOpenAuth.Core.dll
+C:\Users\rohit_000\Desktop\Code BackUp\17 Dec\VibExchange\VibExchange\bin\DotNetOpenAuth.OAuth.Consumer.dll
+C:\Users\rohit_000\Desktop\Code BackUp\17 Dec\VibExchange\VibExchange\bin\DotNetOpenAuth.OAuth.dll
+C:\Users\rohit_000\Desktop\Code BackUp\17 Dec\VibExchange\VibExchange\bin\DotNetOpenAuth.OpenId.dll
+C:\Users\rohit_000\Desktop\Code BackUp\17 Dec\VibExchange\VibExchange\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
+C:\Users\rohit_000\Desktop\Code BackUp\17 Dec\VibExchange\VibExchange\bin\EntityFramework.dll
+C:\Users\rohit_000\Desktop\Code BackUp\17 Dec\VibExchange\VibExchange\bin\EntityFramework.SqlServer.dll
+C:\Users\rohit_000\Desktop\Code BackUp\17 Dec\VibExchange\VibExchange\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\rohit_000\Desktop\Code BackUp\17 Dec\VibExchange\VibExchange\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+C:\Users\rohit_000\Desktop\Code BackUp\17 Dec\VibExchange\VibExchange\bin\Microsoft.Web.WebPages.OAuth.dll
+C:\Users\rohit_000\Desktop\Code BackUp\17 Dec\VibExchange\VibExchange\bin\Newtonsoft.Json.dll
+C:\Users\rohit_000\Desktop\Code BackUp\17 Dec\VibExchange\VibExchange\bin\System.Net.Http.dll
+C:\Users\rohit_000\Desktop\Code BackUp\17 Dec\VibExchange\VibExchange\bin\System.Net.Http.Formatting.dll
+C:\Users\rohit_000\Desktop\Code BackUp\17 Dec\VibExchange\VibExchange\bin\System.Net.Http.WebRequest.dll
+C:\Users\rohit_000\Desktop\Code BackUp\17 Dec\VibExchange\VibExchange\bin\System.Web.Helpers.dll
+C:\Users\rohit_000\Desktop\Code BackUp\17 Dec\VibExchange\VibExchange\bin\System.Web.Http.dll
+C:\Users\rohit_000\Desktop\Code BackUp\17 Dec\VibExchange\VibExchange\bin\System.Web.Http.WebHost.dll
+C:\Users\rohit_000\Desktop\Code BackUp\17 Dec\VibExchange\VibExchange\bin\System.Web.Mvc.dll
+C:\Users\rohit_000\Desktop\Code BackUp\17 Dec\VibExchange\VibExchange\bin\System.Web.Optimization.dll
+C:\Users\rohit_000\Desktop\Code BackUp\17 Dec\VibExchange\VibExchange\bin\System.Web.Providers.dll
+C:\Users\rohit_000\Desktop\Code BackUp\17 Dec\VibExchange\VibExchange\bin\System.Web.Razor.dll
+C:\Users\rohit_000\Desktop\Code BackUp\17 Dec\VibExchange\VibExchange\bin\System.Web.WebPages.Deployment.dll
+C:\Users\rohit_000\Desktop\Code BackUp\17 Dec\VibExchange\VibExchange\bin\System.Web.WebPages.dll
+C:\Users\rohit_000\Desktop\Code BackUp\17 Dec\VibExchange\VibExchange\bin\System.Web.WebPages.Razor.dll
+C:\Users\rohit_000\Desktop\Code BackUp\17 Dec\VibExchange\VibExchange\bin\WebGrease.dll
+C:\Users\rohit_000\Desktop\Code BackUp\17 Dec\VibExchange\VibExchange\bin\WebMatrix.Data.dll
+C:\Users\rohit_000\Desktop\Code BackUp\17 Dec\VibExchange\VibExchange\bin\WebMatrix.WebData.dll
+C:\Users\rohit_000\Desktop\Code BackUp\17 Dec\VibExchange\VibExchange\bin\Antlr3.Runtime.pdb
+C:\Users\rohit_000\Desktop\Code BackUp\17 Dec\VibExchange\VibExchange\bin\DotNetOpenAuth.AspNet.xml
+C:\Users\rohit_000\Desktop\Code BackUp\17 Dec\VibExchange\VibExchange\bin\DotNetOpenAuth.Core.xml
+C:\Users\rohit_000\Desktop\Code BackUp\17 Dec\VibExchange\VibExchange\bin\DotNetOpenAuth.OAuth.xml
+C:\Users\rohit_000\Desktop\Code BackUp\17 Dec\VibExchange\VibExchange\bin\DotNetOpenAuth.OAuth.Consumer.xml
+C:\Users\rohit_000\Desktop\Code BackUp\17 Dec\VibExchange\VibExchange\bin\DotNetOpenAuth.OpenId.xml
+C:\Users\rohit_000\Desktop\Code BackUp\17 Dec\VibExchange\VibExchange\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+C:\Users\rohit_000\Desktop\Code BackUp\17 Dec\VibExchange\VibExchange\bin\EntityFramework.xml
+C:\Users\rohit_000\Desktop\Code BackUp\17 Dec\VibExchange\VibExchange\bin\EntityFramework.SqlServer.xml
+C:\Users\rohit_000\Desktop\Code BackUp\17 Dec\VibExchange\VibExchange\bin\Microsoft.Web.WebPages.OAuth.xml
+C:\Users\rohit_000\Desktop\Code BackUp\17 Dec\VibExchange\VibExchange\bin\Newtonsoft.Json.xml
+C:\Users\rohit_000\Desktop\Code BackUp\17 Dec\VibExchange\VibExchange\bin\System.Web.Optimization.xml
+C:\Users\rohit_000\Desktop\Code BackUp\17 Dec\VibExchange\VibExchange\bin\System.Web.Providers.xml
+C:\Users\rohit_000\Desktop\Code BackUp\17 Dec\VibExchange\VibExchange\bin\System.Net.Http.Formatting.xml
+C:\Users\rohit_000\Desktop\Code BackUp\17 Dec\VibExchange\VibExchange\bin\System.Web.Helpers.xml
+C:\Users\rohit_000\Desktop\Code BackUp\17 Dec\VibExchange\VibExchange\bin\System.Web.Http.xml
+C:\Users\rohit_000\Desktop\Code BackUp\17 Dec\VibExchange\VibExchange\bin\System.Web.Http.WebHost.xml
+C:\Users\rohit_000\Desktop\Code BackUp\17 Dec\VibExchange\VibExchange\bin\System.Web.Mvc.xml
+C:\Users\rohit_000\Desktop\Code BackUp\17 Dec\VibExchange\VibExchange\bin\System.Web.Razor.xml
+C:\Users\rohit_000\Desktop\Code BackUp\17 Dec\VibExchange\VibExchange\bin\System.Web.WebPages.xml
+C:\Users\rohit_000\Desktop\Code BackUp\17 Dec\VibExchange\VibExchange\bin\System.Web.WebPages.Deployment.xml
+C:\Users\rohit_000\Desktop\Code BackUp\17 Dec\VibExchange\VibExchange\bin\System.Web.WebPages.Razor.xml
+C:\Users\rohit_000\Desktop\Code BackUp\17 Dec\VibExchange\VibExchange\bin\WebMatrix.Data.xml
+C:\Users\rohit_000\Desktop\Code BackUp\17 Dec\VibExchange\VibExchange\bin\WebMatrix.WebData.xml
+C:\Users\rohit_000\Desktop\Code BackUp\17 Dec\VibExchange\VibExchange\obj\Debug\VibExchange.csprojResolveAssemblyReference.cache
+C:\Users\rohit_000\Desktop\Code BackUp\17 Dec\VibExchange\VibExchange\obj\Debug\VibExchange.dll
+C:\Users\rohit_000\Desktop\Code BackUp\17 Dec\VibExchange\VibExchange\obj\Debug\VibExchange.pdb
+C:\Users\rohit_000\Desktop\VibExchange\VibExchange\bin\VibExchange.dll
+C:\Users\rohit_000\Desktop\VibExchange\VibExchange\bin\VibExchange.pdb
+C:\Users\rohit_000\Desktop\VibExchange\VibExchange\obj\Debug\VibExchange.csprojResolveAssemblyReference.cache
+C:\Users\rohit_000\Desktop\VibExchange\VibExchange\obj\Debug\VibExchange.dll
+C:\Users\rohit_000\Desktop\VibExchange\VibExchange\obj\Debug\VibExchange.pdb
+F:\Code Backup\June 2016\VibExchange_20 June 2016\VibExchange\bin\VibExchange.dll.config
+F:\Code Backup\June 2016\VibExchange_20 June 2016\VibExchange\bin\VibExchange.dll
+F:\Code Backup\June 2016\VibExchange_20 June 2016\VibExchange\bin\VibExchange.pdb
+F:\Code Backup\June 2016\VibExchange_20 June 2016\VibExchange\bin\Antlr3.Runtime.dll
+F:\Code Backup\June 2016\VibExchange_20 June 2016\VibExchange\bin\EntityFramework.dll
+F:\Code Backup\June 2016\VibExchange_20 June 2016\VibExchange\bin\EntityFramework.SqlServer.dll
+F:\Code Backup\June 2016\VibExchange_20 June 2016\VibExchange\bin\Microsoft.Web.Infrastructure.dll
+F:\Code Backup\June 2016\VibExchange_20 June 2016\VibExchange\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+F:\Code Backup\June 2016\VibExchange_20 June 2016\VibExchange\bin\Microsoft.Web.WebPages.OAuth.dll
+F:\Code Backup\June 2016\VibExchange_20 June 2016\VibExchange\bin\Newtonsoft.Json.dll
+F:\Code Backup\June 2016\VibExchange_20 June 2016\VibExchange\bin\System.Net.Http.dll
+F:\Code Backup\June 2016\VibExchange_20 June 2016\VibExchange\bin\System.Net.Http.Formatting.dll
+F:\Code Backup\June 2016\VibExchange_20 June 2016\VibExchange\bin\System.Net.Http.WebRequest.dll
+F:\Code Backup\June 2016\VibExchange_20 June 2016\VibExchange\bin\System.Web.Helpers.dll
+F:\Code Backup\June 2016\VibExchange_20 June 2016\VibExchange\bin\System.Web.Http.dll
+F:\Code Backup\June 2016\VibExchange_20 June 2016\VibExchange\bin\System.Web.Http.WebHost.dll
+F:\Code Backup\June 2016\VibExchange_20 June 2016\VibExchange\bin\System.Web.Mvc.dll
+F:\Code Backup\June 2016\VibExchange_20 June 2016\VibExchange\bin\System.Web.Providers.dll
+F:\Code Backup\June 2016\VibExchange_20 June 2016\VibExchange\bin\System.Web.Razor.dll
+F:\Code Backup\June 2016\VibExchange_20 June 2016\VibExchange\bin\System.Web.WebPages.Deployment.dll
+F:\Code Backup\June 2016\VibExchange_20 June 2016\VibExchange\bin\System.Web.WebPages.dll
+F:\Code Backup\June 2016\VibExchange_20 June 2016\VibExchange\bin\System.Web.WebPages.Razor.dll
+F:\Code Backup\June 2016\VibExchange_20 June 2016\VibExchange\bin\WebGrease.dll
+F:\Code Backup\June 2016\VibExchange_20 June 2016\VibExchange\bin\WebMatrix.Data.dll
+F:\Code Backup\June 2016\VibExchange_20 June 2016\VibExchange\bin\WebMatrix.WebData.dll
+F:\Code Backup\June 2016\VibExchange_20 June 2016\VibExchange\bin\Antlr3.Runtime.pdb
+F:\Code Backup\June 2016\VibExchange_20 June 2016\VibExchange\bin\EntityFramework.xml
+F:\Code Backup\June 2016\VibExchange_20 June 2016\VibExchange\bin\EntityFramework.SqlServer.xml
+F:\Code Backup\June 2016\VibExchange_20 June 2016\VibExchange\bin\Microsoft.Web.WebPages.OAuth.xml
+F:\Code Backup\June 2016\VibExchange_20 June 2016\VibExchange\bin\Newtonsoft.Json.xml
+F:\Code Backup\June 2016\VibExchange_20 June 2016\VibExchange\bin\System.Web.Providers.xml
+F:\Code Backup\June 2016\VibExchange_20 June 2016\VibExchange\bin\System.Net.Http.Formatting.xml
+F:\Code Backup\June 2016\VibExchange_20 June 2016\VibExchange\bin\System.Web.Helpers.xml
+F:\Code Backup\June 2016\VibExchange_20 June 2016\VibExchange\bin\System.Web.Http.xml
+F:\Code Backup\June 2016\VibExchange_20 June 2016\VibExchange\bin\System.Web.Http.WebHost.xml
+F:\Code Backup\June 2016\VibExchange_20 June 2016\VibExchange\bin\System.Web.Mvc.xml
+F:\Code Backup\June 2016\VibExchange_20 June 2016\VibExchange\bin\System.Web.Razor.xml
+F:\Code Backup\June 2016\VibExchange_20 June 2016\VibExchange\bin\System.Web.WebPages.xml
+F:\Code Backup\June 2016\VibExchange_20 June 2016\VibExchange\bin\System.Web.WebPages.Deployment.xml
+F:\Code Backup\June 2016\VibExchange_20 June 2016\VibExchange\bin\System.Web.WebPages.Razor.xml
+F:\Code Backup\June 2016\VibExchange_20 June 2016\VibExchange\bin\WebMatrix.Data.xml
+F:\Code Backup\June 2016\VibExchange_20 June 2016\VibExchange\bin\WebMatrix.WebData.xml
+F:\Code Backup\June 2016\VibExchange_20 June 2016\VibExchange\obj\Debug\VibExchange.csprojResolveAssemblyReference.cache
+F:\Code Backup\June 2016\VibExchange_20 June 2016\VibExchange\obj\Debug\VibExchange.dll
+F:\Code Backup\June 2016\VibExchange_20 June 2016\VibExchange\obj\Debug\VibExchange.pdb
+F:\Code Backup\June 2016\VibExchange_27 June 2016\VibExchange\bin\VibExchange.dll.config
+F:\Code Backup\June 2016\VibExchange_27 June 2016\VibExchange\bin\VibExchange.dll
+F:\Code Backup\June 2016\VibExchange_27 June 2016\VibExchange\bin\VibExchange.pdb
+F:\Code Backup\June 2016\VibExchange_27 June 2016\VibExchange\bin\Antlr3.Runtime.dll
+F:\Code Backup\June 2016\VibExchange_27 June 2016\VibExchange\bin\EntityFramework.dll
+F:\Code Backup\June 2016\VibExchange_27 June 2016\VibExchange\bin\EntityFramework.SqlServer.dll
+F:\Code Backup\June 2016\VibExchange_27 June 2016\VibExchange\bin\Microsoft.Web.Infrastructure.dll
+F:\Code Backup\June 2016\VibExchange_27 June 2016\VibExchange\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+F:\Code Backup\June 2016\VibExchange_27 June 2016\VibExchange\bin\Microsoft.Web.WebPages.OAuth.dll
+F:\Code Backup\June 2016\VibExchange_27 June 2016\VibExchange\bin\Newtonsoft.Json.dll
+F:\Code Backup\June 2016\VibExchange_27 June 2016\VibExchange\bin\System.Net.Http.dll
+F:\Code Backup\June 2016\VibExchange_27 June 2016\VibExchange\bin\System.Net.Http.Formatting.dll
+F:\Code Backup\June 2016\VibExchange_27 June 2016\VibExchange\bin\System.Net.Http.WebRequest.dll
+F:\Code Backup\June 2016\VibExchange_27 June 2016\VibExchange\bin\System.Web.Helpers.dll
+F:\Code Backup\June 2016\VibExchange_27 June 2016\VibExchange\bin\System.Web.Http.dll
+F:\Code Backup\June 2016\VibExchange_27 June 2016\VibExchange\bin\System.Web.Http.WebHost.dll
+F:\Code Backup\June 2016\VibExchange_27 June 2016\VibExchange\bin\System.Web.Mvc.dll
+F:\Code Backup\June 2016\VibExchange_27 June 2016\VibExchange\bin\System.Web.Providers.dll
+F:\Code Backup\June 2016\VibExchange_27 June 2016\VibExchange\bin\System.Web.Razor.dll
+F:\Code Backup\June 2016\VibExchange_27 June 2016\VibExchange\bin\System.Web.WebPages.Deployment.dll
+F:\Code Backup\June 2016\VibExchange_27 June 2016\VibExchange\bin\System.Web.WebPages.dll
+F:\Code Backup\June 2016\VibExchange_27 June 2016\VibExchange\bin\System.Web.WebPages.Razor.dll
+F:\Code Backup\June 2016\VibExchange_27 June 2016\VibExchange\bin\WebGrease.dll
+F:\Code Backup\June 2016\VibExchange_27 June 2016\VibExchange\bin\WebMatrix.Data.dll
+F:\Code Backup\June 2016\VibExchange_27 June 2016\VibExchange\bin\WebMatrix.WebData.dll
+F:\Code Backup\June 2016\VibExchange_27 June 2016\VibExchange\bin\Antlr3.Runtime.pdb
+F:\Code Backup\June 2016\VibExchange_27 June 2016\VibExchange\bin\EntityFramework.xml
+F:\Code Backup\June 2016\VibExchange_27 June 2016\VibExchange\bin\EntityFramework.SqlServer.xml
+F:\Code Backup\June 2016\VibExchange_27 June 2016\VibExchange\bin\Microsoft.Web.WebPages.OAuth.xml
+F:\Code Backup\June 2016\VibExchange_27 June 2016\VibExchange\bin\Newtonsoft.Json.xml
+F:\Code Backup\June 2016\VibExchange_27 June 2016\VibExchange\bin\System.Web.Providers.xml
+F:\Code Backup\June 2016\VibExchange_27 June 2016\VibExchange\bin\System.Net.Http.Formatting.xml
+F:\Code Backup\June 2016\VibExchange_27 June 2016\VibExchange\bin\System.Web.Helpers.xml
+F:\Code Backup\June 2016\VibExchange_27 June 2016\VibExchange\bin\System.Web.Http.xml
+F:\Code Backup\June 2016\VibExchange_27 June 2016\VibExchange\bin\System.Web.Http.WebHost.xml
+F:\Code Backup\June 2016\VibExchange_27 June 2016\VibExchange\bin\System.Web.Mvc.xml
+F:\Code Backup\June 2016\VibExchange_27 June 2016\VibExchange\bin\System.Web.Razor.xml
+F:\Code Backup\June 2016\VibExchange_27 June 2016\VibExchange\bin\System.Web.WebPages.xml
+F:\Code Backup\June 2016\VibExchange_27 June 2016\VibExchange\bin\System.Web.WebPages.Deployment.xml
+F:\Code Backup\June 2016\VibExchange_27 June 2016\VibExchange\bin\System.Web.WebPages.Razor.xml
+F:\Code Backup\June 2016\VibExchange_27 June 2016\VibExchange\bin\WebMatrix.Data.xml
+F:\Code Backup\June 2016\VibExchange_27 June 2016\VibExchange\bin\WebMatrix.WebData.xml
+F:\Code Backup\June 2016\VibExchange_27 June 2016\VibExchange\obj\Debug\VibExchange.csprojResolveAssemblyReference.cache
+F:\Code Backup\June 2016\VibExchange_27 June 2016\VibExchange\obj\Debug\VibExchange.dll
+F:\Code Backup\June 2016\VibExchange_27 June 2016\VibExchange\obj\Debug\VibExchange.pdb
+F:\Code Backup\July 2016\VibExchange_01 July 2016\VibExchange\bin\VibExchange.dll.config
+F:\Code Backup\July 2016\VibExchange_01 July 2016\VibExchange\bin\VibExchange.dll
+F:\Code Backup\July 2016\VibExchange_01 July 2016\VibExchange\bin\VibExchange.pdb
+F:\Code Backup\July 2016\VibExchange_01 July 2016\VibExchange\bin\Antlr3.Runtime.dll
+F:\Code Backup\July 2016\VibExchange_01 July 2016\VibExchange\bin\EntityFramework.dll
+F:\Code Backup\July 2016\VibExchange_01 July 2016\VibExchange\bin\EntityFramework.SqlServer.dll
+F:\Code Backup\July 2016\VibExchange_01 July 2016\VibExchange\bin\Microsoft.Web.Infrastructure.dll
+F:\Code Backup\July 2016\VibExchange_01 July 2016\VibExchange\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+F:\Code Backup\July 2016\VibExchange_01 July 2016\VibExchange\bin\Microsoft.Web.WebPages.OAuth.dll
+F:\Code Backup\July 2016\VibExchange_01 July 2016\VibExchange\bin\Newtonsoft.Json.dll
+F:\Code Backup\July 2016\VibExchange_01 July 2016\VibExchange\bin\System.Net.Http.dll
+F:\Code Backup\July 2016\VibExchange_01 July 2016\VibExchange\bin\System.Net.Http.Formatting.dll
+F:\Code Backup\July 2016\VibExchange_01 July 2016\VibExchange\bin\System.Net.Http.WebRequest.dll
+F:\Code Backup\July 2016\VibExchange_01 July 2016\VibExchange\bin\System.Web.Helpers.dll
+F:\Code Backup\July 2016\VibExchange_01 July 2016\VibExchange\bin\System.Web.Http.dll
+F:\Code Backup\July 2016\VibExchange_01 July 2016\VibExchange\bin\System.Web.Http.WebHost.dll
+F:\Code Backup\July 2016\VibExchange_01 July 2016\VibExchange\bin\System.Web.Mvc.dll
+F:\Code Backup\July 2016\VibExchange_01 July 2016\VibExchange\bin\System.Web.Providers.dll
+F:\Code Backup\July 2016\VibExchange_01 July 2016\VibExchange\bin\System.Web.Razor.dll
+F:\Code Backup\July 2016\VibExchange_01 July 2016\VibExchange\bin\System.Web.WebPages.Deployment.dll
+F:\Code Backup\July 2016\VibExchange_01 July 2016\VibExchange\bin\System.Web.WebPages.dll
+F:\Code Backup\July 2016\VibExchange_01 July 2016\VibExchange\bin\System.Web.WebPages.Razor.dll
+F:\Code Backup\July 2016\VibExchange_01 July 2016\VibExchange\bin\WebGrease.dll
+F:\Code Backup\July 2016\VibExchange_01 July 2016\VibExchange\bin\WebMatrix.Data.dll
+F:\Code Backup\July 2016\VibExchange_01 July 2016\VibExchange\bin\WebMatrix.WebData.dll
+F:\Code Backup\July 2016\VibExchange_01 July 2016\VibExchange\bin\Antlr3.Runtime.pdb
+F:\Code Backup\July 2016\VibExchange_01 July 2016\VibExchange\bin\EntityFramework.xml
+F:\Code Backup\July 2016\VibExchange_01 July 2016\VibExchange\bin\EntityFramework.SqlServer.xml
+F:\Code Backup\July 2016\VibExchange_01 July 2016\VibExchange\bin\Microsoft.Web.WebPages.OAuth.xml
+F:\Code Backup\July 2016\VibExchange_01 July 2016\VibExchange\bin\Newtonsoft.Json.xml
+F:\Code Backup\July 2016\VibExchange_01 July 2016\VibExchange\bin\System.Web.Providers.xml
+F:\Code Backup\July 2016\VibExchange_01 July 2016\VibExchange\bin\System.Net.Http.Formatting.xml
+F:\Code Backup\July 2016\VibExchange_01 July 2016\VibExchange\bin\System.Web.Helpers.xml
+F:\Code Backup\July 2016\VibExchange_01 July 2016\VibExchange\bin\System.Web.Http.xml
+F:\Code Backup\July 2016\VibExchange_01 July 2016\VibExchange\bin\System.Web.Http.WebHost.xml
+F:\Code Backup\July 2016\VibExchange_01 July 2016\VibExchange\bin\System.Web.Mvc.xml
+F:\Code Backup\July 2016\VibExchange_01 July 2016\VibExchange\bin\System.Web.Razor.xml
+F:\Code Backup\July 2016\VibExchange_01 July 2016\VibExchange\bin\System.Web.WebPages.xml
+F:\Code Backup\July 2016\VibExchange_01 July 2016\VibExchange\bin\System.Web.WebPages.Deployment.xml
+F:\Code Backup\July 2016\VibExchange_01 July 2016\VibExchange\bin\System.Web.WebPages.Razor.xml
+F:\Code Backup\July 2016\VibExchange_01 July 2016\VibExchange\bin\WebMatrix.Data.xml
+F:\Code Backup\July 2016\VibExchange_01 July 2016\VibExchange\bin\WebMatrix.WebData.xml
+F:\Code Backup\July 2016\VibExchange_01 July 2016\VibExchange\obj\Debug\VibExchange.csprojResolveAssemblyReference.cache
+F:\Code Backup\July 2016\VibExchange_01 July 2016\VibExchange\obj\Debug\VibExchange.dll
+F:\Code Backup\July 2016\VibExchange_01 July 2016\VibExchange\obj\Debug\VibExchange.pdb
+D:\Backup\Code Backup\July 2016\VibExchange 08 July 2016\VibExchange\bin\VibExchange.dll.config
+D:\Backup\Code Backup\July 2016\VibExchange 08 July 2016\VibExchange\bin\VibExchange.dll
+D:\Backup\Code Backup\July 2016\VibExchange 08 July 2016\VibExchange\bin\VibExchange.pdb
+D:\Backup\Code Backup\July 2016\VibExchange 08 July 2016\VibExchange\bin\Antlr3.Runtime.dll
+D:\Backup\Code Backup\July 2016\VibExchange 08 July 2016\VibExchange\bin\EntityFramework.dll
+D:\Backup\Code Backup\July 2016\VibExchange 08 July 2016\VibExchange\bin\EntityFramework.SqlServer.dll
+D:\Backup\Code Backup\July 2016\VibExchange 08 July 2016\VibExchange\bin\Microsoft.Web.Infrastructure.dll
+D:\Backup\Code Backup\July 2016\VibExchange 08 July 2016\VibExchange\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+D:\Backup\Code Backup\July 2016\VibExchange 08 July 2016\VibExchange\bin\Microsoft.Web.WebPages.OAuth.dll
+D:\Backup\Code Backup\July 2016\VibExchange 08 July 2016\VibExchange\bin\Newtonsoft.Json.dll
+D:\Backup\Code Backup\July 2016\VibExchange 08 July 2016\VibExchange\bin\System.Net.Http.dll
+D:\Backup\Code Backup\July 2016\VibExchange 08 July 2016\VibExchange\bin\System.Net.Http.Formatting.dll
+D:\Backup\Code Backup\July 2016\VibExchange 08 July 2016\VibExchange\bin\System.Net.Http.WebRequest.dll
+D:\Backup\Code Backup\July 2016\VibExchange 08 July 2016\VibExchange\bin\System.Web.Helpers.dll
+D:\Backup\Code Backup\July 2016\VibExchange 08 July 2016\VibExchange\bin\System.Web.Http.dll
+D:\Backup\Code Backup\July 2016\VibExchange 08 July 2016\VibExchange\bin\System.Web.Http.WebHost.dll
+D:\Backup\Code Backup\July 2016\VibExchange 08 July 2016\VibExchange\bin\System.Web.Mvc.dll
+D:\Backup\Code Backup\July 2016\VibExchange 08 July 2016\VibExchange\bin\System.Web.Providers.dll
+D:\Backup\Code Backup\July 2016\VibExchange 08 July 2016\VibExchange\bin\System.Web.Razor.dll
+D:\Backup\Code Backup\July 2016\VibExchange 08 July 2016\VibExchange\bin\System.Web.WebPages.Deployment.dll
+D:\Backup\Code Backup\July 2016\VibExchange 08 July 2016\VibExchange\bin\System.Web.WebPages.dll
+D:\Backup\Code Backup\July 2016\VibExchange 08 July 2016\VibExchange\bin\System.Web.WebPages.Razor.dll
+D:\Backup\Code Backup\July 2016\VibExchange 08 July 2016\VibExchange\bin\WebGrease.dll
+D:\Backup\Code Backup\July 2016\VibExchange 08 July 2016\VibExchange\bin\WebMatrix.Data.dll
+D:\Backup\Code Backup\July 2016\VibExchange 08 July 2016\VibExchange\bin\WebMatrix.WebData.dll
+D:\Backup\Code Backup\July 2016\VibExchange 08 July 2016\VibExchange\bin\Antlr3.Runtime.pdb
+D:\Backup\Code Backup\July 2016\VibExchange 08 July 2016\VibExchange\bin\EntityFramework.xml
+D:\Backup\Code Backup\July 2016\VibExchange 08 July 2016\VibExchange\bin\EntityFramework.SqlServer.xml
+D:\Backup\Code Backup\July 2016\VibExchange 08 July 2016\VibExchange\bin\Microsoft.Web.WebPages.OAuth.xml
+D:\Backup\Code Backup\July 2016\VibExchange 08 July 2016\VibExchange\bin\Newtonsoft.Json.xml
+D:\Backup\Code Backup\July 2016\VibExchange 08 July 2016\VibExchange\bin\System.Web.Providers.xml
+D:\Backup\Code Backup\July 2016\VibExchange 08 July 2016\VibExchange\bin\System.Net.Http.Formatting.xml
+D:\Backup\Code Backup\July 2016\VibExchange 08 July 2016\VibExchange\bin\System.Web.Helpers.xml
+D:\Backup\Code Backup\July 2016\VibExchange 08 July 2016\VibExchange\bin\System.Web.Http.xml
+D:\Backup\Code Backup\July 2016\VibExchange 08 July 2016\VibExchange\bin\System.Web.Http.WebHost.xml
+D:\Backup\Code Backup\July 2016\VibExchange 08 July 2016\VibExchange\bin\System.Web.Mvc.xml
+D:\Backup\Code Backup\July 2016\VibExchange 08 July 2016\VibExchange\bin\System.Web.Razor.xml
+D:\Backup\Code Backup\July 2016\VibExchange 08 July 2016\VibExchange\bin\System.Web.WebPages.xml
+D:\Backup\Code Backup\July 2016\VibExchange 08 July 2016\VibExchange\bin\System.Web.WebPages.Deployment.xml
+D:\Backup\Code Backup\July 2016\VibExchange 08 July 2016\VibExchange\bin\System.Web.WebPages.Razor.xml
+D:\Backup\Code Backup\July 2016\VibExchange 08 July 2016\VibExchange\bin\WebMatrix.Data.xml
+D:\Backup\Code Backup\July 2016\VibExchange 08 July 2016\VibExchange\bin\WebMatrix.WebData.xml
+D:\Backup\Code Backup\July 2016\VibExchange 08 July 2016\VibExchange\obj\Debug\VibExchange.csprojResolveAssemblyReference.cache
+D:\Backup\Code Backup\July 2016\VibExchange 08 July 2016\VibExchange\obj\Debug\VibExchange.dll
+D:\Backup\Code Backup\July 2016\VibExchange 08 July 2016\VibExchange\obj\Debug\VibExchange.pdb
+D:\Backup\Code Backup\July 2016\VibExchange 14 July 2016\VibExchange\bin\VibExchange.dll.config
+D:\Backup\Code Backup\July 2016\VibExchange 14 July 2016\VibExchange\bin\VibExchange.dll
+D:\Backup\Code Backup\July 2016\VibExchange 14 July 2016\VibExchange\bin\VibExchange.pdb
+D:\Backup\Code Backup\July 2016\VibExchange 14 July 2016\VibExchange\bin\Antlr3.Runtime.dll
+D:\Backup\Code Backup\July 2016\VibExchange 14 July 2016\VibExchange\bin\EntityFramework.dll
+D:\Backup\Code Backup\July 2016\VibExchange 14 July 2016\VibExchange\bin\EntityFramework.SqlServer.dll
+D:\Backup\Code Backup\July 2016\VibExchange 14 July 2016\VibExchange\bin\Microsoft.Web.Infrastructure.dll
+D:\Backup\Code Backup\July 2016\VibExchange 14 July 2016\VibExchange\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+D:\Backup\Code Backup\July 2016\VibExchange 14 July 2016\VibExchange\bin\Microsoft.Web.WebPages.OAuth.dll
+D:\Backup\Code Backup\July 2016\VibExchange 14 July 2016\VibExchange\bin\Newtonsoft.Json.dll
+D:\Backup\Code Backup\July 2016\VibExchange 14 July 2016\VibExchange\bin\System.Net.Http.dll
+D:\Backup\Code Backup\July 2016\VibExchange 14 July 2016\VibExchange\bin\System.Net.Http.Formatting.dll
+D:\Backup\Code Backup\July 2016\VibExchange 14 July 2016\VibExchange\bin\System.Net.Http.WebRequest.dll
+D:\Backup\Code Backup\July 2016\VibExchange 14 July 2016\VibExchange\bin\System.Web.Helpers.dll
+D:\Backup\Code Backup\July 2016\VibExchange 14 July 2016\VibExchange\bin\System.Web.Http.dll
+D:\Backup\Code Backup\July 2016\VibExchange 14 July 2016\VibExchange\bin\System.Web.Http.WebHost.dll
+D:\Backup\Code Backup\July 2016\VibExchange 14 July 2016\VibExchange\bin\System.Web.Mvc.dll
+D:\Backup\Code Backup\July 2016\VibExchange 14 July 2016\VibExchange\bin\System.Web.Providers.dll
+D:\Backup\Code Backup\July 2016\VibExchange 14 July 2016\VibExchange\bin\System.Web.Razor.dll
+D:\Backup\Code Backup\July 2016\VibExchange 14 July 2016\VibExchange\bin\System.Web.WebPages.Deployment.dll
+D:\Backup\Code Backup\July 2016\VibExchange 14 July 2016\VibExchange\bin\System.Web.WebPages.dll
+D:\Backup\Code Backup\July 2016\VibExchange 14 July 2016\VibExchange\bin\System.Web.WebPages.Razor.dll
+D:\Backup\Code Backup\July 2016\VibExchange 14 July 2016\VibExchange\bin\WebGrease.dll
+D:\Backup\Code Backup\July 2016\VibExchange 14 July 2016\VibExchange\bin\WebMatrix.Data.dll
+D:\Backup\Code Backup\July 2016\VibExchange 14 July 2016\VibExchange\bin\WebMatrix.WebData.dll
+D:\Backup\Code Backup\July 2016\VibExchange 14 July 2016\VibExchange\bin\Antlr3.Runtime.pdb
+D:\Backup\Code Backup\July 2016\VibExchange 14 July 2016\VibExchange\bin\EntityFramework.xml
+D:\Backup\Code Backup\July 2016\VibExchange 14 July 2016\VibExchange\bin\EntityFramework.SqlServer.xml
+D:\Backup\Code Backup\July 2016\VibExchange 14 July 2016\VibExchange\bin\Microsoft.Web.WebPages.OAuth.xml
+D:\Backup\Code Backup\July 2016\VibExchange 14 July 2016\VibExchange\bin\Newtonsoft.Json.xml
+D:\Backup\Code Backup\July 2016\VibExchange 14 July 2016\VibExchange\bin\System.Web.Providers.xml
+D:\Backup\Code Backup\July 2016\VibExchange 14 July 2016\VibExchange\bin\System.Net.Http.Formatting.xml
+D:\Backup\Code Backup\July 2016\VibExchange 14 July 2016\VibExchange\bin\System.Web.Helpers.xml
+D:\Backup\Code Backup\July 2016\VibExchange 14 July 2016\VibExchange\bin\System.Web.Http.xml
+D:\Backup\Code Backup\July 2016\VibExchange 14 July 2016\VibExchange\bin\System.Web.Http.WebHost.xml
+D:\Backup\Code Backup\July 2016\VibExchange 14 July 2016\VibExchange\bin\System.Web.Mvc.xml
+D:\Backup\Code Backup\July 2016\VibExchange 14 July 2016\VibExchange\bin\System.Web.Razor.xml
+D:\Backup\Code Backup\July 2016\VibExchange 14 July 2016\VibExchange\bin\System.Web.WebPages.xml
+D:\Backup\Code Backup\July 2016\VibExchange 14 July 2016\VibExchange\bin\System.Web.WebPages.Deployment.xml
+D:\Backup\Code Backup\July 2016\VibExchange 14 July 2016\VibExchange\bin\System.Web.WebPages.Razor.xml
+D:\Backup\Code Backup\July 2016\VibExchange 14 July 2016\VibExchange\bin\WebMatrix.Data.xml
+D:\Backup\Code Backup\July 2016\VibExchange 14 July 2016\VibExchange\bin\WebMatrix.WebData.xml
+D:\Backup\Code Backup\July 2016\VibExchange 14 July 2016\VibExchange\obj\Debug\VibExchange.csprojResolveAssemblyReference.cache
+D:\Backup\Code Backup\July 2016\VibExchange 14 July 2016\VibExchange\obj\Debug\VibExchange.dll
+D:\Backup\Code Backup\July 2016\VibExchange 14 July 2016\VibExchange\obj\Debug\VibExchange.pdb
+D:\Backup\Code Backup\July 2016\VibExchange 14 July 2016_Final\VibExchange\bin\VibExchange.dll.config
+D:\Backup\Code Backup\July 2016\VibExchange 14 July 2016_Final\VibExchange\bin\VibExchange.dll
+D:\Backup\Code Backup\July 2016\VibExchange 14 July 2016_Final\VibExchange\bin\VibExchange.pdb
+D:\Backup\Code Backup\July 2016\VibExchange 14 July 2016_Final\VibExchange\bin\Antlr3.Runtime.dll
+D:\Backup\Code Backup\July 2016\VibExchange 14 July 2016_Final\VibExchange\bin\EntityFramework.dll
+D:\Backup\Code Backup\July 2016\VibExchange 14 July 2016_Final\VibExchange\bin\EntityFramework.SqlServer.dll
+D:\Backup\Code Backup\July 2016\VibExchange 14 July 2016_Final\VibExchange\bin\Microsoft.Web.Infrastructure.dll
+D:\Backup\Code Backup\July 2016\VibExchange 14 July 2016_Final\VibExchange\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+D:\Backup\Code Backup\July 2016\VibExchange 14 July 2016_Final\VibExchange\bin\Microsoft.Web.WebPages.OAuth.dll
+D:\Backup\Code Backup\July 2016\VibExchange 14 July 2016_Final\VibExchange\bin\Newtonsoft.Json.dll
+D:\Backup\Code Backup\July 2016\VibExchange 14 July 2016_Final\VibExchange\bin\System.Net.Http.Formatting.dll
+D:\Backup\Code Backup\July 2016\VibExchange 14 July 2016_Final\VibExchange\bin\System.Web.Helpers.dll
+D:\Backup\Code Backup\July 2016\VibExchange 14 July 2016_Final\VibExchange\bin\System.Web.Http.dll
+D:\Backup\Code Backup\July 2016\VibExchange 14 July 2016_Final\VibExchange\bin\System.Web.Http.WebHost.dll
+D:\Backup\Code Backup\July 2016\VibExchange 14 July 2016_Final\VibExchange\bin\System.Web.Mvc.dll
+D:\Backup\Code Backup\July 2016\VibExchange 14 July 2016_Final\VibExchange\bin\System.Web.Providers.dll
+D:\Backup\Code Backup\July 2016\VibExchange 14 July 2016_Final\VibExchange\bin\System.Web.Razor.dll
+D:\Backup\Code Backup\July 2016\VibExchange 14 July 2016_Final\VibExchange\bin\System.Web.WebPages.Deployment.dll
+D:\Backup\Code Backup\July 2016\VibExchange 14 July 2016_Final\VibExchange\bin\System.Web.WebPages.dll
+D:\Backup\Code Backup\July 2016\VibExchange 14 July 2016_Final\VibExchange\bin\System.Web.WebPages.Razor.dll
+D:\Backup\Code Backup\July 2016\VibExchange 14 July 2016_Final\VibExchange\bin\WebGrease.dll
+D:\Backup\Code Backup\July 2016\VibExchange 14 July 2016_Final\VibExchange\bin\WebMatrix.Data.dll
+D:\Backup\Code Backup\July 2016\VibExchange 14 July 2016_Final\VibExchange\bin\WebMatrix.WebData.dll
+D:\Backup\Code Backup\July 2016\VibExchange 14 July 2016_Final\VibExchange\bin\Antlr3.Runtime.pdb
+D:\Backup\Code Backup\July 2016\VibExchange 14 July 2016_Final\VibExchange\bin\EntityFramework.xml
+D:\Backup\Code Backup\July 2016\VibExchange 14 July 2016_Final\VibExchange\bin\EntityFramework.SqlServer.xml
+D:\Backup\Code Backup\July 2016\VibExchange 14 July 2016_Final\VibExchange\bin\Microsoft.Web.WebPages.OAuth.xml
+D:\Backup\Code Backup\July 2016\VibExchange 14 July 2016_Final\VibExchange\bin\Newtonsoft.Json.xml
+D:\Backup\Code Backup\July 2016\VibExchange 14 July 2016_Final\VibExchange\bin\System.Web.Providers.xml
+D:\Backup\Code Backup\July 2016\VibExchange 14 July 2016_Final\VibExchange\bin\System.Net.Http.Formatting.xml
+D:\Backup\Code Backup\July 2016\VibExchange 14 July 2016_Final\VibExchange\bin\System.Web.Helpers.xml
+D:\Backup\Code Backup\July 2016\VibExchange 14 July 2016_Final\VibExchange\bin\System.Web.Http.xml
+D:\Backup\Code Backup\July 2016\VibExchange 14 July 2016_Final\VibExchange\bin\System.Web.Http.WebHost.xml
+D:\Backup\Code Backup\July 2016\VibExchange 14 July 2016_Final\VibExchange\bin\System.Web.Mvc.xml
+D:\Backup\Code Backup\July 2016\VibExchange 14 July 2016_Final\VibExchange\bin\System.Web.Razor.xml
+D:\Backup\Code Backup\July 2016\VibExchange 14 July 2016_Final\VibExchange\bin\System.Web.WebPages.xml
+D:\Backup\Code Backup\July 2016\VibExchange 14 July 2016_Final\VibExchange\bin\System.Web.WebPages.Deployment.xml
+D:\Backup\Code Backup\July 2016\VibExchange 14 July 2016_Final\VibExchange\bin\System.Web.WebPages.Razor.xml
+D:\Backup\Code Backup\July 2016\VibExchange 14 July 2016_Final\VibExchange\bin\WebMatrix.Data.xml
+D:\Backup\Code Backup\July 2016\VibExchange 14 July 2016_Final\VibExchange\bin\WebMatrix.WebData.xml
+D:\Backup\Code Backup\July 2016\VibExchange 14 July 2016_Final\VibExchange\obj\Debug\VibExchange.csprojResolveAssemblyReference.cache
+D:\Backup\Code Backup\July 2016\VibExchange 14 July 2016_Final\VibExchange\obj\Debug\VibExchange.dll
+D:\Backup\Code Backup\July 2016\VibExchange 14 July 2016_Final\VibExchange\obj\Debug\VibExchange.pdb
+D:\Backup\Code Backup\July 2016\VibExchange 14 July 2016_Final\VibExchange\bin\System.Net.Http.Extensions.dll
+D:\Backup\Code Backup\July 2016\VibExchange 14 July 2016_Final\VibExchange\bin\System.Net.Http.Primitives.dll
+D:\Backup\Code Backup\July 2016\VibExchange 14 July 2016_Final\VibExchange\bin\System.Net.Http.Extensions.xml
+D:\Backup\Code Backup\July 2016\VibExchange 14 July 2016_Final\VibExchange\bin\System.Net.Http.Primitives.xml
+D:\Backup\Code Backup\July 2016\VibExchange 14 July 2016_Final\VibExchange\obj\Debug\VibExchange.csproj.App.config
+C:\Users\vimal\Desktop\VibExchange 19 July 2016_Final\VibExchange\bin\VibExchange.dll.config
+C:\Users\vimal\Desktop\VibExchange 19 July 2016_Final\VibExchange\bin\VibExchange.dll
+C:\Users\vimal\Desktop\VibExchange 19 July 2016_Final\VibExchange\bin\VibExchange.pdb
+C:\Users\vimal\Desktop\VibExchange 19 July 2016_Final\VibExchange\bin\Antlr3.Runtime.dll
+C:\Users\vimal\Desktop\VibExchange 19 July 2016_Final\VibExchange\bin\EntityFramework.dll
+C:\Users\vimal\Desktop\VibExchange 19 July 2016_Final\VibExchange\bin\EntityFramework.SqlServer.dll
+C:\Users\vimal\Desktop\VibExchange 19 July 2016_Final\VibExchange\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\vimal\Desktop\VibExchange 19 July 2016_Final\VibExchange\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+C:\Users\vimal\Desktop\VibExchange 19 July 2016_Final\VibExchange\bin\Microsoft.Web.WebPages.OAuth.dll
+C:\Users\vimal\Desktop\VibExchange 19 July 2016_Final\VibExchange\bin\Newtonsoft.Json.dll
+C:\Users\vimal\Desktop\VibExchange 19 July 2016_Final\VibExchange\bin\System.Net.Http.Extensions.dll
+C:\Users\vimal\Desktop\VibExchange 19 July 2016_Final\VibExchange\bin\System.Net.Http.Formatting.dll
+C:\Users\vimal\Desktop\VibExchange 19 July 2016_Final\VibExchange\bin\System.Net.Http.Primitives.dll
+C:\Users\vimal\Desktop\VibExchange 19 July 2016_Final\VibExchange\bin\System.Web.Helpers.dll
+C:\Users\vimal\Desktop\VibExchange 19 July 2016_Final\VibExchange\bin\System.Web.Http.dll
+C:\Users\vimal\Desktop\VibExchange 19 July 2016_Final\VibExchange\bin\System.Web.Http.WebHost.dll
+C:\Users\vimal\Desktop\VibExchange 19 July 2016_Final\VibExchange\bin\System.Web.Mvc.dll
+C:\Users\vimal\Desktop\VibExchange 19 July 2016_Final\VibExchange\bin\System.Web.Providers.dll
+C:\Users\vimal\Desktop\VibExchange 19 July 2016_Final\VibExchange\bin\System.Web.Razor.dll
+C:\Users\vimal\Desktop\VibExchange 19 July 2016_Final\VibExchange\bin\System.Web.WebPages.Deployment.dll
+C:\Users\vimal\Desktop\VibExchange 19 July 2016_Final\VibExchange\bin\System.Web.WebPages.dll
+C:\Users\vimal\Desktop\VibExchange 19 July 2016_Final\VibExchange\bin\System.Web.WebPages.Razor.dll
+C:\Users\vimal\Desktop\VibExchange 19 July 2016_Final\VibExchange\bin\WebGrease.dll
+C:\Users\vimal\Desktop\VibExchange 19 July 2016_Final\VibExchange\bin\WebMatrix.Data.dll
+C:\Users\vimal\Desktop\VibExchange 19 July 2016_Final\VibExchange\bin\WebMatrix.WebData.dll
+C:\Users\vimal\Desktop\VibExchange 19 July 2016_Final\VibExchange\bin\Antlr3.Runtime.pdb
+C:\Users\vimal\Desktop\VibExchange 19 July 2016_Final\VibExchange\bin\EntityFramework.xml
+C:\Users\vimal\Desktop\VibExchange 19 July 2016_Final\VibExchange\bin\EntityFramework.SqlServer.xml
+C:\Users\vimal\Desktop\VibExchange 19 July 2016_Final\VibExchange\bin\Microsoft.Web.WebPages.OAuth.xml
+C:\Users\vimal\Desktop\VibExchange 19 July 2016_Final\VibExchange\bin\Newtonsoft.Json.xml
+C:\Users\vimal\Desktop\VibExchange 19 July 2016_Final\VibExchange\bin\System.Net.Http.Extensions.xml
+C:\Users\vimal\Desktop\VibExchange 19 July 2016_Final\VibExchange\bin\System.Net.Http.Primitives.xml
+C:\Users\vimal\Desktop\VibExchange 19 July 2016_Final\VibExchange\bin\System.Web.Providers.xml
+C:\Users\vimal\Desktop\VibExchange 19 July 2016_Final\VibExchange\bin\System.Net.Http.Formatting.xml
+C:\Users\vimal\Desktop\VibExchange 19 July 2016_Final\VibExchange\bin\System.Web.Helpers.xml
+C:\Users\vimal\Desktop\VibExchange 19 July 2016_Final\VibExchange\bin\System.Web.Http.xml
+C:\Users\vimal\Desktop\VibExchange 19 July 2016_Final\VibExchange\bin\System.Web.Http.WebHost.xml
+C:\Users\vimal\Desktop\VibExchange 19 July 2016_Final\VibExchange\bin\System.Web.Mvc.xml
+C:\Users\vimal\Desktop\VibExchange 19 July 2016_Final\VibExchange\bin\System.Web.Razor.xml
+C:\Users\vimal\Desktop\VibExchange 19 July 2016_Final\VibExchange\bin\System.Web.WebPages.xml
+C:\Users\vimal\Desktop\VibExchange 19 July 2016_Final\VibExchange\bin\System.Web.WebPages.Deployment.xml
+C:\Users\vimal\Desktop\VibExchange 19 July 2016_Final\VibExchange\bin\System.Web.WebPages.Razor.xml
+C:\Users\vimal\Desktop\VibExchange 19 July 2016_Final\VibExchange\bin\WebMatrix.Data.xml
+C:\Users\vimal\Desktop\VibExchange 19 July 2016_Final\VibExchange\bin\WebMatrix.WebData.xml
+C:\Users\vimal\Desktop\VibExchange 19 July 2016_Final\VibExchange\obj\Debug\VibExchange.csproj.App.config
+C:\Users\vimal\Desktop\VibExchange 19 July 2016_Final\VibExchange\obj\Debug\VibExchange.csprojResolveAssemblyReference.cache
+C:\Users\vimal\Desktop\VibExchange 19 July 2016_Final\VibExchange\obj\Debug\VibExchange.dll
+C:\Users\vimal\Desktop\VibExchange 19 July 2016_Final\VibExchange\obj\Debug\VibExchange.pdb
+C:\Users\vimal\Desktop\VibExchange 25 July 2016_Final\VibExchange\bin\VibExchange.dll.config
+C:\Users\vimal\Desktop\VibExchange 25 July 2016_Final\VibExchange\bin\VibExchange.dll
+C:\Users\vimal\Desktop\VibExchange 25 July 2016_Final\VibExchange\bin\VibExchange.pdb
+C:\Users\vimal\Desktop\VibExchange 25 July 2016_Final\VibExchange\bin\Antlr3.Runtime.dll
+C:\Users\vimal\Desktop\VibExchange 25 July 2016_Final\VibExchange\bin\EntityFramework.dll
+C:\Users\vimal\Desktop\VibExchange 25 July 2016_Final\VibExchange\bin\EntityFramework.SqlServer.dll
+C:\Users\vimal\Desktop\VibExchange 25 July 2016_Final\VibExchange\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\vimal\Desktop\VibExchange 25 July 2016_Final\VibExchange\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+C:\Users\vimal\Desktop\VibExchange 25 July 2016_Final\VibExchange\bin\Microsoft.Web.WebPages.OAuth.dll
+C:\Users\vimal\Desktop\VibExchange 25 July 2016_Final\VibExchange\bin\Newtonsoft.Json.dll
+C:\Users\vimal\Desktop\VibExchange 25 July 2016_Final\VibExchange\bin\System.Net.Http.Extensions.dll
+C:\Users\vimal\Desktop\VibExchange 25 July 2016_Final\VibExchange\bin\System.Net.Http.Formatting.dll
+C:\Users\vimal\Desktop\VibExchange 25 July 2016_Final\VibExchange\bin\System.Net.Http.Primitives.dll
+C:\Users\vimal\Desktop\VibExchange 25 July 2016_Final\VibExchange\bin\System.Web.Helpers.dll
+C:\Users\vimal\Desktop\VibExchange 25 July 2016_Final\VibExchange\bin\System.Web.Http.dll
+C:\Users\vimal\Desktop\VibExchange 25 July 2016_Final\VibExchange\bin\System.Web.Http.WebHost.dll
+C:\Users\vimal\Desktop\VibExchange 25 July 2016_Final\VibExchange\bin\System.Web.Mvc.dll
+C:\Users\vimal\Desktop\VibExchange 25 July 2016_Final\VibExchange\bin\System.Web.Providers.dll
+C:\Users\vimal\Desktop\VibExchange 25 July 2016_Final\VibExchange\bin\System.Web.Razor.dll
+C:\Users\vimal\Desktop\VibExchange 25 July 2016_Final\VibExchange\bin\System.Web.WebPages.Deployment.dll
+C:\Users\vimal\Desktop\VibExchange 25 July 2016_Final\VibExchange\bin\System.Web.WebPages.dll
+C:\Users\vimal\Desktop\VibExchange 25 July 2016_Final\VibExchange\bin\System.Web.WebPages.Razor.dll
+C:\Users\vimal\Desktop\VibExchange 25 July 2016_Final\VibExchange\bin\WebGrease.dll
+C:\Users\vimal\Desktop\VibExchange 25 July 2016_Final\VibExchange\bin\WebMatrix.Data.dll
+C:\Users\vimal\Desktop\VibExchange 25 July 2016_Final\VibExchange\bin\WebMatrix.WebData.dll
+C:\Users\vimal\Desktop\VibExchange 25 July 2016_Final\VibExchange\bin\Antlr3.Runtime.pdb
+C:\Users\vimal\Desktop\VibExchange 25 July 2016_Final\VibExchange\bin\EntityFramework.xml
+C:\Users\vimal\Desktop\VibExchange 25 July 2016_Final\VibExchange\bin\EntityFramework.SqlServer.xml
+C:\Users\vimal\Desktop\VibExchange 25 July 2016_Final\VibExchange\bin\Microsoft.Web.WebPages.OAuth.xml
+C:\Users\vimal\Desktop\VibExchange 25 July 2016_Final\VibExchange\bin\Newtonsoft.Json.xml
+C:\Users\vimal\Desktop\VibExchange 25 July 2016_Final\VibExchange\bin\System.Net.Http.Extensions.xml
+C:\Users\vimal\Desktop\VibExchange 25 July 2016_Final\VibExchange\bin\System.Net.Http.Primitives.xml
+C:\Users\vimal\Desktop\VibExchange 25 July 2016_Final\VibExchange\bin\System.Web.Providers.xml
+C:\Users\vimal\Desktop\VibExchange 25 July 2016_Final\VibExchange\bin\System.Net.Http.Formatting.xml
+C:\Users\vimal\Desktop\VibExchange 25 July 2016_Final\VibExchange\bin\System.Web.Helpers.xml
+C:\Users\vimal\Desktop\VibExchange 25 July 2016_Final\VibExchange\bin\System.Web.Http.xml
+C:\Users\vimal\Desktop\VibExchange 25 July 2016_Final\VibExchange\bin\System.Web.Http.WebHost.xml
+C:\Users\vimal\Desktop\VibExchange 25 July 2016_Final\VibExchange\bin\System.Web.Mvc.xml
+C:\Users\vimal\Desktop\VibExchange 25 July 2016_Final\VibExchange\bin\System.Web.Razor.xml
+C:\Users\vimal\Desktop\VibExchange 25 July 2016_Final\VibExchange\bin\System.Web.WebPages.xml
+C:\Users\vimal\Desktop\VibExchange 25 July 2016_Final\VibExchange\bin\System.Web.WebPages.Deployment.xml
+C:\Users\vimal\Desktop\VibExchange 25 July 2016_Final\VibExchange\bin\System.Web.WebPages.Razor.xml
+C:\Users\vimal\Desktop\VibExchange 25 July 2016_Final\VibExchange\bin\WebMatrix.Data.xml
+C:\Users\vimal\Desktop\VibExchange 25 July 2016_Final\VibExchange\bin\WebMatrix.WebData.xml
+C:\Users\vimal\Desktop\VibExchange 25 July 2016_Final\VibExchange\obj\Debug\VibExchange.csproj.App.config
+C:\Users\vimal\Desktop\VibExchange 25 July 2016_Final\VibExchange\obj\Debug\VibExchange.csprojResolveAssemblyReference.cache
+C:\Users\vimal\Desktop\VibExchange 25 July 2016_Final\VibExchange\obj\Debug\VibExchange.dll
+C:\Users\vimal\Desktop\VibExchange 25 July 2016_Final\VibExchange\obj\Debug\VibExchange.pdb
+D:\Backup\Code Backup\August\VibExchange 25 July 2016_Final\VibExchange\bin\VibExchange.dll.config
+D:\Backup\Code Backup\August\VibExchange 25 July 2016_Final\VibExchange\bin\VibExchange.dll
+D:\Backup\Code Backup\August\VibExchange 25 July 2016_Final\VibExchange\bin\VibExchange.pdb
+D:\Backup\Code Backup\August\VibExchange 25 July 2016_Final\VibExchange\bin\Antlr3.Runtime.dll
+D:\Backup\Code Backup\August\VibExchange 25 July 2016_Final\VibExchange\bin\EntityFramework.dll
+D:\Backup\Code Backup\August\VibExchange 25 July 2016_Final\VibExchange\bin\EntityFramework.SqlServer.dll
+D:\Backup\Code Backup\August\VibExchange 25 July 2016_Final\VibExchange\bin\Microsoft.Web.Infrastructure.dll
+D:\Backup\Code Backup\August\VibExchange 25 July 2016_Final\VibExchange\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+D:\Backup\Code Backup\August\VibExchange 25 July 2016_Final\VibExchange\bin\Microsoft.Web.WebPages.OAuth.dll
+D:\Backup\Code Backup\August\VibExchange 25 July 2016_Final\VibExchange\bin\Newtonsoft.Json.dll
+D:\Backup\Code Backup\August\VibExchange 25 July 2016_Final\VibExchange\bin\System.Net.Http.Extensions.dll
+D:\Backup\Code Backup\August\VibExchange 25 July 2016_Final\VibExchange\bin\System.Net.Http.Formatting.dll
+D:\Backup\Code Backup\August\VibExchange 25 July 2016_Final\VibExchange\bin\System.Net.Http.Primitives.dll
+D:\Backup\Code Backup\August\VibExchange 25 July 2016_Final\VibExchange\bin\System.Web.Helpers.dll
+D:\Backup\Code Backup\August\VibExchange 25 July 2016_Final\VibExchange\bin\System.Web.Http.dll
+D:\Backup\Code Backup\August\VibExchange 25 July 2016_Final\VibExchange\bin\System.Web.Http.WebHost.dll
+D:\Backup\Code Backup\August\VibExchange 25 July 2016_Final\VibExchange\bin\System.Web.Mvc.dll
+D:\Backup\Code Backup\August\VibExchange 25 July 2016_Final\VibExchange\bin\System.Web.Providers.dll
+D:\Backup\Code Backup\August\VibExchange 25 July 2016_Final\VibExchange\bin\System.Web.Razor.dll
+D:\Backup\Code Backup\August\VibExchange 25 July 2016_Final\VibExchange\bin\System.Web.WebPages.Deployment.dll
+D:\Backup\Code Backup\August\VibExchange 25 July 2016_Final\VibExchange\bin\System.Web.WebPages.dll
+D:\Backup\Code Backup\August\VibExchange 25 July 2016_Final\VibExchange\bin\System.Web.WebPages.Razor.dll
+D:\Backup\Code Backup\August\VibExchange 25 July 2016_Final\VibExchange\bin\WebGrease.dll
+D:\Backup\Code Backup\August\VibExchange 25 July 2016_Final\VibExchange\bin\WebMatrix.Data.dll
+D:\Backup\Code Backup\August\VibExchange 25 July 2016_Final\VibExchange\bin\WebMatrix.WebData.dll
+D:\Backup\Code Backup\August\VibExchange 25 July 2016_Final\VibExchange\bin\Antlr3.Runtime.pdb
+D:\Backup\Code Backup\August\VibExchange 25 July 2016_Final\VibExchange\bin\EntityFramework.xml
+D:\Backup\Code Backup\August\VibExchange 25 July 2016_Final\VibExchange\bin\EntityFramework.SqlServer.xml
+D:\Backup\Code Backup\August\VibExchange 25 July 2016_Final\VibExchange\bin\Microsoft.Web.WebPages.OAuth.xml
+D:\Backup\Code Backup\August\VibExchange 25 July 2016_Final\VibExchange\bin\Newtonsoft.Json.xml
+D:\Backup\Code Backup\August\VibExchange 25 July 2016_Final\VibExchange\bin\System.Net.Http.Extensions.xml
+D:\Backup\Code Backup\August\VibExchange 25 July 2016_Final\VibExchange\bin\System.Net.Http.Primitives.xml
+D:\Backup\Code Backup\August\VibExchange 25 July 2016_Final\VibExchange\bin\System.Web.Providers.xml
+D:\Backup\Code Backup\August\VibExchange 25 July 2016_Final\VibExchange\bin\System.Net.Http.Formatting.xml
+D:\Backup\Code Backup\August\VibExchange 25 July 2016_Final\VibExchange\bin\System.Web.Helpers.xml
+D:\Backup\Code Backup\August\VibExchange 25 July 2016_Final\VibExchange\bin\System.Web.Http.xml
+D:\Backup\Code Backup\August\VibExchange 25 July 2016_Final\VibExchange\bin\System.Web.Http.WebHost.xml
+D:\Backup\Code Backup\August\VibExchange 25 July 2016_Final\VibExchange\bin\System.Web.Mvc.xml
+D:\Backup\Code Backup\August\VibExchange 25 July 2016_Final\VibExchange\bin\System.Web.Razor.xml
+D:\Backup\Code Backup\August\VibExchange 25 July 2016_Final\VibExchange\bin\System.Web.WebPages.xml
+D:\Backup\Code Backup\August\VibExchange 25 July 2016_Final\VibExchange\bin\System.Web.WebPages.Deployment.xml
+D:\Backup\Code Backup\August\VibExchange 25 July 2016_Final\VibExchange\bin\System.Web.WebPages.Razor.xml
+D:\Backup\Code Backup\August\VibExchange 25 July 2016_Final\VibExchange\bin\WebMatrix.Data.xml
+D:\Backup\Code Backup\August\VibExchange 25 July 2016_Final\VibExchange\bin\WebMatrix.WebData.xml
+D:\Backup\Code Backup\August\VibExchange 25 July 2016_Final\VibExchange\obj\Debug\VibExchange.csproj.App.config
+D:\Backup\Code Backup\August\VibExchange 25 July 2016_Final\VibExchange\obj\Debug\VibExchange.dll
+D:\Backup\Code Backup\August\VibExchange 25 July 2016_Final\VibExchange\obj\Debug\VibExchange.pdb
+D:\Backup\Code Backup\August\VibExchange 25 July 2016_Final\VibExchange\obj\Debug\VibExchange.csprojResolveAssemblyReference.cache
+D:\Backup\Code Backup\August 2016\VibExchange 25 July 2016_Final\VibExchange\bin\VibExchange.dll.config
+D:\Backup\Code Backup\August 2016\VibExchange 25 July 2016_Final\VibExchange\bin\VibExchange.dll
+D:\Backup\Code Backup\August 2016\VibExchange 25 July 2016_Final\VibExchange\bin\VibExchange.pdb
+D:\Backup\Code Backup\August 2016\VibExchange 25 July 2016_Final\VibExchange\bin\Antlr3.Runtime.dll
+D:\Backup\Code Backup\August 2016\VibExchange 25 July 2016_Final\VibExchange\bin\EntityFramework.dll
+D:\Backup\Code Backup\August 2016\VibExchange 25 July 2016_Final\VibExchange\bin\EntityFramework.SqlServer.dll
+D:\Backup\Code Backup\August 2016\VibExchange 25 July 2016_Final\VibExchange\bin\Microsoft.Web.Infrastructure.dll
+D:\Backup\Code Backup\August 2016\VibExchange 25 July 2016_Final\VibExchange\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+D:\Backup\Code Backup\August 2016\VibExchange 25 July 2016_Final\VibExchange\bin\Microsoft.Web.WebPages.OAuth.dll
+D:\Backup\Code Backup\August 2016\VibExchange 25 July 2016_Final\VibExchange\bin\Newtonsoft.Json.dll
+D:\Backup\Code Backup\August 2016\VibExchange 25 July 2016_Final\VibExchange\bin\System.Net.Http.Extensions.dll
+D:\Backup\Code Backup\August 2016\VibExchange 25 July 2016_Final\VibExchange\bin\System.Net.Http.Formatting.dll
+D:\Backup\Code Backup\August 2016\VibExchange 25 July 2016_Final\VibExchange\bin\System.Net.Http.Primitives.dll
+D:\Backup\Code Backup\August 2016\VibExchange 25 July 2016_Final\VibExchange\bin\System.Web.Helpers.dll
+D:\Backup\Code Backup\August 2016\VibExchange 25 July 2016_Final\VibExchange\bin\System.Web.Http.dll
+D:\Backup\Code Backup\August 2016\VibExchange 25 July 2016_Final\VibExchange\bin\System.Web.Http.WebHost.dll
+D:\Backup\Code Backup\August 2016\VibExchange 25 July 2016_Final\VibExchange\bin\System.Web.Mvc.dll
+D:\Backup\Code Backup\August 2016\VibExchange 25 July 2016_Final\VibExchange\bin\System.Web.Providers.dll
+D:\Backup\Code Backup\August 2016\VibExchange 25 July 2016_Final\VibExchange\bin\System.Web.Razor.dll
+D:\Backup\Code Backup\August 2016\VibExchange 25 July 2016_Final\VibExchange\bin\System.Web.WebPages.Deployment.dll
+D:\Backup\Code Backup\August 2016\VibExchange 25 July 2016_Final\VibExchange\bin\System.Web.WebPages.dll
+D:\Backup\Code Backup\August 2016\VibExchange 25 July 2016_Final\VibExchange\bin\System.Web.WebPages.Razor.dll
+D:\Backup\Code Backup\August 2016\VibExchange 25 July 2016_Final\VibExchange\bin\WebGrease.dll
+D:\Backup\Code Backup\August 2016\VibExchange 25 July 2016_Final\VibExchange\bin\WebMatrix.Data.dll
+D:\Backup\Code Backup\August 2016\VibExchange 25 July 2016_Final\VibExchange\bin\WebMatrix.WebData.dll
+D:\Backup\Code Backup\August 2016\VibExchange 25 July 2016_Final\VibExchange\bin\Antlr3.Runtime.pdb
+D:\Backup\Code Backup\August 2016\VibExchange 25 July 2016_Final\VibExchange\bin\EntityFramework.xml
+D:\Backup\Code Backup\August 2016\VibExchange 25 July 2016_Final\VibExchange\bin\EntityFramework.SqlServer.xml
+D:\Backup\Code Backup\August 2016\VibExchange 25 July 2016_Final\VibExchange\bin\Microsoft.Web.WebPages.OAuth.xml
+D:\Backup\Code Backup\August 2016\VibExchange 25 July 2016_Final\VibExchange\bin\Newtonsoft.Json.xml
+D:\Backup\Code Backup\August 2016\VibExchange 25 July 2016_Final\VibExchange\bin\System.Net.Http.Extensions.xml
+D:\Backup\Code Backup\August 2016\VibExchange 25 July 2016_Final\VibExchange\bin\System.Net.Http.Primitives.xml
+D:\Backup\Code Backup\August 2016\VibExchange 25 July 2016_Final\VibExchange\bin\System.Web.Providers.xml
+D:\Backup\Code Backup\August 2016\VibExchange 25 July 2016_Final\VibExchange\bin\System.Net.Http.Formatting.xml
+D:\Backup\Code Backup\August 2016\VibExchange 25 July 2016_Final\VibExchange\bin\System.Web.Helpers.xml
+D:\Backup\Code Backup\August 2016\VibExchange 25 July 2016_Final\VibExchange\bin\System.Web.Http.xml
+D:\Backup\Code Backup\August 2016\VibExchange 25 July 2016_Final\VibExchange\bin\System.Web.Http.WebHost.xml
+D:\Backup\Code Backup\August 2016\VibExchange 25 July 2016_Final\VibExchange\bin\System.Web.Mvc.xml
+D:\Backup\Code Backup\August 2016\VibExchange 25 July 2016_Final\VibExchange\bin\System.Web.Razor.xml
+D:\Backup\Code Backup\August 2016\VibExchange 25 July 2016_Final\VibExchange\bin\System.Web.WebPages.xml
+D:\Backup\Code Backup\August 2016\VibExchange 25 July 2016_Final\VibExchange\bin\System.Web.WebPages.Deployment.xml
+D:\Backup\Code Backup\August 2016\VibExchange 25 July 2016_Final\VibExchange\bin\System.Web.WebPages.Razor.xml
+D:\Backup\Code Backup\August 2016\VibExchange 25 July 2016_Final\VibExchange\bin\WebMatrix.Data.xml
+D:\Backup\Code Backup\August 2016\VibExchange 25 July 2016_Final\VibExchange\bin\WebMatrix.WebData.xml
+D:\Backup\Code Backup\August 2016\VibExchange 25 July 2016_Final\VibExchange\obj\Debug\VibExchange.csproj.App.config
+D:\Backup\Code Backup\August 2016\VibExchange 25 July 2016_Final\VibExchange\obj\Debug\VibExchange.csprojResolveAssemblyReference.cache
+D:\Backup\Code Backup\August 2016\VibExchange 25 July 2016_Final\VibExchange\obj\Debug\VibExchange.dll
+D:\Backup\Code Backup\August 2016\VibExchange 25 July 2016_Final\VibExchange\obj\Debug\VibExchange.pdb
+D:\Backup\Code Backup\August 2016\VibExchange 8 Aug 2016_Final\VibExchange\bin\VibExchange.dll.config
+D:\Backup\Code Backup\August 2016\VibExchange 8 Aug 2016_Final\VibExchange\bin\VibExchange.dll
+D:\Backup\Code Backup\August 2016\VibExchange 8 Aug 2016_Final\VibExchange\bin\VibExchange.pdb
+D:\Backup\Code Backup\August 2016\VibExchange 8 Aug 2016_Final\VibExchange\bin\Antlr3.Runtime.dll
+D:\Backup\Code Backup\August 2016\VibExchange 8 Aug 2016_Final\VibExchange\bin\EntityFramework.dll
+D:\Backup\Code Backup\August 2016\VibExchange 8 Aug 2016_Final\VibExchange\bin\EntityFramework.SqlServer.dll
+D:\Backup\Code Backup\August 2016\VibExchange 8 Aug 2016_Final\VibExchange\bin\Microsoft.Web.Infrastructure.dll
+D:\Backup\Code Backup\August 2016\VibExchange 8 Aug 2016_Final\VibExchange\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+D:\Backup\Code Backup\August 2016\VibExchange 8 Aug 2016_Final\VibExchange\bin\Microsoft.Web.WebPages.OAuth.dll
+D:\Backup\Code Backup\August 2016\VibExchange 8 Aug 2016_Final\VibExchange\bin\Newtonsoft.Json.dll
+D:\Backup\Code Backup\August 2016\VibExchange 8 Aug 2016_Final\VibExchange\bin\System.Net.Http.Extensions.dll
+D:\Backup\Code Backup\August 2016\VibExchange 8 Aug 2016_Final\VibExchange\bin\System.Net.Http.Formatting.dll
+D:\Backup\Code Backup\August 2016\VibExchange 8 Aug 2016_Final\VibExchange\bin\System.Net.Http.Primitives.dll
+D:\Backup\Code Backup\August 2016\VibExchange 8 Aug 2016_Final\VibExchange\bin\System.Web.Helpers.dll
+D:\Backup\Code Backup\August 2016\VibExchange 8 Aug 2016_Final\VibExchange\bin\System.Web.Http.dll
+D:\Backup\Code Backup\August 2016\VibExchange 8 Aug 2016_Final\VibExchange\bin\System.Web.Http.WebHost.dll
+D:\Backup\Code Backup\August 2016\VibExchange 8 Aug 2016_Final\VibExchange\bin\System.Web.Mvc.dll
+D:\Backup\Code Backup\August 2016\VibExchange 8 Aug 2016_Final\VibExchange\bin\System.Web.Providers.dll
+D:\Backup\Code Backup\August 2016\VibExchange 8 Aug 2016_Final\VibExchange\bin\System.Web.Razor.dll
+D:\Backup\Code Backup\August 2016\VibExchange 8 Aug 2016_Final\VibExchange\bin\System.Web.WebPages.Deployment.dll
+D:\Backup\Code Backup\August 2016\VibExchange 8 Aug 2016_Final\VibExchange\bin\System.Web.WebPages.dll
+D:\Backup\Code Backup\August 2016\VibExchange 8 Aug 2016_Final\VibExchange\bin\System.Web.WebPages.Razor.dll
+D:\Backup\Code Backup\August 2016\VibExchange 8 Aug 2016_Final\VibExchange\bin\WebGrease.dll
+D:\Backup\Code Backup\August 2016\VibExchange 8 Aug 2016_Final\VibExchange\bin\WebMatrix.Data.dll
+D:\Backup\Code Backup\August 2016\VibExchange 8 Aug 2016_Final\VibExchange\bin\WebMatrix.WebData.dll
+D:\Backup\Code Backup\August 2016\VibExchange 8 Aug 2016_Final\VibExchange\bin\Antlr3.Runtime.pdb
+D:\Backup\Code Backup\August 2016\VibExchange 8 Aug 2016_Final\VibExchange\bin\EntityFramework.xml
+D:\Backup\Code Backup\August 2016\VibExchange 8 Aug 2016_Final\VibExchange\bin\EntityFramework.SqlServer.xml
+D:\Backup\Code Backup\August 2016\VibExchange 8 Aug 2016_Final\VibExchange\bin\Microsoft.Web.WebPages.OAuth.xml
+D:\Backup\Code Backup\August 2016\VibExchange 8 Aug 2016_Final\VibExchange\bin\Newtonsoft.Json.xml
+D:\Backup\Code Backup\August 2016\VibExchange 8 Aug 2016_Final\VibExchange\bin\System.Net.Http.Extensions.xml
+D:\Backup\Code Backup\August 2016\VibExchange 8 Aug 2016_Final\VibExchange\bin\System.Net.Http.Primitives.xml
+D:\Backup\Code Backup\August 2016\VibExchange 8 Aug 2016_Final\VibExchange\bin\System.Web.Providers.xml
+D:\Backup\Code Backup\August 2016\VibExchange 8 Aug 2016_Final\VibExchange\bin\System.Net.Http.Formatting.xml
+D:\Backup\Code Backup\August 2016\VibExchange 8 Aug 2016_Final\VibExchange\bin\System.Web.Helpers.xml
+D:\Backup\Code Backup\August 2016\VibExchange 8 Aug 2016_Final\VibExchange\bin\System.Web.Http.xml
+D:\Backup\Code Backup\August 2016\VibExchange 8 Aug 2016_Final\VibExchange\bin\System.Web.Http.WebHost.xml
+D:\Backup\Code Backup\August 2016\VibExchange 8 Aug 2016_Final\VibExchange\bin\System.Web.Mvc.xml
+D:\Backup\Code Backup\August 2016\VibExchange 8 Aug 2016_Final\VibExchange\bin\System.Web.Razor.xml
+D:\Backup\Code Backup\August 2016\VibExchange 8 Aug 2016_Final\VibExchange\bin\System.Web.WebPages.xml
+D:\Backup\Code Backup\August 2016\VibExchange 8 Aug 2016_Final\VibExchange\bin\System.Web.WebPages.Deployment.xml
+D:\Backup\Code Backup\August 2016\VibExchange 8 Aug 2016_Final\VibExchange\bin\System.Web.WebPages.Razor.xml
+D:\Backup\Code Backup\August 2016\VibExchange 8 Aug 2016_Final\VibExchange\bin\WebMatrix.Data.xml
+D:\Backup\Code Backup\August 2016\VibExchange 8 Aug 2016_Final\VibExchange\bin\WebMatrix.WebData.xml
+D:\Backup\Code Backup\August 2016\VibExchange 8 Aug 2016_Final\VibExchange\obj\Debug\VibExchange.csproj.App.config
+D:\Backup\Code Backup\August 2016\VibExchange 8 Aug 2016_Final\VibExchange\obj\Debug\VibExchange.csprojResolveAssemblyReference.cache
+D:\Backup\Code Backup\August 2016\VibExchange 8 Aug 2016_Final\VibExchange\obj\Debug\VibExchange.dll
+D:\Backup\Code Backup\August 2016\VibExchange 8 Aug 2016_Final\VibExchange\obj\Debug\VibExchange.pdb
+D:\Backup\Code Backup\August 2016\VibExchange 17 Aug 2016_Final\VibExchange\bin\VibExchange.dll.config
+D:\Backup\Code Backup\August 2016\VibExchange 17 Aug 2016_Final\VibExchange\bin\VibExchange.dll
+D:\Backup\Code Backup\August 2016\VibExchange 17 Aug 2016_Final\VibExchange\bin\VibExchange.pdb
+D:\Backup\Code Backup\August 2016\VibExchange 17 Aug 2016_Final\VibExchange\bin\Antlr3.Runtime.dll
+D:\Backup\Code Backup\August 2016\VibExchange 17 Aug 2016_Final\VibExchange\bin\EntityFramework.dll
+D:\Backup\Code Backup\August 2016\VibExchange 17 Aug 2016_Final\VibExchange\bin\EntityFramework.SqlServer.dll
+D:\Backup\Code Backup\August 2016\VibExchange 17 Aug 2016_Final\VibExchange\bin\Microsoft.Web.Infrastructure.dll
+D:\Backup\Code Backup\August 2016\VibExchange 17 Aug 2016_Final\VibExchange\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+D:\Backup\Code Backup\August 2016\VibExchange 17 Aug 2016_Final\VibExchange\bin\Microsoft.Web.WebPages.OAuth.dll
+D:\Backup\Code Backup\August 2016\VibExchange 17 Aug 2016_Final\VibExchange\bin\Newtonsoft.Json.dll
+D:\Backup\Code Backup\August 2016\VibExchange 17 Aug 2016_Final\VibExchange\bin\System.Net.Http.Extensions.dll
+D:\Backup\Code Backup\August 2016\VibExchange 17 Aug 2016_Final\VibExchange\bin\System.Net.Http.Formatting.dll
+D:\Backup\Code Backup\August 2016\VibExchange 17 Aug 2016_Final\VibExchange\bin\System.Net.Http.Primitives.dll
+D:\Backup\Code Backup\August 2016\VibExchange 17 Aug 2016_Final\VibExchange\bin\System.Web.Helpers.dll
+D:\Backup\Code Backup\August 2016\VibExchange 17 Aug 2016_Final\VibExchange\bin\System.Web.Http.dll
+D:\Backup\Code Backup\August 2016\VibExchange 17 Aug 2016_Final\VibExchange\bin\System.Web.Http.WebHost.dll
+D:\Backup\Code Backup\August 2016\VibExchange 17 Aug 2016_Final\VibExchange\bin\System.Web.Mvc.dll
+D:\Backup\Code Backup\August 2016\VibExchange 17 Aug 2016_Final\VibExchange\bin\System.Web.Providers.dll
+D:\Backup\Code Backup\August 2016\VibExchange 17 Aug 2016_Final\VibExchange\bin\System.Web.Razor.dll
+D:\Backup\Code Backup\August 2016\VibExchange 17 Aug 2016_Final\VibExchange\bin\System.Web.WebPages.Deployment.dll
+D:\Backup\Code Backup\August 2016\VibExchange 17 Aug 2016_Final\VibExchange\bin\System.Web.WebPages.dll
+D:\Backup\Code Backup\August 2016\VibExchange 17 Aug 2016_Final\VibExchange\bin\System.Web.WebPages.Razor.dll
+D:\Backup\Code Backup\August 2016\VibExchange 17 Aug 2016_Final\VibExchange\bin\WebGrease.dll
+D:\Backup\Code Backup\August 2016\VibExchange 17 Aug 2016_Final\VibExchange\bin\WebMatrix.Data.dll
+D:\Backup\Code Backup\August 2016\VibExchange 17 Aug 2016_Final\VibExchange\bin\WebMatrix.WebData.dll
+D:\Backup\Code Backup\August 2016\VibExchange 17 Aug 2016_Final\VibExchange\bin\Antlr3.Runtime.pdb
+D:\Backup\Code Backup\August 2016\VibExchange 17 Aug 2016_Final\VibExchange\bin\EntityFramework.xml
+D:\Backup\Code Backup\August 2016\VibExchange 17 Aug 2016_Final\VibExchange\bin\EntityFramework.SqlServer.xml
+D:\Backup\Code Backup\August 2016\VibExchange 17 Aug 2016_Final\VibExchange\bin\Microsoft.Web.WebPages.OAuth.xml
+D:\Backup\Code Backup\August 2016\VibExchange 17 Aug 2016_Final\VibExchange\bin\Newtonsoft.Json.xml
+D:\Backup\Code Backup\August 2016\VibExchange 17 Aug 2016_Final\VibExchange\bin\System.Net.Http.Extensions.xml
+D:\Backup\Code Backup\August 2016\VibExchange 17 Aug 2016_Final\VibExchange\bin\System.Net.Http.Primitives.xml
+D:\Backup\Code Backup\August 2016\VibExchange 17 Aug 2016_Final\VibExchange\bin\System.Web.Providers.xml
+D:\Backup\Code Backup\August 2016\VibExchange 17 Aug 2016_Final\VibExchange\bin\System.Net.Http.Formatting.xml
+D:\Backup\Code Backup\August 2016\VibExchange 17 Aug 2016_Final\VibExchange\bin\System.Web.Helpers.xml
+D:\Backup\Code Backup\August 2016\VibExchange 17 Aug 2016_Final\VibExchange\bin\System.Web.Http.xml
+D:\Backup\Code Backup\August 2016\VibExchange 17 Aug 2016_Final\VibExchange\bin\System.Web.Http.WebHost.xml
+D:\Backup\Code Backup\August 2016\VibExchange 17 Aug 2016_Final\VibExchange\bin\System.Web.Mvc.xml
+D:\Backup\Code Backup\August 2016\VibExchange 17 Aug 2016_Final\VibExchange\bin\System.Web.Razor.xml
+D:\Backup\Code Backup\August 2016\VibExchange 17 Aug 2016_Final\VibExchange\bin\System.Web.WebPages.xml
+D:\Backup\Code Backup\August 2016\VibExchange 17 Aug 2016_Final\VibExchange\bin\System.Web.WebPages.Deployment.xml
+D:\Backup\Code Backup\August 2016\VibExchange 17 Aug 2016_Final\VibExchange\bin\System.Web.WebPages.Razor.xml
+D:\Backup\Code Backup\August 2016\VibExchange 17 Aug 2016_Final\VibExchange\bin\WebMatrix.Data.xml
+D:\Backup\Code Backup\August 2016\VibExchange 17 Aug 2016_Final\VibExchange\bin\WebMatrix.WebData.xml
+D:\Backup\Code Backup\August 2016\VibExchange 17 Aug 2016_Final\VibExchange\obj\Debug\VibExchange.csproj.App.config
+D:\Backup\Code Backup\August 2016\VibExchange 17 Aug 2016_Final\VibExchange\obj\Debug\VibExchange.csprojResolveAssemblyReference.cache
+D:\Backup\Code Backup\August 2016\VibExchange 17 Aug 2016_Final\VibExchange\obj\Debug\VibExchange.dll
+D:\Backup\Code Backup\August 2016\VibExchange 17 Aug 2016_Final\VibExchange\obj\Debug\VibExchange.pdb
+D:\Backup\Code Backup\August 2016\VibExchange 19 Aug 2016_Final\VibExchange\bin\VibExchange.dll.config
+D:\Backup\Code Backup\August 2016\VibExchange 19 Aug 2016_Final\VibExchange\bin\VibExchange.dll
+D:\Backup\Code Backup\August 2016\VibExchange 19 Aug 2016_Final\VibExchange\bin\VibExchange.pdb
+D:\Backup\Code Backup\August 2016\VibExchange 19 Aug 2016_Final\VibExchange\bin\Antlr3.Runtime.dll
+D:\Backup\Code Backup\August 2016\VibExchange 19 Aug 2016_Final\VibExchange\bin\EntityFramework.dll
+D:\Backup\Code Backup\August 2016\VibExchange 19 Aug 2016_Final\VibExchange\bin\EntityFramework.SqlServer.dll
+D:\Backup\Code Backup\August 2016\VibExchange 19 Aug 2016_Final\VibExchange\bin\Microsoft.Web.Infrastructure.dll
+D:\Backup\Code Backup\August 2016\VibExchange 19 Aug 2016_Final\VibExchange\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+D:\Backup\Code Backup\August 2016\VibExchange 19 Aug 2016_Final\VibExchange\bin\Microsoft.Web.WebPages.OAuth.dll
+D:\Backup\Code Backup\August 2016\VibExchange 19 Aug 2016_Final\VibExchange\bin\Newtonsoft.Json.dll
+D:\Backup\Code Backup\August 2016\VibExchange 19 Aug 2016_Final\VibExchange\bin\System.Net.Http.Extensions.dll
+D:\Backup\Code Backup\August 2016\VibExchange 19 Aug 2016_Final\VibExchange\bin\System.Net.Http.Formatting.dll
+D:\Backup\Code Backup\August 2016\VibExchange 19 Aug 2016_Final\VibExchange\bin\System.Net.Http.Primitives.dll
+D:\Backup\Code Backup\August 2016\VibExchange 19 Aug 2016_Final\VibExchange\bin\System.Web.Helpers.dll
+D:\Backup\Code Backup\August 2016\VibExchange 19 Aug 2016_Final\VibExchange\bin\System.Web.Http.dll
+D:\Backup\Code Backup\August 2016\VibExchange 19 Aug 2016_Final\VibExchange\bin\System.Web.Http.WebHost.dll
+D:\Backup\Code Backup\August 2016\VibExchange 19 Aug 2016_Final\VibExchange\bin\System.Web.Mvc.dll
+D:\Backup\Code Backup\August 2016\VibExchange 19 Aug 2016_Final\VibExchange\bin\System.Web.Providers.dll
+D:\Backup\Code Backup\August 2016\VibExchange 19 Aug 2016_Final\VibExchange\bin\System.Web.Razor.dll
+D:\Backup\Code Backup\August 2016\VibExchange 19 Aug 2016_Final\VibExchange\bin\System.Web.WebPages.Deployment.dll
+D:\Backup\Code Backup\August 2016\VibExchange 19 Aug 2016_Final\VibExchange\bin\System.Web.WebPages.dll
+D:\Backup\Code Backup\August 2016\VibExchange 19 Aug 2016_Final\VibExchange\bin\System.Web.WebPages.Razor.dll
+D:\Backup\Code Backup\August 2016\VibExchange 19 Aug 2016_Final\VibExchange\bin\WebGrease.dll
+D:\Backup\Code Backup\August 2016\VibExchange 19 Aug 2016_Final\VibExchange\bin\WebMatrix.Data.dll
+D:\Backup\Code Backup\August 2016\VibExchange 19 Aug 2016_Final\VibExchange\bin\WebMatrix.WebData.dll
+D:\Backup\Code Backup\August 2016\VibExchange 19 Aug 2016_Final\VibExchange\bin\Antlr3.Runtime.pdb
+D:\Backup\Code Backup\August 2016\VibExchange 19 Aug 2016_Final\VibExchange\bin\EntityFramework.xml
+D:\Backup\Code Backup\August 2016\VibExchange 19 Aug 2016_Final\VibExchange\bin\EntityFramework.SqlServer.xml
+D:\Backup\Code Backup\August 2016\VibExchange 19 Aug 2016_Final\VibExchange\bin\Microsoft.Web.WebPages.OAuth.xml
+D:\Backup\Code Backup\August 2016\VibExchange 19 Aug 2016_Final\VibExchange\bin\Newtonsoft.Json.xml
+D:\Backup\Code Backup\August 2016\VibExchange 19 Aug 2016_Final\VibExchange\bin\System.Net.Http.Extensions.xml
+D:\Backup\Code Backup\August 2016\VibExchange 19 Aug 2016_Final\VibExchange\bin\System.Net.Http.Primitives.xml
+D:\Backup\Code Backup\August 2016\VibExchange 19 Aug 2016_Final\VibExchange\bin\System.Web.Providers.xml
+D:\Backup\Code Backup\August 2016\VibExchange 19 Aug 2016_Final\VibExchange\bin\System.Net.Http.Formatting.xml
+D:\Backup\Code Backup\August 2016\VibExchange 19 Aug 2016_Final\VibExchange\bin\System.Web.Helpers.xml
+D:\Backup\Code Backup\August 2016\VibExchange 19 Aug 2016_Final\VibExchange\bin\System.Web.Http.xml
+D:\Backup\Code Backup\August 2016\VibExchange 19 Aug 2016_Final\VibExchange\bin\System.Web.Http.WebHost.xml
+D:\Backup\Code Backup\August 2016\VibExchange 19 Aug 2016_Final\VibExchange\bin\System.Web.Mvc.xml
+D:\Backup\Code Backup\August 2016\VibExchange 19 Aug 2016_Final\VibExchange\bin\System.Web.Razor.xml
+D:\Backup\Code Backup\August 2016\VibExchange 19 Aug 2016_Final\VibExchange\bin\System.Web.WebPages.xml
+D:\Backup\Code Backup\August 2016\VibExchange 19 Aug 2016_Final\VibExchange\bin\System.Web.WebPages.Deployment.xml
+D:\Backup\Code Backup\August 2016\VibExchange 19 Aug 2016_Final\VibExchange\bin\System.Web.WebPages.Razor.xml
+D:\Backup\Code Backup\August 2016\VibExchange 19 Aug 2016_Final\VibExchange\bin\WebMatrix.Data.xml
+D:\Backup\Code Backup\August 2016\VibExchange 19 Aug 2016_Final\VibExchange\bin\WebMatrix.WebData.xml
+D:\Backup\Code Backup\August 2016\VibExchange 19 Aug 2016_Final\VibExchange\obj\Debug\VibExchange.csproj.App.config
+D:\Backup\Code Backup\August 2016\VibExchange 19 Aug 2016_Final\VibExchange\obj\Debug\VibExchange.csprojResolveAssemblyReference.cache
+D:\Backup\Code Backup\August 2016\VibExchange 19 Aug 2016_Final\VibExchange\obj\Debug\VibExchange.dll
+D:\Backup\Code Backup\August 2016\VibExchange 19 Aug 2016_Final\VibExchange\obj\Debug\VibExchange.pdb
+D:\Backup\Code Backup\August 2016\VibExchange 22 Aug 2016_Final\VibExchange\bin\VibExchange.dll.config
+D:\Backup\Code Backup\August 2016\VibExchange 22 Aug 2016_Final\VibExchange\bin\VibExchange.dll
+D:\Backup\Code Backup\August 2016\VibExchange 22 Aug 2016_Final\VibExchange\bin\VibExchange.pdb
+D:\Backup\Code Backup\August 2016\VibExchange 22 Aug 2016_Final\VibExchange\bin\Antlr3.Runtime.dll
+D:\Backup\Code Backup\August 2016\VibExchange 22 Aug 2016_Final\VibExchange\bin\EntityFramework.dll
+D:\Backup\Code Backup\August 2016\VibExchange 22 Aug 2016_Final\VibExchange\bin\EntityFramework.SqlServer.dll
+D:\Backup\Code Backup\August 2016\VibExchange 22 Aug 2016_Final\VibExchange\bin\Microsoft.Web.Infrastructure.dll
+D:\Backup\Code Backup\August 2016\VibExchange 22 Aug 2016_Final\VibExchange\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+D:\Backup\Code Backup\August 2016\VibExchange 22 Aug 2016_Final\VibExchange\bin\Microsoft.Web.WebPages.OAuth.dll
+D:\Backup\Code Backup\August 2016\VibExchange 22 Aug 2016_Final\VibExchange\bin\Newtonsoft.Json.dll
+D:\Backup\Code Backup\August 2016\VibExchange 22 Aug 2016_Final\VibExchange\bin\System.Net.Http.Extensions.dll
+D:\Backup\Code Backup\August 2016\VibExchange 22 Aug 2016_Final\VibExchange\bin\System.Net.Http.Formatting.dll
+D:\Backup\Code Backup\August 2016\VibExchange 22 Aug 2016_Final\VibExchange\bin\System.Net.Http.Primitives.dll
+D:\Backup\Code Backup\August 2016\VibExchange 22 Aug 2016_Final\VibExchange\bin\System.Web.Helpers.dll
+D:\Backup\Code Backup\August 2016\VibExchange 22 Aug 2016_Final\VibExchange\bin\System.Web.Http.dll
+D:\Backup\Code Backup\August 2016\VibExchange 22 Aug 2016_Final\VibExchange\bin\System.Web.Http.WebHost.dll
+D:\Backup\Code Backup\August 2016\VibExchange 22 Aug 2016_Final\VibExchange\bin\System.Web.Mvc.dll
+D:\Backup\Code Backup\August 2016\VibExchange 22 Aug 2016_Final\VibExchange\bin\System.Web.Providers.dll
+D:\Backup\Code Backup\August 2016\VibExchange 22 Aug 2016_Final\VibExchange\bin\System.Web.Razor.dll
+D:\Backup\Code Backup\August 2016\VibExchange 22 Aug 2016_Final\VibExchange\bin\System.Web.WebPages.Deployment.dll
+D:\Backup\Code Backup\August 2016\VibExchange 22 Aug 2016_Final\VibExchange\bin\System.Web.WebPages.dll
+D:\Backup\Code Backup\August 2016\VibExchange 22 Aug 2016_Final\VibExchange\bin\System.Web.WebPages.Razor.dll
+D:\Backup\Code Backup\August 2016\VibExchange 22 Aug 2016_Final\VibExchange\bin\WebGrease.dll
+D:\Backup\Code Backup\August 2016\VibExchange 22 Aug 2016_Final\VibExchange\bin\WebMatrix.Data.dll
+D:\Backup\Code Backup\August 2016\VibExchange 22 Aug 2016_Final\VibExchange\bin\WebMatrix.WebData.dll
+D:\Backup\Code Backup\August 2016\VibExchange 22 Aug 2016_Final\VibExchange\bin\Antlr3.Runtime.pdb
+D:\Backup\Code Backup\August 2016\VibExchange 22 Aug 2016_Final\VibExchange\bin\EntityFramework.xml
+D:\Backup\Code Backup\August 2016\VibExchange 22 Aug 2016_Final\VibExchange\bin\EntityFramework.SqlServer.xml
+D:\Backup\Code Backup\August 2016\VibExchange 22 Aug 2016_Final\VibExchange\bin\Microsoft.Web.WebPages.OAuth.xml
+D:\Backup\Code Backup\August 2016\VibExchange 22 Aug 2016_Final\VibExchange\bin\Newtonsoft.Json.xml
+D:\Backup\Code Backup\August 2016\VibExchange 22 Aug 2016_Final\VibExchange\bin\System.Net.Http.Extensions.xml
+D:\Backup\Code Backup\August 2016\VibExchange 22 Aug 2016_Final\VibExchange\bin\System.Net.Http.Primitives.xml
+D:\Backup\Code Backup\August 2016\VibExchange 22 Aug 2016_Final\VibExchange\bin\System.Web.Providers.xml
+D:\Backup\Code Backup\August 2016\VibExchange 22 Aug 2016_Final\VibExchange\bin\System.Net.Http.Formatting.xml
+D:\Backup\Code Backup\August 2016\VibExchange 22 Aug 2016_Final\VibExchange\bin\System.Web.Helpers.xml
+D:\Backup\Code Backup\August 2016\VibExchange 22 Aug 2016_Final\VibExchange\bin\System.Web.Http.xml
+D:\Backup\Code Backup\August 2016\VibExchange 22 Aug 2016_Final\VibExchange\bin\System.Web.Http.WebHost.xml
+D:\Backup\Code Backup\August 2016\VibExchange 22 Aug 2016_Final\VibExchange\bin\System.Web.Mvc.xml
+D:\Backup\Code Backup\August 2016\VibExchange 22 Aug 2016_Final\VibExchange\bin\System.Web.Razor.xml
+D:\Backup\Code Backup\August 2016\VibExchange 22 Aug 2016_Final\VibExchange\bin\System.Web.WebPages.xml
+D:\Backup\Code Backup\August 2016\VibExchange 22 Aug 2016_Final\VibExchange\bin\System.Web.WebPages.Deployment.xml
+D:\Backup\Code Backup\August 2016\VibExchange 22 Aug 2016_Final\VibExchange\bin\System.Web.WebPages.Razor.xml
+D:\Backup\Code Backup\August 2016\VibExchange 22 Aug 2016_Final\VibExchange\bin\WebMatrix.Data.xml
+D:\Backup\Code Backup\August 2016\VibExchange 22 Aug 2016_Final\VibExchange\bin\WebMatrix.WebData.xml
+D:\Backup\Code Backup\August 2016\VibExchange 22 Aug 2016_Final\VibExchange\obj\Debug\VibExchange.csproj.App.config
+D:\Backup\Code Backup\August 2016\VibExchange 22 Aug 2016_Final\VibExchange\obj\Debug\VibExchange.dll
+D:\Backup\Code Backup\August 2016\VibExchange 22 Aug 2016_Final\VibExchange\obj\Debug\VibExchange.pdb
+D:\Backup\Code Backup\August 2016\VibExchange 22 Aug 2016_Final\VibExchange\obj\Debug\VibExchange.csprojResolveAssemblyReference.cache
+D:\Backup\VibExchange Backup\August 2016\VibExchange 29 Aug 2016_Final\VibExchange\bin\VibExchange.dll.config
+D:\Backup\VibExchange Backup\August 2016\VibExchange 29 Aug 2016_Final\VibExchange\bin\VibExchange.dll
+D:\Backup\VibExchange Backup\August 2016\VibExchange 29 Aug 2016_Final\VibExchange\bin\VibExchange.pdb
+D:\Backup\VibExchange Backup\August 2016\VibExchange 29 Aug 2016_Final\VibExchange\bin\Antlr3.Runtime.dll
+D:\Backup\VibExchange Backup\August 2016\VibExchange 29 Aug 2016_Final\VibExchange\bin\EntityFramework.dll
+D:\Backup\VibExchange Backup\August 2016\VibExchange 29 Aug 2016_Final\VibExchange\bin\EntityFramework.SqlServer.dll
+D:\Backup\VibExchange Backup\August 2016\VibExchange 29 Aug 2016_Final\VibExchange\bin\Microsoft.Web.Infrastructure.dll
+D:\Backup\VibExchange Backup\August 2016\VibExchange 29 Aug 2016_Final\VibExchange\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+D:\Backup\VibExchange Backup\August 2016\VibExchange 29 Aug 2016_Final\VibExchange\bin\Microsoft.Web.WebPages.OAuth.dll
+D:\Backup\VibExchange Backup\August 2016\VibExchange 29 Aug 2016_Final\VibExchange\bin\Newtonsoft.Json.dll
+D:\Backup\VibExchange Backup\August 2016\VibExchange 29 Aug 2016_Final\VibExchange\bin\System.Net.Http.Extensions.dll
+D:\Backup\VibExchange Backup\August 2016\VibExchange 29 Aug 2016_Final\VibExchange\bin\System.Net.Http.Formatting.dll
+D:\Backup\VibExchange Backup\August 2016\VibExchange 29 Aug 2016_Final\VibExchange\bin\System.Net.Http.Primitives.dll
+D:\Backup\VibExchange Backup\August 2016\VibExchange 29 Aug 2016_Final\VibExchange\bin\System.Web.Helpers.dll
+D:\Backup\VibExchange Backup\August 2016\VibExchange 29 Aug 2016_Final\VibExchange\bin\System.Web.Http.dll
+D:\Backup\VibExchange Backup\August 2016\VibExchange 29 Aug 2016_Final\VibExchange\bin\System.Web.Http.WebHost.dll
+D:\Backup\VibExchange Backup\August 2016\VibExchange 29 Aug 2016_Final\VibExchange\bin\System.Web.Mvc.dll
+D:\Backup\VibExchange Backup\August 2016\VibExchange 29 Aug 2016_Final\VibExchange\bin\System.Web.Providers.dll
+D:\Backup\VibExchange Backup\August 2016\VibExchange 29 Aug 2016_Final\VibExchange\bin\System.Web.Razor.dll
+D:\Backup\VibExchange Backup\August 2016\VibExchange 29 Aug 2016_Final\VibExchange\bin\System.Web.WebPages.Deployment.dll
+D:\Backup\VibExchange Backup\August 2016\VibExchange 29 Aug 2016_Final\VibExchange\bin\System.Web.WebPages.dll
+D:\Backup\VibExchange Backup\August 2016\VibExchange 29 Aug 2016_Final\VibExchange\bin\System.Web.WebPages.Razor.dll
+D:\Backup\VibExchange Backup\August 2016\VibExchange 29 Aug 2016_Final\VibExchange\bin\WebGrease.dll
+D:\Backup\VibExchange Backup\August 2016\VibExchange 29 Aug 2016_Final\VibExchange\bin\WebMatrix.Data.dll
+D:\Backup\VibExchange Backup\August 2016\VibExchange 29 Aug 2016_Final\VibExchange\bin\WebMatrix.WebData.dll
+D:\Backup\VibExchange Backup\August 2016\VibExchange 29 Aug 2016_Final\VibExchange\bin\Antlr3.Runtime.pdb
+D:\Backup\VibExchange Backup\August 2016\VibExchange 29 Aug 2016_Final\VibExchange\bin\EntityFramework.xml
+D:\Backup\VibExchange Backup\August 2016\VibExchange 29 Aug 2016_Final\VibExchange\bin\EntityFramework.SqlServer.xml
+D:\Backup\VibExchange Backup\August 2016\VibExchange 29 Aug 2016_Final\VibExchange\bin\Microsoft.Web.WebPages.OAuth.xml
+D:\Backup\VibExchange Backup\August 2016\VibExchange 29 Aug 2016_Final\VibExchange\bin\Newtonsoft.Json.xml
+D:\Backup\VibExchange Backup\August 2016\VibExchange 29 Aug 2016_Final\VibExchange\bin\System.Net.Http.Extensions.xml
+D:\Backup\VibExchange Backup\August 2016\VibExchange 29 Aug 2016_Final\VibExchange\bin\System.Net.Http.Primitives.xml
+D:\Backup\VibExchange Backup\August 2016\VibExchange 29 Aug 2016_Final\VibExchange\bin\System.Web.Providers.xml
+D:\Backup\VibExchange Backup\August 2016\VibExchange 29 Aug 2016_Final\VibExchange\bin\System.Net.Http.Formatting.xml
+D:\Backup\VibExchange Backup\August 2016\VibExchange 29 Aug 2016_Final\VibExchange\bin\System.Web.Helpers.xml
+D:\Backup\VibExchange Backup\August 2016\VibExchange 29 Aug 2016_Final\VibExchange\bin\System.Web.Http.xml
+D:\Backup\VibExchange Backup\August 2016\VibExchange 29 Aug 2016_Final\VibExchange\bin\System.Web.Http.WebHost.xml
+D:\Backup\VibExchange Backup\August 2016\VibExchange 29 Aug 2016_Final\VibExchange\bin\System.Web.Mvc.xml
+D:\Backup\VibExchange Backup\August 2016\VibExchange 29 Aug 2016_Final\VibExchange\bin\System.Web.Razor.xml
+D:\Backup\VibExchange Backup\August 2016\VibExchange 29 Aug 2016_Final\VibExchange\bin\System.Web.WebPages.xml
+D:\Backup\VibExchange Backup\August 2016\VibExchange 29 Aug 2016_Final\VibExchange\bin\System.Web.WebPages.Deployment.xml
+D:\Backup\VibExchange Backup\August 2016\VibExchange 29 Aug 2016_Final\VibExchange\bin\System.Web.WebPages.Razor.xml
+D:\Backup\VibExchange Backup\August 2016\VibExchange 29 Aug 2016_Final\VibExchange\bin\WebMatrix.Data.xml
+D:\Backup\VibExchange Backup\August 2016\VibExchange 29 Aug 2016_Final\VibExchange\bin\WebMatrix.WebData.xml
+D:\Backup\VibExchange Backup\August 2016\VibExchange 29 Aug 2016_Final\VibExchange\obj\Debug\VibExchange.csproj.App.config
+D:\Backup\VibExchange Backup\August 2016\VibExchange 29 Aug 2016_Final\VibExchange\obj\Debug\VibExchange.csprojResolveAssemblyReference.cache
+D:\Backup\VibExchange Backup\August 2016\VibExchange 29 Aug 2016_Final\VibExchange\obj\Debug\VibExchange.dll
+D:\Backup\VibExchange Backup\August 2016\VibExchange 29 Aug 2016_Final\VibExchange\obj\Debug\VibExchange.pdb
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 2 Sept 2016_Final\VibExchange\bin\VibExchange.dll.config
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 2 Sept 2016_Final\VibExchange\bin\VibExchange.dll
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 2 Sept 2016_Final\VibExchange\bin\VibExchange.pdb
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 2 Sept 2016_Final\VibExchange\bin\Antlr3.Runtime.dll
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 2 Sept 2016_Final\VibExchange\bin\EntityFramework.dll
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 2 Sept 2016_Final\VibExchange\bin\EntityFramework.SqlServer.dll
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 2 Sept 2016_Final\VibExchange\bin\Microsoft.Web.Infrastructure.dll
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 2 Sept 2016_Final\VibExchange\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 2 Sept 2016_Final\VibExchange\bin\Microsoft.Web.WebPages.OAuth.dll
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 2 Sept 2016_Final\VibExchange\bin\Newtonsoft.Json.dll
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 2 Sept 2016_Final\VibExchange\bin\System.Net.Http.Extensions.dll
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 2 Sept 2016_Final\VibExchange\bin\System.Net.Http.Formatting.dll
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 2 Sept 2016_Final\VibExchange\bin\System.Net.Http.Primitives.dll
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 2 Sept 2016_Final\VibExchange\bin\System.Web.Helpers.dll
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 2 Sept 2016_Final\VibExchange\bin\System.Web.Http.dll
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 2 Sept 2016_Final\VibExchange\bin\System.Web.Http.WebHost.dll
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 2 Sept 2016_Final\VibExchange\bin\System.Web.Mvc.dll
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 2 Sept 2016_Final\VibExchange\bin\System.Web.Providers.dll
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 2 Sept 2016_Final\VibExchange\bin\System.Web.Razor.dll
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 2 Sept 2016_Final\VibExchange\bin\System.Web.WebPages.Deployment.dll
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 2 Sept 2016_Final\VibExchange\bin\System.Web.WebPages.dll
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 2 Sept 2016_Final\VibExchange\bin\System.Web.WebPages.Razor.dll
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 2 Sept 2016_Final\VibExchange\bin\WebGrease.dll
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 2 Sept 2016_Final\VibExchange\bin\WebMatrix.Data.dll
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 2 Sept 2016_Final\VibExchange\bin\WebMatrix.WebData.dll
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 2 Sept 2016_Final\VibExchange\bin\Antlr3.Runtime.pdb
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 2 Sept 2016_Final\VibExchange\bin\EntityFramework.xml
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 2 Sept 2016_Final\VibExchange\bin\EntityFramework.SqlServer.xml
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 2 Sept 2016_Final\VibExchange\bin\Microsoft.Web.WebPages.OAuth.xml
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 2 Sept 2016_Final\VibExchange\bin\Newtonsoft.Json.xml
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 2 Sept 2016_Final\VibExchange\bin\System.Net.Http.Extensions.xml
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 2 Sept 2016_Final\VibExchange\bin\System.Net.Http.Primitives.xml
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 2 Sept 2016_Final\VibExchange\bin\System.Web.Providers.xml
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 2 Sept 2016_Final\VibExchange\bin\System.Net.Http.Formatting.xml
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 2 Sept 2016_Final\VibExchange\bin\System.Web.Helpers.xml
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 2 Sept 2016_Final\VibExchange\bin\System.Web.Http.xml
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 2 Sept 2016_Final\VibExchange\bin\System.Web.Http.WebHost.xml
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 2 Sept 2016_Final\VibExchange\bin\System.Web.Mvc.xml
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 2 Sept 2016_Final\VibExchange\bin\System.Web.Razor.xml
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 2 Sept 2016_Final\VibExchange\bin\System.Web.WebPages.xml
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 2 Sept 2016_Final\VibExchange\bin\System.Web.WebPages.Deployment.xml
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 2 Sept 2016_Final\VibExchange\bin\System.Web.WebPages.Razor.xml
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 2 Sept 2016_Final\VibExchange\bin\WebMatrix.Data.xml
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 2 Sept 2016_Final\VibExchange\bin\WebMatrix.WebData.xml
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 2 Sept 2016_Final\VibExchange\obj\Debug\VibExchange.csproj.App.config
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 2 Sept 2016_Final\VibExchange\obj\Debug\VibExchange.csprojResolveAssemblyReference.cache
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 2 Sept 2016_Final\VibExchange\obj\Debug\VibExchange.dll
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 2 Sept 2016_Final\VibExchange\obj\Debug\VibExchange.pdb
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 3 Sept 2016_Final\VibExchange\bin\VibExchange.dll.config
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 3 Sept 2016_Final\VibExchange\bin\VibExchange.dll
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 3 Sept 2016_Final\VibExchange\bin\VibExchange.pdb
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 3 Sept 2016_Final\VibExchange\bin\Antlr3.Runtime.dll
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 3 Sept 2016_Final\VibExchange\bin\EntityFramework.dll
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 3 Sept 2016_Final\VibExchange\bin\EntityFramework.SqlServer.dll
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 3 Sept 2016_Final\VibExchange\bin\Microsoft.Web.Infrastructure.dll
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 3 Sept 2016_Final\VibExchange\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 3 Sept 2016_Final\VibExchange\bin\Microsoft.Web.WebPages.OAuth.dll
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 3 Sept 2016_Final\VibExchange\bin\Newtonsoft.Json.dll
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 3 Sept 2016_Final\VibExchange\bin\System.Net.Http.Extensions.dll
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 3 Sept 2016_Final\VibExchange\bin\System.Net.Http.Formatting.dll
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 3 Sept 2016_Final\VibExchange\bin\System.Net.Http.Primitives.dll
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 3 Sept 2016_Final\VibExchange\bin\System.Web.Helpers.dll
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 3 Sept 2016_Final\VibExchange\bin\System.Web.Http.dll
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 3 Sept 2016_Final\VibExchange\bin\System.Web.Http.WebHost.dll
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 3 Sept 2016_Final\VibExchange\bin\System.Web.Mvc.dll
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 3 Sept 2016_Final\VibExchange\bin\System.Web.Providers.dll
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 3 Sept 2016_Final\VibExchange\bin\System.Web.Razor.dll
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 3 Sept 2016_Final\VibExchange\bin\System.Web.WebPages.Deployment.dll
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 3 Sept 2016_Final\VibExchange\bin\System.Web.WebPages.dll
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 3 Sept 2016_Final\VibExchange\bin\System.Web.WebPages.Razor.dll
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 3 Sept 2016_Final\VibExchange\bin\WebGrease.dll
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 3 Sept 2016_Final\VibExchange\bin\WebMatrix.Data.dll
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 3 Sept 2016_Final\VibExchange\bin\WebMatrix.WebData.dll
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 3 Sept 2016_Final\VibExchange\bin\Antlr3.Runtime.pdb
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 3 Sept 2016_Final\VibExchange\bin\EntityFramework.xml
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 3 Sept 2016_Final\VibExchange\bin\EntityFramework.SqlServer.xml
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 3 Sept 2016_Final\VibExchange\bin\Microsoft.Web.WebPages.OAuth.xml
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 3 Sept 2016_Final\VibExchange\bin\Newtonsoft.Json.xml
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 3 Sept 2016_Final\VibExchange\bin\System.Net.Http.Extensions.xml
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 3 Sept 2016_Final\VibExchange\bin\System.Net.Http.Primitives.xml
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 3 Sept 2016_Final\VibExchange\bin\System.Web.Providers.xml
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 3 Sept 2016_Final\VibExchange\bin\System.Net.Http.Formatting.xml
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 3 Sept 2016_Final\VibExchange\bin\System.Web.Helpers.xml
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 3 Sept 2016_Final\VibExchange\bin\System.Web.Http.xml
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 3 Sept 2016_Final\VibExchange\bin\System.Web.Http.WebHost.xml
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 3 Sept 2016_Final\VibExchange\bin\System.Web.Mvc.xml
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 3 Sept 2016_Final\VibExchange\bin\System.Web.Razor.xml
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 3 Sept 2016_Final\VibExchange\bin\System.Web.WebPages.xml
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 3 Sept 2016_Final\VibExchange\bin\System.Web.WebPages.Deployment.xml
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 3 Sept 2016_Final\VibExchange\bin\System.Web.WebPages.Razor.xml
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 3 Sept 2016_Final\VibExchange\bin\WebMatrix.Data.xml
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 3 Sept 2016_Final\VibExchange\bin\WebMatrix.WebData.xml
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 3 Sept 2016_Final\VibExchange\obj\Debug\VibExchange.csproj.App.config
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 3 Sept 2016_Final\VibExchange\obj\Debug\VibExchange.dll
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 3 Sept 2016_Final\VibExchange\obj\Debug\VibExchange.pdb
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 3 Sept 2016_Final\VibExchange\obj\Debug\VibExchange.csprojResolveAssemblyReference.cache
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 3 Sept 2016_Final - Copy\VibExchange\bin\VibExchange.dll.config
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 3 Sept 2016_Final - Copy\VibExchange\bin\VibExchange.dll
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 3 Sept 2016_Final - Copy\VibExchange\bin\VibExchange.pdb
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 3 Sept 2016_Final - Copy\VibExchange\bin\Antlr3.Runtime.dll
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 3 Sept 2016_Final - Copy\VibExchange\bin\EntityFramework.dll
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 3 Sept 2016_Final - Copy\VibExchange\bin\EntityFramework.SqlServer.dll
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 3 Sept 2016_Final - Copy\VibExchange\bin\Microsoft.Web.Infrastructure.dll
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 3 Sept 2016_Final - Copy\VibExchange\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 3 Sept 2016_Final - Copy\VibExchange\bin\Microsoft.Web.WebPages.OAuth.dll
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 3 Sept 2016_Final - Copy\VibExchange\bin\Newtonsoft.Json.dll
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 3 Sept 2016_Final - Copy\VibExchange\bin\System.Net.Http.Extensions.dll
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 3 Sept 2016_Final - Copy\VibExchange\bin\System.Net.Http.Formatting.dll
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 3 Sept 2016_Final - Copy\VibExchange\bin\System.Net.Http.Primitives.dll
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 3 Sept 2016_Final - Copy\VibExchange\bin\System.Web.Helpers.dll
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 3 Sept 2016_Final - Copy\VibExchange\bin\System.Web.Http.dll
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 3 Sept 2016_Final - Copy\VibExchange\bin\System.Web.Http.WebHost.dll
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 3 Sept 2016_Final - Copy\VibExchange\bin\System.Web.Mvc.dll
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 3 Sept 2016_Final - Copy\VibExchange\bin\System.Web.Providers.dll
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 3 Sept 2016_Final - Copy\VibExchange\bin\System.Web.Razor.dll
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 3 Sept 2016_Final - Copy\VibExchange\bin\System.Web.WebPages.Deployment.dll
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 3 Sept 2016_Final - Copy\VibExchange\bin\System.Web.WebPages.dll
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 3 Sept 2016_Final - Copy\VibExchange\bin\System.Web.WebPages.Razor.dll
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 3 Sept 2016_Final - Copy\VibExchange\bin\WebGrease.dll
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 3 Sept 2016_Final - Copy\VibExchange\bin\WebMatrix.Data.dll
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 3 Sept 2016_Final - Copy\VibExchange\bin\WebMatrix.WebData.dll
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 3 Sept 2016_Final - Copy\VibExchange\bin\Antlr3.Runtime.pdb
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 3 Sept 2016_Final - Copy\VibExchange\bin\EntityFramework.xml
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 3 Sept 2016_Final - Copy\VibExchange\bin\EntityFramework.SqlServer.xml
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 3 Sept 2016_Final - Copy\VibExchange\bin\Microsoft.Web.WebPages.OAuth.xml
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 3 Sept 2016_Final - Copy\VibExchange\bin\Newtonsoft.Json.xml
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 3 Sept 2016_Final - Copy\VibExchange\bin\System.Net.Http.Extensions.xml
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 3 Sept 2016_Final - Copy\VibExchange\bin\System.Net.Http.Primitives.xml
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 3 Sept 2016_Final - Copy\VibExchange\bin\System.Web.Providers.xml
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 3 Sept 2016_Final - Copy\VibExchange\bin\System.Net.Http.Formatting.xml
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 3 Sept 2016_Final - Copy\VibExchange\bin\System.Web.Helpers.xml
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 3 Sept 2016_Final - Copy\VibExchange\bin\System.Web.Http.xml
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 3 Sept 2016_Final - Copy\VibExchange\bin\System.Web.Http.WebHost.xml
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 3 Sept 2016_Final - Copy\VibExchange\bin\System.Web.Mvc.xml
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 3 Sept 2016_Final - Copy\VibExchange\bin\System.Web.Razor.xml
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 3 Sept 2016_Final - Copy\VibExchange\bin\System.Web.WebPages.xml
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 3 Sept 2016_Final - Copy\VibExchange\bin\System.Web.WebPages.Deployment.xml
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 3 Sept 2016_Final - Copy\VibExchange\bin\System.Web.WebPages.Razor.xml
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 3 Sept 2016_Final - Copy\VibExchange\bin\WebMatrix.Data.xml
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 3 Sept 2016_Final - Copy\VibExchange\bin\WebMatrix.WebData.xml
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 3 Sept 2016_Final - Copy\VibExchange\obj\Debug\VibExchange.csproj.App.config
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 3 Sept 2016_Final - Copy\VibExchange\obj\Debug\VibExchange.csprojResolveAssemblyReference.cache
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 3 Sept 2016_Final - Copy\VibExchange\obj\Debug\VibExchange.dll
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 3 Sept 2016_Final - Copy\VibExchange\obj\Debug\VibExchange.pdb
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 17 Sept 2016_Final\VibExchange\bin\VibExchange.dll.config
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 17 Sept 2016_Final\VibExchange\bin\VibExchange.dll
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 17 Sept 2016_Final\VibExchange\bin\VibExchange.pdb
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 17 Sept 2016_Final\VibExchange\bin\Antlr3.Runtime.dll
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 17 Sept 2016_Final\VibExchange\bin\EntityFramework.dll
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 17 Sept 2016_Final\VibExchange\bin\EntityFramework.SqlServer.dll
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 17 Sept 2016_Final\VibExchange\bin\Microsoft.Web.Infrastructure.dll
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 17 Sept 2016_Final\VibExchange\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 17 Sept 2016_Final\VibExchange\bin\Microsoft.Web.WebPages.OAuth.dll
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 17 Sept 2016_Final\VibExchange\bin\Newtonsoft.Json.dll
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 17 Sept 2016_Final\VibExchange\bin\System.Net.Http.Extensions.dll
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 17 Sept 2016_Final\VibExchange\bin\System.Net.Http.Formatting.dll
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 17 Sept 2016_Final\VibExchange\bin\System.Net.Http.Primitives.dll
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 17 Sept 2016_Final\VibExchange\bin\System.Web.Helpers.dll
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 17 Sept 2016_Final\VibExchange\bin\System.Web.Http.dll
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 17 Sept 2016_Final\VibExchange\bin\System.Web.Http.WebHost.dll
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 17 Sept 2016_Final\VibExchange\bin\System.Web.Mvc.dll
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 17 Sept 2016_Final\VibExchange\bin\System.Web.Providers.dll
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 17 Sept 2016_Final\VibExchange\bin\System.Web.Razor.dll
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 17 Sept 2016_Final\VibExchange\bin\System.Web.WebPages.Deployment.dll
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 17 Sept 2016_Final\VibExchange\bin\System.Web.WebPages.dll
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 17 Sept 2016_Final\VibExchange\bin\System.Web.WebPages.Razor.dll
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 17 Sept 2016_Final\VibExchange\bin\WebGrease.dll
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 17 Sept 2016_Final\VibExchange\bin\WebMatrix.Data.dll
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 17 Sept 2016_Final\VibExchange\bin\WebMatrix.WebData.dll
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 17 Sept 2016_Final\VibExchange\bin\Antlr3.Runtime.pdb
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 17 Sept 2016_Final\VibExchange\bin\EntityFramework.xml
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 17 Sept 2016_Final\VibExchange\bin\EntityFramework.SqlServer.xml
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 17 Sept 2016_Final\VibExchange\bin\Microsoft.Web.WebPages.OAuth.xml
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 17 Sept 2016_Final\VibExchange\bin\Newtonsoft.Json.xml
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 17 Sept 2016_Final\VibExchange\bin\System.Net.Http.Extensions.xml
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 17 Sept 2016_Final\VibExchange\bin\System.Net.Http.Primitives.xml
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 17 Sept 2016_Final\VibExchange\bin\System.Web.Providers.xml
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 17 Sept 2016_Final\VibExchange\bin\System.Net.Http.Formatting.xml
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 17 Sept 2016_Final\VibExchange\bin\System.Web.Helpers.xml
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 17 Sept 2016_Final\VibExchange\bin\System.Web.Http.xml
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 17 Sept 2016_Final\VibExchange\bin\System.Web.Http.WebHost.xml
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 17 Sept 2016_Final\VibExchange\bin\System.Web.Mvc.xml
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 17 Sept 2016_Final\VibExchange\bin\System.Web.Razor.xml
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 17 Sept 2016_Final\VibExchange\bin\System.Web.WebPages.xml
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 17 Sept 2016_Final\VibExchange\bin\System.Web.WebPages.Deployment.xml
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 17 Sept 2016_Final\VibExchange\bin\System.Web.WebPages.Razor.xml
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 17 Sept 2016_Final\VibExchange\bin\WebMatrix.Data.xml
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 17 Sept 2016_Final\VibExchange\bin\WebMatrix.WebData.xml
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 17 Sept 2016_Final\VibExchange\obj\Debug\VibExchange.csproj.App.config
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 17 Sept 2016_Final\VibExchange\obj\Debug\VibExchange.csprojResolveAssemblyReference.cache
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 17 Sept 2016_Final\VibExchange\obj\Debug\VibExchange.dll
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 17 Sept 2016_Final\VibExchange\obj\Debug\VibExchange.pdb
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 30 Sept 2016_Final\VibExchange\bin\VibExchange.dll.config
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 30 Sept 2016_Final\VibExchange\bin\VibExchange.dll
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 30 Sept 2016_Final\VibExchange\bin\VibExchange.pdb
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 30 Sept 2016_Final\VibExchange\bin\Antlr3.Runtime.dll
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 30 Sept 2016_Final\VibExchange\bin\EntityFramework.dll
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 30 Sept 2016_Final\VibExchange\bin\EntityFramework.SqlServer.dll
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 30 Sept 2016_Final\VibExchange\bin\Microsoft.Web.Infrastructure.dll
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 30 Sept 2016_Final\VibExchange\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 30 Sept 2016_Final\VibExchange\bin\Microsoft.Web.WebPages.OAuth.dll
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 30 Sept 2016_Final\VibExchange\bin\Newtonsoft.Json.dll
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 30 Sept 2016_Final\VibExchange\bin\System.Net.Http.Extensions.dll
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 30 Sept 2016_Final\VibExchange\bin\System.Net.Http.Formatting.dll
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 30 Sept 2016_Final\VibExchange\bin\System.Net.Http.Primitives.dll
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 30 Sept 2016_Final\VibExchange\bin\System.Web.Helpers.dll
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 30 Sept 2016_Final\VibExchange\bin\System.Web.Http.dll
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 30 Sept 2016_Final\VibExchange\bin\System.Web.Http.WebHost.dll
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 30 Sept 2016_Final\VibExchange\bin\System.Web.Mvc.dll
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 30 Sept 2016_Final\VibExchange\bin\System.Web.Providers.dll
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 30 Sept 2016_Final\VibExchange\bin\System.Web.Razor.dll
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 30 Sept 2016_Final\VibExchange\bin\System.Web.WebPages.Deployment.dll
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 30 Sept 2016_Final\VibExchange\bin\System.Web.WebPages.dll
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 30 Sept 2016_Final\VibExchange\bin\System.Web.WebPages.Razor.dll
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 30 Sept 2016_Final\VibExchange\bin\WebGrease.dll
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 30 Sept 2016_Final\VibExchange\bin\WebMatrix.Data.dll
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 30 Sept 2016_Final\VibExchange\bin\WebMatrix.WebData.dll
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 30 Sept 2016_Final\VibExchange\bin\Antlr3.Runtime.pdb
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 30 Sept 2016_Final\VibExchange\bin\EntityFramework.xml
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 30 Sept 2016_Final\VibExchange\bin\EntityFramework.SqlServer.xml
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 30 Sept 2016_Final\VibExchange\bin\Microsoft.Web.WebPages.OAuth.xml
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 30 Sept 2016_Final\VibExchange\bin\Newtonsoft.Json.xml
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 30 Sept 2016_Final\VibExchange\bin\System.Net.Http.Extensions.xml
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 30 Sept 2016_Final\VibExchange\bin\System.Net.Http.Primitives.xml
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 30 Sept 2016_Final\VibExchange\bin\System.Web.Providers.xml
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 30 Sept 2016_Final\VibExchange\bin\System.Net.Http.Formatting.xml
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 30 Sept 2016_Final\VibExchange\bin\System.Web.Helpers.xml
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 30 Sept 2016_Final\VibExchange\bin\System.Web.Http.xml
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 30 Sept 2016_Final\VibExchange\bin\System.Web.Http.WebHost.xml
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 30 Sept 2016_Final\VibExchange\bin\System.Web.Mvc.xml
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 30 Sept 2016_Final\VibExchange\bin\System.Web.Razor.xml
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 30 Sept 2016_Final\VibExchange\bin\System.Web.WebPages.xml
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 30 Sept 2016_Final\VibExchange\bin\System.Web.WebPages.Deployment.xml
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 30 Sept 2016_Final\VibExchange\bin\System.Web.WebPages.Razor.xml
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 30 Sept 2016_Final\VibExchange\bin\WebMatrix.Data.xml
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 30 Sept 2016_Final\VibExchange\bin\WebMatrix.WebData.xml
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 30 Sept 2016_Final\VibExchange\obj\Debug\VibExchange.csproj.App.config
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 30 Sept 2016_Final\VibExchange\obj\Debug\VibExchange.csprojResolveAssemblyReference.cache
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 30 Sept 2016_Final\VibExchange\obj\Debug\VibExchange.dll
+D:\Backup\VibExchange Backup\Sept 2016\VibExchange 30 Sept 2016_Final\VibExchange\obj\Debug\VibExchange.pdb
+D:\Backup\VibExchange Backup\Oct 2016\VibExchange 3 Oct 2016_Final\VibExchange\obj\Debug\VibExchange.csproj.App.config
+D:\Backup\VibExchange Backup\Oct 2016\VibExchange 3 Oct 2016_Final\VibExchange\obj\Debug\VibExchange.csprojResolveAssemblyReference.cache
+D:\Backup\VibExchange Backup\Oct 2016\VibExchange 3 Oct 2016_Final\VibExchange\obj\Debug\VibExchange.dll
+D:\Backup\VibExchange Backup\Oct 2016\VibExchange 3 Oct 2016_Final\VibExchange\obj\Debug\VibExchange.pdb
+D:\Backup\VibExchange Backup\Oct 2016\VibExchange 3 Oct 2016_Final\VibExchange\bin\VibExchange.dll.config
+D:\Backup\VibExchange Backup\Oct 2016\VibExchange 3 Oct 2016_Final\VibExchange\bin\VibExchange.dll
+D:\Backup\VibExchange Backup\Oct 2016\VibExchange 3 Oct 2016_Final\VibExchange\bin\VibExchange.pdb
+D:\Backup\VibExchange Backup\Oct 2016\VibExchange 3 Oct 2016_Final\VibExchange\bin\Antlr3.Runtime.dll
+D:\Backup\VibExchange Backup\Oct 2016\VibExchange 3 Oct 2016_Final\VibExchange\bin\EntityFramework.dll
+D:\Backup\VibExchange Backup\Oct 2016\VibExchange 3 Oct 2016_Final\VibExchange\bin\EntityFramework.SqlServer.dll
+D:\Backup\VibExchange Backup\Oct 2016\VibExchange 3 Oct 2016_Final\VibExchange\bin\Microsoft.Web.Infrastructure.dll
+D:\Backup\VibExchange Backup\Oct 2016\VibExchange 3 Oct 2016_Final\VibExchange\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+D:\Backup\VibExchange Backup\Oct 2016\VibExchange 3 Oct 2016_Final\VibExchange\bin\Microsoft.Web.WebPages.OAuth.dll
+D:\Backup\VibExchange Backup\Oct 2016\VibExchange 3 Oct 2016_Final\VibExchange\bin\Newtonsoft.Json.dll
+D:\Backup\VibExchange Backup\Oct 2016\VibExchange 3 Oct 2016_Final\VibExchange\bin\System.Net.Http.Extensions.dll
+D:\Backup\VibExchange Backup\Oct 2016\VibExchange 3 Oct 2016_Final\VibExchange\bin\System.Net.Http.Formatting.dll
+D:\Backup\VibExchange Backup\Oct 2016\VibExchange 3 Oct 2016_Final\VibExchange\bin\System.Net.Http.Primitives.dll
+D:\Backup\VibExchange Backup\Oct 2016\VibExchange 3 Oct 2016_Final\VibExchange\bin\System.Web.Helpers.dll
+D:\Backup\VibExchange Backup\Oct 2016\VibExchange 3 Oct 2016_Final\VibExchange\bin\System.Web.Http.dll
+D:\Backup\VibExchange Backup\Oct 2016\VibExchange 3 Oct 2016_Final\VibExchange\bin\System.Web.Http.WebHost.dll
+D:\Backup\VibExchange Backup\Oct 2016\VibExchange 3 Oct 2016_Final\VibExchange\bin\System.Web.Mvc.dll
+D:\Backup\VibExchange Backup\Oct 2016\VibExchange 3 Oct 2016_Final\VibExchange\bin\System.Web.Providers.dll
+D:\Backup\VibExchange Backup\Oct 2016\VibExchange 3 Oct 2016_Final\VibExchange\bin\System.Web.Razor.dll
+D:\Backup\VibExchange Backup\Oct 2016\VibExchange 3 Oct 2016_Final\VibExchange\bin\System.Web.WebPages.Deployment.dll
+D:\Backup\VibExchange Backup\Oct 2016\VibExchange 3 Oct 2016_Final\VibExchange\bin\System.Web.WebPages.dll
+D:\Backup\VibExchange Backup\Oct 2016\VibExchange 3 Oct 2016_Final\VibExchange\bin\System.Web.WebPages.Razor.dll
+D:\Backup\VibExchange Backup\Oct 2016\VibExchange 3 Oct 2016_Final\VibExchange\bin\WebGrease.dll
+D:\Backup\VibExchange Backup\Oct 2016\VibExchange 3 Oct 2016_Final\VibExchange\bin\WebMatrix.Data.dll
+D:\Backup\VibExchange Backup\Oct 2016\VibExchange 3 Oct 2016_Final\VibExchange\bin\WebMatrix.WebData.dll
+D:\Backup\VibExchange Backup\Oct 2016\VibExchange 3 Oct 2016_Final\VibExchange\bin\Antlr3.Runtime.pdb
+D:\Backup\VibExchange Backup\Oct 2016\VibExchange 3 Oct 2016_Final\VibExchange\bin\EntityFramework.xml
+D:\Backup\VibExchange Backup\Oct 2016\VibExchange 3 Oct 2016_Final\VibExchange\bin\EntityFramework.SqlServer.xml
+D:\Backup\VibExchange Backup\Oct 2016\VibExchange 3 Oct 2016_Final\VibExchange\bin\Microsoft.Web.WebPages.OAuth.xml
+D:\Backup\VibExchange Backup\Oct 2016\VibExchange 3 Oct 2016_Final\VibExchange\bin\Newtonsoft.Json.xml
+D:\Backup\VibExchange Backup\Oct 2016\VibExchange 3 Oct 2016_Final\VibExchange\bin\System.Net.Http.Extensions.xml
+D:\Backup\VibExchange Backup\Oct 2016\VibExchange 3 Oct 2016_Final\VibExchange\bin\System.Net.Http.Primitives.xml
+D:\Backup\VibExchange Backup\Oct 2016\VibExchange 3 Oct 2016_Final\VibExchange\bin\System.Web.Providers.xml
+D:\Backup\VibExchange Backup\Oct 2016\VibExchange 3 Oct 2016_Final\VibExchange\bin\System.Net.Http.Formatting.xml
+D:\Backup\VibExchange Backup\Oct 2016\VibExchange 3 Oct 2016_Final\VibExchange\bin\System.Web.Helpers.xml
+D:\Backup\VibExchange Backup\Oct 2016\VibExchange 3 Oct 2016_Final\VibExchange\bin\System.Web.Http.xml
+D:\Backup\VibExchange Backup\Oct 2016\VibExchange 3 Oct 2016_Final\VibExchange\bin\System.Web.Http.WebHost.xml
+D:\Backup\VibExchange Backup\Oct 2016\VibExchange 3 Oct 2016_Final\VibExchange\bin\System.Web.Mvc.xml
+D:\Backup\VibExchange Backup\Oct 2016\VibExchange 3 Oct 2016_Final\VibExchange\bin\System.Web.Razor.xml
+D:\Backup\VibExchange Backup\Oct 2016\VibExchange 3 Oct 2016_Final\VibExchange\bin\System.Web.WebPages.xml
+D:\Backup\VibExchange Backup\Oct 2016\VibExchange 3 Oct 2016_Final\VibExchange\bin\System.Web.WebPages.Deployment.xml
+D:\Backup\VibExchange Backup\Oct 2016\VibExchange 3 Oct 2016_Final\VibExchange\bin\System.Web.WebPages.Razor.xml
+D:\Backup\VibExchange Backup\Oct 2016\VibExchange 3 Oct 2016_Final\VibExchange\bin\WebMatrix.Data.xml
+D:\Backup\VibExchange Backup\Oct 2016\VibExchange 3 Oct 2016_Final\VibExchange\bin\WebMatrix.WebData.xml
+D:\Backup\VibExchange Backup\Oct 2016\VibExchange 13 Oct 2016_Final\VibExchange\bin\VibExchange.dll.config
+D:\Backup\VibExchange Backup\Oct 2016\VibExchange 13 Oct 2016_Final\VibExchange\bin\VibExchange.dll
+D:\Backup\VibExchange Backup\Oct 2016\VibExchange 13 Oct 2016_Final\VibExchange\bin\VibExchange.pdb
+D:\Backup\VibExchange Backup\Oct 2016\VibExchange 13 Oct 2016_Final\VibExchange\bin\Antlr3.Runtime.dll
+D:\Backup\VibExchange Backup\Oct 2016\VibExchange 13 Oct 2016_Final\VibExchange\bin\EntityFramework.dll
+D:\Backup\VibExchange Backup\Oct 2016\VibExchange 13 Oct 2016_Final\VibExchange\bin\EntityFramework.SqlServer.dll
+D:\Backup\VibExchange Backup\Oct 2016\VibExchange 13 Oct 2016_Final\VibExchange\bin\Microsoft.Web.Infrastructure.dll
+D:\Backup\VibExchange Backup\Oct 2016\VibExchange 13 Oct 2016_Final\VibExchange\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+D:\Backup\VibExchange Backup\Oct 2016\VibExchange 13 Oct 2016_Final\VibExchange\bin\Microsoft.Web.WebPages.OAuth.dll
+D:\Backup\VibExchange Backup\Oct 2016\VibExchange 13 Oct 2016_Final\VibExchange\bin\Newtonsoft.Json.dll
+D:\Backup\VibExchange Backup\Oct 2016\VibExchange 13 Oct 2016_Final\VibExchange\bin\System.Net.Http.Extensions.dll
+D:\Backup\VibExchange Backup\Oct 2016\VibExchange 13 Oct 2016_Final\VibExchange\bin\System.Net.Http.Formatting.dll
+D:\Backup\VibExchange Backup\Oct 2016\VibExchange 13 Oct 2016_Final\VibExchange\bin\System.Net.Http.Primitives.dll
+D:\Backup\VibExchange Backup\Oct 2016\VibExchange 13 Oct 2016_Final\VibExchange\bin\System.Web.Helpers.dll
+D:\Backup\VibExchange Backup\Oct 2016\VibExchange 13 Oct 2016_Final\VibExchange\bin\System.Web.Http.dll
+D:\Backup\VibExchange Backup\Oct 2016\VibExchange 13 Oct 2016_Final\VibExchange\bin\System.Web.Http.WebHost.dll
+D:\Backup\VibExchange Backup\Oct 2016\VibExchange 13 Oct 2016_Final\VibExchange\bin\System.Web.Mvc.dll
+D:\Backup\VibExchange Backup\Oct 2016\VibExchange 13 Oct 2016_Final\VibExchange\bin\System.Web.Providers.dll
+D:\Backup\VibExchange Backup\Oct 2016\VibExchange 13 Oct 2016_Final\VibExchange\bin\System.Web.Razor.dll
+D:\Backup\VibExchange Backup\Oct 2016\VibExchange 13 Oct 2016_Final\VibExchange\bin\System.Web.WebPages.Deployment.dll
+D:\Backup\VibExchange Backup\Oct 2016\VibExchange 13 Oct 2016_Final\VibExchange\bin\System.Web.WebPages.dll
+D:\Backup\VibExchange Backup\Oct 2016\VibExchange 13 Oct 2016_Final\VibExchange\bin\System.Web.WebPages.Razor.dll
+D:\Backup\VibExchange Backup\Oct 2016\VibExchange 13 Oct 2016_Final\VibExchange\bin\WebGrease.dll
+D:\Backup\VibExchange Backup\Oct 2016\VibExchange 13 Oct 2016_Final\VibExchange\bin\WebMatrix.Data.dll
+D:\Backup\VibExchange Backup\Oct 2016\VibExchange 13 Oct 2016_Final\VibExchange\bin\WebMatrix.WebData.dll
+D:\Backup\VibExchange Backup\Oct 2016\VibExchange 13 Oct 2016_Final\VibExchange\bin\Antlr3.Runtime.pdb
+D:\Backup\VibExchange Backup\Oct 2016\VibExchange 13 Oct 2016_Final\VibExchange\bin\EntityFramework.xml
+D:\Backup\VibExchange Backup\Oct 2016\VibExchange 13 Oct 2016_Final\VibExchange\bin\EntityFramework.SqlServer.xml
+D:\Backup\VibExchange Backup\Oct 2016\VibExchange 13 Oct 2016_Final\VibExchange\bin\Microsoft.Web.WebPages.OAuth.xml
+D:\Backup\VibExchange Backup\Oct 2016\VibExchange 13 Oct 2016_Final\VibExchange\bin\Newtonsoft.Json.xml
+D:\Backup\VibExchange Backup\Oct 2016\VibExchange 13 Oct 2016_Final\VibExchange\bin\System.Net.Http.Extensions.xml
+D:\Backup\VibExchange Backup\Oct 2016\VibExchange 13 Oct 2016_Final\VibExchange\bin\System.Net.Http.Primitives.xml
+D:\Backup\VibExchange Backup\Oct 2016\VibExchange 13 Oct 2016_Final\VibExchange\bin\System.Web.Providers.xml
+D:\Backup\VibExchange Backup\Oct 2016\VibExchange 13 Oct 2016_Final\VibExchange\bin\System.Net.Http.Formatting.xml
+D:\Backup\VibExchange Backup\Oct 2016\VibExchange 13 Oct 2016_Final\VibExchange\bin\System.Web.Helpers.xml
+D:\Backup\VibExchange Backup\Oct 2016\VibExchange 13 Oct 2016_Final\VibExchange\bin\System.Web.Http.xml
+D:\Backup\VibExchange Backup\Oct 2016\VibExchange 13 Oct 2016_Final\VibExchange\bin\System.Web.Http.WebHost.xml
+D:\Backup\VibExchange Backup\Oct 2016\VibExchange 13 Oct 2016_Final\VibExchange\bin\System.Web.Mvc.xml
+D:\Backup\VibExchange Backup\Oct 2016\VibExchange 13 Oct 2016_Final\VibExchange\bin\System.Web.Razor.xml
+D:\Backup\VibExchange Backup\Oct 2016\VibExchange 13 Oct 2016_Final\VibExchange\bin\System.Web.WebPages.xml
+D:\Backup\VibExchange Backup\Oct 2016\VibExchange 13 Oct 2016_Final\VibExchange\bin\System.Web.WebPages.Deployment.xml
+D:\Backup\VibExchange Backup\Oct 2016\VibExchange 13 Oct 2016_Final\VibExchange\bin\System.Web.WebPages.Razor.xml
+D:\Backup\VibExchange Backup\Oct 2016\VibExchange 13 Oct 2016_Final\VibExchange\bin\WebMatrix.Data.xml
+D:\Backup\VibExchange Backup\Oct 2016\VibExchange 13 Oct 2016_Final\VibExchange\bin\WebMatrix.WebData.xml
+D:\Backup\VibExchange Backup\Oct 2016\VibExchange 13 Oct 2016_Final\VibExchange\obj\Debug\VibExchange.csproj.App.config
+D:\Backup\VibExchange Backup\Oct 2016\VibExchange 13 Oct 2016_Final\VibExchange\obj\Debug\VibExchange.csprojResolveAssemblyReference.cache
+D:\Backup\VibExchange Backup\Oct 2016\VibExchange 13 Oct 2016_Final\VibExchange\obj\Debug\VibExchange.dll
+D:\Backup\VibExchange Backup\Oct 2016\VibExchange 13 Oct 2016_Final\VibExchange\obj\Debug\VibExchange.pdb
+D:\Backup\VibExchange Backup\Oct 2016\VibExchange 18 Oct 2016_Final\VibExchange\bin\VibExchange.dll.config
+D:\Backup\VibExchange Backup\Oct 2016\VibExchange 18 Oct 2016_Final\VibExchange\bin\VibExchange.dll
+D:\Backup\VibExchange Backup\Oct 2016\VibExchange 18 Oct 2016_Final\VibExchange\bin\VibExchange.pdb
+D:\Backup\VibExchange Backup\Oct 2016\VibExchange 18 Oct 2016_Final\VibExchange\bin\Antlr3.Runtime.dll
+D:\Backup\VibExchange Backup\Oct 2016\VibExchange 18 Oct 2016_Final\VibExchange\bin\EntityFramework.dll
+D:\Backup\VibExchange Backup\Oct 2016\VibExchange 18 Oct 2016_Final\VibExchange\bin\EntityFramework.SqlServer.dll
+D:\Backup\VibExchange Backup\Oct 2016\VibExchange 18 Oct 2016_Final\VibExchange\bin\Microsoft.Web.Infrastructure.dll
+D:\Backup\VibExchange Backup\Oct 2016\VibExchange 18 Oct 2016_Final\VibExchange\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+D:\Backup\VibExchange Backup\Oct 2016\VibExchange 18 Oct 2016_Final\VibExchange\bin\Microsoft.Web.WebPages.OAuth.dll
+D:\Backup\VibExchange Backup\Oct 2016\VibExchange 18 Oct 2016_Final\VibExchange\bin\Newtonsoft.Json.dll
+D:\Backup\VibExchange Backup\Oct 2016\VibExchange 18 Oct 2016_Final\VibExchange\bin\System.Net.Http.Extensions.dll
+D:\Backup\VibExchange Backup\Oct 2016\VibExchange 18 Oct 2016_Final\VibExchange\bin\System.Net.Http.Formatting.dll
+D:\Backup\VibExchange Backup\Oct 2016\VibExchange 18 Oct 2016_Final\VibExchange\bin\System.Net.Http.Primitives.dll
+D:\Backup\VibExchange Backup\Oct 2016\VibExchange 18 Oct 2016_Final\VibExchange\bin\System.Web.Helpers.dll
+D:\Backup\VibExchange Backup\Oct 2016\VibExchange 18 Oct 2016_Final\VibExchange\bin\System.Web.Http.dll
+D:\Backup\VibExchange Backup\Oct 2016\VibExchange 18 Oct 2016_Final\VibExchange\bin\System.Web.Http.WebHost.dll
+D:\Backup\VibExchange Backup\Oct 2016\VibExchange 18 Oct 2016_Final\VibExchange\bin\System.Web.Mvc.dll
+D:\Backup\VibExchange Backup\Oct 2016\VibExchange 18 Oct 2016_Final\VibExchange\bin\System.Web.Providers.dll
+D:\Backup\VibExchange Backup\Oct 2016\VibExchange 18 Oct 2016_Final\VibExchange\bin\System.Web.Razor.dll
+D:\Backup\VibExchange Backup\Oct 2016\VibExchange 18 Oct 2016_Final\VibExchange\bin\System.Web.WebPages.Deployment.dll
+D:\Backup\VibExchange Backup\Oct 2016\VibExchange 18 Oct 2016_Final\VibExchange\bin\System.Web.WebPages.dll
+D:\Backup\VibExchange Backup\Oct 2016\VibExchange 18 Oct 2016_Final\VibExchange\bin\System.Web.WebPages.Razor.dll
+D:\Backup\VibExchange Backup\Oct 2016\VibExchange 18 Oct 2016_Final\VibExchange\bin\WebGrease.dll
+D:\Backup\VibExchange Backup\Oct 2016\VibExchange 18 Oct 2016_Final\VibExchange\bin\WebMatrix.Data.dll
+D:\Backup\VibExchange Backup\Oct 2016\VibExchange 18 Oct 2016_Final\VibExchange\bin\WebMatrix.WebData.dll
+D:\Backup\VibExchange Backup\Oct 2016\VibExchange 18 Oct 2016_Final\VibExchange\bin\Antlr3.Runtime.pdb
+D:\Backup\VibExchange Backup\Oct 2016\VibExchange 18 Oct 2016_Final\VibExchange\bin\EntityFramework.xml
+D:\Backup\VibExchange Backup\Oct 2016\VibExchange 18 Oct 2016_Final\VibExchange\bin\EntityFramework.SqlServer.xml
+D:\Backup\VibExchange Backup\Oct 2016\VibExchange 18 Oct 2016_Final\VibExchange\bin\Microsoft.Web.WebPages.OAuth.xml
+D:\Backup\VibExchange Backup\Oct 2016\VibExchange 18 Oct 2016_Final\VibExchange\bin\Newtonsoft.Json.xml
+D:\Backup\VibExchange Backup\Oct 2016\VibExchange 18 Oct 2016_Final\VibExchange\bin\System.Net.Http.Extensions.xml
+D:\Backup\VibExchange Backup\Oct 2016\VibExchange 18 Oct 2016_Final\VibExchange\bin\System.Net.Http.Primitives.xml
+D:\Backup\VibExchange Backup\Oct 2016\VibExchange 18 Oct 2016_Final\VibExchange\bin\System.Web.Providers.xml
+D:\Backup\VibExchange Backup\Oct 2016\VibExchange 18 Oct 2016_Final\VibExchange\bin\System.Net.Http.Formatting.xml
+D:\Backup\VibExchange Backup\Oct 2016\VibExchange 18 Oct 2016_Final\VibExchange\bin\System.Web.Helpers.xml
+D:\Backup\VibExchange Backup\Oct 2016\VibExchange 18 Oct 2016_Final\VibExchange\bin\System.Web.Http.xml
+D:\Backup\VibExchange Backup\Oct 2016\VibExchange 18 Oct 2016_Final\VibExchange\bin\System.Web.Http.WebHost.xml
+D:\Backup\VibExchange Backup\Oct 2016\VibExchange 18 Oct 2016_Final\VibExchange\bin\System.Web.Mvc.xml
+D:\Backup\VibExchange Backup\Oct 2016\VibExchange 18 Oct 2016_Final\VibExchange\bin\System.Web.Razor.xml
+D:\Backup\VibExchange Backup\Oct 2016\VibExchange 18 Oct 2016_Final\VibExchange\bin\System.Web.WebPages.xml
+D:\Backup\VibExchange Backup\Oct 2016\VibExchange 18 Oct 2016_Final\VibExchange\bin\System.Web.WebPages.Deployment.xml
+D:\Backup\VibExchange Backup\Oct 2016\VibExchange 18 Oct 2016_Final\VibExchange\bin\System.Web.WebPages.Razor.xml
+D:\Backup\VibExchange Backup\Oct 2016\VibExchange 18 Oct 2016_Final\VibExchange\bin\WebMatrix.Data.xml
+D:\Backup\VibExchange Backup\Oct 2016\VibExchange 18 Oct 2016_Final\VibExchange\bin\WebMatrix.WebData.xml
+D:\Backup\VibExchange Backup\Oct 2016\VibExchange 18 Oct 2016_Final\VibExchange\obj\Debug\VibExchange.csproj.App.config
+D:\Backup\VibExchange Backup\Oct 2016\VibExchange 18 Oct 2016_Final\VibExchange\obj\Debug\VibExchange.csprojResolveAssemblyReference.cache
+D:\Backup\VibExchange Backup\Oct 2016\VibExchange 18 Oct 2016_Final\VibExchange\obj\Debug\VibExchange.dll
+D:\Backup\VibExchange Backup\Oct 2016\VibExchange 18 Oct 2016_Final\VibExchange\obj\Debug\VibExchange.pdb
+D:\Backup\VibExchange Backup\Oct 2016\VibExchange 24 Oct 2016_Final\VibExchange\bin\VibExchange.dll.config
+D:\Backup\VibExchange Backup\Oct 2016\VibExchange 24 Oct 2016_Final\VibExchange\bin\VibExchange.dll
+D:\Backup\VibExchange Backup\Oct 2016\VibExchange 24 Oct 2016_Final\VibExchange\bin\VibExchange.pdb
+D:\Backup\VibExchange Backup\Oct 2016\VibExchange 24 Oct 2016_Final\VibExchange\bin\Antlr3.Runtime.dll
+D:\Backup\VibExchange Backup\Oct 2016\VibExchange 24 Oct 2016_Final\VibExchange\bin\EntityFramework.dll
+D:\Backup\VibExchange Backup\Oct 2016\VibExchange 24 Oct 2016_Final\VibExchange\bin\EntityFramework.SqlServer.dll
+D:\Backup\VibExchange Backup\Oct 2016\VibExchange 24 Oct 2016_Final\VibExchange\bin\Microsoft.Web.Infrastructure.dll
+D:\Backup\VibExchange Backup\Oct 2016\VibExchange 24 Oct 2016_Final\VibExchange\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+D:\Backup\VibExchange Backup\Oct 2016\VibExchange 24 Oct 2016_Final\VibExchange\bin\Microsoft.Web.WebPages.OAuth.dll
+D:\Backup\VibExchange Backup\Oct 2016\VibExchange 24 Oct 2016_Final\VibExchange\bin\Newtonsoft.Json.dll
+D:\Backup\VibExchange Backup\Oct 2016\VibExchange 24 Oct 2016_Final\VibExchange\bin\System.Net.Http.Extensions.dll
+D:\Backup\VibExchange Backup\Oct 2016\VibExchange 24 Oct 2016_Final\VibExchange\bin\System.Net.Http.Formatting.dll
+D:\Backup\VibExchange Backup\Oct 2016\VibExchange 24 Oct 2016_Final\VibExchange\bin\System.Net.Http.Primitives.dll
+D:\Backup\VibExchange Backup\Oct 2016\VibExchange 24 Oct 2016_Final\VibExchange\bin\System.Web.Helpers.dll
+D:\Backup\VibExchange Backup\Oct 2016\VibExchange 24 Oct 2016_Final\VibExchange\bin\System.Web.Http.dll
+D:\Backup\VibExchange Backup\Oct 2016\VibExchange 24 Oct 2016_Final\VibExchange\bin\System.Web.Http.WebHost.dll
+D:\Backup\VibExchange Backup\Oct 2016\VibExchange 24 Oct 2016_Final\VibExchange\bin\System.Web.Mvc.dll
+D:\Backup\VibExchange Backup\Oct 2016\VibExchange 24 Oct 2016_Final\VibExchange\bin\System.Web.Providers.dll
+D:\Backup\VibExchange Backup\Oct 2016\VibExchange 24 Oct 2016_Final\VibExchange\bin\System.Web.Razor.dll
+D:\Backup\VibExchange Backup\Oct 2016\VibExchange 24 Oct 2016_Final\VibExchange\bin\System.Web.WebPages.Deployment.dll
+D:\Backup\VibExchange Backup\Oct 2016\VibExchange 24 Oct 2016_Final\VibExchange\bin\System.Web.WebPages.dll
+D:\Backup\VibExchange Backup\Oct 2016\VibExchange 24 Oct 2016_Final\VibExchange\bin\System.Web.WebPages.Razor.dll
+D:\Backup\VibExchange Backup\Oct 2016\VibExchange 24 Oct 2016_Final\VibExchange\bin\WebGrease.dll
+D:\Backup\VibExchange Backup\Oct 2016\VibExchange 24 Oct 2016_Final\VibExchange\bin\WebMatrix.Data.dll
+D:\Backup\VibExchange Backup\Oct 2016\VibExchange 24 Oct 2016_Final\VibExchange\bin\WebMatrix.WebData.dll
+D:\Backup\VibExchange Backup\Oct 2016\VibExchange 24 Oct 2016_Final\VibExchange\bin\Antlr3.Runtime.pdb
+D:\Backup\VibExchange Backup\Oct 2016\VibExchange 24 Oct 2016_Final\VibExchange\bin\EntityFramework.xml
+D:\Backup\VibExchange Backup\Oct 2016\VibExchange 24 Oct 2016_Final\VibExchange\bin\EntityFramework.SqlServer.xml
+D:\Backup\VibExchange Backup\Oct 2016\VibExchange 24 Oct 2016_Final\VibExchange\bin\Microsoft.Web.WebPages.OAuth.xml
+D:\Backup\VibExchange Backup\Oct 2016\VibExchange 24 Oct 2016_Final\VibExchange\bin\Newtonsoft.Json.xml
+D:\Backup\VibExchange Backup\Oct 2016\VibExchange 24 Oct 2016_Final\VibExchange\bin\System.Net.Http.Extensions.xml
+D:\Backup\VibExchange Backup\Oct 2016\VibExchange 24 Oct 2016_Final\VibExchange\bin\System.Net.Http.Primitives.xml
+D:\Backup\VibExchange Backup\Oct 2016\VibExchange 24 Oct 2016_Final\VibExchange\bin\System.Web.Providers.xml
+D:\Backup\VibExchange Backup\Oct 2016\VibExchange 24 Oct 2016_Final\VibExchange\bin\System.Net.Http.Formatting.xml
+D:\Backup\VibExchange Backup\Oct 2016\VibExchange 24 Oct 2016_Final\VibExchange\bin\System.Web.Helpers.xml
+D:\Backup\VibExchange Backup\Oct 2016\VibExchange 24 Oct 2016_Final\VibExchange\bin\System.Web.Http.xml
+D:\Backup\VibExchange Backup\Oct 2016\VibExchange 24 Oct 2016_Final\VibExchange\bin\System.Web.Http.WebHost.xml
+D:\Backup\VibExchange Backup\Oct 2016\VibExchange 24 Oct 2016_Final\VibExchange\bin\System.Web.Mvc.xml
+D:\Backup\VibExchange Backup\Oct 2016\VibExchange 24 Oct 2016_Final\VibExchange\bin\System.Web.Razor.xml
+D:\Backup\VibExchange Backup\Oct 2016\VibExchange 24 Oct 2016_Final\VibExchange\bin\System.Web.WebPages.xml
+D:\Backup\VibExchange Backup\Oct 2016\VibExchange 24 Oct 2016_Final\VibExchange\bin\System.Web.WebPages.Deployment.xml
+D:\Backup\VibExchange Backup\Oct 2016\VibExchange 24 Oct 2016_Final\VibExchange\bin\System.Web.WebPages.Razor.xml
+D:\Backup\VibExchange Backup\Oct 2016\VibExchange 24 Oct 2016_Final\VibExchange\bin\WebMatrix.Data.xml
+D:\Backup\VibExchange Backup\Oct 2016\VibExchange 24 Oct 2016_Final\VibExchange\bin\WebMatrix.WebData.xml
+D:\Backup\VibExchange Backup\Oct 2016\VibExchange 24 Oct 2016_Final\VibExchange\obj\Debug\VibExchange.csproj.App.config
+D:\Backup\VibExchange Backup\Oct 2016\VibExchange 24 Oct 2016_Final\VibExchange\obj\Debug\VibExchange.csprojResolveAssemblyReference.cache
+D:\Backup\VibExchange Backup\Oct 2016\VibExchange 24 Oct 2016_Final\VibExchange\obj\Debug\VibExchange.dll
+D:\Backup\VibExchange Backup\Oct 2016\VibExchange 24 Oct 2016_Final\VibExchange\obj\Debug\VibExchange.pdb
+D:\All Backup\VibExchange Backup\Oct 2016\VibExchange 24 Oct 2016_Final\VibExchange\bin\VibExchange.dll.config
+D:\All Backup\VibExchange Backup\Oct 2016\VibExchange 24 Oct 2016_Final\VibExchange\bin\VibExchange.dll
+D:\All Backup\VibExchange Backup\Oct 2016\VibExchange 24 Oct 2016_Final\VibExchange\bin\VibExchange.pdb
+D:\All Backup\VibExchange Backup\Oct 2016\VibExchange 24 Oct 2016_Final\VibExchange\bin\Antlr3.Runtime.dll
+D:\All Backup\VibExchange Backup\Oct 2016\VibExchange 24 Oct 2016_Final\VibExchange\bin\EntityFramework.dll
+D:\All Backup\VibExchange Backup\Oct 2016\VibExchange 24 Oct 2016_Final\VibExchange\bin\EntityFramework.SqlServer.dll
+D:\All Backup\VibExchange Backup\Oct 2016\VibExchange 24 Oct 2016_Final\VibExchange\bin\Microsoft.Web.Infrastructure.dll
+D:\All Backup\VibExchange Backup\Oct 2016\VibExchange 24 Oct 2016_Final\VibExchange\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+D:\All Backup\VibExchange Backup\Oct 2016\VibExchange 24 Oct 2016_Final\VibExchange\bin\Microsoft.Web.WebPages.OAuth.dll
+D:\All Backup\VibExchange Backup\Oct 2016\VibExchange 24 Oct 2016_Final\VibExchange\bin\Newtonsoft.Json.dll
+D:\All Backup\VibExchange Backup\Oct 2016\VibExchange 24 Oct 2016_Final\VibExchange\bin\System.Net.Http.Extensions.dll
+D:\All Backup\VibExchange Backup\Oct 2016\VibExchange 24 Oct 2016_Final\VibExchange\bin\System.Net.Http.Formatting.dll
+D:\All Backup\VibExchange Backup\Oct 2016\VibExchange 24 Oct 2016_Final\VibExchange\bin\System.Net.Http.Primitives.dll
+D:\All Backup\VibExchange Backup\Oct 2016\VibExchange 24 Oct 2016_Final\VibExchange\bin\System.Web.Helpers.dll
+D:\All Backup\VibExchange Backup\Oct 2016\VibExchange 24 Oct 2016_Final\VibExchange\bin\System.Web.Http.dll
+D:\All Backup\VibExchange Backup\Oct 2016\VibExchange 24 Oct 2016_Final\VibExchange\bin\System.Web.Http.WebHost.dll
+D:\All Backup\VibExchange Backup\Oct 2016\VibExchange 24 Oct 2016_Final\VibExchange\bin\System.Web.Mvc.dll
+D:\All Backup\VibExchange Backup\Oct 2016\VibExchange 24 Oct 2016_Final\VibExchange\bin\System.Web.Providers.dll
+D:\All Backup\VibExchange Backup\Oct 2016\VibExchange 24 Oct 2016_Final\VibExchange\bin\System.Web.Razor.dll
+D:\All Backup\VibExchange Backup\Oct 2016\VibExchange 24 Oct 2016_Final\VibExchange\bin\System.Web.WebPages.Deployment.dll
+D:\All Backup\VibExchange Backup\Oct 2016\VibExchange 24 Oct 2016_Final\VibExchange\bin\System.Web.WebPages.dll
+D:\All Backup\VibExchange Backup\Oct 2016\VibExchange 24 Oct 2016_Final\VibExchange\bin\System.Web.WebPages.Razor.dll
+D:\All Backup\VibExchange Backup\Oct 2016\VibExchange 24 Oct 2016_Final\VibExchange\bin\WebGrease.dll
+D:\All Backup\VibExchange Backup\Oct 2016\VibExchange 24 Oct 2016_Final\VibExchange\bin\WebMatrix.Data.dll
+D:\All Backup\VibExchange Backup\Oct 2016\VibExchange 24 Oct 2016_Final\VibExchange\bin\WebMatrix.WebData.dll
+D:\All Backup\VibExchange Backup\Oct 2016\VibExchange 24 Oct 2016_Final\VibExchange\bin\Antlr3.Runtime.pdb
+D:\All Backup\VibExchange Backup\Oct 2016\VibExchange 24 Oct 2016_Final\VibExchange\bin\EntityFramework.xml
+D:\All Backup\VibExchange Backup\Oct 2016\VibExchange 24 Oct 2016_Final\VibExchange\bin\EntityFramework.SqlServer.xml
+D:\All Backup\VibExchange Backup\Oct 2016\VibExchange 24 Oct 2016_Final\VibExchange\bin\Microsoft.Web.WebPages.OAuth.xml
+D:\All Backup\VibExchange Backup\Oct 2016\VibExchange 24 Oct 2016_Final\VibExchange\bin\Newtonsoft.Json.xml
+D:\All Backup\VibExchange Backup\Oct 2016\VibExchange 24 Oct 2016_Final\VibExchange\bin\System.Net.Http.Extensions.xml
+D:\All Backup\VibExchange Backup\Oct 2016\VibExchange 24 Oct 2016_Final\VibExchange\bin\System.Net.Http.Primitives.xml
+D:\All Backup\VibExchange Backup\Oct 2016\VibExchange 24 Oct 2016_Final\VibExchange\bin\System.Web.Providers.xml
+D:\All Backup\VibExchange Backup\Oct 2016\VibExchange 24 Oct 2016_Final\VibExchange\bin\System.Net.Http.Formatting.xml
+D:\All Backup\VibExchange Backup\Oct 2016\VibExchange 24 Oct 2016_Final\VibExchange\bin\System.Web.Helpers.xml
+D:\All Backup\VibExchange Backup\Oct 2016\VibExchange 24 Oct 2016_Final\VibExchange\bin\System.Web.Http.xml
+D:\All Backup\VibExchange Backup\Oct 2016\VibExchange 24 Oct 2016_Final\VibExchange\bin\System.Web.Http.WebHost.xml
+D:\All Backup\VibExchange Backup\Oct 2016\VibExchange 24 Oct 2016_Final\VibExchange\bin\System.Web.Mvc.xml
+D:\All Backup\VibExchange Backup\Oct 2016\VibExchange 24 Oct 2016_Final\VibExchange\bin\System.Web.Razor.xml
+D:\All Backup\VibExchange Backup\Oct 2016\VibExchange 24 Oct 2016_Final\VibExchange\bin\System.Web.WebPages.xml
+D:\All Backup\VibExchange Backup\Oct 2016\VibExchange 24 Oct 2016_Final\VibExchange\bin\System.Web.WebPages.Deployment.xml
+D:\All Backup\VibExchange Backup\Oct 2016\VibExchange 24 Oct 2016_Final\VibExchange\bin\System.Web.WebPages.Razor.xml
+D:\All Backup\VibExchange Backup\Oct 2016\VibExchange 24 Oct 2016_Final\VibExchange\bin\WebMatrix.Data.xml
+D:\All Backup\VibExchange Backup\Oct 2016\VibExchange 24 Oct 2016_Final\VibExchange\bin\WebMatrix.WebData.xml
+D:\All Backup\VibExchange Backup\Oct 2016\VibExchange 24 Oct 2016_Final\VibExchange\obj\Debug\VibExchange.csproj.App.config
+D:\All Backup\VibExchange Backup\Oct 2016\VibExchange 24 Oct 2016_Final\VibExchange\obj\Debug\VibExchange.csprojResolveAssemblyReference.cache
+D:\All Backup\VibExchange Backup\Oct 2016\VibExchange 24 Oct 2016_Final\VibExchange\obj\Debug\VibExchange.dll
+D:\All Backup\VibExchange Backup\Oct 2016\VibExchange 24 Oct 2016_Final\VibExchange\obj\Debug\VibExchange.pdb
+G:\sarita\VibExchange 24 Oct 2016_Final\VibExchange\bin\VibExchange.dll.config
+G:\sarita\VibExchange 24 Oct 2016_Final\VibExchange\bin\VibExchange.dll
+G:\sarita\VibExchange 24 Oct 2016_Final\VibExchange\bin\VibExchange.pdb
+G:\sarita\VibExchange 24 Oct 2016_Final\VibExchange\bin\Antlr3.Runtime.dll
+G:\sarita\VibExchange 24 Oct 2016_Final\VibExchange\bin\EntityFramework.dll
+G:\sarita\VibExchange 24 Oct 2016_Final\VibExchange\bin\EntityFramework.SqlServer.dll
+G:\sarita\VibExchange 24 Oct 2016_Final\VibExchange\bin\Microsoft.Web.Infrastructure.dll
+G:\sarita\VibExchange 24 Oct 2016_Final\VibExchange\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+G:\sarita\VibExchange 24 Oct 2016_Final\VibExchange\bin\Microsoft.Web.WebPages.OAuth.dll
+G:\sarita\VibExchange 24 Oct 2016_Final\VibExchange\bin\Newtonsoft.Json.dll
+G:\sarita\VibExchange 24 Oct 2016_Final\VibExchange\bin\System.Net.Http.Extensions.dll
+G:\sarita\VibExchange 24 Oct 2016_Final\VibExchange\bin\System.Net.Http.Formatting.dll
+G:\sarita\VibExchange 24 Oct 2016_Final\VibExchange\bin\System.Net.Http.Primitives.dll
+G:\sarita\VibExchange 24 Oct 2016_Final\VibExchange\bin\System.Web.Helpers.dll
+G:\sarita\VibExchange 24 Oct 2016_Final\VibExchange\bin\System.Web.Http.dll
+G:\sarita\VibExchange 24 Oct 2016_Final\VibExchange\bin\System.Web.Http.WebHost.dll
+G:\sarita\VibExchange 24 Oct 2016_Final\VibExchange\bin\System.Web.Mvc.dll
+G:\sarita\VibExchange 24 Oct 2016_Final\VibExchange\bin\System.Web.Providers.dll
+G:\sarita\VibExchange 24 Oct 2016_Final\VibExchange\bin\System.Web.Razor.dll
+G:\sarita\VibExchange 24 Oct 2016_Final\VibExchange\bin\System.Web.WebPages.Deployment.dll
+G:\sarita\VibExchange 24 Oct 2016_Final\VibExchange\bin\System.Web.WebPages.dll
+G:\sarita\VibExchange 24 Oct 2016_Final\VibExchange\bin\System.Web.WebPages.Razor.dll
+G:\sarita\VibExchange 24 Oct 2016_Final\VibExchange\bin\WebGrease.dll
+G:\sarita\VibExchange 24 Oct 2016_Final\VibExchange\bin\WebMatrix.Data.dll
+G:\sarita\VibExchange 24 Oct 2016_Final\VibExchange\bin\WebMatrix.WebData.dll
+G:\sarita\VibExchange 24 Oct 2016_Final\VibExchange\bin\Antlr3.Runtime.pdb
+G:\sarita\VibExchange 24 Oct 2016_Final\VibExchange\bin\EntityFramework.xml
+G:\sarita\VibExchange 24 Oct 2016_Final\VibExchange\bin\EntityFramework.SqlServer.xml
+G:\sarita\VibExchange 24 Oct 2016_Final\VibExchange\bin\Microsoft.Web.WebPages.OAuth.xml
+G:\sarita\VibExchange 24 Oct 2016_Final\VibExchange\bin\Newtonsoft.Json.xml
+G:\sarita\VibExchange 24 Oct 2016_Final\VibExchange\bin\System.Net.Http.Extensions.xml
+G:\sarita\VibExchange 24 Oct 2016_Final\VibExchange\bin\System.Net.Http.Primitives.xml
+G:\sarita\VibExchange 24 Oct 2016_Final\VibExchange\bin\System.Web.Providers.xml
+G:\sarita\VibExchange 24 Oct 2016_Final\VibExchange\bin\System.Net.Http.Formatting.xml
+G:\sarita\VibExchange 24 Oct 2016_Final\VibExchange\bin\System.Web.Helpers.xml
+G:\sarita\VibExchange 24 Oct 2016_Final\VibExchange\bin\System.Web.Http.xml
+G:\sarita\VibExchange 24 Oct 2016_Final\VibExchange\bin\System.Web.Http.WebHost.xml
+G:\sarita\VibExchange 24 Oct 2016_Final\VibExchange\bin\System.Web.Mvc.xml
+G:\sarita\VibExchange 24 Oct 2016_Final\VibExchange\bin\System.Web.Razor.xml
+G:\sarita\VibExchange 24 Oct 2016_Final\VibExchange\bin\System.Web.WebPages.xml
+G:\sarita\VibExchange 24 Oct 2016_Final\VibExchange\bin\System.Web.WebPages.Deployment.xml
+G:\sarita\VibExchange 24 Oct 2016_Final\VibExchange\bin\System.Web.WebPages.Razor.xml
+G:\sarita\VibExchange 24 Oct 2016_Final\VibExchange\bin\WebMatrix.Data.xml
+G:\sarita\VibExchange 24 Oct 2016_Final\VibExchange\bin\WebMatrix.WebData.xml
+G:\sarita\VibExchange 24 Oct 2016_Final\VibExchange\obj\Debug\VibExchange.csproj.App.config
+G:\sarita\VibExchange 24 Oct 2016_Final\VibExchange\obj\Debug\VibExchange.csprojResolveAssemblyReference.cache
+G:\sarita\VibExchange 24 Oct 2016_Final\VibExchange\obj\Debug\VibExchange.dll
+G:\sarita\VibExchange 24 Oct 2016_Final\VibExchange\obj\Debug\VibExchange.pdb
+C:\Users\vimal\Desktop\VibExchange 24 Oct 2016_Final\VibExchange\bin\VibExchange.dll.config
+C:\Users\vimal\Desktop\VibExchange 24 Oct 2016_Final\VibExchange\bin\VibExchange.dll
+C:\Users\vimal\Desktop\VibExchange 24 Oct 2016_Final\VibExchange\bin\VibExchange.pdb
+C:\Users\vimal\Desktop\VibExchange 24 Oct 2016_Final\VibExchange\bin\Antlr3.Runtime.dll
+C:\Users\vimal\Desktop\VibExchange 24 Oct 2016_Final\VibExchange\bin\EntityFramework.dll
+C:\Users\vimal\Desktop\VibExchange 24 Oct 2016_Final\VibExchange\bin\EntityFramework.SqlServer.dll
+C:\Users\vimal\Desktop\VibExchange 24 Oct 2016_Final\VibExchange\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\vimal\Desktop\VibExchange 24 Oct 2016_Final\VibExchange\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+C:\Users\vimal\Desktop\VibExchange 24 Oct 2016_Final\VibExchange\bin\Microsoft.Web.WebPages.OAuth.dll
+C:\Users\vimal\Desktop\VibExchange 24 Oct 2016_Final\VibExchange\bin\Newtonsoft.Json.dll
+C:\Users\vimal\Desktop\VibExchange 24 Oct 2016_Final\VibExchange\bin\System.Net.Http.Extensions.dll
+C:\Users\vimal\Desktop\VibExchange 24 Oct 2016_Final\VibExchange\bin\System.Net.Http.Formatting.dll
+C:\Users\vimal\Desktop\VibExchange 24 Oct 2016_Final\VibExchange\bin\System.Net.Http.Primitives.dll
+C:\Users\vimal\Desktop\VibExchange 24 Oct 2016_Final\VibExchange\bin\System.Web.Helpers.dll
+C:\Users\vimal\Desktop\VibExchange 24 Oct 2016_Final\VibExchange\bin\System.Web.Http.dll
+C:\Users\vimal\Desktop\VibExchange 24 Oct 2016_Final\VibExchange\bin\System.Web.Http.WebHost.dll
+C:\Users\vimal\Desktop\VibExchange 24 Oct 2016_Final\VibExchange\bin\System.Web.Mvc.dll
+C:\Users\vimal\Desktop\VibExchange 24 Oct 2016_Final\VibExchange\bin\System.Web.Providers.dll
+C:\Users\vimal\Desktop\VibExchange 24 Oct 2016_Final\VibExchange\bin\System.Web.Razor.dll
+C:\Users\vimal\Desktop\VibExchange 24 Oct 2016_Final\VibExchange\bin\System.Web.WebPages.Deployment.dll
+C:\Users\vimal\Desktop\VibExchange 24 Oct 2016_Final\VibExchange\bin\System.Web.WebPages.dll
+C:\Users\vimal\Desktop\VibExchange 24 Oct 2016_Final\VibExchange\bin\System.Web.WebPages.Razor.dll
+C:\Users\vimal\Desktop\VibExchange 24 Oct 2016_Final\VibExchange\bin\WebGrease.dll
+C:\Users\vimal\Desktop\VibExchange 24 Oct 2016_Final\VibExchange\bin\WebMatrix.Data.dll
+C:\Users\vimal\Desktop\VibExchange 24 Oct 2016_Final\VibExchange\bin\WebMatrix.WebData.dll
+C:\Users\vimal\Desktop\VibExchange 24 Oct 2016_Final\VibExchange\bin\Antlr3.Runtime.pdb
+C:\Users\vimal\Desktop\VibExchange 24 Oct 2016_Final\VibExchange\bin\EntityFramework.xml
+C:\Users\vimal\Desktop\VibExchange 24 Oct 2016_Final\VibExchange\bin\EntityFramework.SqlServer.xml
+C:\Users\vimal\Desktop\VibExchange 24 Oct 2016_Final\VibExchange\bin\Microsoft.Web.WebPages.OAuth.xml
+C:\Users\vimal\Desktop\VibExchange 24 Oct 2016_Final\VibExchange\bin\Newtonsoft.Json.xml
+C:\Users\vimal\Desktop\VibExchange 24 Oct 2016_Final\VibExchange\bin\System.Net.Http.Extensions.xml
+C:\Users\vimal\Desktop\VibExchange 24 Oct 2016_Final\VibExchange\bin\System.Net.Http.Primitives.xml
+C:\Users\vimal\Desktop\VibExchange 24 Oct 2016_Final\VibExchange\bin\System.Web.Providers.xml
+C:\Users\vimal\Desktop\VibExchange 24 Oct 2016_Final\VibExchange\bin\System.Net.Http.Formatting.xml
+C:\Users\vimal\Desktop\VibExchange 24 Oct 2016_Final\VibExchange\bin\System.Web.Helpers.xml
+C:\Users\vimal\Desktop\VibExchange 24 Oct 2016_Final\VibExchange\bin\System.Web.Http.xml
+C:\Users\vimal\Desktop\VibExchange 24 Oct 2016_Final\VibExchange\bin\System.Web.Http.WebHost.xml
+C:\Users\vimal\Desktop\VibExchange 24 Oct 2016_Final\VibExchange\bin\System.Web.Mvc.xml
+C:\Users\vimal\Desktop\VibExchange 24 Oct 2016_Final\VibExchange\bin\System.Web.Razor.xml
+C:\Users\vimal\Desktop\VibExchange 24 Oct 2016_Final\VibExchange\bin\System.Web.WebPages.xml
+C:\Users\vimal\Desktop\VibExchange 24 Oct 2016_Final\VibExchange\bin\System.Web.WebPages.Deployment.xml
+C:\Users\vimal\Desktop\VibExchange 24 Oct 2016_Final\VibExchange\bin\System.Web.WebPages.Razor.xml
+C:\Users\vimal\Desktop\VibExchange 24 Oct 2016_Final\VibExchange\bin\WebMatrix.Data.xml
+C:\Users\vimal\Desktop\VibExchange 24 Oct 2016_Final\VibExchange\bin\WebMatrix.WebData.xml
+C:\Users\vimal\Desktop\VibExchange 24 Oct 2016_Final\VibExchange\obj\Debug\VibExchange.csproj.App.config
+C:\Users\vimal\Desktop\VibExchange 24 Oct 2016_Final\VibExchange\obj\Debug\VibExchange.csprojResolveAssemblyReference.cache
+C:\Users\vimal\Desktop\VibExchange 24 Oct 2016_Final\VibExchange\obj\Debug\VibExchange.dll
+C:\Users\vimal\Desktop\VibExchange 24 Oct 2016_Final\VibExchange\obj\Debug\VibExchange.pdb
+D:\All Backup\VibExchange Backup\June 2017\VibExchange 24 Oct 2016_Final\VibExchange\bin\VibExchange.dll.config
+D:\All Backup\VibExchange Backup\June 2017\VibExchange 24 Oct 2016_Final\VibExchange\bin\VibExchange.dll
+D:\All Backup\VibExchange Backup\June 2017\VibExchange 24 Oct 2016_Final\VibExchange\bin\VibExchange.pdb
+D:\All Backup\VibExchange Backup\June 2017\VibExchange 24 Oct 2016_Final\VibExchange\bin\Antlr3.Runtime.dll
+D:\All Backup\VibExchange Backup\June 2017\VibExchange 24 Oct 2016_Final\VibExchange\bin\EntityFramework.dll
+D:\All Backup\VibExchange Backup\June 2017\VibExchange 24 Oct 2016_Final\VibExchange\bin\EntityFramework.SqlServer.dll
+D:\All Backup\VibExchange Backup\June 2017\VibExchange 24 Oct 2016_Final\VibExchange\bin\Microsoft.Web.Infrastructure.dll
+D:\All Backup\VibExchange Backup\June 2017\VibExchange 24 Oct 2016_Final\VibExchange\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+D:\All Backup\VibExchange Backup\June 2017\VibExchange 24 Oct 2016_Final\VibExchange\bin\Microsoft.Web.WebPages.OAuth.dll
+D:\All Backup\VibExchange Backup\June 2017\VibExchange 24 Oct 2016_Final\VibExchange\bin\Newtonsoft.Json.dll
+D:\All Backup\VibExchange Backup\June 2017\VibExchange 24 Oct 2016_Final\VibExchange\bin\System.Net.Http.Extensions.dll
+D:\All Backup\VibExchange Backup\June 2017\VibExchange 24 Oct 2016_Final\VibExchange\bin\System.Net.Http.Primitives.dll
+D:\All Backup\VibExchange Backup\June 2017\VibExchange 24 Oct 2016_Final\VibExchange\bin\System.Web.Helpers.dll
+D:\All Backup\VibExchange Backup\June 2017\VibExchange 24 Oct 2016_Final\VibExchange\bin\System.Web.Mvc.dll
+D:\All Backup\VibExchange Backup\June 2017\VibExchange 24 Oct 2016_Final\VibExchange\bin\System.Web.Providers.dll
+D:\All Backup\VibExchange Backup\June 2017\VibExchange 24 Oct 2016_Final\VibExchange\bin\System.Web.Razor.dll
+D:\All Backup\VibExchange Backup\June 2017\VibExchange 24 Oct 2016_Final\VibExchange\bin\System.Web.WebPages.Deployment.dll
+D:\All Backup\VibExchange Backup\June 2017\VibExchange 24 Oct 2016_Final\VibExchange\bin\System.Web.WebPages.dll
+D:\All Backup\VibExchange Backup\June 2017\VibExchange 24 Oct 2016_Final\VibExchange\bin\System.Web.WebPages.Razor.dll
+D:\All Backup\VibExchange Backup\June 2017\VibExchange 24 Oct 2016_Final\VibExchange\bin\WebGrease.dll
+D:\All Backup\VibExchange Backup\June 2017\VibExchange 24 Oct 2016_Final\VibExchange\bin\WebMatrix.Data.dll
+D:\All Backup\VibExchange Backup\June 2017\VibExchange 24 Oct 2016_Final\VibExchange\bin\WebMatrix.WebData.dll
+D:\All Backup\VibExchange Backup\June 2017\VibExchange 24 Oct 2016_Final\VibExchange\bin\Antlr3.Runtime.pdb
+D:\All Backup\VibExchange Backup\June 2017\VibExchange 24 Oct 2016_Final\VibExchange\bin\EntityFramework.xml
+D:\All Backup\VibExchange Backup\June 2017\VibExchange 24 Oct 2016_Final\VibExchange\bin\EntityFramework.SqlServer.xml
+D:\All Backup\VibExchange Backup\June 2017\VibExchange 24 Oct 2016_Final\VibExchange\bin\Microsoft.Web.WebPages.OAuth.xml
+D:\All Backup\VibExchange Backup\June 2017\VibExchange 24 Oct 2016_Final\VibExchange\bin\Newtonsoft.Json.xml
+D:\All Backup\VibExchange Backup\June 2017\VibExchange 24 Oct 2016_Final\VibExchange\bin\System.Net.Http.Extensions.xml
+D:\All Backup\VibExchange Backup\June 2017\VibExchange 24 Oct 2016_Final\VibExchange\bin\System.Net.Http.Primitives.xml
+D:\All Backup\VibExchange Backup\June 2017\VibExchange 24 Oct 2016_Final\VibExchange\bin\System.Web.Providers.xml
+D:\All Backup\VibExchange Backup\June 2017\VibExchange 24 Oct 2016_Final\VibExchange\bin\System.Web.Helpers.xml
+D:\All Backup\VibExchange Backup\June 2017\VibExchange 24 Oct 2016_Final\VibExchange\bin\System.Web.Mvc.xml
+D:\All Backup\VibExchange Backup\June 2017\VibExchange 24 Oct 2016_Final\VibExchange\bin\System.Web.Razor.xml
+D:\All Backup\VibExchange Backup\June 2017\VibExchange 24 Oct 2016_Final\VibExchange\bin\System.Web.WebPages.xml
+D:\All Backup\VibExchange Backup\June 2017\VibExchange 24 Oct 2016_Final\VibExchange\bin\System.Web.WebPages.Deployment.xml
+D:\All Backup\VibExchange Backup\June 2017\VibExchange 24 Oct 2016_Final\VibExchange\bin\System.Web.WebPages.Razor.xml
+D:\All Backup\VibExchange Backup\June 2017\VibExchange 24 Oct 2016_Final\VibExchange\bin\WebMatrix.Data.xml
+D:\All Backup\VibExchange Backup\June 2017\VibExchange 24 Oct 2016_Final\VibExchange\bin\WebMatrix.WebData.xml
+D:\All Backup\VibExchange Backup\June 2017\VibExchange 24 Oct 2016_Final\VibExchange\obj\Debug\VibExchange.csproj.App.config
+D:\All Backup\VibExchange Backup\June 2017\VibExchange 24 Oct 2016_Final\VibExchange\obj\Debug\VibExchange.csprojResolveAssemblyReference.cache
+D:\All Backup\VibExchange Backup\June 2017\VibExchange 24 Oct 2016_Final\VibExchange\obj\Debug\VibExchange.dll
+D:\All Backup\VibExchange Backup\June 2017\VibExchange 24 Oct 2016_Final\VibExchange\obj\Debug\VibExchange.pdb
+C:\Users\vimal\Desktop\VibExchange 10 June 2017\VibExchange\bin\VibExchange.dll.config
+C:\Users\vimal\Desktop\VibExchange 10 June 2017\VibExchange\bin\VibExchange.dll
+C:\Users\vimal\Desktop\VibExchange 10 June 2017\VibExchange\bin\VibExchange.pdb
+C:\Users\vimal\Desktop\VibExchange 10 June 2017\VibExchange\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\vimal\Desktop\VibExchange 10 June 2017\VibExchange\bin\Microsoft.Web.WebPages.OAuth.dll
+C:\Users\vimal\Desktop\VibExchange 10 June 2017\VibExchange\bin\System.Web.Helpers.dll
+C:\Users\vimal\Desktop\VibExchange 10 June 2017\VibExchange\bin\System.Web.Razor.dll
+C:\Users\vimal\Desktop\VibExchange 10 June 2017\VibExchange\bin\System.Web.WebPages.Deployment.dll
+C:\Users\vimal\Desktop\VibExchange 10 June 2017\VibExchange\bin\System.Web.WebPages.dll
+C:\Users\vimal\Desktop\VibExchange 10 June 2017\VibExchange\bin\System.Web.WebPages.Razor.dll
+C:\Users\vimal\Desktop\VibExchange 10 June 2017\VibExchange\bin\WebMatrix.Data.dll
+C:\Users\vimal\Desktop\VibExchange 10 June 2017\VibExchange\bin\WebMatrix.WebData.dll
+C:\Users\vimal\Desktop\VibExchange 10 June 2017\VibExchange\bin\Antlr3.Runtime.pdb
+C:\Users\vimal\Desktop\VibExchange 10 June 2017\VibExchange\bin\EntityFramework.xml
+C:\Users\vimal\Desktop\VibExchange 10 June 2017\VibExchange\bin\EntityFramework.SqlServer.xml
+C:\Users\vimal\Desktop\VibExchange 10 June 2017\VibExchange\bin\Microsoft.Web.WebPages.OAuth.xml
+C:\Users\vimal\Desktop\VibExchange 10 June 2017\VibExchange\bin\Newtonsoft.Json.xml
+C:\Users\vimal\Desktop\VibExchange 10 June 2017\VibExchange\bin\System.Web.Providers.xml
+C:\Users\vimal\Desktop\VibExchange 10 June 2017\VibExchange\bin\System.Web.Helpers.xml
+C:\Users\vimal\Desktop\VibExchange 10 June 2017\VibExchange\bin\System.Web.Mvc.xml
+C:\Users\vimal\Desktop\VibExchange 10 June 2017\VibExchange\bin\System.Web.Razor.xml
+C:\Users\vimal\Desktop\VibExchange 10 June 2017\VibExchange\bin\System.Web.WebPages.xml
+C:\Users\vimal\Desktop\VibExchange 10 June 2017\VibExchange\bin\System.Web.WebPages.Deployment.xml
+C:\Users\vimal\Desktop\VibExchange 10 June 2017\VibExchange\bin\System.Web.WebPages.Razor.xml
+C:\Users\vimal\Desktop\VibExchange 10 June 2017\VibExchange\bin\WebMatrix.Data.xml
+C:\Users\vimal\Desktop\VibExchange 10 June 2017\VibExchange\bin\WebMatrix.WebData.xml
+C:\Users\vimal\Desktop\VibExchange 10 June 2017\VibExchange\obj\Debug\VibExchange.csprojResolveAssemblyReference.cache
+C:\Users\vimal\Desktop\VibExchange 10 June 2017\VibExchange\obj\Debug\VibExchange.dll
+C:\Users\vimal\Desktop\VibExchange 10 June 2017\VibExchange\obj\Debug\VibExchange.pdb
+C:\Users\vimal\Desktop\VibExchange 10 June 2017\VibExchange\bin\System.Net.Http.Formatting.xml
+C:\Users\vimal\Desktop\VibExchange 10 June 2017\VibExchange\bin\System.Web.Http.xml
+C:\Users\vimal\Desktop\VibExchange 10 June 2017\VibExchange\bin\System.Web.Http.WebHost.xml
+C:\Users\vimal\Desktop\VibExchange 10 June 2017\VibExchange\bin\RestSharp.xml
+D:\github\other__software\VibExchange\VibExchange 10 June 2017\VibExchange\bin\VibExchange.dll.config
+D:\github\other__software\VibExchange\VibExchange 10 June 2017\VibExchange\bin\VibExchange.dll
+D:\github\other__software\VibExchange\VibExchange 10 June 2017\VibExchange\bin\VibExchange.pdb
+D:\github\other__software\VibExchange\VibExchange 10 June 2017\VibExchange\bin\DotNetOpenAuth.AspNet.dll
+D:\github\other__software\VibExchange\VibExchange 10 June 2017\VibExchange\bin\DotNetOpenAuth.OAuth.Consumer.dll
+D:\github\other__software\VibExchange\VibExchange 10 June 2017\VibExchange\bin\DotNetOpenAuth.OpenId.dll
+D:\github\other__software\VibExchange\VibExchange 10 June 2017\VibExchange\bin\EntityFramework.dll
+D:\github\other__software\VibExchange\VibExchange 10 June 2017\VibExchange\bin\Microsoft.Web.Infrastructure.dll
+D:\github\other__software\VibExchange\VibExchange 10 June 2017\VibExchange\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+D:\github\other__software\VibExchange\VibExchange 10 June 2017\VibExchange\bin\Microsoft.Web.WebPages.OAuth.dll
+D:\github\other__software\VibExchange\VibExchange 10 June 2017\VibExchange\bin\Newtonsoft.Json.dll
+D:\github\other__software\VibExchange\VibExchange 10 June 2017\VibExchange\bin\RestSharp.dll
+D:\github\other__software\VibExchange\VibExchange 10 June 2017\VibExchange\bin\System.Web.Helpers.dll
+D:\github\other__software\VibExchange\VibExchange 10 June 2017\VibExchange\bin\System.Web.Http.dll
+D:\github\other__software\VibExchange\VibExchange 10 June 2017\VibExchange\bin\System.Web.Mvc.dll
+D:\github\other__software\VibExchange\VibExchange 10 June 2017\VibExchange\bin\System.Web.Optimization.dll
+D:\github\other__software\VibExchange\VibExchange 10 June 2017\VibExchange\bin\System.Web.Razor.dll
+D:\github\other__software\VibExchange\VibExchange 10 June 2017\VibExchange\bin\System.Web.WebPages.Deployment.dll
+D:\github\other__software\VibExchange\VibExchange 10 June 2017\VibExchange\bin\System.Web.WebPages.dll
+D:\github\other__software\VibExchange\VibExchange 10 June 2017\VibExchange\bin\System.Web.WebPages.Razor.dll
+D:\github\other__software\VibExchange\VibExchange 10 June 2017\VibExchange\bin\WebMatrix.Data.dll
+D:\github\other__software\VibExchange\VibExchange 10 June 2017\VibExchange\bin\WebMatrix.WebData.dll
+D:\github\other__software\VibExchange\VibExchange 10 June 2017\VibExchange\bin\DotNetOpenAuth.OAuth.dll
+D:\github\other__software\VibExchange\VibExchange 10 June 2017\VibExchange\bin\DotNetOpenAuth.Core.dll
+D:\github\other__software\VibExchange\VibExchange 10 June 2017\VibExchange\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
+D:\github\other__software\VibExchange\VibExchange 10 June 2017\VibExchange\bin\System.Net.Http.Formatting.dll
+D:\github\other__software\VibExchange\VibExchange 10 June 2017\VibExchange\bin\WebGrease.dll
+D:\github\other__software\VibExchange\VibExchange 10 June 2017\VibExchange\bin\Antlr3.Runtime.dll
+D:\github\other__software\VibExchange\VibExchange 10 June 2017\VibExchange\bin\EntityFramework.xml
+D:\github\other__software\VibExchange\VibExchange 10 June 2017\VibExchange\bin\Microsoft.Web.WebPages.OAuth.xml
+D:\github\other__software\VibExchange\VibExchange 10 June 2017\VibExchange\bin\Newtonsoft.Json.xml
+D:\github\other__software\VibExchange\VibExchange 10 June 2017\VibExchange\bin\RestSharp.xml
+D:\github\other__software\VibExchange\VibExchange 10 June 2017\VibExchange\bin\System.Web.Http.xml
+D:\github\other__software\VibExchange\VibExchange 10 June 2017\VibExchange\bin\System.Web.Mvc.xml
+D:\github\other__software\VibExchange\VibExchange 10 June 2017\VibExchange\bin\System.Web.Helpers.xml
+D:\github\other__software\VibExchange\VibExchange 10 June 2017\VibExchange\bin\System.Web.Razor.xml
+D:\github\other__software\VibExchange\VibExchange 10 June 2017\VibExchange\bin\System.Web.WebPages.xml
+D:\github\other__software\VibExchange\VibExchange 10 June 2017\VibExchange\bin\System.Web.WebPages.Deployment.xml
+D:\github\other__software\VibExchange\VibExchange 10 June 2017\VibExchange\bin\System.Web.WebPages.Razor.xml
+D:\github\other__software\VibExchange\VibExchange 10 June 2017\VibExchange\bin\WebMatrix.Data.xml
+D:\github\other__software\VibExchange\VibExchange 10 June 2017\VibExchange\bin\WebMatrix.WebData.xml
+D:\github\other__software\VibExchange\VibExchange 10 June 2017\VibExchange\bin\System.Net.Http.Formatting.xml
+D:\github\other__software\VibExchange\VibExchange 10 June 2017\VibExchange\bin\Antlr3.Runtime.pdb
+D:\github\other__software\VibExchange\VibExchange 10 June 2017\VibExchange\obj\Debug\VibExchange.dll
+D:\github\other__software\VibExchange\VibExchange 10 June 2017\VibExchange\obj\Debug\VibExchange.pdb
+D:\github\other__software\VibExchange\VibExchange 10 June 2017\VibExchange\obj\Debug\VibExchange.csprojResolveAssemblyReference.cache
+D:\All Backup\VibExchange Backup\VibExchange 29 Jan 2018\VibExchange\bin\VibExchange.dll.config
+D:\All Backup\VibExchange Backup\VibExchange 29 Jan 2018\VibExchange\bin\VibExchange.dll
+D:\All Backup\VibExchange Backup\VibExchange 29 Jan 2018\VibExchange\bin\VibExchange.pdb
+D:\All Backup\VibExchange Backup\VibExchange 29 Jan 2018\VibExchange\bin\Microsoft.Web.Infrastructure.dll
+D:\All Backup\VibExchange Backup\VibExchange 29 Jan 2018\VibExchange\bin\Microsoft.Web.WebPages.OAuth.dll
+D:\All Backup\VibExchange Backup\VibExchange 29 Jan 2018\VibExchange\bin\Newtonsoft.Json.dll
+D:\All Backup\VibExchange Backup\VibExchange 29 Jan 2018\VibExchange\bin\NUnrar.dll
+D:\All Backup\VibExchange Backup\VibExchange 29 Jan 2018\VibExchange\bin\System.Web.Helpers.dll
+D:\All Backup\VibExchange Backup\VibExchange 29 Jan 2018\VibExchange\bin\System.Web.Razor.dll
+D:\All Backup\VibExchange Backup\VibExchange 29 Jan 2018\VibExchange\bin\System.Web.WebPages.Deployment.dll
+D:\All Backup\VibExchange Backup\VibExchange 29 Jan 2018\VibExchange\bin\System.Web.WebPages.dll
+D:\All Backup\VibExchange Backup\VibExchange 29 Jan 2018\VibExchange\bin\System.Web.WebPages.Razor.dll
+D:\All Backup\VibExchange Backup\VibExchange 29 Jan 2018\VibExchange\bin\WebMatrix.Data.dll
+D:\All Backup\VibExchange Backup\VibExchange 29 Jan 2018\VibExchange\bin\WebMatrix.WebData.dll
+D:\All Backup\VibExchange Backup\VibExchange 29 Jan 2018\VibExchange\bin\DotNetOpenAuth.OAuth.dll
+D:\All Backup\VibExchange Backup\VibExchange 29 Jan 2018\VibExchange\bin\DotNetOpenAuth.Core.dll
+D:\All Backup\VibExchange Backup\VibExchange 29 Jan 2018\VibExchange\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
+D:\All Backup\VibExchange Backup\VibExchange 29 Jan 2018\VibExchange\bin\WebGrease.dll
+D:\All Backup\VibExchange Backup\VibExchange 29 Jan 2018\VibExchange\bin\Antlr3.Runtime.dll
+D:\All Backup\VibExchange Backup\VibExchange 29 Jan 2018\VibExchange\bin\EntityFramework.xml
+D:\All Backup\VibExchange Backup\VibExchange 29 Jan 2018\VibExchange\bin\Microsoft.Web.WebPages.OAuth.xml
+D:\All Backup\VibExchange Backup\VibExchange 29 Jan 2018\VibExchange\bin\Newtonsoft.Json.xml
+D:\All Backup\VibExchange Backup\VibExchange 29 Jan 2018\VibExchange\bin\RestSharp.xml
+D:\All Backup\VibExchange Backup\VibExchange 29 Jan 2018\VibExchange\bin\System.Web.Helpers.xml
+D:\All Backup\VibExchange Backup\VibExchange 29 Jan 2018\VibExchange\bin\System.Web.Razor.xml
+D:\All Backup\VibExchange Backup\VibExchange 29 Jan 2018\VibExchange\bin\System.Web.WebPages.xml
+D:\All Backup\VibExchange Backup\VibExchange 29 Jan 2018\VibExchange\bin\System.Web.WebPages.Deployment.xml
+D:\All Backup\VibExchange Backup\VibExchange 29 Jan 2018\VibExchange\bin\System.Web.WebPages.Razor.xml
+D:\All Backup\VibExchange Backup\VibExchange 29 Jan 2018\VibExchange\bin\WebMatrix.Data.xml
+D:\All Backup\VibExchange Backup\VibExchange 29 Jan 2018\VibExchange\bin\WebMatrix.WebData.xml
+D:\All Backup\VibExchange Backup\VibExchange 29 Jan 2018\VibExchange\bin\Antlr3.Runtime.pdb
+D:\All Backup\VibExchange Backup\VibExchange 29 Jan 2018\VibExchange\obj\Debug\VibExchange.csprojResolveAssemblyReference.cache
+D:\All Backup\VibExchange Backup\VibExchange 29 Jan 2018\VibExchange\obj\Debug\VibExchange.dll
+D:\All Backup\VibExchange Backup\VibExchange 29 Jan 2018\VibExchange\obj\Debug\VibExchange.pdb
+C:\Users\vimal\Desktop\Code for VibExchange\VibExchange 19 Jan 2018\VibExchange\bin\VibExchange.dll.config
+C:\Users\vimal\Desktop\Code for VibExchange\VibExchange 19 Jan 2018\VibExchange\bin\VibExchange.dll
+C:\Users\vimal\Desktop\Code for VibExchange\VibExchange 19 Jan 2018\VibExchange\bin\VibExchange.pdb
+C:\Users\vimal\Desktop\Code for VibExchange\VibExchange 19 Jan 2018\VibExchange\bin\Antlr3.Runtime.dll
+C:\Users\vimal\Desktop\Code for VibExchange\VibExchange 19 Jan 2018\VibExchange\bin\EntityFramework.dll
+C:\Users\vimal\Desktop\Code for VibExchange\VibExchange 19 Jan 2018\VibExchange\bin\EntityFramework.SqlServer.dll
+C:\Users\vimal\Desktop\Code for VibExchange\VibExchange 19 Jan 2018\VibExchange\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\vimal\Desktop\Code for VibExchange\VibExchange 19 Jan 2018\VibExchange\bin\Microsoft.Web.WebPages.OAuth.dll
+C:\Users\vimal\Desktop\Code for VibExchange\VibExchange 19 Jan 2018\VibExchange\bin\Newtonsoft.Json.dll
+C:\Users\vimal\Desktop\Code for VibExchange\VibExchange 19 Jan 2018\VibExchange\bin\NUnrar.dll
+C:\Users\vimal\Desktop\Code for VibExchange\VibExchange 19 Jan 2018\VibExchange\bin\System.Web.Helpers.dll
+C:\Users\vimal\Desktop\Code for VibExchange\VibExchange 19 Jan 2018\VibExchange\bin\System.Web.Mvc.dll
+C:\Users\vimal\Desktop\Code for VibExchange\VibExchange 19 Jan 2018\VibExchange\bin\System.Web.Razor.dll
+C:\Users\vimal\Desktop\Code for VibExchange\VibExchange 19 Jan 2018\VibExchange\bin\System.Web.WebPages.Deployment.dll
+C:\Users\vimal\Desktop\Code for VibExchange\VibExchange 19 Jan 2018\VibExchange\bin\System.Web.WebPages.dll
+C:\Users\vimal\Desktop\Code for VibExchange\VibExchange 19 Jan 2018\VibExchange\bin\System.Web.WebPages.Razor.dll
+C:\Users\vimal\Desktop\Code for VibExchange\VibExchange 19 Jan 2018\VibExchange\bin\WebMatrix.Data.dll
+C:\Users\vimal\Desktop\Code for VibExchange\VibExchange 19 Jan 2018\VibExchange\bin\WebMatrix.WebData.dll
+C:\Users\vimal\Desktop\Code for VibExchange\VibExchange 19 Jan 2018\VibExchange\bin\DotNetOpenAuth.OAuth.dll
+C:\Users\vimal\Desktop\Code for VibExchange\VibExchange 19 Jan 2018\VibExchange\bin\DotNetOpenAuth.Core.dll
+C:\Users\vimal\Desktop\Code for VibExchange\VibExchange 19 Jan 2018\VibExchange\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
+C:\Users\vimal\Desktop\Code for VibExchange\VibExchange 19 Jan 2018\VibExchange\bin\WebGrease.dll
+C:\Users\vimal\Desktop\Code for VibExchange\VibExchange 19 Jan 2018\VibExchange\bin\Antlr3.Runtime.pdb
+C:\Users\vimal\Desktop\Code for VibExchange\VibExchange 19 Jan 2018\VibExchange\bin\EntityFramework.xml
+C:\Users\vimal\Desktop\Code for VibExchange\VibExchange 19 Jan 2018\VibExchange\bin\EntityFramework.SqlServer.xml
+C:\Users\vimal\Desktop\Code for VibExchange\VibExchange 19 Jan 2018\VibExchange\bin\Microsoft.Web.WebPages.OAuth.xml
+C:\Users\vimal\Desktop\Code for VibExchange\VibExchange 19 Jan 2018\VibExchange\bin\Newtonsoft.Json.xml
+C:\Users\vimal\Desktop\Code for VibExchange\VibExchange 19 Jan 2018\VibExchange\bin\RestSharp.xml
+C:\Users\vimal\Desktop\Code for VibExchange\VibExchange 19 Jan 2018\VibExchange\bin\System.Web.Helpers.xml
+C:\Users\vimal\Desktop\Code for VibExchange\VibExchange 19 Jan 2018\VibExchange\bin\System.Web.Mvc.xml
+C:\Users\vimal\Desktop\Code for VibExchange\VibExchange 19 Jan 2018\VibExchange\bin\System.Web.Razor.xml
+C:\Users\vimal\Desktop\Code for VibExchange\VibExchange 19 Jan 2018\VibExchange\bin\System.Web.WebPages.xml
+C:\Users\vimal\Desktop\Code for VibExchange\VibExchange 19 Jan 2018\VibExchange\bin\System.Web.WebPages.Deployment.xml
+C:\Users\vimal\Desktop\Code for VibExchange\VibExchange 19 Jan 2018\VibExchange\bin\System.Web.WebPages.Razor.xml
+C:\Users\vimal\Desktop\Code for VibExchange\VibExchange 19 Jan 2018\VibExchange\bin\WebMatrix.Data.xml
+C:\Users\vimal\Desktop\Code for VibExchange\VibExchange 19 Jan 2018\VibExchange\bin\WebMatrix.WebData.xml
+C:\Users\vimal\Desktop\Code for VibExchange\VibExchange 19 Jan 2018\VibExchange\obj\Debug\VibExchange.csprojResolveAssemblyReference.cache
+C:\Users\vimal\Desktop\Code for VibExchange\VibExchange 19 Jan 2018\VibExchange\obj\Debug\VibExchange.dll
+C:\Users\vimal\Desktop\Code for VibExchange\VibExchange 19 Jan 2018\VibExchange\obj\Debug\VibExchange.pdb
+C:\Users\vimal\Desktop\Code for VibExchange2\VibExchange 19 Jan 2018\VibExchange\obj\Debug\VibExchange.csprojResolveAssemblyReference.cache
+C:\Users\vimal\Desktop\Code for VibExchange2\VibExchange 19 Jan 2018\VibExchange\obj\Debug\VibExchange.dll
+C:\Users\vimal\Desktop\Code for VibExchange2\VibExchange 19 Jan 2018\VibExchange\bin\VibExchange.dll.config
+C:\Users\vimal\Desktop\Code for VibExchange2\VibExchange 19 Jan 2018\VibExchange\bin\VibExchange.dll
+C:\Users\vimal\Desktop\Code for VibExchange2\VibExchange 19 Jan 2018\VibExchange\bin\VibExchange.pdb
+C:\Users\vimal\Desktop\Code for VibExchange2\VibExchange 19 Jan 2018\VibExchange\bin\Antlr3.Runtime.dll
+C:\Users\vimal\Desktop\Code for VibExchange2\VibExchange 19 Jan 2018\VibExchange\bin\EntityFramework.dll
+C:\Users\vimal\Desktop\Code for VibExchange2\VibExchange 19 Jan 2018\VibExchange\bin\EntityFramework.SqlServer.dll
+C:\Users\vimal\Desktop\Code for VibExchange2\VibExchange 19 Jan 2018\VibExchange\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\vimal\Desktop\Code for VibExchange2\VibExchange 19 Jan 2018\VibExchange\bin\Microsoft.Web.WebPages.OAuth.dll
+C:\Users\vimal\Desktop\Code for VibExchange2\VibExchange 19 Jan 2018\VibExchange\bin\Newtonsoft.Json.dll
+C:\Users\vimal\Desktop\Code for VibExchange2\VibExchange 19 Jan 2018\VibExchange\bin\NUnrar.dll
+C:\Users\vimal\Desktop\Code for VibExchange2\VibExchange 19 Jan 2018\VibExchange\bin\System.Web.Helpers.dll
+C:\Users\vimal\Desktop\Code for VibExchange2\VibExchange 19 Jan 2018\VibExchange\bin\System.Web.Mvc.dll
+C:\Users\vimal\Desktop\Code for VibExchange2\VibExchange 19 Jan 2018\VibExchange\bin\System.Web.Razor.dll
+C:\Users\vimal\Desktop\Code for VibExchange2\VibExchange 19 Jan 2018\VibExchange\bin\System.Web.WebPages.Deployment.dll
+C:\Users\vimal\Desktop\Code for VibExchange2\VibExchange 19 Jan 2018\VibExchange\bin\System.Web.WebPages.dll
+C:\Users\vimal\Desktop\Code for VibExchange2\VibExchange 19 Jan 2018\VibExchange\bin\System.Web.WebPages.Razor.dll
+C:\Users\vimal\Desktop\Code for VibExchange2\VibExchange 19 Jan 2018\VibExchange\bin\WebMatrix.Data.dll
+C:\Users\vimal\Desktop\Code for VibExchange2\VibExchange 19 Jan 2018\VibExchange\bin\WebMatrix.WebData.dll
+C:\Users\vimal\Desktop\Code for VibExchange2\VibExchange 19 Jan 2018\VibExchange\bin\DotNetOpenAuth.OAuth.dll
+C:\Users\vimal\Desktop\Code for VibExchange2\VibExchange 19 Jan 2018\VibExchange\bin\DotNetOpenAuth.Core.dll
+C:\Users\vimal\Desktop\Code for VibExchange2\VibExchange 19 Jan 2018\VibExchange\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
+C:\Users\vimal\Desktop\Code for VibExchange2\VibExchange 19 Jan 2018\VibExchange\bin\WebGrease.dll
+C:\Users\vimal\Desktop\Code for VibExchange2\VibExchange 19 Jan 2018\VibExchange\bin\Antlr3.Runtime.pdb
+C:\Users\vimal\Desktop\Code for VibExchange2\VibExchange 19 Jan 2018\VibExchange\bin\EntityFramework.xml
+C:\Users\vimal\Desktop\Code for VibExchange2\VibExchange 19 Jan 2018\VibExchange\bin\EntityFramework.SqlServer.xml
+C:\Users\vimal\Desktop\Code for VibExchange2\VibExchange 19 Jan 2018\VibExchange\bin\Microsoft.Web.WebPages.OAuth.xml
+C:\Users\vimal\Desktop\Code for VibExchange2\VibExchange 19 Jan 2018\VibExchange\bin\Newtonsoft.Json.xml
+C:\Users\vimal\Desktop\Code for VibExchange2\VibExchange 19 Jan 2018\VibExchange\bin\RestSharp.xml
+C:\Users\vimal\Desktop\Code for VibExchange2\VibExchange 19 Jan 2018\VibExchange\bin\System.Web.Helpers.xml
+C:\Users\vimal\Desktop\Code for VibExchange2\VibExchange 19 Jan 2018\VibExchange\bin\System.Web.Mvc.xml
+C:\Users\vimal\Desktop\Code for VibExchange2\VibExchange 19 Jan 2018\VibExchange\bin\System.Web.Razor.xml
+C:\Users\vimal\Desktop\Code for VibExchange2\VibExchange 19 Jan 2018\VibExchange\bin\System.Web.WebPages.xml
+C:\Users\vimal\Desktop\Code for VibExchange2\VibExchange 19 Jan 2018\VibExchange\bin\System.Web.WebPages.Deployment.xml
+C:\Users\vimal\Desktop\Code for VibExchange2\VibExchange 19 Jan 2018\VibExchange\bin\System.Web.WebPages.Razor.xml
+C:\Users\vimal\Desktop\Code for VibExchange2\VibExchange 19 Jan 2018\VibExchange\bin\WebMatrix.Data.xml
+C:\Users\vimal\Desktop\Code for VibExchange2\VibExchange 19 Jan 2018\VibExchange\bin\WebMatrix.WebData.xml
+C:\Users\vimal\Desktop\Code for VibExchange2\VibExchange 19 Jan 2018\VibExchange\obj\Debug\VibExchange.pdb
+C:\Users\vimal\Desktop\VibExchange 19 Jan 2018\VibExchange\bin\VibExchange.dll.config
+C:\Users\vimal\Desktop\VibExchange 19 Jan 2018\VibExchange\bin\VibExchange.dll
+C:\Users\vimal\Desktop\VibExchange 19 Jan 2018\VibExchange\bin\VibExchange.pdb
+C:\Users\vimal\Desktop\VibExchange 19 Jan 2018\VibExchange\bin\Antlr3.Runtime.dll
+C:\Users\vimal\Desktop\VibExchange 19 Jan 2018\VibExchange\bin\EntityFramework.dll
+C:\Users\vimal\Desktop\VibExchange 19 Jan 2018\VibExchange\bin\EntityFramework.SqlServer.dll
+C:\Users\vimal\Desktop\VibExchange 19 Jan 2018\VibExchange\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\vimal\Desktop\VibExchange 19 Jan 2018\VibExchange\bin\Microsoft.Web.WebPages.OAuth.dll
+C:\Users\vimal\Desktop\VibExchange 19 Jan 2018\VibExchange\bin\Newtonsoft.Json.dll
+C:\Users\vimal\Desktop\VibExchange 19 Jan 2018\VibExchange\bin\NUnrar.dll
+C:\Users\vimal\Desktop\VibExchange 19 Jan 2018\VibExchange\bin\System.Web.Helpers.dll
+C:\Users\vimal\Desktop\VibExchange 19 Jan 2018\VibExchange\bin\System.Web.Mvc.dll
+C:\Users\vimal\Desktop\VibExchange 19 Jan 2018\VibExchange\bin\System.Web.Razor.dll
+C:\Users\vimal\Desktop\VibExchange 19 Jan 2018\VibExchange\bin\System.Web.WebPages.Deployment.dll
+C:\Users\vimal\Desktop\VibExchange 19 Jan 2018\VibExchange\bin\System.Web.WebPages.dll
+C:\Users\vimal\Desktop\VibExchange 19 Jan 2018\VibExchange\bin\System.Web.WebPages.Razor.dll
+C:\Users\vimal\Desktop\VibExchange 19 Jan 2018\VibExchange\bin\WebMatrix.Data.dll
+C:\Users\vimal\Desktop\VibExchange 19 Jan 2018\VibExchange\bin\WebMatrix.WebData.dll
+C:\Users\vimal\Desktop\VibExchange 19 Jan 2018\VibExchange\bin\Antlr3.Runtime.pdb
+C:\Users\vimal\Desktop\VibExchange 19 Jan 2018\VibExchange\bin\EntityFramework.xml
+C:\Users\vimal\Desktop\VibExchange 19 Jan 2018\VibExchange\bin\EntityFramework.SqlServer.xml
+C:\Users\vimal\Desktop\VibExchange 19 Jan 2018\VibExchange\bin\Microsoft.Web.WebPages.OAuth.xml
+C:\Users\vimal\Desktop\VibExchange 19 Jan 2018\VibExchange\bin\Newtonsoft.Json.xml
+C:\Users\vimal\Desktop\VibExchange 19 Jan 2018\VibExchange\bin\System.Web.Helpers.xml
+C:\Users\vimal\Desktop\VibExchange 19 Jan 2018\VibExchange\bin\System.Web.Mvc.xml
+C:\Users\vimal\Desktop\VibExchange 19 Jan 2018\VibExchange\bin\System.Web.Razor.xml
+C:\Users\vimal\Desktop\VibExchange 19 Jan 2018\VibExchange\bin\System.Web.WebPages.xml
+C:\Users\vimal\Desktop\VibExchange 19 Jan 2018\VibExchange\bin\System.Web.WebPages.Deployment.xml
+C:\Users\vimal\Desktop\VibExchange 19 Jan 2018\VibExchange\bin\System.Web.WebPages.Razor.xml
+C:\Users\vimal\Desktop\VibExchange 19 Jan 2018\VibExchange\bin\WebMatrix.Data.xml
+C:\Users\vimal\Desktop\VibExchange 19 Jan 2018\VibExchange\bin\WebMatrix.WebData.xml
+C:\Users\vimal\Desktop\VibExchange 19 Jan 2018\VibExchange\obj\Debug\VibExchange.dll
+C:\Users\vimal\Desktop\VibExchange 19 Jan 2018\VibExchange\obj\Debug\VibExchange.pdb
+C:\Users\vimal\Desktop\VibExchange 19 Jan 2018\VibExchange\bin\DotNetOpenAuth.Core.dll
+C:\Users\vimal\Desktop\VibExchange 19 Jan 2018\VibExchange\bin\System.Net.Http.Extensions.dll
+C:\Users\vimal\Desktop\VibExchange 19 Jan 2018\VibExchange\bin\System.Net.Http.Primitives.dll
+C:\Users\vimal\Desktop\VibExchange 19 Jan 2018\VibExchange\bin\DotNetOpenAuth.Core.xml
+C:\Users\vimal\Desktop\VibExchange 19 Jan 2018\VibExchange\bin\System.Net.Http.Extensions.xml
+C:\Users\vimal\Desktop\VibExchange 19 Jan 2018\VibExchange\bin\System.Net.Http.Primitives.xml
+C:\Users\vimal\Desktop\VibExchange 19 Jan 2018\VibExchange\obj\Debug\VibExchange.csproj.App.config
+C:\Users\vimal\Desktop\VibExchange 19 Jan 2018\VibExchange\bin\WebGrease.dll
+C:\Users\vimal\Desktop\VibExchange 19 Jan 2018\VibExchange\obj\Debug\RdlCompile.cache
+C:\Users\vimal\Desktop\VibExchange 19 Jan 2018\VibExchange\obj\Debug\RdlCompile.compiled
+C:\Users\vimal\Desktop\VibExchange 19 Jan 2018\VibExchange\obj\Debug\VibExchange.csprojResolveAssemblyReference.cache
+C:\Users\vimal\Desktop\VibExchange 19 Jan 2018\VibExchange\bin\Microsoft.ReportViewer.WebForms.DLL
+D:\SKY\VibExchange\VibExchange 19 Jan 2018\VibExchange\bin\VibExchange.dll.config
+D:\SKY\VibExchange\VibExchange 19 Jan 2018\VibExchange\bin\VibExchange.dll
+D:\SKY\VibExchange\VibExchange 19 Jan 2018\VibExchange\bin\VibExchange.pdb
+D:\SKY\VibExchange\VibExchange 19 Jan 2018\VibExchange\bin\Antlr3.Runtime.dll
+D:\SKY\VibExchange\VibExchange 19 Jan 2018\VibExchange\bin\DotNetOpenAuth.Core.dll
+D:\SKY\VibExchange\VibExchange 19 Jan 2018\VibExchange\bin\EntityFramework.dll
+D:\SKY\VibExchange\VibExchange 19 Jan 2018\VibExchange\bin\EntityFramework.SqlServer.dll
+D:\SKY\VibExchange\VibExchange 19 Jan 2018\VibExchange\bin\Microsoft.ReportViewer.WebForms.DLL
+D:\SKY\VibExchange\VibExchange 19 Jan 2018\VibExchange\bin\Microsoft.Web.Infrastructure.dll
+D:\SKY\VibExchange\VibExchange 19 Jan 2018\VibExchange\bin\Microsoft.Web.WebPages.OAuth.dll
+D:\SKY\VibExchange\VibExchange 19 Jan 2018\VibExchange\bin\Newtonsoft.Json.dll
+D:\SKY\VibExchange\VibExchange 19 Jan 2018\VibExchange\bin\NUnrar.dll
+D:\SKY\VibExchange\VibExchange 19 Jan 2018\VibExchange\bin\System.Net.Http.Extensions.dll
+D:\SKY\VibExchange\VibExchange 19 Jan 2018\VibExchange\bin\System.Net.Http.Primitives.dll
+D:\SKY\VibExchange\VibExchange 19 Jan 2018\VibExchange\bin\System.Web.Helpers.dll
+D:\SKY\VibExchange\VibExchange 19 Jan 2018\VibExchange\bin\System.Web.Mvc.dll
+D:\SKY\VibExchange\VibExchange 19 Jan 2018\VibExchange\bin\System.Web.Razor.dll
+D:\SKY\VibExchange\VibExchange 19 Jan 2018\VibExchange\bin\System.Web.WebPages.Deployment.dll
+D:\SKY\VibExchange\VibExchange 19 Jan 2018\VibExchange\bin\System.Web.WebPages.dll
+D:\SKY\VibExchange\VibExchange 19 Jan 2018\VibExchange\bin\System.Web.WebPages.Razor.dll
+D:\SKY\VibExchange\VibExchange 19 Jan 2018\VibExchange\bin\WebMatrix.Data.dll
+D:\SKY\VibExchange\VibExchange 19 Jan 2018\VibExchange\bin\WebMatrix.WebData.dll
+D:\SKY\VibExchange\VibExchange 19 Jan 2018\VibExchange\bin\Antlr3.Runtime.pdb
+D:\SKY\VibExchange\VibExchange 19 Jan 2018\VibExchange\bin\DotNetOpenAuth.Core.xml
+D:\SKY\VibExchange\VibExchange 19 Jan 2018\VibExchange\bin\EntityFramework.xml
+D:\SKY\VibExchange\VibExchange 19 Jan 2018\VibExchange\bin\EntityFramework.SqlServer.xml
+D:\SKY\VibExchange\VibExchange 19 Jan 2018\VibExchange\bin\Microsoft.Web.WebPages.OAuth.xml
+D:\SKY\VibExchange\VibExchange 19 Jan 2018\VibExchange\bin\Newtonsoft.Json.xml
+D:\SKY\VibExchange\VibExchange 19 Jan 2018\VibExchange\bin\System.Net.Http.Extensions.xml
+D:\SKY\VibExchange\VibExchange 19 Jan 2018\VibExchange\bin\System.Net.Http.Primitives.xml
+D:\SKY\VibExchange\VibExchange 19 Jan 2018\VibExchange\bin\System.Web.Helpers.xml
+D:\SKY\VibExchange\VibExchange 19 Jan 2018\VibExchange\bin\System.Web.Mvc.xml
+D:\SKY\VibExchange\VibExchange 19 Jan 2018\VibExchange\bin\System.Web.Razor.xml
+D:\SKY\VibExchange\VibExchange 19 Jan 2018\VibExchange\bin\System.Web.WebPages.xml
+D:\SKY\VibExchange\VibExchange 19 Jan 2018\VibExchange\bin\System.Web.WebPages.Deployment.xml
+D:\SKY\VibExchange\VibExchange 19 Jan 2018\VibExchange\bin\System.Web.WebPages.Razor.xml
+D:\SKY\VibExchange\VibExchange 19 Jan 2018\VibExchange\bin\WebMatrix.Data.xml
+D:\SKY\VibExchange\VibExchange 19 Jan 2018\VibExchange\bin\WebMatrix.WebData.xml
+D:\SKY\VibExchange\VibExchange 19 Jan 2018\VibExchange\obj\Debug\VibExchange.csproj.App.config
+D:\SKY\VibExchange\VibExchange 19 Jan 2018\VibExchange\obj\Debug\RdlCompile.cache
+D:\SKY\VibExchange\VibExchange 19 Jan 2018\VibExchange\obj\Debug\RdlCompile.compiled
+D:\SKY\VibExchange\VibExchange 19 Jan 2018\VibExchange\obj\Debug\VibExchange.dll
+D:\SKY\VibExchange\VibExchange 19 Jan 2018\VibExchange\obj\Debug\VibExchange.pdb
+D:\SKY\VibExchange\VibExchange 19 Jan 2018\VibExchange\obj\Debug\VibExchange.csprojResolveAssemblyReference.cache
+E:\IadeptTechnologies\26062018\VibExchange\VibExchange 19 Jan 2018\VibExchange\bin\VibExchange.dll.config
+E:\IadeptTechnologies\26062018\VibExchange\VibExchange 19 Jan 2018\VibExchange\bin\VibExchange.dll
+E:\IadeptTechnologies\26062018\VibExchange\VibExchange 19 Jan 2018\VibExchange\bin\VibExchange.pdb
+E:\IadeptTechnologies\26062018\VibExchange\VibExchange 19 Jan 2018\VibExchange\bin\Antlr3.Runtime.dll
+E:\IadeptTechnologies\26062018\VibExchange\VibExchange 19 Jan 2018\VibExchange\bin\DotNetOpenAuth.Core.dll
+E:\IadeptTechnologies\26062018\VibExchange\VibExchange 19 Jan 2018\VibExchange\bin\EntityFramework.dll
+E:\IadeptTechnologies\26062018\VibExchange\VibExchange 19 Jan 2018\VibExchange\bin\EntityFramework.SqlServer.dll
+E:\IadeptTechnologies\26062018\VibExchange\VibExchange 19 Jan 2018\VibExchange\bin\Microsoft.ReportViewer.WebForms.DLL
+E:\IadeptTechnologies\26062018\VibExchange\VibExchange 19 Jan 2018\VibExchange\bin\Microsoft.Web.Infrastructure.dll
+E:\IadeptTechnologies\26062018\VibExchange\VibExchange 19 Jan 2018\VibExchange\bin\Newtonsoft.Json.dll
+E:\IadeptTechnologies\26062018\VibExchange\VibExchange 19 Jan 2018\VibExchange\bin\NUnrar.dll
+E:\IadeptTechnologies\26062018\VibExchange\VibExchange 19 Jan 2018\VibExchange\bin\System.Net.Http.Extensions.dll
+E:\IadeptTechnologies\26062018\VibExchange\VibExchange 19 Jan 2018\VibExchange\bin\System.Net.Http.Primitives.dll
+E:\IadeptTechnologies\26062018\VibExchange\VibExchange 19 Jan 2018\VibExchange\bin\System.Web.Helpers.dll
+E:\IadeptTechnologies\26062018\VibExchange\VibExchange 19 Jan 2018\VibExchange\bin\System.Web.Mvc.dll
+E:\IadeptTechnologies\26062018\VibExchange\VibExchange 19 Jan 2018\VibExchange\bin\System.Web.Razor.dll
+E:\IadeptTechnologies\26062018\VibExchange\VibExchange 19 Jan 2018\VibExchange\bin\System.Web.WebPages.Deployment.dll
+E:\IadeptTechnologies\26062018\VibExchange\VibExchange 19 Jan 2018\VibExchange\bin\System.Web.WebPages.dll
+E:\IadeptTechnologies\26062018\VibExchange\VibExchange 19 Jan 2018\VibExchange\bin\System.Web.WebPages.Razor.dll
+E:\IadeptTechnologies\26062018\VibExchange\VibExchange 19 Jan 2018\VibExchange\bin\WebMatrix.Data.dll
+E:\IadeptTechnologies\26062018\VibExchange\VibExchange 19 Jan 2018\VibExchange\bin\WebMatrix.WebData.dll
+E:\IadeptTechnologies\26062018\VibExchange\VibExchange 19 Jan 2018\VibExchange\bin\Microsoft.ReportViewer.Common.dll
+E:\IadeptTechnologies\26062018\VibExchange\VibExchange 19 Jan 2018\VibExchange\bin\Microsoft.ReportViewer.ProcessingObjectModel.dll
+E:\IadeptTechnologies\26062018\VibExchange\VibExchange 19 Jan 2018\VibExchange\bin\Microsoft.SqlServer.Types.dll
+E:\IadeptTechnologies\26062018\VibExchange\VibExchange 19 Jan 2018\VibExchange\bin\Antlr3.Runtime.pdb
+E:\IadeptTechnologies\26062018\VibExchange\VibExchange 19 Jan 2018\VibExchange\bin\DotNetOpenAuth.Core.xml
+E:\IadeptTechnologies\26062018\VibExchange\VibExchange 19 Jan 2018\VibExchange\bin\EntityFramework.xml
+E:\IadeptTechnologies\26062018\VibExchange\VibExchange 19 Jan 2018\VibExchange\bin\EntityFramework.SqlServer.xml
+E:\IadeptTechnologies\26062018\VibExchange\VibExchange 19 Jan 2018\VibExchange\bin\Newtonsoft.Json.xml
+E:\IadeptTechnologies\26062018\VibExchange\VibExchange 19 Jan 2018\VibExchange\bin\System.Net.Http.Extensions.xml
+E:\IadeptTechnologies\26062018\VibExchange\VibExchange 19 Jan 2018\VibExchange\bin\System.Net.Http.Primitives.xml
+E:\IadeptTechnologies\26062018\VibExchange\VibExchange 19 Jan 2018\VibExchange\bin\System.Web.Helpers.xml
+E:\IadeptTechnologies\26062018\VibExchange\VibExchange 19 Jan 2018\VibExchange\bin\System.Web.Mvc.xml
+E:\IadeptTechnologies\26062018\VibExchange\VibExchange 19 Jan 2018\VibExchange\bin\System.Web.Razor.xml
+E:\IadeptTechnologies\26062018\VibExchange\VibExchange 19 Jan 2018\VibExchange\bin\System.Web.WebPages.xml
+E:\IadeptTechnologies\26062018\VibExchange\VibExchange 19 Jan 2018\VibExchange\bin\System.Web.WebPages.Deployment.xml
+E:\IadeptTechnologies\26062018\VibExchange\VibExchange 19 Jan 2018\VibExchange\bin\System.Web.WebPages.Razor.xml
+E:\IadeptTechnologies\26062018\VibExchange\VibExchange 19 Jan 2018\VibExchange\bin\WebMatrix.Data.xml
+E:\IadeptTechnologies\26062018\VibExchange\VibExchange 19 Jan 2018\VibExchange\bin\WebMatrix.WebData.xml
+E:\IadeptTechnologies\26062018\VibExchange\VibExchange 19 Jan 2018\VibExchange\obj\Debug\VibExchange.csproj.App.config
+E:\IadeptTechnologies\26062018\VibExchange\VibExchange 19 Jan 2018\VibExchange\obj\Debug\VibExchange.csprojResolveAssemblyReference.cache
+E:\IadeptTechnologies\26062018\VibExchange\VibExchange 19 Jan 2018\VibExchange\obj\Debug\VibExchange.dll
+E:\IadeptTechnologies\26062018\VibExchange\VibExchange 19 Jan 2018\VibExchange\obj\Debug\VibExchange.pdb
+C:\Users\Akash\Desktop\RemoteAnalysis\VibExchange\bin\VibExchange.dll.config
+C:\Users\Akash\Desktop\RemoteAnalysis\VibExchange\bin\VibExchange.dll
+C:\Users\Akash\Desktop\RemoteAnalysis\VibExchange\bin\VibExchange.pdb
+C:\Users\Akash\Desktop\RemoteAnalysis\VibExchange\bin\Antlr3.Runtime.dll
+C:\Users\Akash\Desktop\RemoteAnalysis\VibExchange\bin\DotNetOpenAuth.Core.dll
+C:\Users\Akash\Desktop\RemoteAnalysis\VibExchange\bin\EntityFramework.dll
+C:\Users\Akash\Desktop\RemoteAnalysis\VibExchange\bin\EntityFramework.SqlServer.dll
+C:\Users\Akash\Desktop\RemoteAnalysis\VibExchange\bin\Microsoft.ReportViewer.WebForms.DLL
+C:\Users\Akash\Desktop\RemoteAnalysis\VibExchange\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Akash\Desktop\RemoteAnalysis\VibExchange\bin\Newtonsoft.Json.dll
+C:\Users\Akash\Desktop\RemoteAnalysis\VibExchange\bin\NUnrar.dll
+C:\Users\Akash\Desktop\RemoteAnalysis\VibExchange\bin\System.Net.Http.Extensions.dll
+C:\Users\Akash\Desktop\RemoteAnalysis\VibExchange\bin\System.Net.Http.Primitives.dll
+C:\Users\Akash\Desktop\RemoteAnalysis\VibExchange\bin\System.Web.Helpers.dll
+C:\Users\Akash\Desktop\RemoteAnalysis\VibExchange\bin\System.Web.Mvc.dll
+C:\Users\Akash\Desktop\RemoteAnalysis\VibExchange\bin\System.Web.Razor.dll
+C:\Users\Akash\Desktop\RemoteAnalysis\VibExchange\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Akash\Desktop\RemoteAnalysis\VibExchange\bin\System.Web.WebPages.dll
+C:\Users\Akash\Desktop\RemoteAnalysis\VibExchange\bin\System.Web.WebPages.Razor.dll
+C:\Users\Akash\Desktop\RemoteAnalysis\VibExchange\bin\WebMatrix.Data.dll
+C:\Users\Akash\Desktop\RemoteAnalysis\VibExchange\bin\WebMatrix.WebData.dll
+C:\Users\Akash\Desktop\RemoteAnalysis\VibExchange\bin\Microsoft.ReportViewer.Common.dll
+C:\Users\Akash\Desktop\RemoteAnalysis\VibExchange\bin\Microsoft.ReportViewer.ProcessingObjectModel.dll
+C:\Users\Akash\Desktop\RemoteAnalysis\VibExchange\bin\Microsoft.SqlServer.Types.dll
+C:\Users\Akash\Desktop\RemoteAnalysis\VibExchange\bin\Antlr3.Runtime.pdb
+C:\Users\Akash\Desktop\RemoteAnalysis\VibExchange\bin\DotNetOpenAuth.Core.xml
+C:\Users\Akash\Desktop\RemoteAnalysis\VibExchange\bin\EntityFramework.xml
+C:\Users\Akash\Desktop\RemoteAnalysis\VibExchange\bin\EntityFramework.SqlServer.xml
+C:\Users\Akash\Desktop\RemoteAnalysis\VibExchange\bin\Newtonsoft.Json.xml
+C:\Users\Akash\Desktop\RemoteAnalysis\VibExchange\bin\System.Net.Http.Extensions.xml
+C:\Users\Akash\Desktop\RemoteAnalysis\VibExchange\bin\System.Net.Http.Primitives.xml
+C:\Users\Akash\Desktop\RemoteAnalysis\VibExchange\bin\System.Web.Helpers.xml
+C:\Users\Akash\Desktop\RemoteAnalysis\VibExchange\bin\System.Web.Mvc.xml
+C:\Users\Akash\Desktop\RemoteAnalysis\VibExchange\bin\System.Web.Razor.xml
+C:\Users\Akash\Desktop\RemoteAnalysis\VibExchange\bin\System.Web.WebPages.xml
+C:\Users\Akash\Desktop\RemoteAnalysis\VibExchange\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Akash\Desktop\RemoteAnalysis\VibExchange\bin\System.Web.WebPages.Razor.xml
+C:\Users\Akash\Desktop\RemoteAnalysis\VibExchange\bin\WebMatrix.Data.xml
+C:\Users\Akash\Desktop\RemoteAnalysis\VibExchange\bin\WebMatrix.WebData.xml
+C:\Users\Akash\Desktop\RemoteAnalysis\VibExchange\obj\Debug\VibExchange.csproj.App.config
+C:\Users\Akash\Desktop\RemoteAnalysis\VibExchange\obj\Debug\VibExchange.dll
+C:\Users\Akash\Desktop\RemoteAnalysis\VibExchange\obj\Debug\VibExchange.pdb

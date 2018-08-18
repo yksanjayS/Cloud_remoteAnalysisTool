@@ -1,0 +1,272 @@
+﻿@model VibExchange.Areas.RemoteAnalysis.Models.PointData
+@{
+    var status = TempData["NodeAvailability"];
+    var pointid = @Model.PointID;
+}
+<style>
+    .chnlDisplay {
+        font-family: Cambria;
+        font-size: 12px;
+    }
+</style>
+
+@using (Html.BeginForm("UpdatePoint", "Upload", null, FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+    <legend class="navbar-left" style="color:lightcoral">Point Information</legend>
+    <div class="row-fluid" style="padding-bottom:20px;">
+        <div class="col-md-7">
+            <div id="divPointDetail" class="col-md-11">
+                @*///////////////Point Detail section///////////////////////////////////////////////////////////////*@
+                <div class="display-none">
+                    @Html.HiddenFor(model => model.PointID)
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(m => m.PointName, new { @class = "col-md-3 control-label" })
+                    <div class="col-md-9">
+                        @Html.TextBoxFor(m => m.PointName, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(m => m.PointName, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(model => model.PointDetail, htmlAttributes: new { @class = "control-label col-md-3" })
+                    <div class="col-md-9">
+                        @Html.TextAreaFor(m => m.PointDetail, 1, 5, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(m => m.PointName, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+                @*///////////////fault frequency section///////////////////////////////////////////////////////////*@
+                <div class="row-fluid">
+                    <h4 style="color:lightcoral;">Fault Frequency Detail</h4>
+                </div>
+                <div style="vertical-align: text-bottom; padding-bottom:5px;">
+                    <button type="button" id="btnAddFaultFrequency" class="btn btn-sm btn-info" data-toggle="modal" data-target="#myModal">
+                        Add Fault Frequency
+                    </button>
+                </div>
+                <div id="divFaultFreq">
+                    @if (Model.lstFaultFrequency.Count > 0)
+                    {
+                    <table id="tblFaultFrequency" class="table table-bordered table-responsive table-striped table-condensed table-hover">
+                        <thead>
+                            <tr class="clickable-row">
+                                <th>Frequency Name</th>
+                                <th>Frequency Value</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model.lstFaultFrequency)
+                                {
+                                <tr>
+                                    <td>@item.FaultFreqName</td>
+                                    <td>@item.FaultFreqValue</td>
+                                </tr>
+                                }
+                        </tbody>
+                    </table>
+                    }
+                </div>
+                @*///////////////Bearing frequency section//////////////////////////////////////////////////////////*@
+
+                <h4 style="color:lightcoral">Bearing Frequency Detail</h4>
+                <div id="divBearing" class="row-fluid" style="vertical-align: text-bottom; padding-bottom:5px;">
+                    @Html.Partial("_bearingList", Model.lstBearingFrequency)
+                </div>
+
+                @*///////////////Alarm Detail section/////////////////////////////////////////////////////////////*@
+                <div class="row-fluid">
+                    <h4 style="color:lightcoral;">Alarm Detail</h4>
+                    <div id="divAlarm" style="margin-left:20px;">
+                        <div class="form-group">
+                            @Html.DropDownList("ddlAlarm", new List<SelectListItem>{
+                    new SelectListItem{ Text="ISO-G1-R", Value = "ISO-G1-R" },
+                     new SelectListItem{ Text="ISO-G1-F", Value = "ISO-G1-F"},
+                      new SelectListItem{ Text="ISO-G2-R", Value = "ISO-G2-R" },
+                         new SelectListItem{ Text="ISO-G2-F", Value = "ISO-G2-F" },
+                            new SelectListItem{ Text="ISO-G3-F", Value = "ISO-G3-F"},
+                      new SelectListItem{ Text="ISO-G3-R", Value = "ISO-G3-R" },
+                         new SelectListItem{ Text="ISO-G4-F", Value = "ISO-G4-F" },
+                            new SelectListItem{ Text="ISO-G4-R", Value = "ISO-G4-R" }
+                 }, "Select Alarm", new { @class = "form-control col-md-2", @onchange = "FillAlarmData()" })
+                            <div class="col-md-3">
+                                @Html.TextBoxFor(m => m.HighValue, new { @class = "form-control", @readonly = true, placeholder = "High Value" })
+                            </div>
+
+                            <div class="col-md-3">
+                                @Html.TextBoxFor(m => m.LowValue, new { @class = "form-control", @readonly = true, placeholder = "Low Value" })
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-5" style="border: solid 1px #e3e3e3">
+            <h4 style="color:lightcoral">Measurement Parameter Details</h4>
+            <div class="form-group chnlDisplay">
+                <h5 class="col-md-3" style="color:lightcoral; margin-left:10px;">Parameter Name</h5>
+                <h5 class="col-md-3" style="color:lightcoral">Channel A</h5>
+                <h5 class="col-md-3" style="color:lightcoral">Channel B</h5>
+                @Html.LabelFor(m => m.ChannelA, new { @class = "col-md-4 control-label" })
+                <div class="col-md-3">
+                    @Html.DisplayFor(m => m.ChannelA, new { @class = "form-control" })
+                </div>
+                <div class="col-md-3">
+                    @Html.DisplayFor(m => m.ChannelB, new { @class = "form-control" })
+                </div>
+            </div>
+            <div class="form-group chnlDisplay">
+                @Html.LabelFor(m => m.RadioA, new { @class = "col-md-4 control-label" })
+                <div class="col-md-3">
+                    @Html.DisplayFor(m => m.RadioA, new { @class = "form-control" })
+                </div>
+                <div class="col-md-3">
+                    @Html.DisplayFor(m => m.RadioB, new { @class = "form-control" })
+                </div>
+            </div>
+            <div class="form-group chnlDisplay">
+                @Html.LabelFor(m => m.EnvelopingFreq, new { @class = "col-md-4 control-label" })
+                <div class="col-md-3">
+                    @Html.DisplayFor(m => m.EnvelopingFreq, new { @class = "form-control" })
+                </div>
+                <div class="col-md-3">
+                    @Html.DisplayFor(m => m.EnvelopingFreq, new { @class = "form-control" })
+                </div>
+            </div>
+            <div class="form-group chnlDisplay">
+                @Html.LabelFor(m => m.WindowType, new { @class = "col-md-4 control-label" })
+                <div class="col-md-3">
+                    @Html.DisplayFor(m => m.WindowType, new { @class = "form-control" })
+                </div>
+                <div class="col-md-3">
+                    @Html.DisplayFor(m => m.WindowType, new { @class = "form-control" })
+                </div>
+            </div>
+            <div class="form-group chnlDisplay">
+                @Html.LabelFor(m => m.SpectralLines, new { @class = "col-md-4 control-label" })
+                <div class="col-md-3">
+                    @Html.DisplayFor(m => m.SpectralLines, new { @class = "form-control" })
+                </div>
+                <div class="col-md-3">
+                    @Html.DisplayFor(m => m.SpectralLines, new { @class = "form-control" })
+                </div>
+            </div>
+            <div class="form-group chnlDisplay">
+                @Html.LabelFor(m => m.Fmin, new { @class = "col-md-4 control-label" })
+                <div class="col-md-3">
+                    @Html.DisplayFor(m => m.Fmin, new { @class = "form-control" })
+                </div>
+                <div class="col-md-3">
+                    @Html.DisplayFor(m => m.Fmin, new { @class = "form-control" })
+                </div>
+            </div>
+            <div class="form-group chnlDisplay">
+                @Html.LabelFor(m => m.Fmax, new { @class = "col-md-4 control-label" })
+                <div class="col-md-3">
+                    @Html.DisplayFor(m => m.Fmax, new { @class = "form-control" })
+                </div>
+                <div class="col-md-3">
+                    @Html.DisplayFor(m => m.Fmax, new { @class = "form-control" })
+                </div>
+            </div>
+            <div class="form-group chnlDisplay">
+                @Html.LabelFor(m => m.TrigerMode, new { @class = "col-md-4 control-label" })
+                <div class="col-md-3">
+                    @Html.DisplayFor(m => m.TrigerMode, new { @class = "form-control" })
+                </div>
+                <div class="col-md-3">
+                    @Html.DisplayFor(m => m.TrigerMode, new { @class = "form-control" })
+                </div>
+            </div>
+            <div class="form-group chnlDisplay">
+                @Html.LabelFor(m => m.AverageMode, new { @class = "col-md-4 control-label" })
+                <div class="col-md-3">
+                    @Html.DisplayFor(m => m.AverageMode, new { @class = "form-control" })
+                </div>
+                <div class="col-md-3">
+                    @Html.DisplayFor(m => m.AverageMode, new { @class = "form-control" })
+                </div>
+            </div>
+            <div class="form-group chnlDisplay">
+                @Html.LabelFor(m => m.N, new { @class = "col-md-4 control-label" })
+                <div class="col-md-3">
+                    @Html.DisplayFor(m => m.N, new { @class = "form-control" })
+                </div>
+                <div class="col-md-3">
+                    @Html.DisplayFor(m => m.N, new { @class = "form-control" })
+                </div>
+            </div>
+            <div class="form-group chnlDisplay">
+                @Html.LabelFor(m => m.Comments, new { @class = "col-md-4 control-label" })
+                <div class="col-md-3">
+                    @Html.DisplayFor(m => m.Comments, new { @class = "form-control" })
+                </div>
+                <div class="col-md-3">
+                    @Html.DisplayFor(m => m.Comments, new { @class = "form-control" })
+                </div>
+            </div>
+        </div>
+    </div>
+}
+<div class="form-group col-md-offset-6">
+    <button id="btnGraphChannelA" class="col-md-offset-4 btn btn-danger" value="Channel 1" onclick="ShowGraph(@Model.PointID)">Show Spectrum</button>
+</div>
+<script>
+    function ShowGraph(nodeid) {
+        $.ajax({
+            url: "@Url.Action("DisplayGraph", "Upload", new { area = "RemoteAnalysis" })",
+            type: 'POST',
+            data: { 'nodeid': String(nodeid) },
+            success: function (data) {
+                $('#detailDisplay').html('');
+                $('#detailDisplay').html(data);
+            }
+        });
+    }
+
+    $('#btnUpdatePoint').click(function () {
+        $.ajax({
+            url: "@Url.Action("UpdatePoint", "Upload", new { area = "RemoteAnalysis" })",
+            type: 'POST',
+            data: $('form').serialize(),
+            success: function (data) {
+                $('#graphDisplay').html('');
+                $('#graphDisplay').html(data);
+                alert("Point details update succesfully.");
+            }
+        });
+    });
+
+
+
+    $('#btnAddFaultFrequency').click(function () {
+        $("#myModalContent").load("@Url.Action("AddFF", "Upload", new { area = "RemoteAnalysis", @PID = Model.PointID })", function () {
+        });
+    });
+
+    $('#btnAddBearingFrequency').click(function () {
+        $("#myModalContent").load("@Url.Action("AddBearingFrequency", "Upload", new { area = "RemoteAnalysis", @PID = Model.PointID })", function () {
+        });
+    });
+
+
+    function FillAlarmData() {
+        var alarmname = $('#ddlAlarm').val();
+        var pointid = '@(Model.PointID)';
+        $.ajax({
+            url: "@Url.Action("getAlarmData", "Upload", new { area = "RemoteAnalysis" })",
+            type: "GET",
+            dataType: "JSON",
+            data: { AlarmName: alarmname, PointID: pointid },
+            success: function (AlarmData) {
+                if (AlarmData[4] == "Success") {
+                    $('#HighValue').val(AlarmData[2]);
+                    $('#LowValue').val(AlarmData[3]);
+                }
+                else {
+                    alert("There is some error in add Alarm. Please try again !")
+                }
+            }
+        });
+    }
+</script>

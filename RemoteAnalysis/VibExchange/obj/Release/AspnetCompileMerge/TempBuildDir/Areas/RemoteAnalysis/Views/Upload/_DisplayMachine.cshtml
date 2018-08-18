@@ -1,0 +1,79 @@
+﻿@model VibExchange.Areas.RemoteAnalysis.Models.MachineData
+
+@{
+    var status = TempData["NodeAvailability"];
+}
+
+@using (Html.BeginForm("UpdateMachine", "Upload", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+    <legend class="navbar-left" style="color:lightcoral">Machine Information</legend>
+    <div>
+        <div class="display-none">
+            @Html.HiddenFor(model => model.MachineID)
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.MachineName, new { @class = "col-md-2 col-md-offset-1 control-label" })
+            <div class="col-md-8">
+                @Html.TextBoxFor(m => m.MachineName, new { @class = "form-control" })
+                @Html.ValidationMessageFor(m => m.MachineName, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.MachineClass, htmlAttributes: new { @class = "col-md-2 col-md-offset-1 control-label" })
+            <div class="col-md-8">
+                @Html.DropDownList("machineClass", new List<SelectListItem>{
+                  new SelectListItem{ Text="Class 1", Value = "Class1" },
+                   new SelectListItem{ Text="Class 2", Value = "Class2" },
+                     new SelectListItem{ Text="Class 3", Value = "Class3" },
+                      new SelectListItem{ Text="Class 4", Value = "Class4" }
+
+                 }, "Select Machine Class", new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.MachineClass, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.RPMDriven, new { @class = "col-md-2 col-md-offset-1 control-label" })
+            <div class="col-md-8">
+                @Html.TextBoxFor(m => m.RPMDriven, new { @class = "form-control" })
+                @Html.ValidationMessageFor(m => m.RPMDriven, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.PulseRevolution, new { @class = "col-md-2 col-md-offset-1 control-label" })
+            <div class="col-md-8">
+                @Html.TextBoxFor(m => m.PulseRevolution, new { @class = "form-control" })
+                @Html.ValidationMessageFor(m => m.PulseRevolution, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.MachineDetail, htmlAttributes: new { @class = " col-md-2 col-md-offset-1 control-label" })
+            <div class="col-md-8">
+                @Html.TextAreaFor(m => m.MachineDetail, 3, 10, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.MachineDetail, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-4 col-md-8">
+                <button type="button" id="btnUpdateMachine" class="btn btn-success">Save Detail</button>
+            </div>
+        </div>
+    </div>
+}
+
+<script>
+    $('#btnUpdateMachine').click(function () {
+        $.ajax({
+            url: "@Url.Action("UpdateMachine", "Upload", new { area = "RemoteAnalysis" })",
+            type: 'POST',
+            data: $('form').serialize(),
+            success: function (data) {
+                $('#graphDisplay').html('');
+                $('#graphDisplay').html(data);
+                alert("Machine details update succesfully.");
+            }
+        });
+    });
+</script>
+

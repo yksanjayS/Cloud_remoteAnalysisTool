@@ -1,0 +1,333 @@
+﻿@model VibExchange.Models.UploadFile
+
+<script src="~/Scripts/jquery-1.7.1.min.js"></script>
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>UploadFile</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Instrument)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Instrument)
+            @Html.ValidationMessageFor(model => model.Instrument)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.AnalysisType)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.AnalysisType)
+            @Html.ValidationMessageFor(model => model.AnalysisType)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Description)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Description)
+            @Html.ValidationMessageFor(model => model.Description)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.MachineLabel)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.MachineLabel)
+            @Html.ValidationMessageFor(model => model.MachineLabel)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.FileID)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.FileID)
+            @Html.ValidationMessageFor(model => model.FileID)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.TrainName)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.TrainName)
+            @Html.ValidationMessageFor(model => model.TrainName)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.MachineOrientaion)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.MachineOrientaion)
+            @Html.ValidationMessageFor(model => model.MachineOrientaion)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.MountingType)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.MountingType)
+            @Html.ValidationMessageFor(model => model.MountingType)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.TransmissionType)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.TransmissionType)
+            @Html.ValidationMessageFor(model => model.TransmissionType)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.DEUnitType)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.DEUnitType)
+            @Html.ValidationMessageFor(model => model.DEUnitType)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.DURPM)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.DURPM)
+            @Html.ValidationMessageFor(model => model.DURPM)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.NoOfPoles)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.NoOfPoles)
+            @Html.ValidationMessageFor(model => model.NoOfPoles)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.NDEUnitType1)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.NDEUnitType1)
+            @Html.ValidationMessageFor(model => model.NDEUnitType1)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.NDEUnitType2)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.NDEUnitType2)
+            @Html.ValidationMessageFor(model => model.NDEUnitType2)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.NDEUnitType3)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.NDEUnitType3)
+            @Html.ValidationMessageFor(model => model.NDEUnitType3)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.BearingLubrication)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.BearingLubrication)
+            @Html.ValidationMessageFor(model => model.BearingLubrication)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.bearingMake)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.bearingMake)
+            @Html.ValidationMessageFor(model => model.bearingMake)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.bearingNoDE)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.bearingNoDE)
+            @Html.ValidationMessageFor(model => model.bearingNoDE)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.bearingNoNDE)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.bearingNoNDE)
+            @Html.ValidationMessageFor(model => model.bearingNoNDE)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.machine)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.machine)
+            @Html.ValidationMessageFor(model => model.machine)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.coupling1)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.coupling1)
+            @Html.ValidationMessageFor(model => model.coupling1)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.coupling2)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.coupling2)
+            @Html.ValidationMessageFor(model => model.coupling2)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.coupling3)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.coupling3)
+            @Html.ValidationMessageFor(model => model.coupling3)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.rpm1)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.rpm1)
+            @Html.ValidationMessageFor(model => model.rpm1)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.rpm2)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.rpm2)
+            @Html.ValidationMessageFor(model => model.rpm2)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.rpm3)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.rpm3)
+            @Html.ValidationMessageFor(model => model.rpm3)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.PointCount)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.PointCount)
+            @Html.ValidationMessageFor(model => model.PointCount)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.filelabel)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.filelabel)
+            @Html.ValidationMessageFor(model => model.filelabel)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.fileName1)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.fileName1)
+            @Html.ValidationMessageFor(model => model.fileName1)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Uploaddate)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Uploaddate)
+            @Html.ValidationMessageFor(model => model.Uploaddate)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.FileType)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.FileType)
+            @Html.ValidationMessageFor(model => model.FileType)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.sr)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.sr)
+            @Html.ValidationMessageFor(model => model.sr)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.costperpoint)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.costperpoint)
+            @Html.ValidationMessageFor(model => model.costperpoint)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.costpergraph)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.costpergraph)
+            @Html.ValidationMessageFor(model => model.costpergraph)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.currentfile)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.currentfile)
+            @Html.ValidationMessageFor(model => model.currentfile)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.BearingType)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.BearingType)
+            @Html.ValidationMessageFor(model => model.BearingType)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.chkId)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.chkId)
+            @Html.ValidationMessageFor(model => model.chkId)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.chkName)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.chkName)
+            @Html.ValidationMessageFor(model => model.chkName)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.chkStatus)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.chkStatus)
+            @Html.ValidationMessageFor(model => model.chkStatus)
+        </div>
+
+        <p>
+            <input type="submit" value="Create" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>

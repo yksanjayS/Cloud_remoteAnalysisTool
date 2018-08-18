@@ -1,0 +1,99 @@
+﻿@model VibExchange.Models.RegisterModel
+
+@{
+    ViewBag.Title = "Employee Register";
+    Layout = "~/Views/Shared/_VibExchangeLayout.cshtml";
+}
+
+
+@using (Html.BeginForm("Register", "Employee", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+{
+    <div class="container row" style="padding-left: 40px">
+        <h4 style="color: chocolate">Please enter your detail. </h4>
+        <section id="registerform">
+
+            @Html.AntiForgeryToken()
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+            <div class="form-group">
+                @Html.LabelFor(m => m.Name, new { @class = "col-md-2 control-label" })
+                <div class="col-md-10">
+                    @Html.TextBoxFor(m => m.Name, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(m => m.Name, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(m => m.UserName, new { @class = "col-md-2 control-label" })
+                <div class="col-md-10">
+                    @Html.TextBoxFor(m => m.UserName, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(m => m.UserName, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(m => m.Password, new { @class = "col-md-2 control-label" })
+                <div class="col-md-10">
+                    @Html.PasswordFor(m => m.Password, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(m => m.ConfirmPassword, new { @class = "col-md-2 control-label" })
+                <div class="col-md-10">
+                    @Html.PasswordFor(m => m.ConfirmPassword, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(m => m.ConfirmPassword, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(m => m.Designation, new { @class = "col-md-2 control-label" })
+                <div class="col-md-10">
+                    @Html.TextBoxFor(m => m.Designation, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(m => m.Designation, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group ">
+                @Html.LabelFor(model => model.Department, new { @class = "col-md-2 control-label" })
+                <div class="col-md-10">
+                    @Html.DropDownList("Department", new List<SelectListItem>{
+                    new SelectListItem{ Text="Account", Value = "account" },
+                     new SelectListItem{ Text="Admin", Value = "Admin" },
+                      new SelectListItem{ Text="HR", Value = "HR" },
+                       new SelectListItem{ Text="IT", Value = "IT" },
+                    new SelectListItem{ Text="Sales and Marketing", Value = "Sales and Marketing" }
+                 }, "Select Department", new { @class = "form-control" })
+                    @Html.ValidationMessageFor(m => m.Department, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(m => m.Email, new { @class = "col-md-2 control-label" })
+                <div class="col-md-10">
+                    @Html.TextBoxFor(m => m.Email, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            @*<div class="form-actions">
+               
+                <button type="submit" class="btn btn-success">Sign Up</button>
+            </div>*@
+            <div class="form-group">
+                <label class="checkbox"> <input type="checkbox" class="uniform" value=""> <br />I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a></label>
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="submit" value="Register" class="btn btn-default" />
+                </div>
+            </div>
+
+        </section>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to Home", "Index", "Home")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

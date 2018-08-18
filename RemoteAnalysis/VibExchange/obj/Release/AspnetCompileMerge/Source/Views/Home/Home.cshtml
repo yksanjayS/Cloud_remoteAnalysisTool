@@ -1,0 +1,325 @@
+﻿@model IEnumerable<VibExchange.Models.Slider>
+
+@{
+    ViewBag.Title = "Vibration Analysis Services, Condition Monitoring on VibExchange";
+    Layout = "~/Views/Shared/_VibExchangeLayout.cshtml";
+}
+<style>
+    #body {
+        background: url("../Images/Industry1.jpg") no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+
+    .login-box-plain {
+        background: none repeat scroll 0 0 transparent;
+        border: 1px solid #D8D8D8;
+        border-radius: 7px 7px 7px 7px;
+        box-shadow: 0 1px 4px #D3D3D3;
+        margin: 15px auto;
+        padding: 5px 10px 10px;
+        position: relative;
+        min-height: 300px;
+    }
+
+    div a:hover img {
+        transform: scale(1.2);
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        background-color: chocolate;
+        z-index: 1;
+        border: 2px solid #ff6600;
+    }
+
+    .bigintro {
+        font-size: 20px;
+        line-height: 40px;
+        text-align: center;
+        border-bottom: solid 1px black;
+        margin-bottom: 5px;
+        color: cyan;
+        background-color: GrayText;
+    }
+
+    .services {
+        background-color: aliceblue;
+        margin-bottom: 10%;
+        width: 100%;
+        height: 20%;
+        text-align: center;
+        font-family: Verdana;
+        font-weight: 100;
+        font-size: large;
+        text-align-last: center;
+    }
+</style>
+
+<div id="body">
+    <div>
+        <div id="main" class="row-fluid">
+            <div class="col-md-9" style="margin-top:7%;">
+                <div class="col-md-offset-5 col-md-5" style="margin-top:8%;">
+                    <h1 style="color: whitesmoke; text-align: center; border-bottom: solid 2px orangered; font-weight: 500; font-family: cursive">Make Your Choice </h1>
+                </div>
+                <div class="row-fluid">
+                    <div class="col-md-offset-4 col-md-7">
+                        <a class="col-md-6 " href="#" style="padding-left:15%;">
+                            <h2 id="customer" style="color: white; border: none; font-family: sans-serif; " onclick="gotoCustomer()">Vibration User</h2>
+                        </a>
+                        <a class="col-md-5 " href="#">
+                            <h2 id="consultant" style="color: white; border: none; font-family: sans-serif" onclick="gotoConsultant()">
+                                Vibration Expert
+                            </h2>
+                        </a>
+                    </div>
+                </div>
+
+                <div style="margin-top: 12%;">
+
+
+                    <div id="Service1" class="col-md-offset-2 col-md-3 img-thumbnail" style="height: 150px; padding: 1px;">
+                        <a href="@Url.Action("getService", "Services", new { @serviceID = "Centrifugal Pump" })">
+                            <img src="~/Images/cfp1.jpg" style="width: 100%; height: 100%;" />
+                        </a>
+
+                    </div>
+                    <div id="Service2" class=" col-md-3 img-thumbnail" style="height: 150px; margin-left: 3%; padding: 1px;">
+                        <a href="@Url.Action("getService", "Services", new { @serviceID="Fans"})">
+                            <img src="~/Images/fans.jpg" style="width:100%;height:100%;" />
+                        </a>
+
+                    </div>
+                    <div id="Service3" class=" col-md-3 img-thumbnail" style=" height: 150px; margin-left: 3%; padding: 1px;">
+                        <a href="@Url.Action("getService", "Services", new { @serviceID = "Bearings" })">
+                            <img src="~/Images/bearing2.jpeg" style="width:100%;height:100%;" />
+                        </a>
+
+                    </div>
+
+                </div>
+                <div style="margin-bottom:10px">
+                    <div id="Service4" class="col-md-offset-2 col-md-3 img-thumbnail" style="height: 150px; margin-top: 2%;margin-bottom:2%; padding: 1px;">
+                        <a href="@Url.Action("getService", "Services", new { @serviceID = "Gears" })">
+                            <img src="~/Images/Gear.jpg" style="width:100%;height:100%;" />
+                        </a>
+
+                    </div>
+                    <div id="Service5" class="col-md-3 img-thumbnail" style="height: 150px; margin-top: 2%; margin-bottom: 2%; margin-left: 3%; padding: 1px; ">
+                        <a href="@Url.Action("getService", "Services", new { @serviceID = "Motor Current" })">
+                            <img src="~/Images/mcsa.jpg" style="width:100%;height:100%;" />
+                        </a>
+
+                    </div>
+                    <div id="Service6" class="col-md-3 img-thumbnail" style="height: 150px; margin-top: 2%; margin-bottom: 2%; margin-left: 3%; padding: 1px;">
+                        <a href="@Url.Action("getService", "Services", new { @serviceID="HFD"})">
+                            <img src="~/Images/hfd1.jpg" style="width:100%;height:100%;" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <marquee behavior="scroll" direction="up" scrollamount="7" onmouseover="this.stop();" onmouseout="this.start();" height="700px;" width="100%;">
+                    @{
+                        Html.RenderAction("showExpertData", "Employee");
+                    }
+                </marquee>
+            </div>
+        </div>
+
+        <div id="customerSection" class="row" style="margin-left:5%;margin-right:5%;">
+            <div class="row" style="padding-top:2%;">
+                <a id="home" href="#" onclick="gotoHome()" class=" col-md-2 float-left btn btn-default " style="margin-left:28px;"> << Back to Home</a>
+            </div>
+            <div class=" col-md-3 login-box-plain " style="margin-right:3%;">
+                <h2 class="bigintro img-rounded" style="border: 1px solid; background-color: white; color: #ff6600">WHAT WE DO ?</h2>
+                <hr />
+                <div class=" services img-thumbnail" style="background-color: #ff6600">
+                    <a href="@Url.Action("getService", "Services", new { @serviceID = "Centrifugal Pump" })" style="color:white">Pumps Vibration Analysis</a>
+                </div>
+                <div class=" services img-thumbnail" style="background-color: #ff6600">
+                    <a href="@Url.Action("getService", "Services", new { @serviceID="Fans"})" style="color:white">Fan Vibration Analysis</a>
+                </div>
+                <div class=" services img-thumbnail" style="background-color: #ff6600">
+                    <a href="@Url.Action("getService", "Services", new { @serviceID="Bearings"})" style="color:white">Bearings Vibration Analysis</a>
+                </div>
+                <div class=" services img-thumbnail" style="background-color: #ff6600">
+                    <a href="@Url.Action("getService", "Services", new { @serviceID="Gears"})" style="color:white">Gears Vibration Analysis</a>
+                </div>
+                <div class="services img-thumbnail" style="background-color: #ff6600">
+                    <a href="@Url.Action("getService", "Services", new { @serviceID="Motor Current"})" style="color:white">Motor Current Signature Analysis</a>
+                </div>
+                <div class=" services img-thumbnail" style="background-color: #ff6600">
+                    <a href="@Url.Action("getService", "Services", new { @serviceID="HFD"})" style="color:white">High Frequency Defects Analysis</a>
+                </div>
+            </div>
+
+            <div class="col-md-4 login-box-plain" style="margin-right:3%;">
+                <h2 class="bigintro img-rounded" style="border: 1px solid;background-color: white; color: #ff6600">HOW WE DO ?</h2>
+                <hr />
+                <div class="row-fluid img-thumbnail" style="background-color: #ff6600;">
+                    <h4 style="color:white; border-bottom: none; display: inline;">
+                        VibExchange is the world's first automation platform bringing together the best vibration consultants
+                        and technicians from across the globe. We are setting up the trend of composite Predictive Maintenance
+                        Services via a marketplace model ridding along a rating and ranking mechanism for service providers.
+                    </h4>
+                    <p>
+                        <h4 style="color: aliceblue; border-bottom: none; display: inline;">We provide three types of vibration analysis for your machines </h4>
+                    </p>
+                    <div class=" services img-thumbnail">
+                        <a href="@Url.Action("AnalysisMode", "UploadDownload", new { id = "Manually Analysis Method" })" style="color:#ff6600;">Manual Vibration Analysis </a>
+                    </div>
+                    <div class=" services img-thumbnail">
+                        <a href="javascript:remoteAnalysis()" style="color:#ff6600;">Remote Vibration Analysis</a>
+                    </div>
+
+                    <div class=" services img-thumbnail">
+                        <a href="@Url.Action("GetConsultant", "Employee", new { id = "Expert Analysis Method" })" style="color:#ff6600;">Vibration Analysis by Expert</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 login-box-plain ">
+                <h2 class="bigintro img-rounded" style="border: 1px solid; background-color: white; color: #ff6600">SEND YOUR ENQUIRY</h2>
+                <hr />
+                <div class="img-rounded" style="background-color:white;">
+                    @{
+
+                        Html.RenderAction("getEnquiry", "Order");
+                    }
+                </div>
+            </div>
+        </div>
+
+        <div id="consultantSection" class="row" style="margin-left:5%;margin-right:5%;">
+            <div class="row" style="padding-top:2%;">
+                <a id="home" href="#" onclick="gotoHome()" class=" col-md-2 float-left btn btn-default " style="margin-left:28px;"> << Back to Home</a>
+            </div>
+            <div class="col-md-3 login-box-plain " style="margin-right:3%;">
+                <h2 class="bigintro img-rounded" style="border: 1px solid; background-color: white; color: #ff6600">SEND YOUR QUERY</h2>
+                <hr />
+                <div class="img-rounded" style="background-color:white;">
+                    @{
+                        Html.RenderAction("getExpertQuery", "Order");
+                    }
+                </div>
+            </div>
+            <div class="col-md-3 login-box-plain" style="margin-right:3%;">
+                <h2 class="bigintro img-rounded" style="border: 1px solid; background-color: white; color: #ff6600">WHY JOIN US ?</h2>
+                <hr />
+                <div class="row-fluid img-thumbnail" style="background-color: #ff6600">
+                    <h4 style="color: cyan; border-bottom: none; display: inline; text-decoration: underline">VibExchange</h4>
+                    <span style="color:white">
+                        is the world's first automation platform bringing together the best vibration consultants
+                        and technicians from across the globe.
+                    </span>
+                    <p>
+                        <h5 style="color: cyan; border-bottom: none; display: inline;text-decoration:underline;font-family:Verdana">Key Features : </h5>
+                    </p>
+                    <p>
+                        <span style="color:white">
+                            <img style="padding-right: 1%;" src="~/Images/steps.png" />
+                            Work from accros the world.
+                        </span>
+                    </p>
+                    <p>
+                        <span style="color:white">
+                            <img style="padding-right: 1%;" src="~/Images/steps.png" />
+                            Get the data for analysis at your choice.
+                        </span>
+                    </p>
+                    <p>
+                        <span style="color:white">
+                            <img style="padding-right: 1%;" src="~/Images/steps.png" />
+                            Buy customer enquiries at very low cost.
+                        </span>
+                    </p>
+                    <p>
+                        <span style="color:white">
+                            <img style="padding-right: 1%;" src="~/Images/steps.png" />
+                            Consulting with other experts.
+                        </span>
+                    </p>
+                    <p>
+                        <span style="color:white">
+                            <img style="padding-right: 1%;" src="~/Images/steps.png" />
+                            Opportunity to expand the area of work.
+                        </span>
+                    </p>
+                </div>
+            </div>
+            <div class=" col-md-5 login-box-plain">
+                <h2 class="bigintro img-rounded" style="border: 1px solid; background-color: white; color: #ff6600">BUY ENQUIRY !</h2>
+                <hr />
+                <div class="row-fluid img-thumbnail" style="background-color: white;">
+                    <marquee behavior="scroll" direction="up" scrollamount="5" onmouseover="this.stop();" onmouseout="this.start();" width="100%" height="500px;">
+                        @{
+                            Html.RenderAction("showEnquiryData", "Order");
+                        }
+                    </marquee>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id='myModal' class="modal fade in">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                Put Your Enquiry here ...
+                <button type="button" style="padding-right: 1%; padding-top: 1%; color: red;" class="close" data-dismiss="modal" onclick="closeModal()">Close</button>
+            </div>
+            <div id='myModalContent'></div>
+        </div>
+    </div>
+</div>
+<script>
+    $(document).ready(function () {
+        $("#main").show();
+        $("#customerSection").hide();
+        $("#consultantSection").hide();
+    });
+    function gotoHome() {
+        $("#main").show();
+        $("#customerSection").hide();
+        $("#consultantSection").hide();
+    }
+    function gotoCustomer() {
+        $("#main").hide();
+        $("#customerSection").show();
+        $("#consultantSection").hide();
+    }
+    function gotoConsultant() {
+        $("#main").hide();
+        $("#customerSection").hide();
+        $("#consultantSection").show();
+    }
+    function closeModal() {
+        $("#myModal").toggle();
+    }
+
+    //var numChecked = $('#TermsAndConditions').find('input:checked').length;
+    //if (numChecked === 0) {
+    //    alert('Please accept term and condition');
+    //}
+
+</script>
+<script>
+    (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date(); a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-81671504-1', 'auto');
+    ga('send', 'pageview');
+
+</script>
+<script>
+    function remoteAnalysis() {
+        alert("Remote Analysis is in testing phase and coming soon ! You can use other two methods.");
+    };
+
+
+</script>

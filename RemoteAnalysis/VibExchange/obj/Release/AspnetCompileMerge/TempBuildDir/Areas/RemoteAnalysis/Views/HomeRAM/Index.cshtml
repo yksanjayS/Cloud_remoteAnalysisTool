@@ -1,0 +1,53 @@
+﻿@{
+    ViewBag.Title = "RAMHome";
+    Layout = "~/Views/Shared/_VibExchangeLayout.cshtml";
+}
+@using (Html.BeginForm("Index", "HomeRAM", new { area = "RemoteAnalysis" }, FormMethod.Post, new { returnUrl = this.Request.Url.AbsoluteUri }))
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+    <div class="container">
+        <div class="row-fluid">
+            <div class="row-fluid">
+                <h4></h4>
+                <legend>Welcome to Remote Analysis on VibExchange </legend>
+            </div>
+            <div class="row-fluid">
+                <p>
+                    Terms and Conditions Generator
+
+                    Help protect your website and its users with clear and fair website terms and conditions. These terms and conditions for a website set out key issues such as acceptable use, privacy, cookies, registration and passwords, intellectual property, links to other sites, termination and disclaimers of responsibility. Terms and conditions are used and necessary to protect a website owner from liability of a user relying on the information or the goods provided from the site then suffering a loss.
+
+                    Making your own terms and conditions for your website is hard, not impossible, to do. It can take a few hours to few days for a person with no legal background to make. But worry no more; we are here to help you out. All you need to do is fill up the blank spaces and then you will receive an email with your personalized terms and conditions.
+
+                    Also looking for a disclaimer? Check out disclaimertemplate.net.
+
+                    The accuracy of the generated document on this website is not legally binding. Use at your own risk.
+                </p>
+                <h4>Provision of services 2.1</h4>
+                <p>
+                    Big blue door will provide Services to the Client in accordance with the Agreement.  Whereas these Terms and Conditions are deemed to constitute Big blue door’s standard terms and conditions
+                    of business the Letter of Agreement includes terms and conditions personal to the Client and Big Blue Door.  In the event of a conflict between these Terms and Conditions
+                    and the Letter of Agreement the latter will prevail. 2.2 The Client acknowledges that the Services recommended or provided to the Client by Big blue door are done so on the basis
+                    of information and/or specifications or requirements provided by the Client. 2.3 The Client shall immediately upon request provide Big blue door with any Required Items and agrees
+                    that we will not be liable for any delay or failure to provide the Services caused by the Client’s failure to provide any Required Items. 2.4 The Client shall be provided with and
+                    shall retain duplicate copies of all Materials and insure these against their accidental loss or damage. All Materials shall be at the sole risk of the Client from the time of
+                    delivery to the Client.  The Client acknowledges that Big blue door will retain original Materials for its own purposes including those set out at clause 7.4 below unless the
+                    provisions of clause 7.1 apply. 2.5 Where Big blue door provides the Client with web development services, the Client has the right to obtain maintenance and future development
+                    work from a different developer of their own choosing, upon completion of any work by Big blued door under the Agreement, but we reserve the right to provide the Client with an
+                    estimate and/or quote in respect of such work. 2.6 The Client shall not unlawfully discriminate against Big blue door employees when receiving Services under the Contract either
+                    directly or indirectly on such grounds as race, colour, ethnic or national origin, disability, sex or sexual orientation, religion or belief, or age.
+                </p>
+            </div>
+            <div class="form-group col-md-offset-4" style="padding-top:15px;">
+                @Html.ActionLink("I disagree", "Home", "Home", new { area = "" }, new { @class = "btn btn-danger" })
+                @Html.ActionLink("I agree >>", "DataUpload", "Upload", new { area = "RemoteAnalysis" }, new { @class = "btn btn-success" })
+
+                @*<input type="button" id="btnagree" value="Agree >>" class="btn btn-success"/>*@
+                @*<input type="button" id="btndisagree" value="Disagree" class="btn btn-danger" />*@
+            </div>
+
+
+        </div>
+    </div>
+}

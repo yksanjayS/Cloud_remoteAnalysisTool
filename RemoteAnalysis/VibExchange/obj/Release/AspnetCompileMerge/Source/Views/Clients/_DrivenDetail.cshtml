@@ -1,0 +1,327 @@
+﻿@model VibExchange.Models.UploadFile
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+<h4 style="color: chocolate; margin-left: 10px;">Your machine detail.. </h4>
+<div class="row-fluid" style="padding-left: 20px">
+    <section id="DrivenUnit">
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" }) 
+            <div class=" form-horizontal" role="form">
+                <div class="form-group ">
+                    @Html.LabelFor(model => model.NDEUnit1, new { @class = "col-md-3 control-label" })
+                    <div class="col-md-9">
+                        @Html.TextBoxFor(model => model.NDEUnit1, new { @class = "form-control", id = "NDEUnit", @readonly = true })
+                    </div>
+                </div>
+                <div class="form-group ">
+                    @Html.LabelFor(model => model.NDEType, new { @class = "col-md-3 control-label" })
+                    <div class="col-md-9">
+                        @Html.TextBoxFor(model => model.NDEType, new { @class = "form-control", id = "NDEType", @readonly = true })
+                    </div>
+                </div>
+                <div class="form-group ">
+                    @Html.LabelFor(model => model.TransmissionType, new { @class = "col-md-3 control-label" })
+                    <div class="col-md-9">
+                        @Html.TextBoxFor(model => model.TransmissionType, new { @class = "form-control", id = "TransmissionType", @readonly = true })
+                    </div>
+                </div>
+                <div class="form-group ">
+                    @Html.LabelFor(model => model.BearingLubrication, new { @class = "col-md-3 control-label" })
+                    <div class="col-md-9">
+                        @Html.TextBoxFor(model => model.BearingLubrication, new { @class = "form-control", id = "Ber_Lubrication", @readonly = true })
+                    </div>
+                </div>
+                <div id="divBearingCommon">
+                    <div class="form-group ">
+                        @Html.LabelFor(model => model.bearingMake, new { @class = "col-md-3 control-label" })
+                        <div class="col-md-9">
+                            @Html.TextBoxFor(model => model.bearingMake, new { @class = "form-control", id = "BerMake", @readonly = true })
+                        </div>
+                    </div>
+                    <div class="form-group ">
+                        @Html.LabelFor(model => model.bearingNoDE, new { @class = "col-md-3 control-label" })
+                        <div class="col-md-9">
+                            @Html.TextBoxFor(model => model.bearingNoDE, new { @class = "form-control", @readonly = true })
+                        </div>
+                    </div>
+                    <div class="form-group ">
+                        @Html.LabelFor(model => model.bearingNoNDE, new { @class = "col-md-3 control-label" })
+                        <div class="col-md-9">
+                            @Html.TextBoxFor(model => model.bearingNoNDE, new { @class = "form-control", @readonly = true })
+                        </div>
+                    </div>
+                </div>
+                <div id="divBearingTwoStage">
+                    <div class="form-group ">
+                        @Html.LabelFor(model => model.bearingMake, new { @class = "col-md-3 control-label" })
+                        <div class="col-md-9">
+                            @Html.TextBoxFor(model => model.bearingMake, new { @class = "form-control", id = "BerMake", @readonly = true })
+                        </div>
+                    </div>
+                    <div class="form-group ">
+                        @Html.LabelFor(model => model.bearingDEIn, new { @class = "col-md-3 control-label" })
+                        <div class="col-md-9">
+                            @Html.TextBoxFor(model => model.bearingDEIn, new { @class = "form-control", @readonly = true })
+                        </div>
+                    </div>
+                    <div class="form-group ">
+                        @Html.LabelFor(model => model.bearingNDEIn, new { @class = "col-md-3 control-label" })
+                        <div class="col-md-9">
+                            @Html.TextBoxFor(model => model.bearingNDEIn, new { @class = "form-control", @readonly = true })
+                        </div>
+                    </div>
+
+                    <div class="form-group ">
+                        @Html.LabelFor(model => model.bearingDEOut, new { @class = "col-md-3 control-label" })
+                        <div class="col-md-9">
+                            @Html.TextBoxFor(model => model.bearingDEOut, new { @class = "form-control", @readonly = true })
+                        </div>
+                    </div>
+                    <div class="form-group ">
+                        @Html.LabelFor(model => model.bearingNDEOut, new { @class = "col-md-3 control-label" })
+                        <div class="col-md-9">
+                            @Html.TextBoxFor(model => model.bearingNDEOut, new { @class = "form-control", @readonly = true })
+                        </div>
+                    </div>
+                </div>
+                <div id="divBearingThreeStage">
+                    <div class="form-group ">
+                        @Html.LabelFor(model => model.bearingMake, new { @class = "col-md-3 control-label" })
+                        <div class="col-md-9">
+                            @Html.TextBoxFor(model => model.bearingMake, new { @class = "form-control", @readonly = true })
+                        </div>
+                    </div>
+                    <div class="form-group ">
+                        @Html.LabelFor(model => model.bearingDEIn, new { @class = "col-md-3 control-label" })
+                        <div class="col-md-9">
+                            @Html.TextBoxFor(model => model.bearingDEIn, new { @class = "form-control", @readonly = true })
+                        </div>
+                    </div>
+                    <div class="form-group ">
+                        @Html.LabelFor(model => model.bearingNDEIn, new { @class = "col-md-3 control-label" })
+                        <div class="col-md-9">
+                            @Html.TextBoxFor(model => model.bearingNDEIn, new { @class = "form-control", @readonly = true })
+                        </div>
+                    </div>
+                    <div class="form-group ">
+                        @Html.LabelFor(model => model.bearingDEIdler, new { @class = "col-md-3 control-label" })
+                        <div class="col-md-9">
+                            @Html.TextBoxFor(model => model.bearingDEIdler, new { @class = "form-control", @readonly = true })
+                        </div>
+                    </div>
+                    <div class="form-group ">
+                        @Html.LabelFor(model => model.bearingNDEIdler, new { @class = "col-md-3 control-label" })
+                        <div class="col-md-9">
+                            @Html.TextBoxFor(model => model.bearingNDEIdler, new { @class = "form-control", @readonly = true })
+                        </div>
+                    </div>
+                    <div class="form-group ">
+                        @Html.LabelFor(model => model.bearingDEOut, new { @class = "col-md-3 control-label" })
+                        <div class="col-md-9">
+                            @Html.TextBoxFor(model => model.bearingDEOut, new { @class = "form-control", @readonly = true })
+                        </div>
+                    </div>
+                    <div class="form-group ">
+                        @Html.LabelFor(model => model.bearingNDEOut, new { @class = "col-md-3 control-label" })
+                        <div class="col-md-9">
+                            @Html.TextBoxFor(model => model.bearingNDEOut, new { @class = "form-control", @readonly = true })
+                        </div>
+                    </div>
+                </div>
+                <div id="divRpmIn" class="form-group ">
+                    @Html.LabelFor(model => model.InputRPM, new { @class = "col-md-3 control-label" })
+                    <div class="col-md-9">
+                        @Html.TextBoxFor(model => model.InputRPM, new { @class = "form-control", @readonly = true })
+                    </div>
+                </div>
+                <div id="divRpmOut" class="form-group ">
+                    @Html.LabelFor(model => model.OutputRPM, new { @class = "col-md-3 control-label" })
+                    <div class="col-md-9">
+                        @Html.TextBoxFor(model => model.OutputRPM, new { @class = "form-control", @readonly = true })
+                    </div>
+                </div>
+                <div id="divGearRatio" class="form-group ">
+                    @Html.LabelFor(model => model.GearRatio, new { @class = "col-md-3 control-label" })
+                    <div class="col-md-9">
+                        @Html.TextBoxFor(model => model.GearRatio, new { @class = "form-control", @readonly = true })
+                    </div>
+                </div>
+                <div id="divTeethInput" class="form-group ">
+                    @Html.LabelFor(model => model.TeethCountInput, new { @class = "col-md-3 control-label" })
+                    <div class="col-md-9">
+                        @Html.TextBoxFor(model => model.TeethCountInput, new { @class = "form-control", @readonly = true })
+                    </div>
+                </div>
+                <div id="divTeethOutput" class="form-group ">
+                    @Html.LabelFor(model => model.TeethCountOutput, new { @class = "col-md-3 control-label" })
+                    <div class="col-md-9">
+                        @Html.TextBoxFor(model => model.TeethCountOutput, new { @class = "form-control", @readonly = true })
+                    </div>
+                </div>
+                <div id="divTeethIdler" class="form-group ">
+                    @Html.LabelFor(model => model.TeethCountIdle, new { @class = "col-md-3 control-label" })
+                    <div class="col-md-9">
+                        @Html.TextBoxFor(model => model.TeethCountIdle, new { @class = "form-control", @readonly = true })
+                    </div>
+                </div>
+                <div id="divRPM" class="form-group ">
+                    @Html.LabelFor(model => model.NDERPM, new { @class = "col-md-3 control-label" })
+                    <div class="col-md-9">
+                        @Html.TextBoxFor(model => model.NDERPM, new { @class = "form-control", id = "NDEURPM", placeholder = "Fill rpm", @readonly = true })
+                    </div>
+                </div>
+                <div id="divBladesorFins" class="form-group ">
+                    @Html.LabelFor(model => model.BladesorFins, new { @class = "col-md-3 control-label" })
+                    <div class="col-md-9">
+                        @Html.TextBoxFor(model => model.BladesorFins, new { @class = "form-control", @readonly = true })
+                    </div>
+                </div>
+
+                <div id="divBeltType" class="form-group ">
+                    @Html.LabelFor(model => model.BeltType, new { @class = "col-md-3 control-label" })
+                    <div class="col-md-9">
+                        @Html.TextBoxFor(model => model.BeltType, new { @class = "form-control", id = "BeltType", @readonly = true })
+                    </div>
+                </div>
+                <div id="divBeltCount" class="form-group ">
+                    @Html.LabelFor(model => model.BeltCount, new { @class = "col-md-3 control-label" })
+                    <div class="col-md-9">
+                        @Html.TextBoxFor(model => model.BeltCount, new { @class = "form-control", @readonly = true })
+                    </div>
+                </div>
+                <div id="divBeltLength" class="form-group ">
+                    @Html.LabelFor(model => model.BeltLength, new { @class = "col-md-3 control-label" })
+                    <div class="col-md-9">
+                        @Html.TextBoxFor(model => model.BeltLength, new { @class = "form-control", @readonly = true })
+                    </div>
+                </div>
+                <div id="divPitchDia" class="form-group ">
+                    @Html.LabelFor(model => model.PitchDia, new { @class = "col-md-3 control-label" })
+                    <div class="col-md-9">
+                        @Html.TextBoxFor(model => model.PitchDia, new { @class = "form-control", @readonly = true })
+                    </div>
+                </div>
+                <div id="divBeltTeethCount" class="form-group ">
+                    @Html.LabelFor(model => model.TeethCount, new { @class = "col-md-3 control-label" })
+                    <div class="col-md-9">
+                        @Html.TextBoxFor(model => model.TeethCount, new { @class = "form-control", @readonly = true })
+                    </div>
+                </div>
+                <div class="form-group ">
+                    @Html.LabelFor(model => model.Point_Count_NDE, new { @class = "col-md-3 control-label" })
+                    <div class="col-md-9">
+                        @Html.TextBoxFor(model => model.Point_Count_NDE, new { @class = "form-control", placeholder = "Data Collected Points", @readonly = true })
+
+                    </div>
+                </div>
+            </div>
+        }
+    </section>
+</div>
+
+<script>
+
+    $(document).ready(function () {
+        ////////////////////////Start NDE Unit Section/////////////////////////////////////////////
+        $('#divBeltTeethCount').hide();
+        $('#divPitchDia').hide();
+        $('#divBeltLength').hide();
+        $('#divBeltCount').hide();
+        $('#divBeltType').hide();
+        $('#divRPM').hide();
+        $('#divTeethIdler').hide();
+        $('#divTeethOutput').hide();
+        $('#divTeethInput').hide();
+        $('#divGearRatio').hide();
+        $('#divRpmOut').hide();
+        $('#divRpmIn').hide();
+        $('#divBladesorFins').hide();
+        $('#divBearingCommon').hide();
+        $('#divBearingTwoStage').hide();
+        $('#divBearingThreeStage').hide();
+        var ndeUnit = $('#NDEUnit').val();
+        if (ndeUnit == 'Gear Box Two Stage' || ndeUnit == 'Gear Box Three Stage') {
+            $('#divTeethOutput').show();
+            $('#divTeethInput').show();
+            $('#divGearRatio').show();
+            $('#divRpmOut').show();
+            $('#divRpmIn').show();
+            $('#divRPM').hide();
+            $('#divBladesorFins').hide();
+            $('#divBearingCommon').hide();
+            $('#divBearingTwoStage').hide();
+            $('#divBearingThreeStage').hide();
+            if (ndeUnit == 'Gear Box Two Stage') {
+                $('#divTeethIdler').hide();
+                $('#divBearingCommon').hide();
+                $('#divBearingTwoStage').show();
+                $('#divBearingThreeStage').hide();
+            }
+            else {
+                $('#divTeethIdler').show();
+                $('#divBearingCommon').hide();
+                $('#divBearingTwoStage').hide();
+                $('#divBearingThreeStage').show();
+            }
+        }
+        else if (ndeUnit == 'Fan' || ndeUnit == 'Pump') {
+            $('#divRPM').show();
+            $('#divBladesorFins').show();
+            $('#divTeethIdler').hide();
+            $('#divTeethOutput').hide();
+            $('#divTeethInput').hide();
+            $('#divGearRatio').hide();
+            $('#divRpmOut').hide();
+            $('#divRpmIn').hide();
+            $('#divBearingCommon').show();
+            $('#divBearingTwoStage').hide();
+            $('#divBearingThreeStage').hide();
+        }
+        else if (ndeUnit == 'Crusher' || ndeUnit == 'Compressor') {
+            $('#divRPM').show();
+            $('#divTeethIdler').hide();
+            $('#divTeethOutput').hide();
+            $('#divTeethInput').hide();
+            $('#divGearRatio').hide();
+            $('#divRpmOut').hide();
+            $('#divRpmIn').hide();
+            $('#divBladesorFins').hide();
+            $('#divBearingCommon').show();
+            $('#divBearingTwoStage').hide();
+            $('#divBearingThreeStage').hide();
+        }
+
+        ////////////////////////End NDE Unit Section/////////////////////////////////////////////
+
+        ////////////////////////Start Transmission Section/////////////////////////////////////////////
+
+        var transType = $('#TransmissionType').val();
+        if (transType == 'Direct Mountained' || transType == 'Coupled') {
+            $('#divBeltType').hide();
+        }
+        else if (transType == 'Belt Driven') {
+            $('#divBeltType').show();
+            ////////////////////////Start Belt Type Transmission Section/////////////////////////////////////////////
+            var Belt = $('#BeltType').val();
+            if (Belt == "V Belt") {
+                $('#divPitchDia').show();
+                $('#divBeltLength').show();
+                $('#divBeltCount').show();
+                $('#divBeltTeethCount').hide();
+            }
+            else if (Belt == "Timing Belt") {
+                $('#divBeltTeethCount').show();
+                $('#divPitchDia').hide();
+                $('#divBeltLength').hide();
+                $('#divBeltCount').hide();
+
+                ////////////////////////End Belt Type Transmission Section/////////////////////////////////////////////
+            }
+        }
+        ////////////////////////End Transmission Section/////////////////////////////////////////////
+    });
+</script>
+
+

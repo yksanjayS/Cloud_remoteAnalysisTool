@@ -1,0 +1,78 @@
+﻿@model IEnumerable<VibExchange.Models.Enquiry>
+
+@{var grid = new WebGrid(source: Model, ajaxUpdateContainerId: "EnquiryGrid", rowsPerPage:20,canPage: true,canSort:true);
+grid.Pager(WebGridPagerModes.All);
+}
+@{
+    var username = Session["UserName"];
+}
+    <div id="gridContent" class="row-fluid" style="font-family: Verdana;">
+        @grid.GetHtml(tableStyle: "table table-bordered",
+                      headerStyle: "webgrid-header",
+                      footerStyle: "webgrid-footer",
+                      alternatingRowStyle: "webgrid-alternating-row",
+                      selectedRowStyle: "webgrid-selected-row",
+                      rowStyle: "webgrid-row-style",
+                columns: grid.Columns(
+                grid.Column(format: @<input type="hidden" name="EnquiryID" value="@item.EnquiryID" />),
+                          grid.Column(columnName: "Enq_Category", header: "Enquiry Detail"),
+                          grid.Column(columnName: "EnquiryDetail1", header: "Category"),
+                grid.Column("Action",
+                    style: "col1",
+                    format: @<text><div>
+                                       <a href="javascript:BuyEnquiry(@item.EnquiryID)">Buy Now</a>
+                            @*@Html.ActionLink("Buy Now", "buyEnquiry", "Order", new { id = item.EnquiryID })*@
+                        </div>
+                    </text>)
+              ))
+    </div>
+
+<script type="text/javascript">
+    function BuyEnquiry(EnquiryID) {
+        var userName = '@username';
+        if (userName == "") {
+            var flag = confirm('Please login or register before buy enquiry !');
+            if (flag) {
+                var url = '@Url.Action("Login", "Home")';
+                window.location.href = url;
+            }
+        }
+        else
+            {
+        //var status = confirm("500 Points will be charged for this enquiry ! Prress OK for your confirmation !")
+        //if (status) {
+            $.ajax({
+                url: "/Order/buyEnquiry",
+                type: "POST",
+                data: JSON.stringify({ 'Id': EnquiryID }),
+                dataType: "json",
+                traditional: true,
+                contentType: "application/json; charset=utf-8",
+                success: function (data) {
+
+                    // perform your save call here
+
+                    if (data.status == "Success") {
+                        alert("You have succesfully buy this enquiry. Now you can get information of this enquiry.");
+                        //$("#jqGridAllEnquiry").load();
+                        var url = '@Url.Action("showEnquiry", "Order")';
+                        window.location.href = url;
+                        //location.reload();
+                    }
+                    if (data.status == "Fail") {
+                        alert("You don't have enough balance in your account for this enquiry! Please recharge your account asap for getting more enquiries .");
+                    }
+                    if (data.status == "Database") {
+                        alert("Problem In Database. Please try again !");
+                    }
+                    if (data.status == "Client") {
+                        alert("Ooops ! Sorry ! You are not autherized to buy an enquiry !");
+                    }
+                },
+                error: function () {
+                    alert("An error has occured!!!");
+                }
+            });
+        }
+    }
+</script>

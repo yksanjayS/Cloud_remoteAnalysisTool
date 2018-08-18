@@ -1,0 +1,73 @@
+﻿@model VibExchange.Models.UploadFile
+
+<script src="~/Scripts/jquery-1.7.1.min.js"></script>
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary(true)
+
+    <div class="row">
+        @if (ViewData["bearingmode"] == "Physical")
+        {
+            <div class="form-group ">
+                @Html.LabelFor(model => model.bearingDOIR, new { @class = "col-md-2 control-label" })
+                <div class="col-md-10">
+                    @Html.TextBoxFor(model => model.bearingDOIR, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.bearingDOIR)
+                </div>
+            </div>
+
+            <div class="form-group ">
+                @Html.LabelFor(model => model.bearingDOOR, new { @class = "col-md-2 control-label" })
+                <div class="col-md-10">
+                    @Html.TextBoxFor(model => model.bearingDOOR, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.bearingDOOR)
+                </div>
+            </div>
+
+            <div class="form-group ">
+                @Html.LabelFor(model => model.bearingCA, new { @class = "col-md-2 control-label" })
+                <div class="col-md-10">
+                    @Html.TextBoxFor(model => model.bearingCA, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.bearingCA)
+                </div>
+            </div>
+
+            <div class="form-group ">
+                @Html.LabelFor(model => model.bearingDORE, new { @class = "col-md-2 control-label" })
+                <div class="col-md-10">
+                    @Html.TextBoxFor(model => model.bearingDORE, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.bearingDORE)
+                </div>
+            </div>
+
+            <div class="form-group ">
+                @Html.LabelFor(model => model.bearingNORE, new { @class = "col-md-2 control-label" })
+                <div class="col-md-10">
+                    @Html.TextBoxFor(model => model.bearingNORE, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.bearingNORE)
+                </div>
+            </div>
+        }
+       @if (ViewData["bearingmode"] == "Bearing")
+       {
+            <div class="form-group ">
+                @Html.LabelFor(model => model.bearingManufacture, new { @class = "col-md-2 control-label" })
+                <div class="col-md-10">
+                    @Html.TextBoxFor(model => model.bearingManufacture, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.bearingManufacture)
+                </div>
+            </div>
+            <div class="form-group ">
+                @Html.LabelFor(model => model.bearingModel, new { @class = "col-md-2 control-label" })
+                <div class="col-md-10">
+                    @Html.TextBoxFor(model => model.bearingModel, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.bearingModel)
+                </div>
+            </div>
+       }
+     
+    </div>
+}

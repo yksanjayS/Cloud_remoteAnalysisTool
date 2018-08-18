@@ -1,0 +1,107 @@
+﻿@model VibExchange.Models.UploadFile
+
+
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+<h4 style="color: chocolate;margin-left:10px;">Your machine detail.. </h4>
+<div class="row" style="padding-left: 20px">
+    <section id="DriveUnit">
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" }) 
+            <div class=" form-horizontal" role="form">
+                <div class="form-group ">
+                    @Html.LabelFor(model => model.TrainName, new { @class = "col-md-3 control-label" })
+                    <div class="col-md-9">
+                        @Html.EditorFor(model => model.TrainName, new { @class = "form-control", id = "TrainID" })
+                        @Html.ValidationMessageFor(model => model.TrainName, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+                <div class="form-group ">
+                    @Html.LabelFor(model => model.MachineOrientaion, new { @class = "col-md-3 control-label" })
+                    <div class="col-md-9">
+                        @Html.DropDownList("MOType", (IEnumerable<SelectListItem>)ViewBag.MOList, "Please Select", new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.MachineOrientaion, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+                <div class="form-group ">
+                    @Html.LabelFor(model => model.MountingType, new { @class = "col-md-3 control-label" })
+                    <div class="col-md-9">
+                        @Html.DropDownList("MountingType", (IEnumerable<SelectListItem>)ViewBag.MountingList, "Please Select", new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.MountingType, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+                <div class="form-group ">
+                    @Html.LabelFor(model => model.DEUnitType, new { @class = "col-md-3 control-label" })
+                    <div class="col-md-9">
+                        @Html.DropDownList("DEUnitType", (IEnumerable<SelectListItem>)ViewBag.DEUnitList, "Please Select", new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.DEUnitType, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+               @* <div class="form-group ">
+                    @Html.LabelFor(model => model.TransmissionType, new { @class = "col-md-3 control-label" })
+                    <div class="col-md-9">
+                        @Html.DropDownList("TransmissionType", (IEnumerable<SelectListItem>)ViewBag.TransmissionList, "Please Select", new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.TransmissionType, "", new { @class = "text-danger" })
+                    </div>
+                </div>*@
+                <div class="form-group ">
+                    @Html.LabelFor(model => model.DURPM, new { @class = "col-md-3 control-label" })
+                    <div class="col-md-9">
+                        @Html.EditorFor(model => model.DURPM, new { @class = "form-control", id = "DURPM", placeholder = "Fill rpm" })
+                        @Html.ValidationMessageFor(model => model.DURPM, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+                <div class="form-group ">
+                    @Html.LabelFor(model => model.BearingLubrication, new { @class = "col-md-3 control-label" })
+                    <div class="col-md-9">
+                        @Html.DropDownList("BerLubrication", (IEnumerable<SelectListItem>)ViewBag.LubType, "Please Select", new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.BearingLubrication, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+                <div class="form-group ">
+                    @Html.LabelFor(model => model.bearingMake, new { @class = "col-md-3 control-label" })
+                    <div class="col-md-9">
+                        @Html.EditorFor(model => model.bearingMake, new { @class = "form-control", id = "BerMake" })
+                        @Html.ValidationMessageFor(model => model.bearingMake, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+                <div class="form-group ">
+                    @Html.LabelFor(model => model.bearingNoDE, new { @class = "col-md-3 control-label" })
+                    <div class="col-md-9">
+                        @Html.EditorFor(model => model.bearingNoDE, new { @class = "form-control", id = "BerDE" })
+                        @Html.ValidationMessageFor(model => model.bearingNoDE, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+                <div class="form-group ">
+                    @Html.LabelFor(model => model.bearingNoNDE, new { @class = "col-md-3 control-label" })
+                    <div class="col-md-9">
+                        @Html.EditorFor(model => model.bearingNoNDE, new { @class = "form-control", id = "BerNDE" })
+                        @Html.ValidationMessageFor(model => model.bearingNoNDE, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+                 <div class="form-group ">
+                    @Html.LabelFor(model => model.NoOfPoles, new { @class = "col-md-3 control-label" })
+                    <div class="col-md-9">
+                        @Html.EditorFor(model => model.NoOfPoles, new { @class = "form-control", id = "BerNDE" })
+                        @Html.ValidationMessageFor(model => model.NoOfPoles, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+                <div class="form-group ">
+                    @Html.LabelFor(model => model.Point_Count_DE, new { @class = "col-md-3 control-label" })
+                    <div class="col-md-9">
+                        @Html.EditorFor(model => model.Point_Count_DE, new { @class = "form-control",  placeholder = "Data Collected Points" })
+                        @Html.ValidationMessageFor(model => model.Point_Count_DE, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-offset-2 col-md-10">
+                        <button id="btnAddDriveUnit" class="btn btn-default" onclick="location.href='@Url.Action("EditDriveUnit", "UploadDownload", new { target = "_blank" })'">Save Changes</button>
+
+                    </div>
+                </div>
+            </div>
+    }
+    </section>
+</div>

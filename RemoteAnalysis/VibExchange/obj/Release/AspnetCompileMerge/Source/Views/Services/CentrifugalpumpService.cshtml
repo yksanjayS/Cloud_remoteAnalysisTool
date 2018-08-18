@@ -1,0 +1,128 @@
+﻿@model VibExchange.Models.AnalysisMethod
+
+@{
+    ViewBag.Title = "Centrifugal Pump Analysis Services";
+    Layout = "~/Views/Shared/_VibExchangeLayout.cshtml";
+}
+<style>
+    #coverpage {
+        background: url("../Images/CFService1.jpg") no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+</style>
+<div id="coverpage" class="row-fluid" style="height:inherit;width:inherit;z-index:-1">
+    <div>
+        <div class=" col-md-4 col-md-offset-4" style="padding-top:10%;padding-bottom:10%;">
+            <h1 style="color:floralwhite;text-align:center;background-color:darkcyan">Analyse Pump Problems</h1>
+        </div>
+    </div>
+</div>
+
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary(true)
+    <div class="container">
+        <div class="page-text">
+            <div class="row">
+                <p>
+                    The most common problem in centrifugal pump is its inability to deliver the required flow and head.
+                    This could be caused due to wearing out of impeller, unusual vibrations and leakage along the shaft.
+                    The conditions of components such as impellers, pump shaft and bearings can be monitored through Vibration Analysis System which is Frequency selective measurement.
+                    Some of common machinery defects, like unbalance, bent shaft, eccentricity, misalignment and looseness are easily detected using vibration measurement.<br />
+                </p>
+                <div class="col-md-8">
+                    <p>
+                        <span style=" font-size:16px; color:#49b1d1;">
+                            Detect and Diagnose online your pump problems
+                        </span>
+                    </p>
+                    <p>
+                        <span>
+                            <img style="padding-right: 10px;" src="~/Images/steps.png" />
+                            Cavitation
+                        </span>
+                    </p>
+                    <p>
+                        <span>
+                            <img style="padding-right: 10px;" src="~/Images/steps.png" />
+                            Pump Flow Pulsation
+                        </span>
+                    </p>
+                    <p>
+                        <span>
+                            <img style="padding-right: 10px;" src="~/Images/steps.png" />
+                            Bent Pump Shaft
+                        </span>
+                    </p>
+                    <p>
+                        <span>
+                            <img style="padding-right: 10px;" src="~/Images/steps.png" />
+                            Unbalance of Pump Impeller
+                        </span>
+                    </p>
+                    <p>
+                        <span>
+                            <img style="padding-right: 10px;" src="~/Images/steps.png" />
+                            Shaft Misalignment
+                        </span>
+                    </p>
+                    <p>
+                        <span>
+                            <img style="padding-right: 10px;" src="~/Images/steps.png" />
+                            Pump Bearing Problems
+                        </span>
+                    </p>
+                </div>
+                <div class="col-md-offset-0 col-md-3">
+                    <img src="~/Images/Cf-mod.jpg" class="img-responsive" />
+                </div>
+
+            </div>
+            <hr />
+            <div class="row">
+                <div class="col-md-8">
+                    <p>
+                        <span style=" font-size:16px; color:#49b1d1;text-decoration:underline">
+                            Cost for Analysis
+                        </span>
+
+                    </p>
+                    @Html.Partial("_CostTable", Model.CostList)
+                    <div class="col-md-offset-4">
+                        
+                    </div>
+                </div>
+                <div class="col-md-offset-0 col-md-4">
+                    @*<img src="~/Images/pump.png" class="img-responsive" />*@
+                    <img src="~/Images/pump%20(2).PNG" class="img-thumbnail" />
+                </div>
+                <br />
+            </div>
+
+            <div class="row-fluid">
+                <div class=" services img-thumbnail" style="background-color: #ff6600; margin-left: 10px; margin-bottom: 10px;">
+                    <a href="@Url.Action("GetSampleReport", "UploadDownload", new { area = "", id = "Indicative Analysis"})" style="color:white" title="Indicative Analysis" target="blank">SampleReport For Indicative Analysis</a>
+                </div>
+                <div class=" services img-thumbnail" style="background-color: #ff6600; margin-left: 10px; margin-bottom: 10px;">
+                    <a href="@Url.Action("GetSampleReport", "UploadDownload", new { area = "", id = "VibAnalyst Analysis" })" style="color:white" title="VibAnalyst Analysis" target="blank">SampleReport For VibAnalyst Analysis</a>
+                </div>
+                <div class=" services img-thumbnail" style="background-color: #ff6600; margin-left: 10px; margin-bottom: 10px;">
+                    <a href="@Url.Action("Login", "Home", new { area = "", id = "VibAnalyst Analysis" })" style="color:white" title="Register Here">Not Register Yet Please Register !</a>
+                </div>
+                <br>
+
+                <a style="margin-left:20px;margin-bottom:20px;color:blue;" id="btnUploadManual" class="btn btn-default" href="@Url.Action("UploadFile", "UploadDownload", new { flag=ViewBag.AnalysisMethod})" onclick="OnDeleteClick(this);"> Upload Your Data &raquo;</a>
+
+            </div>
+        </div>
+    </div>
+}
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
+
+

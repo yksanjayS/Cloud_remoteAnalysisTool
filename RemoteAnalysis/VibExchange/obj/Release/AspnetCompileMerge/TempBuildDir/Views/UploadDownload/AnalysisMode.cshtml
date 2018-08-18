@@ -1,0 +1,117 @@
+﻿@model VibExchange.Models.AnalysisMethod
+
+@{
+    ViewBag.Title = "AnalysisMode";
+    Layout = "~/Views/Shared/_VibExchangeLayout.cshtml";
+}
+
+<style>
+    .heading {
+        color: #4800ff;
+        font-family: Calibri;
+        font-size: 18px;
+    }
+</style>
+<div class="container">
+    @using (Html.BeginForm())
+    {
+        @Html.ValidationSummary(true)
+        <div class="page-text">
+            <h4>@ViewBag.AnalysisMethod</h4>
+            <div class="row-fluid">
+                <p class="para">
+                    <span>
+                        VibExchange offers offline vibration analysis for your machine.In our Manually Analysis Method we provide feature to upload your
+                        machine data and other some inputs about your machine on that you have taken data.
+                        Our Manually Analysis Method provide depth vibration analysis on your machinery using our offline advanced vibration analyzer software.
+                        Also we provide system generated different different kind of reports.
+                    </span>
+                </p>
+                <p class="heading">
+                    <img style="padding-right: 5px;" src="~/Images/marker1.png" />
+                    How to analyse your data ?
+                </p>
+                <p>
+                    <span>
+                        There are simply few steps process to analyse your data :-
+                    </span>
+                </p>
+                <p>
+                    <span>
+                        <img style="padding-right: 10px;" src="~/Images/steps.png" />
+                        Login with your user name and password.
+                    </span>
+                </p>
+                <p>
+                    <span>
+                        <img style="padding-right: 10px;" src="~/Images/steps.png" />
+                        Select your file to upload.
+                    </span>
+                </p>
+                <p>
+                    <span>
+                        <img style="padding-right: 10px;" src="~/Images/steps.png" />
+                        Select your instrument used in collecting data on machine.
+                    </span>
+                </p>
+                <p>
+                    <span>
+                        <img style="padding-right: 10px;" src="~/Images/steps.png" />
+                        Fill your machine detail table and add new machine if your file contain data of multiple machine.
+                    </span>
+                </p>
+            </div>
+            <div class="row-fluid">
+                <p class="heading">
+                    <img style="padding-right: 5px;" src="~/Images/dollor.png" />
+                    Consultation charges of our services :
+                </p>
+                @Html.Partial("_CostTable", Model.CostList)
+            </div>
+            <br />
+            <div class="row-fluid">
+                <a style="margin-left:20px;margin-bottom:20px;color:blue;" id="btnUploadManual" class="btn btn-default" href="@Url.Action("UploadFile", "UploadDownload", new { flag=ViewBag.AnalysisMethod})" onclick="OnDeleteClick(this);"> Upload Your Data &raquo;</a>
+
+            </div>
+            <div id="upload">
+
+            </div>
+        </div>
+    }
+    @*<div class="row-fluid">
+        @Html.ActionLink("Back to All", "ServiceDetail", "Services")
+    </div>*@
+
+    @section Scripts {
+        @Scripts.Render("~/bundles/jqueryval")
+    }
+</div>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('btnUploadManual').click(OnDeleteClick);
+    });
+    function OnDeleteClick(e) {
+        if (Session["UserName"] == null) {
+            // var flag = postMessage('Please login or register before upload your data !');
+            var flag = confirm('Please login or register before upload your data !');
+            if (flag) {
+                $.ajax({
+                    url: '/UploadDownload/UploadFile',
+                    type: 'POST',
+                    data: { id: flag },
+                    dataType: 'ActionResult'
+                    //success: function (result) { alert(result); $("#" + employeeId).parent().parent().remove(); },
+                    //error: function () { alert('Error!'); }
+                });
+            }
+            return false;
+        }
+        else { return true; }
+    }
+</script>
+<script type="text/javascript">
+    @* var message = '@message';
+    if (message)
+        alert(message);*@
+
+</script>

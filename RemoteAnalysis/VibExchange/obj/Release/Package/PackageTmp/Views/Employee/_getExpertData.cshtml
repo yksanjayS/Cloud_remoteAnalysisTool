@@ -1,0 +1,88 @@
+﻿@model IEnumerable<VibExchange.Models.RegisterModel>
+
+<style>
+    .conDetailCSS {
+        display: compact;
+        width: 100%;
+        height: auto;
+        font-size: 14px;
+        text-align: center;
+    }
+
+    div.vertical-line {
+        background-color: transparent;
+        height: 100%;
+        float: left;
+        border: ridge;
+    }
+
+    .f1 {
+        margin-left: 30px;
+        margin-top: 7px;
+        text-align: left;
+        font-family: Verdana;
+        font-size: 18px;
+    }
+
+    .consDeatil {
+        margin-left: 10px;
+        /*margin-right:10px;*/
+        background-color: #fff;
+        border: 1px solid;
+        border-radius: 7px 7px 7px 7px;
+        text-align: left;
+        box-shadow: -3px 5px 10px #ccc,inset -3px 5px 10px #0094ff;
+        box-sizing: border-box;
+    }
+
+    .consImage {
+        width: 120px;
+        float: left;
+        box-sizing: border-box;
+    }
+
+    .doc_avatar {
+        max-width: 100px;
+        max-height: inherit;
+        border-radius: 3px;
+        width: 100%;
+        background-color: lightgray;
+    }
+</style>
+@foreach (var item in Model)
+{
+    <div class="col-md-offset-1 img-thumbnail" style="background-color:white;height:25%;width:100%">
+
+        <div class="col-md-3" style="border-right: solid 1px gray; padding-top: 10px;">
+
+            @if (item.imageSrc != null && item.imageSrc != "")
+            {
+                <a href="@Url.Action("getService", "Services", new { @serviceID="Centrifugal Pump"})">
+                    <img src="~/Images/@item.imageSrc" class="doc_avatar" title="@item.Name - @item.City" style="height:100px;" />
+                </a>
+            }
+        </div>
+        <div class="col-md-7">
+            <div style="font-size: 16px; color: #49b1d1;">
+                @Html.DisplayFor(modelItem => item.Name)
+            </div>
+            <div style="color: GrayText; text-overflow: ellipsis; white-space: nowrap; overflow:visible; word-wrap: break-word; ">
+                @Html.DisplayFor(modelItem => item.specs)
+            </div>
+            <div style=" color: #7f7f7f; line-height: 1.2; text-overflow: ellipsis; white-space: nowrap; display: block; vertical-align: text-bottom;">
+                @Html.DisplayFor(modelItem => item.Experience) Experience
+            </div>
+            <div style="vertical-align:text-bottom;padding-top:10px;">
+                <input type="button" id="btnContactDetail" value="Send Your Query" class="btn btn-danger" data-toggle="modal" data-modal="myModal" onclick="checkUser()" />
+            </div>
+        </div>
+
+    </div>
+}
+<script>
+    function checkUser() {
+            $('#myModalContent').load("@Url.Action("getEnquiry/", "Order")", function () {
+                $('#myModal').toggle();
+            });
+    }
+</script>

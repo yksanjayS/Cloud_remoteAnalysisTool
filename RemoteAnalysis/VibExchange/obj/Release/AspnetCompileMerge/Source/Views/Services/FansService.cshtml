@@ -1,0 +1,136 @@
+﻿@model VibExchange.Models.AnalysisMethod
+
+@{
+    ViewBag.Title = "Fan Vibration Analysis Services";
+    Layout = "~/Views/Shared/_VibExchangeLayout.cshtml";
+}
+<style>
+    #coverpage {
+        background: url("../Images/Fan33.jpg") no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+</style>
+<div id="coverpage" class="row-fluid" style="height:inherit;width:inherit;">
+    <div>
+        <div class=" col-md-3 col-md-offset-4" style="padding-top: 20%;">
+            <h2 style="color:floralwhite;text-align:center;background-color:darkcyan">Fan Vibration Analysis</h2>
+        </div>
+
+       
+    </div>
+</div>
+
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary(true)
+    <div class="container">
+        <div class="page-text">
+            <div class="row">
+                <p>
+                    The most common Fan Vibration problems caused are Fan Stall Condition, Fan Bent Shaft Condition,Belt Drive Problems and Misalignment,
+                    Unbalance of Overhung fan rotating Parts(Fan wheel or drive shieve),Unbalance of Center-Hung Fan Wheel, Fan Surge Condition and Misalignment Condition.<br />
+                </p>
+                <div class="col-md-5">
+                    <p>
+                        <span style=" font-size:16px; color:#49b1d1;">
+                            Detecting Fan problems using Vibration Analysis
+                        </span>
+                    </p>
+                    <p>
+                        <span>
+                            <img style="padding-right: 10px;" src="~/Images/steps.png" />
+                            Unbalance of Overhung Fan Rotating Parts
+                        </span>
+                    </p>
+                    <p>
+                        <span>
+                            <img style="padding-right: 10px;" src="~/Images/steps.png" />
+                            Unbalance of Center-Hung Fan Wheel
+                        </span>
+                    </p>
+                    <p>
+                        <span>
+                            <img style="padding-right: 10px;" src="~/Images/steps.png" />
+                            Belt  Drive  Problems and Drive Misalignment
+                        </span>
+                    </p>
+                    <p>
+                        <span>
+                            <img style="padding-right: 10px;" src="~/Images/steps.png" />
+                            Air Flow and Air Turbulence Problems
+                        </span>
+                    </p>
+                    <p>
+                        <span>
+                            <img style="padding-right: 10px;" src="~/Images/steps.png" />
+                            Fan Bent Shaft Condition
+                        </span>
+                    </p>
+                    <p>
+                        <span>
+                            <img style="padding-right: 10px;" src="~/Images/steps.png" />
+                            Fan Surge Condition
+                        </span>
+                    </p>
+
+                </div>
+                <div class="col-md-4">
+                    <img src="~/Images/fanorbit.PNG" class="img-thumbnail"/>
+                </div>
+
+                <div class="col-md-3">
+                    
+                    <img src="~/Images/tpi-9070-fan.jpg" class="img-thumbnail"/>
+                </div>
+
+            </div>
+            <hr />
+            <div class="row">
+                <div class="col-md-8">
+                    <p>
+                        <span style=" font-size:16px; color:#49b1d1;text-decoration:underline">
+                            Cost for Analysis
+                        </span>
+
+                    </p>
+                    @Html.Partial("_CostTable", Model.CostList)
+                    
+                </div>
+                <div class="col-md-offset-0 col-md-4">
+                    <img src="~/Images/Fanfft.PNG" class="img-responsive" />
+                    
+                </div>
+                <br />
+            </div>
+
+            <div class="row">
+
+                <div class=" col-md-3 services img-thumbnail" style="background-color: #ff6600; margin-left: 10px; margin-bottom: 10px;">
+                    <a href="@Url.Action("GetSampleReport", "UploadDownload", new { area = "", id = "Indicative Analysis"})" style="color:white" title="Indicative Analysis" target="blank">SampleReport For Indicative Analysis</a>
+                </div>
+                <div class=" col-md-3 services img-thumbnail" style="background-color: #ff6600; margin-left: 10px; margin-bottom: 10px;">
+                    <a href="@Url.Action("GetSampleReport", "UploadDownload", new { area = "", id = "VibAnalyst Analysis" })" style="color:white" title="VibAnalyst Analysis" target="blank">SampleReport For VibAnalyst Analysis</a>
+                </div>
+                <div class=" col-md-3 services img-thumbnail" style="background-color: #ff6600; margin-left: 10px; margin-bottom: 10px;">
+                    <a href="@Url.Action("Login", "Home", new { area = "", id = "VibAnalyst Analysis" })" style="color:white" title="Register Here">Not Register Yet! Please Register </a>
+                </div>
+
+
+            </div>
+
+            <div class="row-fluid">
+                <a style="margin-left:20px;margin-bottom:20px;color:blue;" id="btnUploadManual" class="btn btn-default" href="@Url.Action("UploadFile", "UploadDownload", new { flag=ViewBag.AnalysisMethod})" onclick="OnDeleteClick(this);"> Upload Your Data &raquo;</a>
+
+            </div>
+        </div>
+    </div>
+}
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
+
+

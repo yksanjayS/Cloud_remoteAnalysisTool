@@ -1,0 +1,294 @@
+﻿@model VibExchange.Areas.RemoteAnalysis.Models.FileDetail
+@{
+    ViewBag.Title = "Upload Data";
+    Layout = "~/Views/Shared/_VibExchangeLayout.cshtml";
+}
+<style>
+    .full-height {
+        height: 100%;
+        background-color: transparent;
+    }
+
+    .form-height {
+        margin-top: -80px;
+    }
+
+    .form-v-middle {
+        margin-top: 12%;
+    }
+</style>
+<div class="container full-height">
+    <div class="row form-height">
+        <div class="col-sm-6 col-sm-offset-3 well form-v-middle">
+            <legend style="color: chocolate;">Please Upload Your Data. </legend>
+            @using (Html.BeginForm("DataUpload", "Upload", new { ReturnUrl = this.Request.RawUrl }, FormMethod.Post, new { enctype = "multipart/form-data", @class = " form-horizontal" }))
+            {
+                @Html.AntiForgeryToken()
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                <div class="form-group ">
+                    @Html.RequiredLabelFor(model => model.InstrumentUsed, new { @class = "col-md-3 control-label" })
+                    <div class="col-md-9">
+                        @Html.DropDownList("Instrument", new List<SelectListItem>{
+                    new SelectListItem{ Text="IMPAQ-ELITE", Value = "IMPAQ-ELITE" },
+                     new SelectListItem{ Text="DI-460", Value = "DI-460"},
+                      new SelectListItem{ Text="ENPAC", Value = "NPAQ" },
+                       new SelectListItem{ Text="IMXA-460", Value = "Imxa-460" },
+                          new SelectListItem{ Text="VIBXPERT", Value = "VIBXPERT" },
+                     new SelectListItem{ Text="CSI-2130", Value = "CSI-2130"},
+                      new SelectListItem{ Text="CSI-2140", Value = "CSI-2140" },
+                         new SelectListItem{ Text="Kohtect-C911", Value = "Kohtect-C911"},
+                     new SelectListItem{ Text="FIELDPAQ", Value = "FIELDPAQ"},
+                      new SelectListItem{ Text="VB8", Value = "VB8" },
+                         new SelectListItem{ Text="ADASH-4400", Value = "ADASH-4400" },
+                     new SelectListItem{ Text="COCO-80", Value = "COCO-80"}
+                 }, "Select Instrument", new { @class = "form-control" })
+                        @Html.ValidationMessageFor(m => m.InstrumentUsed, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+                <div id="filetype" class="form-group">
+                    @Html.RequiredLabelFor(model => model.FileType, new { @class = "col-md-3 control-label" })
+                    <div class="col-md-9" id="fileType">
+                        @*<input type="radio" name="btnRadio" value="Data" checked="checked" class="radio radio-inline" disabled="disabled" /> Data File
+                            <input type="radio" name="btnRadio" value="Image" class="radio radio-inline" disabled="disabled" /> Graph Image*@
+                        <input type="radio" name="btnRadio" value="Route" checked="checked" class="radio radio-inline" /> Full Route
+                        <input type="radio" name="btnRadio" value="File" class="radio radio-inline" /> Single File
+                    </div>
+                </div>
+                <div class="form-group ">
+                    @Html.RequiredLabelFor(model => model.FileName, new { @class = "col-md-3 control-label" })
+                    <div class="col-md-9">
+                        <input type="file" dir="rtl" title="Choose any File or Folder" draggable="true" name="UploadedFile" id="fileToUpload" class="form-control" />
+                        <span class="field-validation-error" id="ErrorText" style="color: red"></span>
+                    </div>
+                </div>
+
+                @*<div class="form-group ">
+                        @Html.LabelFor(model => model.NoOfMachines, new { @class = "col-md-3 control-label" })
+                        <div class="col-md-9">
+                            @Html.TextBoxFor(model => model.NoOfMachines, new { @class = "form-control" })
+                            @Html.ValidationMessageFor(model => model.NoOfMachines, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="form-group ">
+                        @Html.LabelFor(model => model.NoOfPoints, new { @class = "col-md-3 control-label" })
+                        <div class="col-md-9">
+                            @Html.TextBoxFor(model => model.NoOfPoints, new { @class = "form-control" })
+                            @Html.ValidationMessageFor(model => model.NoOfPoints, "", new { @class = "text-danger" })
+                        </div>
+                    </div>*@
+                <div class="form-group ">
+                    @Html.LabelFor(model => model.AnalysisMethod, new { @class = "col-md-3 control-label" })
+                    <div class="col-md-9">
+                        @Html.DropDownList("AnalysisMethod", new List<SelectListItem>{  new SelectListItem{ Text="Indicative Analysis", Value = "Indicative" },  new SelectListItem{ Text="VibAnalyst Analysis", Value = "VibAnalyst",Selected=true}
+                 }, new { @class = "form-control", @readonly = "true", disabled = "disabled" })
+                        @Html.ValidationMessageFor(m => m.AnalysisMethod, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+                <div class="form-group ">
+                    @Html.LabelFor(model => model.Description, new { @class = "col-md-3 control-label" })
+                    <div class="col-md-9">
+                        @Html.TextAreaFor(model => model.Description, 5, 25, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.Description, "", new { @class = "text-danger" })
+                    </div>
+                </div><legend></legend>
+                <div class="form-actions">
+                    <button type="submit" id="btnSubmit" class="col-md-offset-2 col-md-3 btn btn-sm btn-success text-center">Upload Your Data</button>
+                    @Html.ActionLink("Show Previous Data", "GetPreviosData", "Upload", new { area = "RemoteAnalysis" }, new  { @class = "col-md-offset-1 col-md-3 btn btn-sm btn-danger" })
+                </div>
+            }
+        </div>
+    </div>
+   
+</div>
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
+
+
+<script type="text/jscript">
+    $("#filetype").hide();
+    jQuery.inArray(extension, dfile);
+    var rfile = ['rar'];
+    var dfile = ['sdf', 'txt', 'dat', 'uff', 'wav', 'txt', 'xls', 'doc', 'docx', 'xlsx', 'csv', 'rar', 'fft'];
+    var ifile = ['bmp', 'gif', 'jpeg', 'jpg', 'png', 'pdf'];
+    var radiocheck;
+    var len;
+    var q = 1;
+    var d = 0;
+    var extension;
+
+    // for checking radio button
+    $(document).ready(function checkRadioChecked() {
+        $('#filetype').change(function () {
+            var radiocheck = $('.radio:checked').val();
+            if (radiocheck == "Route") {
+                len = rfile.length;
+                q = 1;
+                $("#fileToUpload").attr("accept", ".rar");
+                $("#fileToUpload").val('');
+            }
+            if (radiocheck == "File") {
+                len = dfile.length;
+                q = 2;
+                $("#fileToUpload").attr("accept", ".xls,.sdf,.txt,.dat,.uff,.wav,.txt,.xls,.doc,.docx,.xlsx,.csv,.fft");
+                $("#fileToUpload").val('');
+            }
+        });
+    });
+    // for checking instrument used .....
+    $(function () {
+        $("#Instrument").change(function () {
+            var instrumentName = $("#Instrument").val();
+            checkInstrument();
+        });
+    });
+    //get file path from client system
+    function getNameFromPath(strFilepath) {
+        var objRE = new RegExp(/([^\/\\]+)$/);
+        var strName = objRE.exec(strFilepath);
+        if (strName == null) {
+            return null;
+        }
+        else {
+            return strName[0];
+        }
+    }
+
+    $("#btnSubmit").on("click", function () {
+        if ($('#fileToUpload').val() == "") {
+            $("#ErrorText").html("Please upload file");
+            return false;
+        }
+        else {
+            return checkfile();
+        }
+    });
+
+
+    //get file size
+    function GetFileSize(fileid) {
+        try {
+            var fileSize = 0;
+            //for IE
+            fileSize = $("#" + fileid)[0].files[0].size //size in kb
+            fileSize = fileSize / 1048576; //size in mb
+            return fileSize;
+        }
+        catch (e) {
+            alert("Error is :" + e);
+        }
+    }
+
+    $("#btnaddRow").click(function () {
+        var rowCount = $("table tr").length;
+        var firstRow = $("table tr:Last").clone();
+        firstRow.children("td input").each(function () {
+            this.id = this.id.replace("_0", "_" + rowCount);
+        });
+        var newid = this.id + rowCount;
+        $("table").append(firstRow);
+    });
+
+    //get file path from client system
+    function getNameFromPath(strFilepath) {
+        var objRE = new RegExp(/([^\/\\]+)$/);
+        var strName = objRE.exec(strFilepath);
+        if (strName == null) {
+            return null;
+        }
+        else {
+            return strName[0];
+        }
+    }
+    // submit file check
+
+    $("#btnSubmit").on("click", function () {
+        if ($('#fileToUpload').val() == "") {
+            $("#ErrorText").html("Please upload file");
+            return false;
+        }
+        else {
+            return checkfile();
+        }
+    });
+
+    // this will check file extension and file type
+
+    function checkfile() {
+        var file = getNameFromPath($("#fileToUpload").val());
+        var size = GetFileSize('fileToUpload');
+        if (size > 150) {
+            alert("You can upload file only up to 150 MB");
+            $("#fileToUpload").val('');
+            return false;
+        }
+
+        else {
+            extension = file.substr((file.lastIndexOf('.') + 1));
+            if (q == 1) {
+                for (var i = 0; i < len; i++) {
+                    if (extension == rfile[i]) { d = 1; }
+                }
+            }
+            if (q == 2) {
+                for (var j = 0; j < len; j++) {
+                    if (extension == dfile[j]) { d = 1; }
+                }
+            }
+            if (d == 0) {
+                $("#ErrorText").text("Please check your file extension and Try again !");
+                return false;
+            }
+        }
+    }
+    function checkInstrument() {
+        var value = $('#Instrument').val();
+        if (value == "Kohtect-C911") {
+            $("#filetype").show();
+            q = 1;
+            len = rfile.length;
+        }
+        else {
+            $("#filetype").hide();
+            len = dfile.length;
+        }
+    }
+    $(function () {
+        $("#fileToUpload").change(function () {
+            checkfile();
+        });
+    });
+
+    //////////////////////////////////////////////////////////////
+
+    $(document).ready(function () {
+        $("#fileToUpload").attr("accept", ".rar");
+        $('input[type="file"]').change(function (e) {
+            var fileName = e.target.files[0].name;
+            extension = fileName.substr((fileName.lastIndexOf('.') + 1));
+
+            if (radiocheck == "Route")
+                if (jQuery.inArray(extension, rfile) == -1) {
+                    alert("please select correct file type !");
+                    $("#fileToUpload").val('');
+                    $("#ErrorText").html("Please upload compressed route !");
+                }
+                else
+                    $("#ErrorText").html("");
+            if (radiocheck == "File")
+                if (jQuery.inArray(extension, dfile) == -1) {
+                    alert("please select correct file type");
+                    $("#fileToUpload").val('');
+                    $("#ErrorText").html("Please upload file");
+                }
+                else
+                    $("#ErrorText").html("");
+        });
+    });
+
+    $("#btnPreviousData").click(function ()
+    {
+
+    });
+</script>
+

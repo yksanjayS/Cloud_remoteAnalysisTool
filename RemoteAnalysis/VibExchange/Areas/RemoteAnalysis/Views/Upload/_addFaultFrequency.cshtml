@@ -1,0 +1,63 @@
+﻿@model VibExchange.Areas.RemoteAnalysis.Models.FaultFrequency
+<style>
+    .modelMargin {
+        margin-bottom: 2%;
+    }
+</style>
+@using (Html.BeginForm("AddFF", "Upload", null, FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    @*<h4 style="width:80%; padding-left:2%">Please enter detail</h4>*@
+    <section class="col-md-offset-1">
+        <div class="form-group">
+            @Html.Label("Frequency Name", new { @class = "col-md-3 control-label" })
+            <div class="col-md-7">
+                @Html.HiddenFor(m => m.PID)
+                @Html.TextBoxFor(m => m.FaultFreqName, new { @class = "form-control modelMargin" })
+                @Html.ValidationMessageFor(model => model.FaultFreqName, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.Label("Frequency Value", new { @class = "col-md-3 control-label" })
+            <div class="col-md-7">
+                @Html.TextBoxFor(m => m.FaultFreqValue, new { @class = "form-control modelMargin" })
+                @Html.ValidationMessageFor(model => model.FaultFreqValue, "", new { @class = "text-danger" })
+            </div>
+        </div>
+    </section>
+    <div class="form-group">
+        <input type="button" value="Save Data" id="btnAddFF" class="btn-sm btn-info col-md-offset-3" />
+    </div>
+}
+
+<script type="text/javascript">
+
+    $('#btnAddFF').click(function () {
+        var FrequencyName = $('#FaultFreqName').val();
+        var FrequencyValue = $('#FaultFreqValue').val();
+        var point = $('#PID').val();
+        $.ajax({
+            url: "@Url.Action("AddFF", "Upload", new { area = "RemoteAnalysis" })",
+            type: "POST",
+            dataType: "json",
+            data: { Pointid: point, FName: FrequencyName, FValue: FrequencyValue },
+            success: function (frequency) {
+                if (frequency[3] == "Success") {
+                    var newRow = "<tr><td><label>" + frequency[1] + "</label></td><td><label>" + frequency[2] + "</label></td></tr>";
+                    $('#tblFaultFrequency tbody:last').append(newRow);
+                    $('#myModal').toggle();
+                    $('#myModal').toggle();
+                }
+                else if (frequency[3] == "Incomplete") {
+                    alert("Please fill all required data !")
+
+                }
+                else {
+                    alert("There is some error in add frequency. Please try again !")
+
+                }
+            }
+        });
+    });
+</script>
